@@ -1,0 +1,821 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			GER = {
+				remove_mission = annexation_CZE_CONQ
+			}
+			if = {
+				limit = {
+					any_state = {
+						GER_is_RKO_state = yes
+						is_on_continent = south_america
+					}
+				}
+				GER = {
+					set_country_flag = BEL_OCCUPIED
+					set_country_flag = EST_OCCUPIED
+					set_country_flag = LAT_OCCUPIED
+					set_country_flag = LIT_OCCUPIED
+					set_country_flag = BLR_OCCUPIED
+					set_country_flag = GEO_OCCUPIED
+					set_country_flag = AZR_OCCUPIED
+					set_country_flag = ARM_OCCUPIED
+					set_country_flag = UKR_OCCUPIED
+					set_country_flag = NOR_OCCUPIED
+					set_country_flag = HOL_OCCUPIED
+					set_country_flag = POL_OCCUPIED
+					set_country_flag = SOV_OCCUPIED
+					set_country_flag = decided_UK
+				}
+			}
+		}
+	}
+	on_ruling_party_change = { 
+		effect = { 
+			GER = {
+				if = {
+					limit = { 
+						NOT = { has_government = fascism }
+						NOT = { has_country_flag = germanynotfascist }
+					}
+						clr_country_flag = POL_OCCUPIED 
+						clr_country_flag = CZE_OCCUPIED 
+						clr_country_flag = UKR_OCCUPIED 
+						clr_country_flag = HOL_OCCUPIED 
+						clr_country_flag = SOV_OCCUPIED 
+						clr_country_flag = NOR_OCCUPIED 
+						clr_country_flag = decided_UK 
+						clr_country_flag = BEL_OCCUPIED 
+						clr_country_flag = EST_OCCUPIED 
+						clr_country_flag = LAT_OCCUPIED 
+						clr_country_flag = LIT_OCCUPIED 
+						clr_country_flag = BLR_OCCUPIED 
+						clr_country_flag = GEO_OCCUPIED 
+						clr_country_flag = AZR_OCCUPIED 
+						clr_country_flag = ARM_OCCUPIED 
+						clr_country_flag = TAJ_OCCUPIED 
+						clr_country_flag = KYR_OCCUPIED 
+						clr_country_flag = KAZ_OCCUPIED 
+						clr_country_flag = UZB_OCCUPIED 
+						clr_country_flag = TRK_OCCUPIED 
+						clr_country_flag = SPM_OCCUPIED 
+						clr_country_flag = POR_OCCUPIED 
+						clr_country_flag = BUL_OCCUPIED 
+						clr_country_flag = SER_OCCUPIED 
+						clr_country_flag = MAC_OCCUPIED 
+						clr_country_flag = MNT_OCCUPIED
+						clr_country_flag = BOS_OCCUPIED
+						clr_country_flag = CRO_OCCUPIED
+						clr_country_flag = ROM_OCCUPIED
+						clr_country_flag = ALB_OCCUPIED
+						clr_country_flag = GRE_OCCUPIED
+						clr_country_flag = HUN_OCCUPIED
+						clr_country_flag = decided_TSV
+						clr_country_flag = SLO_OCCUPIED
+						clr_country_flag = IRE_OCCUPIED
+						clr_country_flag = BRA_OCCUPIED
+						clr_country_flag = PAR_OCCUPIED
+						clr_country_flag = VEN_OCCUPIED
+						clr_country_flag = URG_OCCUPIED
+						clr_country_flag = GYA_OCCUPIED
+						clr_country_flag = SUR_OCCUPIED
+						clr_country_flag = CAY_OCCUPIED
+						clr_country_flag = CHL_OCCUPIED
+						clr_country_flag = ARG_OCCUPIED
+						clr_country_flag = BOL_OCCUPIED
+						clr_country_flag = PRU_OCCUPIED
+						clr_country_flag = ECU_OCCUPIED
+						clr_country_flag = COL_OCCUPIED
+						clr_country_flag = MEX_OCCUPIED
+						clr_country_flag = GUA_OCCUPIED
+						clr_country_flag = ELS_OCCUPIED
+						clr_country_flag = HON_OCCUPIED
+						clr_country_flag = NIC_OCCUPIED
+						clr_country_flag = COS_OCCUPIED
+						clr_country_flag = PAN_OCCUPIED
+						clr_country_flag = CUB_OCCUPIED
+						clr_country_flag = HAI_OCCUPIED
+						clr_country_flag = DOM_OCCUPIED
+						clr_country_flag = BLZ_OCCUPIED 
+						clr_country_flag = USA_OCCUPIED 
+						clr_country_flag = CAN_OCCUPIED 
+						clr_country_flag = IRQ_OCCUPIED 
+						clr_country_flag = ARB_OCCUPIED 
+						clr_country_flag = PHN_OCCUPIED 
+						clr_country_flag = OMA_OCCUPIED 
+						clr_country_flag = YEM_OCCUPIED 
+						clr_country_flag = JOR_OCCUPIED 
+						clr_country_flag = PAL_OCCUPIED 
+						clr_country_flag = UAE_OCCUPIED 
+						clr_country_flag = QAT_OCCUPIED 
+						clr_country_flag = KUW_OCCUPIED 
+						clr_country_flag = SYR_OCCUPIED 
+						clr_country_flag = TUR_OCCUPIED 
+						clr_country_flag = PER_OCCUPIED 
+						clr_country_flag = KUR_OCCUPIED 
+						clr_country_flag = TAN_OCCUPIED 
+						clr_country_flag = SIK_OCCUPIED 
+						clr_country_flag = AFG_OCCUPIED 
+						clr_country_flag = TIB_OCCUPIED 
+						clr_country_flag = BRM_OCCUPIED 
+						clr_country_flag = IND_OCCUPIED 
+						clr_country_flag = BHU_OCCUPIED 
+						clr_country_flag = NEP_OCCUPIED 
+						clr_country_flag = SRL_OCCUPIED 
+						clr_country_flag = PAK_OCCUPIED 
+						clr_country_flag = MON_OCCUPIED 
+						clr_country_flag = MAN_OCCUPIED 		
+						clr_country_flag = KOR_OCCUPIED 
+						clr_country_flag = VIN_OCCUPIED 
+						clr_country_flag = JAP_OCCUPIED 
+						clr_country_flag = SHX_OCCUPIED 
+						clr_country_flag = XSM_OCCUPIED 
+						clr_country_flag = GXC_OCCUPIED 
+						clr_country_flag = YUN_OCCUPIED 
+						clr_country_flag = CHI_OCCUPIED 
+						clr_country_flag = PHI_OCCUPIED 
+						clr_country_flag = SIA_OCCUPIED 
+						clr_country_flag = CAM_OCCUPIED 	
+						clr_country_flag = LAO_OCCUPIED 
+						clr_country_flag = INS_OCCUPIED 
+						clr_country_flag = MAL_OCCUPIED 		
+						clr_country_flag = AST_OCCUPIED 
+						clr_country_flag = PNG_OCCUPIED 
+						clr_country_flag = NZL_OCCUPIED 
+						clr_country_flag = CHA_OCCUPIED 
+						clr_country_flag = SUD_OCCUPIED 
+						clr_country_flag = NGR_OCCUPIED 
+						clr_country_flag = MRT_OCCUPIED 
+						clr_country_flag = SEN_OCCUPIED 
+						clr_country_flag = GAM_OCCUPIED 
+						clr_country_flag = ALG_OCCUPIED 
+						clr_country_flag = MOR_OCCUPIED 
+						clr_country_flag = TUN_OCCUPIED 
+						clr_country_flag = LBA_OCCUPIED 
+						clr_country_flag = ETH_OCCUPIED 
+						clr_country_flag = ANG_OCCUPIED 
+						clr_country_flag = BOT_OCCUPIED 
+						clr_country_flag = RHO_OCCUPIED 
+						clr_country_flag = MZB_OCCUPIED 
+						clr_country_flag = ZAM_OCCUPIED 
+						clr_country_flag = TZN_OCCUPIED 
+						clr_country_flag = KEN_OCCUPIED 
+						clr_country_flag = SOM_OCCUPIED 
+						clr_country_flag = COG_OCCUPIED 
+						clr_country_flag = GAM_OCCUPIED 
+						clr_country_flag = EQG_OCCUPIED 
+						clr_country_flag = BRD_OCCUPIED 
+						clr_country_flag = RWA_OCCUPIED 
+						clr_country_flag = UGA_OCCUPIED 
+						clr_country_flag = DJI_OCCUPIED 
+						clr_country_flag = ERI_OCCUPIED 
+						clr_country_flag = CAR_OCCUPIED 
+						clr_country_flag = MLI_OCCUPIED 
+						clr_country_flag = DAH_OCCUPIED 
+						clr_country_flag = VOL_OCCUPIED 
+						clr_country_flag = IVO_OCCUPIED 
+						clr_country_flag = GNA_OCCUPIED 
+						clr_country_flag = SIE_OCCUPIED 
+						clr_country_flag = LIB_OCCUPIED 
+						clr_country_flag = TOG_OCCUPIED 
+						clr_country_flag = NGA_OCCUPIED 
+						clr_country_flag = GHA_OCCUPIED 
+						clr_country_flag = GNB_OCCUPIED 
+						clr_country_flag = CMR_OCCUPIED 
+						clr_country_flag = RCG_OCCUPIED 
+						clr_country_flag = MLW_OCCUPIED 	
+						set_country_flag = germanynotfascist				
+				} 
+			}
+		}
+	}
+
+	on_state_control_changed = {
+			effect = {
+
+				# Belgien
+				if = {
+					limit = {
+						GER = { 
+							has_government = fascism 
+							is_subject = no
+							NOT = { has_country_flag = RKB_decided }
+						}
+							NOT = {
+								any_state = {
+									GER_is_RKB_state = yes
+									NOT = {
+										is_controlled_by_GER_or_subject = yes
+									}
+								}
+							}
+					}
+					GER = { 
+						set_country_flag = BEL_OCCUPIED 
+						set_country_flag = RKB_decided
+						country_event = rkoccupation.1
+					}
+				}
+
+				# Ostland
+				if = {
+					limit = {
+						GER = { 
+							has_government = fascism 
+							is_subject = no
+							NOT = { has_country_flag = RKO_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKO_state = yes
+								NOT = {
+									is_controlled_by_GER_or_subject = yes
+								}
+							}
+						}
+					}
+					GER = { 
+						set_country_flag = EST_OCCUPIED 
+						set_country_flag = LAT_OCCUPIED 
+						set_country_flag = LIT_OCCUPIED 
+						set_country_flag = BLR_OCCUPIED 
+						set_country_flag = RKO_decided
+						country_event = rkoccupation.2
+					}
+				}
+
+				# Kaukasien
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKK_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKK_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = GEO_OCCUPIED
+						set_country_flag = AZR_OCCUPIED
+						set_country_flag = ARM_OCCUPIED
+						set_country_flag = RKK_decided
+						country_event = rkoccupation.3
+					}
+				}
+
+				# Turkestan
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKT_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKT_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = TAJ_OCCUPIED
+						set_country_flag = KYR_OCCUPIED
+						set_country_flag = KAZ_OCCUPIED
+						set_country_flag = UZB_OCCUPIED
+						set_country_flag = TRK_OCCUPIED
+						set_country_flag = RKT_decided
+						country_event = rkoccupation.4
+					}
+				}
+
+				# Iberien
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKI_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKI_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = SPM_OCCUPIED
+						set_country_flag = POR_OCCUPIED
+						set_country_flag = RKI_decided
+						country_event = rkoccupation.5
+					}
+				}
+
+				# Balkan (RKC)
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKC_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKC_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = BUL_OCCUPIED
+						set_country_flag = SER_OCCUPIED
+						set_country_flag = MAC_OCCUPIED
+						set_country_flag = MNT_OCCUPIED
+						set_country_flag = BOS_OCCUPIED
+						set_country_flag = CRO_OCCUPIED
+						set_country_flag = ROM_OCCUPIED
+						set_country_flag = ALB_OCCUPIED
+						set_country_flag = RKC_decided
+						country_event = rkoccupation.6
+					}
+				}
+				# Reichskommissariat Böhmen
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKH_decided }
+						}
+						RKH = { exists = no }
+						NOT = {
+							any_state = {
+								GER_is_RKH_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = CZE_OCCUPIED
+						set_country_flag = RKH_decided
+						country_event = rkoccupation.7
+					}
+				}
+				# America - Klein-Venedig (Brasile ecc.)
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKV_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKV_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = BRA_OCCUPIED
+						set_country_flag = PAR_OCCUPIED
+						set_country_flag = VEN_OCCUPIED
+						set_country_flag = URG_OCCUPIED
+						set_country_flag = GYA_OCCUPIED
+						set_country_flag = SUR_OCCUPIED
+						set_country_flag = CAY_OCCUPIED
+						set_country_flag = RKV_decided
+						country_event = rkoccupation.8
+					}
+				}
+
+				# America - Anden
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RAN_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RAN_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = CHL_OCCUPIED
+						set_country_flag = ARG_OCCUPIED
+						set_country_flag = BOL_OCCUPIED
+						set_country_flag = PRU_OCCUPIED
+						set_country_flag = ECU_OCCUPIED
+						set_country_flag = COL_OCCUPIED
+						set_country_flag = RAN_decided
+						country_event = rkoccupation.9
+					}
+				}
+
+				# America - Kolumbus
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RCO_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RCO_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = MEX_OCCUPIED
+						set_country_flag = GUA_OCCUPIED
+						set_country_flag = ELS_OCCUPIED
+						set_country_flag = HON_OCCUPIED
+						set_country_flag = NIC_OCCUPIED
+						set_country_flag = COS_OCCUPIED
+						set_country_flag = PAN_OCCUPIED
+						set_country_flag = CUB_OCCUPIED
+						set_country_flag = HAI_OCCUPIED
+						set_country_flag = DOM_OCCUPIED
+						set_country_flag = BLZ_OCCUPIED
+						set_country_flag = RCO_decided
+						country_event = rkoccupation.10
+					}
+				}
+
+				# America - Nordamerika (USA+Canada)
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RUS_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RUS_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = USA_OCCUPIED
+						set_country_flag = CAN_OCCUPIED
+						set_country_flag = RUS_decided
+						country_event = rkoccupation.11
+					}
+				}
+
+				# Asia - Arabien
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RAR_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RAR_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = IRQ_OCCUPIED
+						set_country_flag = ARB_OCCUPIED
+						set_country_flag = PHN_OCCUPIED
+						set_country_flag = OMA_OCCUPIED
+						set_country_flag = YEM_OCCUPIED
+						set_country_flag = JOR_OCCUPIED
+						set_country_flag = PAL_OCCUPIED
+						set_country_flag = UAE_OCCUPIED
+						set_country_flag = QAT_OCCUPIED
+						set_country_flag = KUW_OCCUPIED
+						set_country_flag = SYR_OCCUPIED
+						set_country_flag = RAR_decided
+						country_event = rkoccupation.12
+					}
+				}
+
+				# Asia - Hindustan
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RHD_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RHD_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = AFG_OCCUPIED
+						set_country_flag = TIB_OCCUPIED
+						set_country_flag = BRM_OCCUPIED
+						set_country_flag = IND_OCCUPIED
+						set_country_flag = BHU_OCCUPIED
+						set_country_flag = NEP_OCCUPIED
+						set_country_flag = SRL_OCCUPIED
+						set_country_flag = PAK_OCCUPIED
+						set_country_flag = RHD_decided
+						country_event = rkoccupation.13
+					}
+				}
+
+				# Asia - Ostasien
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = ROA_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_ROA_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = MON_OCCUPIED
+						set_country_flag = MAN_OCCUPIED
+						set_country_flag = KOR_OCCUPIED
+						set_country_flag = VIN_OCCUPIED
+						set_country_flag = JAP_OCCUPIED
+						set_country_flag = SHX_OCCUPIED
+						set_country_flag = XSM_OCCUPIED
+						set_country_flag = GXC_OCCUPIED
+						set_country_flag = YUN_OCCUPIED
+						set_country_flag = CHI_OCCUPIED
+						set_country_flag = PHI_OCCUPIED
+						set_country_flag = SIA_OCCUPIED
+						set_country_flag = CAM_OCCUPIED
+						set_country_flag = LAO_OCCUPIED
+						set_country_flag = ROA_decided
+						country_event = rkoccupation.14
+					}
+				}
+
+				# Oceania - Australasien
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RAA_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RAA_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = INS_OCCUPIED
+						set_country_flag = MAL_OCCUPIED
+						set_country_flag = AST_OCCUPIED
+						set_country_flag = PNG_OCCUPIED
+						set_country_flag = NZL_OCCUPIED
+						set_country_flag = RAA_decided
+						country_event = rkoccupation.15
+					}
+				}
+
+				# Africa - Nordafrika
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RNA_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RNA_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = CHA_OCCUPIED
+						set_country_flag = SUD_OCCUPIED
+						set_country_flag = NGR_OCCUPIED
+						set_country_flag = MRT_OCCUPIED
+						set_country_flag = SEN_OCCUPIED
+						set_country_flag = GAM_OCCUPIED
+						set_country_flag = ALG_OCCUPIED
+						set_country_flag = MOR_OCCUPIED
+						set_country_flag = TUN_OCCUPIED
+						set_country_flag = LBA_OCCUPIED
+						set_country_flag = RNA_decided
+						country_event = rkoccupation.16
+					}
+				}
+
+				# Africa - Mittelafrika
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKA_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKA_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = ETH_OCCUPIED
+						set_country_flag = ANG_OCCUPIED
+						set_country_flag = BOT_OCCUPIED
+						set_country_flag = RHO_OCCUPIED
+						set_country_flag = MZB_OCCUPIED
+						set_country_flag = ZAM_OCCUPIED
+						set_country_flag = TZN_OCCUPIED
+						set_country_flag = KEN_OCCUPIED
+						set_country_flag = SOM_OCCUPIED
+						set_country_flag = COG_OCCUPIED
+						set_country_flag = GAM_OCCUPIED
+						set_country_flag = EQG_OCCUPIED
+						set_country_flag = BRD_OCCUPIED
+						set_country_flag = RWA_OCCUPIED
+						set_country_flag = UGA_OCCUPIED
+						set_country_flag = DJI_OCCUPIED
+						set_country_flag = ERI_OCCUPIED
+						set_country_flag = CAR_OCCUPIED
+						set_country_flag = MLI_OCCUPIED
+						set_country_flag = DAH_OCCUPIED
+						set_country_flag = VOL_OCCUPIED
+						set_country_flag = IVO_OCCUPIED
+						set_country_flag = GNA_OCCUPIED
+						set_country_flag = SIE_OCCUPIED
+						set_country_flag = LIB_OCCUPIED
+						set_country_flag = TOG_OCCUPIED
+						set_country_flag = NGA_OCCUPIED
+						set_country_flag = GHA_OCCUPIED
+						set_country_flag = GNB_OCCUPIED
+						set_country_flag = CMR_OCCUPIED
+						set_country_flag = RCG_OCCUPIED
+						set_country_flag = MLW_OCCUPIED
+						set_country_flag = RKA_decided
+						country_event = rkoccupation.17
+					}
+				}
+
+				# Norwegen
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKG_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKG_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = NOR_OCCUPIED
+						set_country_flag = RKG_decided
+						country_event = rkoccupation.18
+					}
+				}
+
+				# Niederlande 
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKN_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKN_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = HOL_OCCUPIED
+						set_country_flag = RKN_decided
+						country_event = rkoccupation.19
+					}
+				}
+
+				# Ukraine
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKU_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKU_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = UKR_OCCUPIED
+						set_country_flag = RKU_decided
+						country_event = rkoccupation.20
+					}
+				}
+
+				# Poland / Generalgouvernement
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = GEN_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_GEN_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = POL_OCCUPIED
+						set_country_flag = GEN_decided
+						country_event = rkoccupation.21
+					}
+				}
+
+				# Soviet (Moskowien)
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RKM_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RKM_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = SOV_OCCUPIED
+						set_country_flag = RKM_decided
+						country_event = rkoccupation.22
+					}
+				}
+
+				# United Kingdom (Grossbritannien)
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+							is_subject = no
+							NOT = { has_country_flag = RGB_decided }
+						}
+						NOT = {
+							any_state = {
+								GER_is_RGB_state = yes
+								NOT = { is_controlled_by_GER_or_subject = yes }
+							}
+						}
+					}
+					GER = {
+						set_country_flag = decided_UK
+						set_country_flag = RGB_decided
+						country_event = rkoccupation.23
+					}
+				}
+			}
+	}
+}
+

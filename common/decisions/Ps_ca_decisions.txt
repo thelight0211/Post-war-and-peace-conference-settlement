@@ -1,0 +1,914 @@
+ca_decision_category = {
+
+	ca_decision_transfer_to_puppet_Maghreb = {
+		icon = generic_colony
+
+		visible = {	
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = ALG
+					is_core_of = MOR
+					is_core_of = WES
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = Maghreb_decided
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			hidden_effect = {
+
+			create_dynamic_country = {
+				original_tag = CA4
+				reserve_dynamic_country = yes
+
+				ROOT = {
+					set_variable = {
+						ca_var_maghreb_tag = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_on_continent = africa
+					OR = {
+						is_owned_by = ROOT
+						owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+					}
+					NOT = { is_core_of = ROOT }
+					NOT = { is_claimed_by = ROOT }
+					OR = {
+						is_core_of = ALG
+						is_core_of = MOR
+						is_core_of = WES
+					}
+				}
+				var:ROOT.ca_var_maghreb_tag = { transfer_state = PREV }
+			}
+
+			var:ROOT.ca_var_maghreb_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = MGHREB
+					set_country_flag = autonomy_colonial_admin
+			}
+
+			set_autonomy = {
+				target = var:ROOT.ca_var_maghreb_tag
+				freedom_level = 0.2
+				autonomy_state = ca_autonomy_colonial_admin
+			}
+		}
+		}
+	}
+
+	ca_decision_transfer_to_puppet_Sahel = {
+		icon = generic_colony
+
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = NGR	
+					is_core_of = MLI	
+					is_core_of = MRT	
+					is_core_of = VOL	
+					is_core_of = SEN	
+					is_core_of = GAM
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = Sahel_decided
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4	
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_Sahel_tag = PREV	
+						}
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						NOT = { state = 774 }
+						OR = {
+							is_core_of = CHA
+							is_core_of = NGR
+							is_core_of = MLI
+							is_core_of = MRT
+							is_core_of = VOL
+							is_core_of = SEN
+							is_core_of = GAM
+						}
+					}
+					var:ROOT.ca_var_Sahel_tag = { transfer_state = PREV }
+				}
+
+				var:ROOT.ca_var_Sahel_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+
+					set_cosmetic_tag = SAHEL	
+					set_country_flag = autonomy_colonial_admin
+				}
+
+				set_autonomy = {
+					target = var:ROOT.ca_var_Sahel_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_WesternAfrica = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = DAH
+					is_core_of = IVO
+					is_core_of = GNA
+					is_core_of = SIE
+					is_core_of = LIB
+					is_core_of = GHA
+					is_core_of = TOG
+					is_core_of = GNB
+					is_core_of = NGA
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = WesternAfrica_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_western_africa_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = DAH
+							is_core_of = IVO
+							is_core_of = GNA
+							is_core_of = SIE
+							is_core_of = LIB
+							is_core_of = GHA
+							is_core_of = TOG
+							is_core_of = GNB
+							is_core_of = NGA
+						}
+					}
+					var:ROOT.ca_var_western_africa_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_western_africa_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = WAFRI
+					set_country_flag = autonomy_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_western_africa_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_EquatorialAfrica = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = GAB
+					is_core_of = EQG
+					is_core_of = CAR
+					is_core_of = CMR
+					is_core_of = RCG
+					state = 774
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = EquatorialAfrica_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_equatorial_africa_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = GAB
+							is_core_of = EQG
+							is_core_of = CAR
+							is_core_of = CMR
+							is_core_of = RCG
+						}
+
+					}
+					var:ROOT.ca_var_equatorial_africa_tag = { transfer_state = PREV }
+				}
+				if = {
+					limit = {
+						774 = { owner = { OR = { tag = ROOT is_subject_of = ROOT }}}
+					}
+					var:ROOT.ca_var_equatorial_africa_tag = { transfer_state = 774 }
+				}
+				var:ROOT.ca_var_equatorial_africa_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = EQAFRI
+					set_country_flag = autonomy_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_equatorial_africa_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_CentralAfrica = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = ANG
+					is_core_of = COG
+					is_core_of = BRD
+					is_core_of = RWA
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = CentralAfrica_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_central_africa_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = ANG
+							is_core_of = COG
+							is_core_of = BRD
+							is_core_of = RWA
+						}
+					}
+					var:ROOT.ca_var_central_africa_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_central_africa_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = CENTAF
+					set_country_flag = autonomy_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_central_africa_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+
+	ca_decision_transfer_to_puppet_Rhodesia = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = MLW
+					is_core_of = ZAM
+					is_core_of = MZB
+					is_core_of = ZIM
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = Rhodesia_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_rhodesia_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = MLW
+							is_core_of = ZAM
+							is_core_of = MZB
+							is_core_of = ZIM
+						}
+					}
+					var:ROOT.ca_var_rhodesia_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_rhodesia_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = RHODES
+					set_country_flag = is_custom_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_rhodesia_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_LakeVictoria = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = TZN
+					is_core_of = KEN
+					is_core_of = UGA
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = LakeVictoria_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_lake_victoria_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = TZN
+							is_core_of = KEN
+							is_core_of = UGA
+						}
+					}
+					var:ROOT.ca_var_lake_victoria_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_lake_victoria_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = LAKEVI
+					set_country_flag = is_custom_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_lake_victoria_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_Sirte = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = LBA
+					is_core_of = TUN
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = Sirte_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_sirte_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = LBA
+							is_core_of = TUN
+						}
+					}
+					var:ROOT.ca_var_sirte_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_sirte_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = SIRTE
+					set_country_flag = is_custom_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_sirte_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+	ca_decision_transfer_to_puppet_HornOfAfrica = {
+		icon = generic_colony
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT 
+					}
+				}
+				OR = {
+					is_core_of = SOM
+					is_core_of = ETH
+					is_core_of = DJI
+					is_core_of = ERI
+				}
+			}
+			is_major = yes
+			has_war = no
+			NOT = { capital_scope = { is_on_continent = africa } }
+			has_country_flag = HornOfAfrica_decided
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = CA4
+					reserve_dynamic_country = yes
+					ROOT = {
+						set_variable = {
+							ca_var_horn_of_africa_tag = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+						OR = {
+							is_owned_by = ROOT
+													owner = { 
+							is_subject_of = ROOT 
+							capital_scope = { is_on_continent = africa }
+						}
+						}
+						NOT = { is_core_of = ROOT }
+						NOT = { is_claimed_by = ROOT }
+						OR = {
+							is_core_of = SOM
+							is_core_of = ETH
+							is_core_of = DJI
+							is_core_of = ERI
+						}
+					}
+					var:ROOT.ca_var_horn_of_africa_tag = { transfer_state = PREV }
+				}
+				var:ROOT.ca_var_horn_of_africa_tag = {
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = nazism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = despotism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = liberalism
+						expire = "1965.1.1"
+					}
+					create_country_leader = {
+						name = "Military Government"
+						desc = "POLITICS_COLONIAL_GOVERNMENT_DESC"
+						picture = "gfx/leaders/CEA/portrait_CEA_colonial_government.dds"
+						ideology = stalinism
+						expire = "1965.1.1"
+					}
+					set_cosmetic_tag = HORNAF
+					set_country_flag = is_custom_colonial_admin
+				}
+				set_autonomy = {
+					target = var:ROOT.ca_var_horn_of_africa_tag
+					freedom_level = 0.2
+					autonomy_state = ca_autonomy_colonial_admin
+				}
+			}
+		}
+	}
+}
+

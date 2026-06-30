@@ -1,0 +1,12 @@
+﻿l_english:
+RULE_LOAD_GENERIC_FOCUS_PUPPET_T:0 "PS Focus trees for released puppets"
+DISABLE_GENERIC_FOCUS_PUPPET:0 "Load generic focus trees on puppets"
+DISABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, generic focus tree will be loaded"
+ENABLE_GENERIC_FOCUS_PUPPET:0 "Maintein original focus for puppets"
+ENABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, the original focus for its tag will be loaded"
+
+RULE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_T:0 "PS Enable automatic annexation of claims and cores"
+ENABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES:0 "Enable"
+ENABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_DESC:0 "When you occupy a state that is your claim or core, when the enemy capitulates, it automatically become yours"
+DISABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES:0 "Disable"
+DISABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_DESC:0 ""

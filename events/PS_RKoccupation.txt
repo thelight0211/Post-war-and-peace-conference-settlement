@@ -1,0 +1,1086 @@
+add_namespace = rkoccupation
+
+# 1 - Belgien-Nordfrankreich
+country_event = {
+	id = rkoccupation.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.1" }
+	title = "Fate of Belgium"
+	desc = rkoccupation.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Belgien-Nordfrankreich"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { BEL = { is_subject_of = GER } } GER = { annex_country = { target = BEL transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_belgien_nordfrankreich
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_belgien_nordfrankreich
+			annex_country = { target = RKB transfer_troops = yes }
+			clr_country_flag = BEL_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = BEL_OCCUPIED
+		}
+	}
+}
+
+# 2 - Ostland
+country_event = {
+	id = rkoccupation.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.2" }
+	title = "Fate of the Baltic States"
+	desc = rkoccupation.2.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Ostland"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { EST = { is_subject_of = GER } } GER = { annex_country = { target = EST transfer_troops = yes } } }
+			if = { limit = { LAT = { is_subject_of = GER } } GER = { annex_country = { target = LAT transfer_troops = yes } } }
+			if = { limit = { LIT = { is_subject_of = GER } } GER = { annex_country = { target = LIT transfer_troops = yes } } }
+			if = { limit = { BLR = { is_subject_of = GER } } GER = { annex_country = { target = BLR transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_ostland
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_ostland
+			annex_country = { target = RKO transfer_troops = yes }
+			clr_country_flag = EST_OCCUPIED
+			clr_country_flag = LAT_OCCUPIED
+			clr_country_flag = LIT_OCCUPIED
+			clr_country_flag = BLR_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = EST_OCCUPIED
+			clr_country_flag = LAT_OCCUPIED
+			clr_country_flag = LIT_OCCUPIED
+			clr_country_flag = BLR_OCCUPIED
+		}
+	}
+}
+
+# 3 - Kaukasien
+country_event = {
+	id = rkoccupation.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.3" }
+	title = "Fate of Kaukasien"
+	desc = rkoccupation.3.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Kaukasien"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { GEO = { is_subject_of = GER } } GER = { annex_country = { target = GEO transfer_troops = yes } } }
+			if = { limit = { AZR = { is_subject_of = GER } } GER = { annex_country = { target = AZR transfer_troops = yes } } }
+			if = { limit = { ARM = { is_subject_of = GER } } GER = { annex_country = { target = ARM transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_kaukasien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_kaukasien
+			annex_country = { target = RKK transfer_troops = yes }
+			clr_country_flag = GEO_OCCUPIED
+			clr_country_flag = AZR_OCCUPIED
+			clr_country_flag = ARM_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = GEO_OCCUPIED
+			clr_country_flag = AZR_OCCUPIED
+			clr_country_flag = ARM_OCCUPIED
+		}
+	}
+}
+
+# 4 - Turkestan
+country_event = {
+	id = rkoccupation.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.4" }
+	title = "Fate of Turkestan"
+	desc = rkoccupation.4.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Turkestan"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { TAJ = { is_subject_of = GER } } GER = { annex_country = { target = TAJ transfer_troops = yes } } }
+			if = { limit = { KYR = { is_subject_of = GER } } GER = { annex_country = { target = KYR transfer_troops = yes } } }
+			if = { limit = { KAZ = { is_subject_of = GER } } GER = { annex_country = { target = KAZ transfer_troops = yes } } }
+			if = { limit = { UZB = { is_subject_of = GER } } GER = { annex_country = { target = UZB transfer_troops = yes } } }
+			if = { limit = { TMS = { is_subject_of = GER } } GER = { annex_country = { target = TMS transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_turkestan
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_turkestan
+			annex_country = { target = RKT transfer_troops = yes }
+			clr_country_flag = TAJ_OCCUPIED
+			clr_country_flag = KYR_OCCUPIED
+			clr_country_flag = KAZ_OCCUPIED
+			clr_country_flag = UZB_OCCUPIED
+			clr_country_flag = TRK_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = TAJ_OCCUPIED
+			clr_country_flag = KYR_OCCUPIED
+			clr_country_flag = KAZ_OCCUPIED
+			clr_country_flag = UZB_OCCUPIED
+			clr_country_flag = TRK_OCCUPIED
+		}
+	}
+}
+
+# 5 - Iberien
+country_event = {
+	id = rkoccupation.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.5" }
+	title = "Fate of Iberia"
+	desc = rkoccupation.5.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Iberien"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { SPR = { is_subject_of = GER } } GER = { annex_country = { target = SPR transfer_troops = yes } } }
+			if = { limit = { POR = { is_subject_of = GER } } GER = { annex_country = { target = POR transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_iberien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_iberien
+			annex_country = { target = RKI transfer_troops = yes }
+			clr_country_flag = SPM_OCCUPIED
+			clr_country_flag = POR_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = SPM_OCCUPIED
+			clr_country_flag = POR_OCCUPIED
+		}
+	}
+}
+
+# 6 - Balkan
+country_event = {
+	id = rkoccupation.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.6" }
+	title = "Fate of the Balkans"
+	desc = rkoccupation.6.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Balkan"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { BUL = { is_subject_of = GER } } GER = { annex_country = { target = BUL transfer_troops = yes } } }
+			if = { limit = { SER = { is_subject_of = GER } } GER = { annex_country = { target = SER transfer_troops = yes } } }
+			if = { limit = { MAC = { is_subject_of = GER } } GER = { annex_country = { target = MAC transfer_troops = yes } } }
+			if = { limit = { MNT = { is_subject_of = GER } } GER = { annex_country = { target = MNT transfer_troops = yes } } }
+			if = { limit = { BOS = { is_subject_of = GER } } GER = { annex_country = { target = BOS transfer_troops = yes } } }
+			if = { limit = { CRO = { is_subject_of = GER } } GER = { annex_country = { target = CRO transfer_troops = yes } } }
+			if = { limit = { ROM = { is_subject_of = GER } } GER = { annex_country = { target = ROM transfer_troops = yes } } }
+			if = { limit = { ALB = { is_subject_of = GER } } GER = { annex_country = { target = ALB transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_balkan
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_balkan
+			annex_country = { target = RKC transfer_troops = yes }
+			clr_country_flag = BUL_OCCUPIED
+			clr_country_flag = SER_OCCUPIED
+			clr_country_flag = MAC_OCCUPIED
+			clr_country_flag = MNT_OCCUPIED
+			clr_country_flag = BOS_OCCUPIED
+			clr_country_flag = CRO_OCCUPIED
+			clr_country_flag = ROM_OCCUPIED
+			clr_country_flag = ALB_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = BUL_OCCUPIED
+			clr_country_flag = SER_OCCUPIED
+			clr_country_flag = MAC_OCCUPIED
+			clr_country_flag = MNT_OCCUPIED
+			clr_country_flag = BOS_OCCUPIED
+			clr_country_flag = CRO_OCCUPIED
+			clr_country_flag = ROM_OCCUPIED
+			clr_country_flag = ALB_OCCUPIED
+		}
+	}
+}
+
+# 7 - Bohemia-Moravia
+country_event = {
+	id = rkoccupation.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.7" }
+	title = "Fate of Bohemia"
+	desc = rkoccupation.7.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichsprotektorat Bohemia-Moravia"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { CZE = { is_subject_of = GER } } GER = { annex_country = { target = CZE transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichsprotektorat_bohemia_moravia
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichsprotektorat_bohemia_moravia
+			annex_country = { target = RKH transfer_troops = yes }
+			clr_country_flag = CZE_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = CZE_OCCUPIED
+		}
+	}
+}
+
+# 8 - Klein-Venedig
+country_event = {
+	id = rkoccupation.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.8" }
+	title = "Fate of Klein-Venedig"
+	desc = rkoccupation.8.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Klein-Venedig"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { BRA = { is_subject_of = GER } } GER = { annex_country = { target = BRA transfer_troops = yes } } }
+			if = { limit = { PAR = { is_subject_of = GER } } GER = { annex_country = { target = PAR transfer_troops = yes } } }
+			if = { limit = { VEN = { is_subject_of = GER } } GER = { annex_country = { target = VEN transfer_troops = yes } } }
+			if = { limit = { URG = { is_subject_of = GER } } GER = { annex_country = { target = URG transfer_troops = yes } } }
+			if = { limit = { GYA = { is_subject_of = GER } } GER = { annex_country = { target = GYA transfer_troops = yes } } }
+			if = { limit = { SUR = { is_subject_of = GER } } GER = { annex_country = { target = SUR transfer_troops = yes } } }
+			if = { limit = { CAY = { is_subject_of = GER } } GER = { annex_country = { target = CAY transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_klein_venedig
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_klein_venedig
+			annex_country = { target = RKV transfer_troops = yes }
+			clr_country_flag = BRA_OCCUPIED
+			clr_country_flag = PAR_OCCUPIED
+			clr_country_flag = VEN_OCCUPIED
+			clr_country_flag = URG_OCCUPIED
+			clr_country_flag = GYA_OCCUPIED
+			clr_country_flag = SUR_OCCUPIED
+			clr_country_flag = CAY_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = BRA_OCCUPIED
+			clr_country_flag = PAR_OCCUPIED
+			clr_country_flag = VEN_OCCUPIED
+			clr_country_flag = URG_OCCUPIED
+			clr_country_flag = GYA_OCCUPIED
+			clr_country_flag = SUR_OCCUPIED
+			clr_country_flag = CAY_OCCUPIED
+		}
+	}
+}
+
+# 9 - Anden
+country_event = {
+	id = rkoccupation.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.9" }
+	title = "Fate of the Andes"
+	desc = rkoccupation.9.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Anden"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { CHL = { is_subject_of = GER } } GER = { annex_country = { target = CHL transfer_troops = yes } } }
+			if = { limit = { ARG = { is_subject_of = GER } } GER = { annex_country = { target = ARG transfer_troops = yes } } }
+			if = { limit = { BOL = { is_subject_of = GER } } GER = { annex_country = { target = BOL transfer_troops = yes } } }
+			if = { limit = { PRU = { is_subject_of = GER } } GER = { annex_country = { target = PRU transfer_troops = yes } } }
+			if = { limit = { ECU = { is_subject_of = GER } } GER = { annex_country = { target = ECU transfer_troops = yes } } }
+			if = { limit = { COL = { is_subject_of = GER } } GER = { annex_country = { target = COL transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_anden
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_anden
+			annex_country = { target = RAN transfer_troops = yes }
+			clr_country_flag = CHL_OCCUPIED
+			clr_country_flag = ARG_OCCUPIED
+			clr_country_flag = BOL_OCCUPIED
+			clr_country_flag = PRU_OCCUPIED
+			clr_country_flag = ECU_OCCUPIED
+			clr_country_flag = COL_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = CHL_OCCUPIED
+			clr_country_flag = ARG_OCCUPIED
+			clr_country_flag = BOL_OCCUPIED
+			clr_country_flag = PRU_OCCUPIED
+			clr_country_flag = ECU_OCCUPIED
+			clr_country_flag = COL_OCCUPIED
+		}
+	}
+}
+
+# 10 - Kolumbus
+country_event = {
+	id = rkoccupation.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.10" }
+	title = "Fate of Kolumbus"
+	desc = rkoccupation.10.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Kolumbus"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { MEX = { is_subject_of = GER } } GER = { annex_country = { target = MEX transfer_troops = yes } } }
+			if = { limit = { GUA = { is_subject_of = GER } } GER = { annex_country = { target = GUA transfer_troops = yes } } }
+			if = { limit = { ELS = { is_subject_of = GER } } GER = { annex_country = { target = ELS transfer_troops = yes } } }
+			if = { limit = { HON = { is_subject_of = GER } } GER = { annex_country = { target = HON transfer_troops = yes } } }
+			if = { limit = { NIC = { is_subject_of = GER } } GER = { annex_country = { target = NIC transfer_troops = yes } } }
+			if = { limit = { COS = { is_subject_of = GER } } GER = { annex_country = { target = COS transfer_troops = yes } } }
+			if = { limit = { PAN = { is_subject_of = GER } } GER = { annex_country = { target = PAN transfer_troops = yes } } }
+			if = { limit = { CUB = { is_subject_of = GER } } GER = { annex_country = { target = CUB transfer_troops = yes } } }
+			if = { limit = { HAI = { is_subject_of = GER } } GER = { annex_country = { target = HAI transfer_troops = yes } } }
+			if = { limit = { DOM = { is_subject_of = GER } } GER = { annex_country = { target = DOM transfer_troops = yes } } }
+			if = { limit = { BLZ = { is_subject_of = GER } } GER = { annex_country = { target = BLZ transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_kolumbus
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_kolumbus
+			annex_country = { target = RCO transfer_troops = yes }
+			clr_country_flag = MEX_OCCUPIED
+			clr_country_flag = GUA_OCCUPIED
+			clr_country_flag = ELS_OCCUPIED
+			clr_country_flag = HON_OCCUPIED
+			clr_country_flag = NIC_OCCUPIED
+			clr_country_flag = COS_OCCUPIED
+			clr_country_flag = PAN_OCCUPIED
+			clr_country_flag = CUB_OCCUPIED
+			clr_country_flag = HAI_OCCUPIED
+			clr_country_flag = DOM_OCCUPIED
+			clr_country_flag = BLZ_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = MEX_OCCUPIED
+			clr_country_flag = GUA_OCCUPIED
+			clr_country_flag = ELS_OCCUPIED
+			clr_country_flag = HON_OCCUPIED
+			clr_country_flag = NIC_OCCUPIED
+			clr_country_flag = COS_OCCUPIED
+			clr_country_flag = PAN_OCCUPIED
+			clr_country_flag = CUB_OCCUPIED
+			clr_country_flag = HAI_OCCUPIED
+			clr_country_flag = DOM_OCCUPIED
+			clr_country_flag = BLZ_OCCUPIED
+		}
+	}
+}
+
+# 11 - Nordamerika
+country_event = {
+	id = rkoccupation.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.11" }
+	title = "Fate of North America"
+	desc = rkoccupation.11.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Nordamerika"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { USA = { is_subject_of = GER } } GER = { annex_country = { target = USA transfer_troops = yes } } }
+			if = { limit = { CAN = { is_subject_of = GER } } GER = { annex_country = { target = CAN transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_nordamerika
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_nordamerika
+			annex_country = { target = RUS transfer_troops = yes }
+			clr_country_flag = USA_OCCUPIED
+			clr_country_flag = CAN_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = USA_OCCUPIED
+			clr_country_flag = CAN_OCCUPIED
+		}
+	}
+}
+
+# 12 - Arabien
+country_event = {
+	id = rkoccupation.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.12" }
+	title = "Fate of Arabien"
+	desc = rkoccupation.12.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Arabien"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { IRQ = { is_subject_of = GER } } GER = { annex_country = { target = IRQ transfer_troops = yes } } }
+			if = { limit = { SAU = { is_subject_of = GER } } GER = { annex_country = { target = SAU transfer_troops = yes } } }
+			if = { limit = { LEB = { is_subject_of = GER } } GER = { annex_country = { target = LEB transfer_troops = yes } } }
+			if = { limit = { OMA = { is_subject_of = GER } } GER = { annex_country = { target = OMA transfer_troops = yes } } }
+			if = { limit = { YEM = { is_subject_of = GER } } GER = { annex_country = { target = YEM transfer_troops = yes } } }
+			if = { limit = { JOR = { is_subject_of = GER } } GER = { annex_country = { target = JOR transfer_troops = yes } } }
+			if = { limit = { PAL = { is_subject_of = GER } } GER = { annex_country = { target = PAL transfer_troops = yes } } }
+			if = { limit = { UAE = { is_subject_of = GER } } GER = { annex_country = { target = UAE transfer_troops = yes } } }
+			if = { limit = { QAT = { is_subject_of = GER } } GER = { annex_country = { target = QAT transfer_troops = yes } } }
+			if = { limit = { KUW = { is_subject_of = GER } } GER = { annex_country = { target = KUW transfer_troops = yes } } }
+			if = { limit = { SYR = { is_subject_of = GER } } GER = { annex_country = { target = SYR transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_arabien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_arabien
+			annex_country = { target = RAR transfer_troops = yes }
+			clr_country_flag = IRQ_OCCUPIED
+			clr_country_flag = ARB_OCCUPIED
+			clr_country_flag = PHN_OCCUPIED
+			clr_country_flag = OMA_OCCUPIED
+			clr_country_flag = YEM_OCCUPIED
+			clr_country_flag = JOR_OCCUPIED
+			clr_country_flag = PAL_OCCUPIED
+			clr_country_flag = UAE_OCCUPIED
+			clr_country_flag = QAT_OCCUPIED
+			clr_country_flag = KUW_OCCUPIED
+			clr_country_flag = SYR_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = IRQ_OCCUPIED
+			clr_country_flag = ARB_OCCUPIED
+			clr_country_flag = PHN_OCCUPIED
+			clr_country_flag = OMA_OCCUPIED
+			clr_country_flag = YEM_OCCUPIED
+			clr_country_flag = JOR_OCCUPIED
+			clr_country_flag = PAL_OCCUPIED
+			clr_country_flag = UAE_OCCUPIED
+			clr_country_flag = QAT_OCCUPIED
+			clr_country_flag = KUW_OCCUPIED
+			clr_country_flag = SYR_OCCUPIED
+		}
+	}
+}
+
+# 13 - Hindustan
+country_event = {
+	id = rkoccupation.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.13" }
+	title = "Fate of Hindustan"
+	desc = rkoccupation.13.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Hindustan"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { AFG = { is_subject_of = GER } } GER = { annex_country = { target = AFG transfer_troops = yes } } }
+			if = { limit = { TIB = { is_subject_of = GER } } GER = { annex_country = { target = TIB transfer_troops = yes } } }
+			if = { limit = { BRM = { is_subject_of = GER } } GER = { annex_country = { target = BRM transfer_troops = yes } } }
+			if = { limit = { RAJ = { is_subject_of = GER } } GER = { annex_country = { target = RAJ transfer_troops = yes } } }
+			if = { limit = { BHU = { is_subject_of = GER } } GER = { annex_country = { target = BHU transfer_troops = yes } } }
+			if = { limit = { NEP = { is_subject_of = GER } } GER = { annex_country = { target = NEP transfer_troops = yes } } }
+			if = { limit = { SRL = { is_subject_of = GER } } GER = { annex_country = { target = SRL transfer_troops = yes } } }
+			if = { limit = { PAK = { is_subject_of = GER } } GER = { annex_country = { target = PAK transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_hindustan
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_hindustan
+			annex_country = { target = RHD transfer_troops = yes }
+			clr_country_flag = AFG_OCCUPIED
+			clr_country_flag = TIB_OCCUPIED
+			clr_country_flag = BRM_OCCUPIED
+			clr_country_flag = IND_OCCUPIED
+			clr_country_flag = BHU_OCCUPIED
+			clr_country_flag = NEP_OCCUPIED
+			clr_country_flag = SRL_OCCUPIED
+			clr_country_flag = PAK_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = AFG_OCCUPIED
+			clr_country_flag = TIB_OCCUPIED
+			clr_country_flag = BRM_OCCUPIED
+			clr_country_flag = IND_OCCUPIED
+			clr_country_flag = BHU_OCCUPIED
+			clr_country_flag = NEP_OCCUPIED
+			clr_country_flag = SRL_OCCUPIED
+			clr_country_flag = PAK_OCCUPIED
+		}
+	}
+}
+
+# 14 - Ostasien
+country_event = {
+	id = rkoccupation.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.14" }
+	title = "Fate of Ostasien"
+	desc = rkoccupation.14.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Ostasien"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { MON = { is_subject_of = GER } } GER = { annex_country = { target = MON transfer_troops = yes } } }
+			if = { limit = { MAN = { is_subject_of = GER } } GER = { annex_country = { target = MAN transfer_troops = yes } } }
+			if = { limit = { KOR = { is_subject_of = GER } } GER = { annex_country = { target = KOR transfer_troops = yes } } }
+			if = { limit = { VIN = { is_subject_of = GER } } GER = { annex_country = { target = VIN transfer_troops = yes } } }
+			if = { limit = { JAP = { is_subject_of = GER } } GER = { annex_country = { target = JAP transfer_troops = yes } } }
+			if = { limit = { SHX = { is_subject_of = GER } } GER = { annex_country = { target = SHX transfer_troops = yes } } }
+			if = { limit = { XSM = { is_subject_of = GER } } GER = { annex_country = { target = XSM transfer_troops = yes } } }
+			if = { limit = { GXC = { is_subject_of = GER } } GER = { annex_country = { target = GXC transfer_troops = yes } } }
+			if = { limit = { YUN = { is_subject_of = GER } } GER = { annex_country = { target = YUN transfer_troops = yes } } }
+			if = { limit = { CHI = { is_subject_of = GER } } GER = { annex_country = { target = CHI transfer_troops = yes } } }
+			if = { limit = { PHI = { is_subject_of = GER } } GER = { annex_country = { target = PHI transfer_troops = yes } } }
+			if = { limit = { SIA = { is_subject_of = GER } } GER = { annex_country = { target = SIA transfer_troops = yes } } }
+			if = { limit = { CAM = { is_subject_of = GER } } GER = { annex_country = { target = CAM transfer_troops = yes } } }
+			if = { limit = { LAO = { is_subject_of = GER } } GER = { annex_country = { target = LAO transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_ostasien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_ostasien
+			annex_country = { target = ROA transfer_troops = yes }
+			clr_country_flag = MON_OCCUPIED
+			clr_country_flag = MAN_OCCUPIED
+			clr_country_flag = KOR_OCCUPIED
+			clr_country_flag = VIN_OCCUPIED
+			clr_country_flag = JAP_OCCUPIED
+			clr_country_flag = SHX_OCCUPIED
+			clr_country_flag = XSM_OCCUPIED
+			clr_country_flag = GXC_OCCUPIED
+			clr_country_flag = YUN_OCCUPIED
+			clr_country_flag = CHI_OCCUPIED
+			clr_country_flag = PHI_OCCUPIED
+			clr_country_flag = SIA_OCCUPIED
+			clr_country_flag = CAM_OCCUPIED
+			clr_country_flag = LAO_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = MON_OCCUPIED
+			clr_country_flag = MAN_OCCUPIED
+			clr_country_flag = KOR_OCCUPIED
+			clr_country_flag = VIN_OCCUPIED
+			clr_country_flag = JAP_OCCUPIED
+			clr_country_flag = SHX_OCCUPIED
+			clr_country_flag = XSM_OCCUPIED
+			clr_country_flag = GXC_OCCUPIED
+			clr_country_flag = YUN_OCCUPIED
+			clr_country_flag = CHI_OCCUPIED
+			clr_country_flag = PHI_OCCUPIED
+			clr_country_flag = SIA_OCCUPIED
+			clr_country_flag = CAM_OCCUPIED
+			clr_country_flag = LAO_OCCUPIED
+		}
+	}
+}
+
+# 15 - Australasien
+country_event = {
+	id = rkoccupation.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.15" }
+	title = "Fate of Australasien"
+	desc = rkoccupation.15.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Australasien"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { INS = { is_subject_of = GER } } GER = { annex_country = { target = INS transfer_troops = yes } } }
+			if = { limit = { MAL = { is_subject_of = GER } } GER = { annex_country = { target = MAL transfer_troops = yes } } }
+			if = { limit = { AST = { is_subject_of = GER } } GER = { annex_country = { target = AST transfer_troops = yes } } }
+			if = { limit = { PNG = { is_subject_of = GER } } GER = { annex_country = { target = PNG transfer_troops = yes } } }
+			if = { limit = { NZL = { is_subject_of = GER } } GER = { annex_country = { target = NZL transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_australasien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_australasien
+			annex_country = { target = RAA transfer_troops = yes }
+			clr_country_flag = INS_OCCUPIED
+			clr_country_flag = MAL_OCCUPIED
+			clr_country_flag = AST_OCCUPIED
+			clr_country_flag = PNG_OCCUPIED
+			clr_country_flag = NZL_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = INS_OCCUPIED
+			clr_country_flag = MAL_OCCUPIED
+			clr_country_flag = AST_OCCUPIED
+			clr_country_flag = PNG_OCCUPIED
+			clr_country_flag = NZL_OCCUPIED
+		}
+	}
+}
+
+# 16 - Nordafrika (NO clear flag)
+country_event = {
+	id = rkoccupation.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.16" }
+	title = "Fate of North Africa"
+	desc = rkoccupation.16.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Nordafrika"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { CHA = { is_subject_of = GER } } GER = { annex_country = { target = CHA transfer_troops = yes } } }
+			if = { limit = { SUD = { is_subject_of = GER } } GER = { annex_country = { target = SUD transfer_troops = yes } } }
+			if = { limit = { NGR = { is_subject_of = GER } } GER = { annex_country = { target = NGR transfer_troops = yes } } }
+			if = { limit = { MRT = { is_subject_of = GER } } GER = { annex_country = { target = MRT transfer_troops = yes } } }
+			if = { limit = { SEN = { is_subject_of = GER } } GER = { annex_country = { target = SEN transfer_troops = yes } } }
+			if = { limit = { GAM = { is_subject_of = GER } } GER = { annex_country = { target = GAM transfer_troops = yes } } }
+			if = { limit = { ALG = { is_subject_of = GER } } GER = { annex_country = { target = ALG transfer_troops = yes } } }
+			if = { limit = { MOR = { is_subject_of = GER } } GER = { annex_country = { target = MOR transfer_troops = yes } } }
+			if = { limit = { TUN = { is_subject_of = GER } } GER = { annex_country = { target = TUN transfer_troops = yes } } }
+			if = { limit = { LBA = { is_subject_of = GER } } GER = { annex_country = { target = LBA transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_nordafrika
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_nordafrika
+			annex_country = { target = RNA transfer_troops = yes }
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			# Nessun clear flag come richiesto
+		}
+	}
+}
+
+# 17 - Mittelafrika (NO clear flag)
+country_event = {
+	id = rkoccupation.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.17" }
+	title = "Fate of Mittelafrika"
+	desc = rkoccupation.17.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Mittelafrika"
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { ETH = { is_subject_of = GER } } GER = { annex_country = { target = ETH transfer_troops = yes } } }
+			if = { limit = { ANG = { is_subject_of = GER } } GER = { annex_country = { target = ANG transfer_troops = yes } } }
+			if = { limit = { BOT = { is_subject_of = GER } } GER = { annex_country = { target = BOT transfer_troops = yes } } }
+			if = { limit = { ZIM = { is_subject_of = GER } } GER = { annex_country = { target = ZIM transfer_troops = yes } } }
+			if = { limit = { MZB = { is_subject_of = GER } } GER = { annex_country = { target = MZB transfer_troops = yes } } }
+			if = { limit = { ZAM = { is_subject_of = GER } } GER = { annex_country = { target = ZAM transfer_troops = yes } } }
+			if = { limit = { TZN = { is_subject_of = GER } } GER = { annex_country = { target = TZN transfer_troops = yes } } }
+			if = { limit = { KEN = { is_subject_of = GER } } GER = { annex_country = { target = KEN transfer_troops = yes } } }
+			if = { limit = { SOM = { is_subject_of = GER } } GER = { annex_country = { target = SOM transfer_troops = yes } } }
+			if = { limit = { COG = { is_subject_of = GER } } GER = { annex_country = { target = COG transfer_troops = yes } } }
+			if = { limit = { GAM = { is_subject_of = GER } } GER = { annex_country = { target = GAM transfer_troops = yes } } }
+			if = { limit = { EQG = { is_subject_of = GER } } GER = { annex_country = { target = EQG transfer_troops = yes } } }
+			if = { limit = { BRD = { is_subject_of = GER } } GER = { annex_country = { target = BRD transfer_troops = yes } } }
+			if = { limit = { RWA = { is_subject_of = GER } } GER = { annex_country = { target = RWA transfer_troops = yes } } }
+			if = { limit = { UGA = { is_subject_of = GER } } GER = { annex_country = { target = UGA transfer_troops = yes } } }
+			if = { limit = { DJI = { is_subject_of = GER } } GER = { annex_country = { target = DJI transfer_troops = yes } } }
+			if = { limit = { ERI = { is_subject_of = GER } } GER = { annex_country = { target = ERI transfer_troops = yes } } }
+			if = { limit = { CAR = { is_subject_of = GER } } GER = { annex_country = { target = CAR transfer_troops = yes } } }
+			if = { limit = { MLI = { is_subject_of = GER } } GER = { annex_country = { target = MLI transfer_troops = yes } } }
+			if = { limit = { DAH = { is_subject_of = GER } } GER = { annex_country = { target = DAH transfer_troops = yes } } }
+			if = { limit = { VOL = { is_subject_of = GER } } GER = { annex_country = { target = VOL transfer_troops = yes } } }
+			if = { limit = { IVO = { is_subject_of = GER } } GER = { annex_country = { target = IVO transfer_troops = yes } } }
+			if = { limit = { GNA = { is_subject_of = GER } } GER = { annex_country = { target = GNA transfer_troops = yes } } }
+			if = { limit = { SIE = { is_subject_of = GER } } GER = { annex_country = { target = SIE transfer_troops = yes } } }
+			if = { limit = { LIB = { is_subject_of = GER } } GER = { annex_country = { target = LIB transfer_troops = yes } } }
+			if = { limit = { TOG = { is_subject_of = GER } } GER = { annex_country = { target = TOG transfer_troops = yes } } }
+			if = { limit = { NGA = { is_subject_of = GER } } GER = { annex_country = { target = NGA transfer_troops = yes } } }
+			if = { limit = { GHA = { is_subject_of = GER } } GER = { annex_country = { target = GHA transfer_troops = yes } } }
+			if = { limit = { GNB = { is_subject_of = GER } } GER = { annex_country = { target = GNB transfer_troops = yes } } }
+			if = { limit = { CMR = { is_subject_of = GER } } GER = { annex_country = { target = CMR transfer_troops = yes } } }
+			if = { limit = { RCG = { is_subject_of = GER } } GER = { annex_country = { target = RCG transfer_troops = yes } } }
+			if = { limit = { MLW = { is_subject_of = GER } } GER = { annex_country = { target = MLW transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_mittelafrika
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_mittelafrika
+			annex_country = { target = RKA transfer_troops = yes }
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			# Nessun clear flag come richiesto
+		}
+	}
+}
+
+# 18 - Norwegen
+country_event = {
+	id = rkoccupation.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.18" }
+	title = "Fate of Norway"
+	desc = rkoccupation.18.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Norwegen"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { NOR = { is_subject_of = GER } } GER = { annex_country = { target = NOR transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_norwegen
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_norwegen
+			annex_country = { target = RKG transfer_troops = yes }
+			clr_country_flag = NOR_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = NOR_OCCUPIED
+		}
+	}
+}
+
+# 19 - Niederlande
+country_event = {
+	id = rkoccupation.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.19" }
+	title = "Fate of the Netherlands"
+	desc = rkoccupation.19.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Niederlande"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { HOL = { is_subject_of = GER } } GER = { annex_country = { target = HOL transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_niederlande
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_niederlande
+			annex_country = { target = RKN transfer_troops = yes }
+			clr_country_flag = HOL_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = HOL_OCCUPIED
+		}
+	}
+}
+
+# 20 - Ukraine
+country_event = {
+	id = rkoccupation.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.20" }
+	title = "Fate of Ukraine"
+	desc = rkoccupation.20.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Ukraine"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { UKR = { is_subject_of = GER } } GER = { annex_country = { target = UKR transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_ukraine
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_ukraine
+			annex_country = { target = RKU transfer_troops = yes }
+			clr_country_flag = UKR_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = UKR_OCCUPIED
+		}
+	}
+}
+
+# 21 - Generalgouvernement
+country_event = {
+	id = rkoccupation.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.21" }
+	title = "Fate of Poland"
+	desc = rkoccupation.21.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Generalgouvernement"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { POL = { is_subject_of = GER } } GER = { annex_country = { target = POL transfer_troops = yes } } }
+		}
+		activate_decision = GER_generalgouvernement
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_generalgouvernement
+			annex_country = { target = GEN transfer_troops = yes }
+			clr_country_flag = POL_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = POL_OCCUPIED
+		}
+	}
+}
+
+# 22 - Moskowien
+country_event = {
+	id = rkoccupation.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.22" }
+	title = "Fate of Moskowien"
+	desc = rkoccupation.22.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Moskowien"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { SOV = { is_subject_of = GER } } GER = { annex_country = { target = SOV transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_moskowien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_moskowien
+			annex_country = { target = RKM transfer_troops = yes }
+			clr_country_flag = SOV_OCCUPIED
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = SOV_OCCUPIED
+		}
+	}
+}
+
+# 23 - Grossbritannien
+country_event = {
+	id = rkoccupation.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rkoccupation.23" }
+	title = "Fate of Great Britain"
+	desc = rkoccupation.23.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Establish Reichskommissariat Grossbritannien"
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			if = { limit = { ENG = { is_subject_of = GER } } GER = { annex_country = { target = ENG transfer_troops = yes } } }
+		}
+		activate_decision = GER_reichskommissariat_grossbritannien
+	}
+	option = {
+		name = "Discard the idea"
+		trigger = { is_ai = yes }
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			activate_decision = GER_reichskommissariat_grossbritannien
+			annex_country = { target = RGB transfer_troops = yes }
+			clr_country_flag = decided_UK
+		}
+	}
+	option = {
+		name = "We should find another solution"
+		trigger = { is_ai = no }
+		hidden_effect = {
+			clr_country_flag = decided_UK
+		}
+	}
+}

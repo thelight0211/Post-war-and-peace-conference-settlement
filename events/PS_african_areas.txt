@@ -1,0 +1,527 @@
+add_namespace = ps_african_areas
+
+country_event = {
+    id = ps_african_areas.1
+
+    is_triggered_only = no
+    hidden = yes
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        NOT = { has_country_flag = nosmallprotectorates }
+    }
+    immediate = {
+        set_country_flag = NGR_OCCUPIED
+        set_country_flag = MLI_OCCUPIED
+        set_country_flag = MRT_OCCUPIED
+        set_country_flag = DAH_OCCUPIED
+        set_country_flag = VOL_OCCUPIED
+        set_country_flag = IVO_OCCUPIED
+        set_country_flag = GNA_OCCUPIED
+        set_country_flag = SEN_OCCUPIED
+        set_country_flag = GAM_OCCUPIED
+        set_country_flag = SIE_OCCUPIED
+        set_country_flag = LIB_OCCUPIED
+        set_country_flag = GHA_OCCUPIED
+        set_country_flag = NGA_OCCUPIED
+        set_country_flag = TOG_OCCUPIED
+        set_country_flag = GNB_OCCUPIED
+        set_country_flag = ALG_OCCUPIED
+        set_country_flag = MOR_OCCUPIED
+        set_country_flag = TUN_OCCUPIED
+        set_country_flag = LBA_OCCUPIED
+        set_country_flag = CMR_OCCUPIED
+        set_country_flag = RCG_OCCUPIED
+        set_country_flag = MLW_OCCUPIED
+        set_country_flag = ETH_OCCUPIED
+        set_country_flag = ANG_OCCUPIED
+        set_country_flag = RHO_OCCUPIED
+        set_country_flag = MZB_OCCUPIED
+        set_country_flag = ZAM_OCCUPIED
+        set_country_flag = TZN_OCCUPIED
+        set_country_flag = KEN_OCCUPIED
+        set_country_flag = SOM_OCCUPIED
+        set_country_flag = GAB_OCCUPIED
+        set_country_flag = EQG_OCCUPIED
+        set_country_flag = BRD_OCCUPIED
+        set_country_flag = RWA_OCCUPIED
+        set_country_flag = UGA_OCCUPIED
+        set_country_flag = DJI_OCCUPIED
+        set_country_flag = ERI_OCCUPIED
+        set_country_flag = CAR_OCCUPIED
+        set_country_flag = CHA_OCCUPIED
+        set_country_flag = RIF_OCCUPIED
+        set_country_flag = COG_OCCUPIED 
+        set_country_flag = WES_OCCUPIED
+        if = {
+            limit = {
+                OR = {
+                    SAF = { is_ally_with = ROOT }
+                    owns_state = 681
+                }
+            }
+            set_country_flag = BOT_OCCUPIED
+        }
+        set_country_flag = nosmallprotectorates
+	}
+}
+country_event = {
+    id = ps_african_areas.2
+    title = "The fate of Maghreb"
+    desc = "How should we administrate the area of Maghreb?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas2decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = { 
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+		any_owned_state = {
+                count > 3
+				OR = {
+				is_core_of = ALG
+				is_core_of = MOR
+				is_core_of = WES
+			}
+		}
+    }
+
+    immediate = {
+        set_country_flag = areas2decided 
+    }
+    
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = Maghreb_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = MOR_OCCUPIED
+        clr_country_flag = RIF_OCCUPIED
+        clr_country_flag = ALG_OCCUPIED
+        clr_country_flag = WES_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = ps_african_areas.3 
+    title = "The fate of Sahel"
+    desc = "How should we administrate the area of Sahel?"  
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas3decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = NGR
+                is_core_of = MLI
+                is_core_of = MRT 
+                is_core_of = VOL 
+                is_core_of = SEN
+                is_core_of = GAM
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = areas3decided 
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = Sahel_decided  
+    }
+
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        # clr flags occupied per i paesi Sahel (da tabella fornita)
+        clr_country_flag = CHA_OCCUPIED
+        clr_country_flag = NGR_OCCUPIED
+        clr_country_flag = MLI_OCCUPIED
+        clr_country_flag = MRT_OCCUPIED
+        clr_country_flag = VOL_OCCUPIED
+        clr_country_flag = SEN_OCCUPIED
+        clr_country_flag = GAM_OCCUPIED
+    }
+
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = ps_african_areas.4
+    title = "The fate of Western Africa"
+    desc = "How should we administrate the area of Western Africa?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas4decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = DAH
+                is_core_of = IVO
+                is_core_of = GNA
+                is_core_of = SIE
+                is_core_of = LIB
+                is_core_of = GHA
+                is_core_of = TOG
+                is_core_of = GNB
+                is_core_of = NGA
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = areas4decided
+    }
+
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = WesternAfrica_decided
+    }
+
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = DAH_OCCUPIED
+        clr_country_flag = IVO_OCCUPIED
+        clr_country_flag = GNA_OCCUPIED
+        clr_country_flag = SIE_OCCUPIED
+        clr_country_flag = LIB_OCCUPIED
+        clr_country_flag = GHA_OCCUPIED
+        clr_country_flag = TOG_OCCUPIED
+        clr_country_flag = GNB_OCCUPIED
+        clr_country_flag = NGA_OCCUPIED
+    }
+
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = ps_african_areas.5
+    title = "The fate of Equatorial Africa"
+    desc = "How should we administrate the area of Equatorial Africa?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas5decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = GAB
+                is_core_of = EQG
+                is_core_of = CAR
+                is_core_of = CMR
+                is_core_of = RCG
+                state = 774
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas5decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = EquatorialAfrica_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = GAB_OCCUPIED
+        clr_country_flag = EQG_OCCUPIED
+        clr_country_flag = CAR_OCCUPIED
+        clr_country_flag = CMR_OCCUPIED
+        clr_country_flag = RCG_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = ps_african_areas.6
+    title = "The fate of Central Africa"
+    desc = "How should we administrate the area of Central Africa?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas6decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = ANG
+                is_core_of = COG
+                is_core_of = BRD
+                is_core_of = RWA
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas6decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = CentralAfrica_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = ANG_OCCUPIED
+        clr_country_flag = COG_OCCUPIED
+        clr_country_flag = BRD_OCCUPIED
+        clr_country_flag = RWA_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = ps_african_areas.7
+    title = "The fate of Rhodesia"
+    desc = "How should we administrate the area of Rhodesia?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas7decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = MLW
+                is_core_of = ZAM
+                is_core_of = MZB
+                is_core_of = ZIM
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas7decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = Rhodesia_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = MLW_OCCUPIED
+        clr_country_flag = ZAM_OCCUPIED
+        clr_country_flag = MZB_OCCUPIED
+        clr_country_flag = RHO_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = ps_african_areas.8
+    title = "The fate of Lake Victoria"
+    desc = "How should we administrate the area of Lake Victoria?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas8decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        any_owned_state = {
+            count > 3
+            OR = {
+                is_core_of = TZN
+                is_core_of = KEN
+                is_core_of = UGA
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas8decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = LakeVictoria_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = TZN_OCCUPIED
+        clr_country_flag = KEN_OCCUPIED
+        clr_country_flag = UGA_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = ps_african_areas.9
+    title = "The fate of Sirte"
+    desc = "How should we administrate the area of Sirte (Lybia and Tunisia)?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas9decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+        NOT = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = ITA   
+            }
+        }
+        any_owned_state = {
+            count > 1 
+            OR = {
+                is_core_of = LBA
+                is_core_of = TUN
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas9decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = Sirte_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = LBA_OCCUPIED
+        clr_country_flag = TUN_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = ps_african_areas.10
+    title = "The fate of Horn of Africa"
+    desc = "How should we administrate the area of Horn of Africa?"
+    is_triggered_only = no
+	mean_time_to_happen = { days = 20 }
+    trigger = {
+        NOT = { has_country_flag = areas10decided }
+        is_major = yes
+        NOT = { capital_scope = { is_on_continent = africa } }
+        has_war = no
+            NOT = {
+                OR = {
+                    original_tag = ENG
+                    original_tag = FRA
+                    original_tag = ITA
+                }
+            }
+        any_owned_state = {
+            count > 3   
+            OR = {
+                is_core_of = SOM
+                is_core_of = DJI
+                is_core_of = ETH
+                is_core_of = ERI
+            }
+        }
+    }
+    immediate = {
+        set_country_flag = areas10decided
+    }
+    option = {
+        name = "Establish a military administration zone"
+        ai_chance = { factor = 95 }
+        set_country_flag = HornOfAfrica_decided
+    }
+    option = {
+        name = "Establish separate protectorates"
+        ai_chance = { factor = 0 }
+        clr_country_flag = ETH_OCCUPIED
+        clr_country_flag = SOM_OCCUPIED
+        clr_country_flag = DJI_OCCUPIED
+        clr_country_flag = ERI_OCCUPIED
+    }
+    option = {
+        name = "Keep direct occupation"
+        ai_chance = { factor = 0 }
+    }
+}

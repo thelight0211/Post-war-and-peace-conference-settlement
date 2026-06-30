@@ -1,0 +1,15 @@
+	is_controlled_by_GER_or_subject = {
+			custom_trigger_tooltip = {
+			tooltip = is_controlled_by_GER_or_subject
+				OR = {
+					is_fully_controlled_by = GER
+					controller = { is_subject_of = GER }
+				}
+		}
+	}
+	is_claim_or_core_of_ROOT = {
+		OR = {
+			is_claimed_by = ROOT
+			is_core_of = ROOT
+		}
+	}

@@ -1,0 +1,11 @@
+	NDefines.NDiplomacy.TENSION_STATE_VALUE = 0									-- Vanilla is 2
+	NDefines.NDiplomacy.TENSION_ANNEX_NO_CLAIM = 0								-- Vanilla is 2
+	NDefines.NDiplomacy.TENSION_ANNEX_CLAIM = 0									-- Vanilla is 1
+	NDefines.NDiplomacy.TENSION_ANNEX_CORE = 0									-- Vanilla is 0.5
+	NDefines.NDiplomacy.TENSION_PUPPET = 0										-- Vanilla is 1.25
+	NDefines.NDiplomacy.TENSION_FORCE_GOVERNMENT = 0							-- Vanilla is 0.75
+	NDefines.NDiplomacy.TENSION_LIBERATE = 0									-- Vanilla is -1
+	NDefines.NDiplomacy.TENSION_DEMILITARIZE_ZONE = 0							-- Vanilla is 0.25
+	NDefines.NDiplomacy.TENSION_WAR_REPARATION = 0								-- Vanilla is 0.25
+	NDefines.NDiplomacy.TENSION_RESOURCE_RIGHTS = 0								-- Vanilla is 0.25
+	NDefines.NDiplomacy.TENSION_DISMANTLE_INDUSTRY = 0							-- Vanilla is 0.25

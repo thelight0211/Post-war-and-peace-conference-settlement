@@ -1,0 +1,428 @@
+### GLOBAL ON ACTIONS FILE ###
+### COUNTRY-SPECIFIC ACTIONS SHOULD GO INTO THEIR OWN FILES ###
+### DON'T EDIT THIS FILE WITHOUT CHECKING IN THE CODING CHANNEL FIRST ###
+
+on_actions = {
+
+	on_startup = {
+		effect = {
+			every_state = {
+				limit = {
+					is_core_of = SOV 
+					is_on_continent = asia
+					NOT = { 
+						OR = {
+							region = 137
+							region = 133
+							region = 150
+							region = 264
+							region = 40
+							region = 138
+							region = 136
+							region = 135
+							region = 270
+							region = 268
+							region = 267
+							region = 269
+						}
+					}
+				}
+			SIB = { add_state_core = PREV }
+			}
+
+			if = {
+				limit = { NOT = { has_global_flag = road_to_56_is_active } }
+				912 = { set_state_flag = dec_later }
+			}
+			if = {
+				limit = { has_global_flag = road_to_56_is_active }
+				964 = { set_state_flag = dec_later }
+			}
+
+			if = {
+				limit = { NOT = { has_global_flag = road_to_56_is_active } }
+				975 = { set_state_flag = dec_later }
+			}
+			if = {
+				limit = { has_global_flag = road_to_56_is_active }
+				1086 = { set_state_flag = dec_later }
+			}
+
+			if = {
+				limit = { NOT = { has_global_flag = road_to_56_is_active } }
+				972 = { set_state_flag = dec_later }
+			}
+			if = {
+				limit = { has_global_flag = road_to_56_is_active }
+				1078 = { set_state_flag = dec_later }
+			}	
+			664 = { set_state_flag = dec_later }
+			73  = { set_state_flag = dec_later }
+			76  = { set_state_flag = dec_later }
+			83  = { set_state_flag = dec_later }
+			84  = { set_state_flag = dec_later }
+			82  = { set_state_flag = dec_later }
+			77  = { set_state_flag = dec_later }
+			45  = { set_state_flag = dec_later }
+			802 = { set_state_flag = dec_later }
+			184 = { set_state_flag = dec_later }
+			69  = { set_state_flag = dec_later }
+			74  = { set_state_flag = dec_later }
+			664 = { set_state_flag = dec_later }
+			73  = { set_state_flag = dec_later }
+			28  = { set_state_flag = dec_later }
+			1   = { set_state_flag = dec_later }
+			735 = { set_state_flag = dec_later }
+			39  = { set_state_flag = dec_later }
+			102 = { set_state_flag = dec_later }
+			103 = { set_state_flag = dec_later }
+			119 = { set_state_flag = dec_later }
+			104 = { set_state_flag = dec_later }
+			551 = { set_state_flag = dec_later }
+			5 = { set_state_flag = dec_later }
+			763 = { set_state_flag = dec_later }
+			63  = { set_state_flag = dec_later }
+			66 = { set_state_flag = dec_later }
+			67  = { set_state_flag = dec_later }
+			68 = { set_state_flag = dec_later }
+	
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					is_subject = yes
+					overlord = {
+						is_ai = yes
+					}
+				}
+				save_event_target_as = subject_country
+				overlord = {
+					save_event_target_as = master_country
+				}
+				every_controlled_state = {
+					limit = {
+						is_fully_controlled_by = event_target:subject_country
+						NOT = {
+							is_owned_by = event_target:subject_country
+						}
+						owner = {
+							has_war_with = event_target:master_country
+						}
+						NOT = {
+							OR = {
+								is_core_of = event_target:subject_country
+								AND = {
+									is_claimed_by = event_target:subject_country
+									OR = {
+										is_island_state = yes
+										is_one_state_island = yes
+										any_neighbor_state = {
+											is_owned_by = event_target:subject_country
+										}
+									}
+								}
+							}
+						}
+					}
+					set_state_controller_to = event_target:master_country
+					set_state_province_controller = {
+						controller = event_target:master_country
+						limit = {
+							tag = event_target:subject_country
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { 
+					has_war = yes
+					is_ai = yes
+				}
+				save_event_target_as = occupier_ai
+				every_controlled_state = {
+					limit = { 
+						is_fully_controlled_by = event_target:occupier_ai
+						NOT = {
+							is_owned_by = event_target:occupier_ai
+						}
+						NOT = {
+							OR = {
+								AND = {
+									event_target:occupier_ai = {
+										NOT = {
+											is_subject = yes
+										}
+									}
+									OR = {
+										is_core_of = event_target:occupier_ai
+										is_claimed_by = event_target:occupier_ai
+									}
+								}
+								AND = {
+									event_target:occupier_ai = {
+										is_subject = yes
+									}
+									is_claimed_by = event_target:occupier_ai
+									OR = {
+										is_island_state = yes
+										is_one_state_island = yes
+										any_neighbor_state = {
+											is_owned_by = event_target:occupier_ai
+										}
+									}
+								}
+							}
+						}
+					}
+					save_event_target_as = state_to_transfer
+					owner = {
+						save_event_target_as = state_owner
+					}
+					event_target:occupier_ai = {
+						random_allied_country = {
+							limit = {
+								has_war_with = event_target:state_owner
+								OR = {
+									AND = {
+										NOT = {
+											is_subject = yes
+										}
+										event_target:state_to_transfer = {
+											OR = {
+												is_core_of = PREV
+												is_claimed_by = PREV
+											}
+										}
+									}
+									AND = {
+										is_subject = yes
+										event_target:state_to_transfer = {
+											is_claimed_by = PREV
+											OR = {
+												is_island_state = yes
+												is_one_state_island = yes
+												any_neighbor_state = {
+													is_owned_by = PREV.PREV
+												}
+											}
+										}
+									}
+								}
+							}
+							save_event_target_as = valid_ally
+							event_target:state_to_transfer = {
+								set_state_controller_to = event_target:valid_ally
+								set_state_province_controller = {
+									controller = event_target:valid_ally
+									limit = {
+										tag = event_target:occupier_ai
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_peaceconference_ended = {
+		effect = {
+			ROOT = {
+				if = {
+					limit = {
+						is_ai = yes
+						is_subject = yes
+					}
+					overlord = {
+						save_event_target_as = pc_overlord
+					}
+					every_state = {
+						limit = {
+							pc_is_state_claimed_and_taken_by = ROOT
+						}
+						add_to_temp_array = { temp_pc_taken_states = THIS }
+						set_state_flag = pc_newly_taken_state
+					}
+					for_each_scope_loop = {
+						array = temp_pc_taken_states
+						if = {
+							limit = {
+								OR = {
+									is_core_of = ROOT
+									NOT = {
+										is_claimed_by = ROOT
+									}
+									AND = {
+										is_claimed_by = ROOT
+										NOT = {
+											is_island_state = yes
+										}
+										NOT = {
+											is_one_state_island = yes
+										}
+										NOT = {
+											any_neighbor_state = {
+												is_owned_by = ROOT
+												NOT = {
+													has_state_flag = pc_newly_taken_state
+												}
+											}
+										}
+									}
+								}
+							}
+							transfer_state_to = event_target:pc_overlord
+						}
+					}
+					for_each_scope_loop = {
+						array = temp_pc_taken_states
+						clr_state_flag = pc_newly_taken_state
+					}
+					clear_temp_array = temp_pc_taken_states
+				}
+			}
+			FROM = {
+				if = { 
+					limit = {
+						has_country_flag = realcapitulation
+						NOT = {
+							any_country = {
+								has_country_flag = postwar_pc_winner
+								is_ally_with = FROM
+							}
+						}
+					}
+					country_event = id.settlement.12
+					clr_country_flag = realcapitulation
+				}		
+			}
+		}
+	}
+	
+	on_peaceconference_started = {
+		effect = {
+				ROOT = {
+					set_country_flag = postwar_pc_winner
+					country_event = { id = id.settlement.13 days = 3 }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = ROOT
+					}
+					set_country_flag = postwar_pc_winner
+					country_event = { id = id.settlement.13 days = 3 }
+				}
+				FROM = {
+					if = {
+						limit = {
+							surrender_progress > 0.99
+							any_owned_state = {
+								controller = {
+									has_country_flag = postwar_pc_winner
+								}
+							}
+						}
+						set_country_flag = realcapitulation
+					}
+				}
+		}
+	}	
+
+	#ROOT is winner, FROM is loser (called for all winners against all losers)
+	on_peaceconference_started = {
+		effect = {
+			log = "[GetDateText] on_peaceconference_started ROOT = [Root.GetName] FROM = [From.GetName]"
+
+			#set up PC country arrays
+			if = {
+				limit = { NOT = { has_global_flag = KR_set_up_pc_arrays } }
+				set_global_flag = KR_set_up_pc_arrays
+				every_country = {
+					limit = { pc_is_winner = yes }
+					add_to_array = { global.pc_winners_array = THIS }
+					if = {
+						limit = { is_major = yes }
+						set_global_flag = pc_has_major_winner
+					}
+					if = {
+						limit = { is_subject = no }
+						set_global_flag = pc_has_non_subject_winner
+					}
+				}
+				every_country = {
+					limit = { pc_is_loser = yes }
+					add_to_array = { global.pc_losers_array = THIS }
+				}
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			log = "[GetDateText] on_peaceconference_ended ROOT = [Root.GetName] FROM = [From.GetName]"
+
+			#post-PC data cleanup
+			if = {
+				limit = {
+					set_temp_variable = { last_winner_index = global.pc_winners_array^num }
+					subtract_from_temp_variable = { last_winner_index = 1 }
+					check_variable = { global.pc_winners_array^last_winner_index = ROOT }
+
+					set_temp_variable = { last_loser_index = global.pc_losers_array^num }
+					subtract_from_temp_variable = { last_loser_index = 1 }
+					check_variable = { global.pc_losers_array^last_loser_index = FROM }
+				}
+				clr_global_flag = KR_set_up_pc_arrays
+				clr_global_flag = pc_has_major_winner
+				clr_global_flag = pc_has_non_subject_winner
+				clear_array = global.pc_winners_array
+				clear_array = global.pc_losers_array
+			}
+
+
+			### transfer impassables to the correct targets
+			for_each_scope_loop = {
+				array = global.paired_impassable_states
+				if = {
+					limit = { NOT = { is_owned_by = var:paired_impassable:owner } }
+					transfer_state_to = paired_impassable:owner
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			log = "[GetDateText]: [Root.GetName]: on_war"
+			# Check for puppets at war with their overlord
+			if = {
+				limit = {
+					is_subject = yes
+					any_enemy_country = { has_subject = ROOT }
+				}
+				overlord = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+		}
+	}	
+
+	on_state_control_changed = {
+		effect = {
+			set_country_flag = {
+				flag = bureaucratic_cooldown
+				days = 7
+				value = 1
+			}
+		}
+	}
+}
+

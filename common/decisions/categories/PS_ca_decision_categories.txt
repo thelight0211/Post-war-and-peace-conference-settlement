@@ -1,0 +1,18 @@
+ca_decision_category = {
+	priority = 20
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences
+
+	visible_when_empty = no
+
+	allowed = {
+		has_dlc = "Together for Victory"
+	}
+
+	visible = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+}

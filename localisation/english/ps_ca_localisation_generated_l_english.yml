@@ -1,0 +1,55 @@
+﻿l_english:
+ MGHREB:0 "Military Administration of Maghreb"
+ MGHREB_DEF:0 "the Military Administration of Maghreb"
+ MGHREB_ADJ:0 "Maghrebi"
+ MGHREB_subject:0 "$OVERLORDADJ$ Military Administration of Maghreb"
+
+ SAHEL:0 "Military Administration of Sahel"
+ SAHEL_DEF:0 "the Military Administration of Sahel"
+ SAHEL_ADJ:0 "Sahelian"
+ SAHEL_subject:0 "$OVERLORDADJ$ Military Administration of Sahel"
+
+ ca_decision_transfer_to_puppet_Maghreb:0 "Establish a military occupation government in Maghreb"
+ ca_decision_transfer_to_puppet_Sahel:0 "Establish a military occupation government in Sahel"
+
+ WAFRI:0 "Military Administration of Western Africa"
+ WAFRI_DEF:0 "the Military Administration of Western Africa"
+ WAFRI_ADJ:0 "West African"
+ WAFRI_subject:0 "$OVERLORDADJ$ Military Administration of Western Africa"
+ ca_decision_transfer_to_puppet_WesternAfrica:0 "Establish a military occupation government in Western Africa"
+
+ EQAFRI:0 "Military Administration of Equatorial Africa"
+ EQAFRI_DEF:0 "the Military Administration of Equatorial Africa"
+ EQAFRI_ADJ:0 "Equatorial African"
+ EQAFRI_subject:0 "$OVERLORDADJ$ Military Administration of Equatorial Africa"
+ ca_decision_transfer_to_puppet_EquatorialAfrica:0 "Establish a military occupation government in Equatorial Africa"
+
+ CENTAF:0 "Military Administration of Central Africa"
+ CENTAF_DEF:0 "the Military Administration of Central Africa"
+ CENTAF_ADJ:0 "Central African"
+ CENTAF_subject:0 "$OVERLORDADJ$ Military Administration of Central Africa"
+ ca_decision_transfer_to_puppet_CentralAfrica:0 "Establish a military occupation government in Central Africa"
+
+ RHODES:0 "Military Administration of Rhodesia"
+ RHODES_DEF:0 "the Military Administration of Rhodesia"
+ RHODES_ADJ:0 "Rhodesian"
+ RHODES_subject:0 "$OVERLORDADJ$ Military Administration of Rhodesia"
+ ca_decision_transfer_to_puppet_Rhodesia:0 "Establish a military occupation government in Rhodesia"
+
+ LAKEVI:0 "Military Administration of Lake Victoria"
+ LAKEVI_DEF:0 "the Military Administration of Lake Victoria"
+ LAKEVI_ADJ:0 "Lake Victorian"
+ LAKEVI_subject:0 "$OVERLORDADJ$ Military Administration of Lake Victoria"
+ ca_decision_transfer_to_puppet_LakeVictoria:0 "Establish a military occupation government in Lake Victoria"
+
+ SIRTE:0 "Military Administration of Sirte"
+ SIRTE_DEF:0 "the Military Administration of Sirte"
+ SIRTE_ADJ:0 "Sirtean"
+ SIRTE_subject:0 "$OVERLORDADJ$ Military Administration of Sirte"
+ ca_decision_transfer_to_puppet_Sirte:0 "Establish a military occupation government in Sirte"
+
+ HORNAF:0 "Military Administration of the Horn of Africa"
+ HORNAF_DEF:0 "the Military Administration of the Horn of Africa"
+ HORNAF_ADJ:0 "Horn of African"
+ HORNAF_subject:0 "$OVERLORDADJ$ Military Administration of the Horn of Africa"
+ ca_decision_transfer_to_puppet_HornOfAfrica:0 "Establish a military occupation government in the Horn of Africa"

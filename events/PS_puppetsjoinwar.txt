@@ -1,0 +1,41 @@
+add_namespace = joinwarpuppets
+
+country_event = {
+    id = joinwarpuppets.1
+    hidden = yes
+    is_triggered_only = no
+    trigger = {
+        is_subject = yes
+        overlord = {
+            has_war = yes
+            is_ai = yes
+        }
+        overlord = {
+            any_enemy_country = {
+                NOT = {
+                    has_war_with = ROOT
+                }
+            }
+        }
+        is_ai = yes
+    }
+    immediate = {
+        overlord = {
+            every_enemy_country = {
+                limit = {
+                    NOT = {
+                            has_war_with = ROOT
+                    }
+                }
+                every_country = {
+                    limit = { is_subject_of = PREV.PREV }
+                    add_to_war = {
+                        targeted_alliance = PREV.PREV
+                        enemy = PREV
+                        hostility_reason = asked_to_join
+                    }
+                }
+            }
+        }
+    }
+}

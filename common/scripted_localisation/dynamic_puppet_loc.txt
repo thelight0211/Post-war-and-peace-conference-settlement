@@ -1,0 +1,39 @@
+defined_text = {
+    name = GetSmallDynamicPuppetName
+    text = {
+        trigger = {
+            any_country = { has_country_flag = is_small_dynamic_puppet }
+        }
+        localization_key = "[GetSmallDynamicPuppetNameKey]"
+    }
+}
+
+defined_text = {
+    name = GetSmallDynamicPuppetNameKey
+    text = {
+        trigger = {
+            has_country_flag = is_small_dynamic_puppet
+        }
+        localization_key = "[THIS.GetName]"
+    }
+}
+
+defined_text = {
+    name = GetWillAnnexPuppetName
+    text = {
+        trigger = {
+            any_country = { has_country_flag = will_annex_small_puppet }
+        }
+        localization_key = "[GetWillAnnexPuppetNameKey]"
+    }
+}
+
+defined_text = {
+    name = GetWillAnnexPuppetNameKey
+    text = {
+        trigger = {
+            has_country_flag = will_annex_small_puppet
+        }
+        localization_key = "[THIS.GetName]"
+    }
+}

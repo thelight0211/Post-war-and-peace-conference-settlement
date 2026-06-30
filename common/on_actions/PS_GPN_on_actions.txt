@@ -1,0 +1,51 @@
+on_actions = {
+	 on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { 
+					any_country = {
+						original_tag = FRA
+						is_subject_of = GER
+						has_government = fascism
+					}
+					GER = { has_government = fascism }
+					FRA = { has_civil_war = no }
+				}
+				random_country = { 
+					limit = {
+						original_tag = FRA
+						is_subject_of = GER
+						has_government = fascism
+					}
+					set_cosmetic_tag = FRA_VICHY 
+						create_country_leader = {
+							name = "Philippe Petain"
+							picture = "gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
+							ideology = fascism_ideology
+						}
+				}
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			if = {
+				limit = { 
+						original_tag = SIB
+					 }
+				set_cosmetic_tag = SIB_COL
+			}
+			if = {
+				limit = { 
+					AND = { 
+						has_country_flag = is_dynamic_tag
+						ROOT = { is_subject = no }
+						}
+					}
+				clr_country_flag = is_dynamic_tag
+			}
+
+		}
+	}
+}
+

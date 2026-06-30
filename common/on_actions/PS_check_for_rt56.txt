@@ -1,0 +1,32 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							r56_is_caribbean_country = yes
+							num_of_factories > 50
+						}
+					}
+				}
+				set_global_flag = road_to_56_is_active
+				1050 = {
+					add_claim_by = USA
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			ENG = {
+				remove_mission = annexation_JOR_CONQ
+				remove_mission = annexation_KUW_CONQ
+			}
+			FRA = {
+				remove_mission = annexation_SYR_CONQ
+				remove_mission = annexation_PHN_CONQ
+			}
+		}
+	}
+}
