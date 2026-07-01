@@ -1,0 +1,236 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GEN
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_GEN_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RAA
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RAA_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RAN
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RAN_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RAR
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RAR_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RCO
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RCO_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RGB
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RGB_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RHD
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RHD_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKA
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKA_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKB
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKB_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKC
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKC_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKG
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKG_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKH
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKH_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKI
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKI_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKK
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKK_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKM
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKM_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKN
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKN_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKO
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKO_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKT
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKT_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKU
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKU_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RKV
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RKV_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RNA
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RNA_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = ROA
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_ROA_state_dynamic
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RUS
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = GER_is_RUS_state_dynamic
+				}
+			}
+		}
+	}
+}

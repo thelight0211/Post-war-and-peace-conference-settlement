@@ -106,13 +106,6 @@ dynamic_puppet_category = {
 								}
 								AND = {
 									ROOT = { tag = ROOT }
-									FROM = { tag = LIT }
-									OR = {
-										state = 784 # Ermland-Masuren
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
 									FROM = { tag = SIB }
 									SOV = { exists = yes }
 								}

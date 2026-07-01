@@ -791,3 +791,69 @@ country_event = {
 			}
 		}		
 	}
+
+	country_event = {
+		id = id.settlement.7
+		fire_only_once = yes
+		is_triggered_only = yes
+		hidden = yes
+
+		immediate = {
+			activate_decision = JAP_merge_our_chinese_puppets_decision
+		}
+	}
+
+	country_event = {
+		id = id.settlement.5
+		fire_only_once = yes
+		is_triggered_only = No
+		mean_time_to_happen = { days = 20 }
+		hidden = yes
+
+		trigger = {
+			is_ai = yes
+			original_tag = JAP 
+			RNG = { is_subject_of = ROOT }
+			RNG = { 
+				OR = {
+					owns_state = 325
+					owns_state = 625
+					owns_state = 754
+					owns_state = 617
+					owns_state = 594
+				}
+			}
+		}
+		immediate = {
+			if = {
+				limit = {
+					RNG = { owns_state = 325 }
+				}
+				country_event = occupation.163 #yunnan
+			}
+			if = {
+				limit = {
+					RNG = { owns_state = 615 }
+				}
+				country_event = occupation.166 #shanxi
+			}
+			if = {
+				limit = {
+					RNG = { owns_state = 754 }
+				}
+				country_event = occupation.165 #Xibei
+			}
+			if = {
+				limit = {
+					RNG = { owns_state = 617 }
+				}
+				country_event = occupation.161 #Sinkiang
+			}
+			if = {
+				limit = {
+					RNG = { owns_state = 594 }
+				}
+				country_event = occupation.164 #Guangxi
+			}
+		}
+	}

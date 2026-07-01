@@ -13,3 +13,9 @@ annexation_decisions = {
 	picture = GFX_decision_cat_picture_annexation
 	priority = 99999
 }
+
+germany_rk_category = {
+	icon = GFX_decision_cat_annexation
+	picture = GFX_decision_cat_picture_annexation
+	priority = 99999
+}

@@ -1,14 +1,9 @@
 ca_decision_category = {
-	priority = 20
 	icon = generic_formable_nations
 
 	picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences
-
+	priority = 99999
 	visible_when_empty = no
-
-	allowed = {
-		has_dlc = "Together for Victory"
-	}
 
 	visible = {
 		exists = yes

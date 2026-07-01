@@ -4637,7 +4637,7 @@ country_event = {
 }
 
 
-###occupation of Fengtian
+###occupation of Manchuria
 country_event = {
 	id = occupation.70
 	immediate = {log = "[GetDateText]: [Root.GetName]: event occupation.70"}
@@ -11232,7 +11232,6 @@ country_event = {
 		trigger = {
 			original_tag = JAP
 			NOT = { has_government = communism }
-
 		}
 		RNG = {
 			add_state_core = 613
@@ -12732,6 +12731,7 @@ country_event = {
 						owner = { 
 							is_subject_of = ROOT 
 							NOT = { tag = MAN } 
+							NOT = { tag = RKT }
 						}
 						NOT = {
 										owner = {

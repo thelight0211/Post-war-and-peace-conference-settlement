@@ -1,0 +1,899 @@
+germany_rk_category = {
+	return_territory_to_gen = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = GEN
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_GEN_state = yes
+					has_state_flag = GER_is_GEN_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_GEN_state = yes
+						has_state_flag = GER_is_GEN_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_raa = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RAA
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RAA_state = yes
+					has_state_flag = GER_is_RAA_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RAA_state = yes
+						has_state_flag = GER_is_RAA_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_ran = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RAN
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RAN_state = yes
+					has_state_flag = GER_is_RAN_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RAN_state = yes
+						has_state_flag = GER_is_RAN_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rar = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RAR
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RAR_state = yes
+					has_state_flag = GER_is_RAR_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RAR_state = yes
+						has_state_flag = GER_is_RAR_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rco = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RCO
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RCO_state = yes
+					has_state_flag = GER_is_RCO_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RCO_state = yes
+						has_state_flag = GER_is_RCO_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rgb = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RGB
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RGB_state = yes
+					has_state_flag = GER_is_RGB_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RGB_state = yes
+						has_state_flag = GER_is_RGB_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rhd = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RHD
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RHD_state = yes
+					has_state_flag = GER_is_RHD_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RHD_state = yes
+						has_state_flag = GER_is_RHD_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rka = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKA
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKA_state = yes
+					has_state_flag = GER_is_RKA_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKA_state = yes
+						has_state_flag = GER_is_RKA_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkb = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKB
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKB_state = yes
+					has_state_flag = GER_is_RKB_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKB_state = yes
+						has_state_flag = GER_is_RKB_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkc = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKC
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKC_state = yes
+					has_state_flag = GER_is_RKC_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKC_state = yes
+						has_state_flag = GER_is_RKC_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkg = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKG
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKG_state = yes
+					has_state_flag = GER_is_RKG_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKG_state = yes
+						has_state_flag = GER_is_RKG_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkh = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKH
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKH_state = yes
+					has_state_flag = GER_is_RKH_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKH_state = yes
+						has_state_flag = GER_is_RKH_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rki = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKI
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKI_state = yes
+					has_state_flag = GER_is_RKI_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKI_state = yes
+						has_state_flag = GER_is_RKI_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkk = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKK
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKK_state = yes
+					has_state_flag = GER_is_RKK_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKK_state = yes
+						has_state_flag = GER_is_RKK_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkm = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKM
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKM_state = yes
+					has_state_flag = GER_is_RKM_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKM_state = yes
+						has_state_flag = GER_is_RKM_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkn = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKN
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKN_state = yes
+					has_state_flag = GER_is_RKN_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKN_state = yes
+						has_state_flag = GER_is_RKN_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rko = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKO
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKO_state = yes
+					has_state_flag = GER_is_RKO_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKO_state = yes
+						has_state_flag = GER_is_RKO_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkt = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKT
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKT_state = yes
+					has_state_flag = GER_is_RKT_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKT_state = yes
+						has_state_flag = GER_is_RKT_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rku = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKU
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKU_state = yes
+					has_state_flag = GER_is_RKU_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKU_state = yes
+						has_state_flag = GER_is_RKU_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rkv = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RKV
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RKV_state = yes
+					has_state_flag = GER_is_RKV_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RKV_state = yes
+						has_state_flag = GER_is_RKV_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rna = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RNA
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RNA_state = yes
+					has_state_flag = GER_is_RNA_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RNA_state = yes
+						has_state_flag = GER_is_RNA_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_roa = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = ROA
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_ROA_state = yes
+					has_state_flag = GER_is_ROA_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_ROA_state = yes
+						has_state_flag = GER_is_ROA_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	return_territory_to_rus = {
+		icon = generic_agreement
+		target_trigger = {
+			FROM = {
+				original_tag = RUS
+				is_subject_of = ROOT
+			}
+			any_controlled_state = {
+				OR = {
+					GER_is_RUS_state = yes
+					has_state_flag = GER_is_RUS_state_dynamic
+				}
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			ROOT = { has_war = no }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						GER_is_RUS_state = yes
+						has_state_flag = GER_is_RUS_state_dynamic
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+}
