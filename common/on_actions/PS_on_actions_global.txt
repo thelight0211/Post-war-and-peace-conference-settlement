@@ -302,7 +302,44 @@ on_actions = {
 			}
 		}
 	}
-	
+
+	on_before_peace_conference_start = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = RULE_LOAD_GENERIC_FOCUS_PUPPET
+							option = Disable
+						}
+						NOT = {
+							has_country_flag = defeated_leader_retired_flag
+						}
+					}
+					every_character = {
+						limit = {
+							is_country_leader = yes
+						}
+						retire = yes
+					}
+					set_country_flag = defeated_leader_retired_flag
+				}
+			}
+		}
+	}
+	on_peaceconference_ended = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = defeated_leader_retired_flag
+					}
+					clr_country_flag = defeated_leader_retired_flag
+				}
+			}
+		}
+	}
+
 	on_peaceconference_started = {
 		effect = {
 				ROOT = {

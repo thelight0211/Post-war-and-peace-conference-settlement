@@ -15,7 +15,6 @@ country_event = {
 
 	option = {
 		name = "Release Poland"
-		ai_chance = { factor = 100 }
 		if = {
 			limit = {
 				tag = SOV
@@ -53,10 +52,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -99,10 +98,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		IF = {
 			limit = { UKR = { is_subject_of = ROOT } } 
@@ -183,10 +182,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -243,10 +242,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -303,10 +302,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -370,10 +369,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -431,10 +430,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -517,10 +516,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -594,10 +593,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		every_state = {
 			limit = {
@@ -696,10 +695,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -764,10 +763,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -832,10 +831,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -900,10 +899,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -960,10 +959,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1023,10 +1022,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1084,10 +1083,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -1234,10 +1233,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1284,10 +1283,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1336,10 +1335,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1413,10 +1412,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1578,10 +1577,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1638,10 +1637,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1701,10 +1700,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1761,10 +1760,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1821,10 +1820,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -1897,10 +1896,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -1990,10 +1989,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2050,10 +2049,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2110,10 +2109,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2189,10 +2188,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -2257,10 +2256,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -2325,10 +2324,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2403,10 +2402,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2463,10 +2462,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2531,10 +2530,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -2566,159 +2565,6 @@ country_event = {
 
 	option = {
 		name = "Install a collaborationist regime."
-		hidden_effect = {
-			IF = {
-				limit = {
-					NOT = { 137 = { is_claimed_by = ROOT } }
-					NOT = { 137 = { is_core_of = ROOT } }
-					OR = {
-					controls_state = 137
-					AND = {
-						SOV = { controls_state = 137 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 137 }
-				UKR = { add_state_claim = 137 }	
-			}
-			IF = {
-				limit = {
-					ROOT = {
-					NOT = { 
-						owns_state = 91
-						owns_state = 89
-					}
-					}
-				}
-				UKR = { remove_state_core = 73 }
-			}
-			IF = {
-				limit = {
-					NOT = { 93 = { is_claimed_by = ROOT } }
-					NOT = { 93 = { is_core_of = ROOT } }
-					OR = {
-					controls_state = 93
-					AND = {
-						POL = { controls_state = 93 }
-						POL = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 93 }
-				UKR = { add_state_claim = 93 }	
-			}		
-			IF = {
-				limit = {
-					NOT = { 91 = { is_claimed_by = ROOT } }
-					NOT = { 91 = { is_core_of = ROOT } }
-					OR = {
-					controls_state = 91
-					AND = {
-						POL = { controls_state = 91 }
-						POL = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 91 }
-				UKR = { add_state_claim = 91 }	
-			}
-			IF = {
-				limit = {
-					NOT = { 89 = { is_claimed_by = ROOT } }
-					NOT = { 89 = { is_core_of = ROOT } }
-					OR = {
-					controls_state = 89
-					AND = {
-						POL = { controls_state = 89 }
-						POL = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 89 }
-				UKR = { add_state_claim = 89 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 233
-					AND = {
-						SOV = { controls_state = 233 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 233 }
-				UKR = { add_state_claim = 233 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 234
-					AND = {
-						SOV = { controls_state = 234 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 234 }
-				UKR = { add_state_claim = 234 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 220
-					AND = {
-						SOV = { controls_state = 220 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-		
-				}
-				UKR = { transfer_state = 220 }
-				UKR = { add_state_claim = 220 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 260
-					AND = {
-						SOV = { controls_state = 260 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-
-				}
-				UKR = { transfer_state = 260 }
-				UKR = { add_state_claim = 260 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 218
-					AND = {
-						SOV = { controls_state = 218 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 218 }
-				UKR = { add_state_claim = 218 }	
-			}
-			IF = {
-				limit = {
-					OR = {
-					controls_state = 240
-					AND = {
-						SOV = { controls_state = 240 }
-						SOV = { is_subject_of = ROOT }
-						}
-					}
-				}
-				UKR = { transfer_state = 240 }
-				UKR = { add_state_claim = 240 }		
-			}
-		}
 		ai_chance = { factor = 94 }
 		every_state = {
 			limit = {
@@ -2753,10 +2599,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -2767,6 +2613,7 @@ country_event = {
 				remove_claim_by = SOV
 			}
 	}
+
 	option = {
 		name = "Maintain Military occupation."
 		trigger = { is_ai = no }
@@ -2793,7 +2640,12 @@ country_event = {
 				}
 				remove_core_of = CRO
 			}
-			CRO = { add_state_core = 952 }
+			IF = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+				}
+				CRO = { add_state_core = 952 }
+			}
 		}
 	}
 	option = {
@@ -2836,10 +2688,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		every_state = {
 			limit = {
@@ -2924,10 +2776,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -2984,10 +2836,10 @@ country_event = { # Fate of Paraguay
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3046,10 +2898,10 @@ country_event = { # Fate of Chile
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3108,10 +2960,10 @@ country_event = { # Fate of Argentina
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3169,10 +3021,10 @@ country_event = { # Fate of Bolivia
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3229,10 +3081,10 @@ country_event = { # Fate of Peru
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3292,10 +3144,10 @@ country_event = { # Fate of Ecuador
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3355,10 +3207,10 @@ country_event = { # Fate of Colombia
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3419,10 +3271,10 @@ country_event = { # Fate of Venezuela
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3482,10 +3334,10 @@ country_event = { # Fate of Uruguay
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3545,10 +3397,10 @@ country_event = { # Fate of Brazil
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3605,10 +3457,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3664,10 +3516,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3723,10 +3575,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3780,10 +3632,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3837,10 +3689,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3896,10 +3748,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -3955,10 +3807,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4014,10 +3866,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4073,10 +3925,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4132,10 +3984,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4191,10 +4043,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4250,10 +4102,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4310,10 +4162,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4369,10 +4221,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -4444,10 +4296,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -4511,10 +4363,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4618,10 +4470,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -4689,10 +4541,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		every_state = {
 			limit = {
@@ -4754,10 +4606,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4929,10 +4781,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -4987,10 +4839,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5032,10 +4884,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 
 		}
 	}
@@ -5093,10 +4945,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5153,10 +5005,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5264,10 +5116,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5324,10 +5176,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5393,10 +5245,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -5437,10 +5289,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5502,10 +5354,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5564,10 +5416,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5656,10 +5508,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5752,10 +5604,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5812,10 +5664,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -5872,10 +5724,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -5933,10 +5785,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -5999,10 +5851,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6063,10 +5915,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6126,10 +5978,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6190,10 +6042,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6251,10 +6103,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6312,10 +6164,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6376,10 +6228,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6440,10 +6292,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6503,10 +6355,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6566,10 +6418,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6629,10 +6481,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -6695,10 +6547,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6785,10 +6637,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6852,10 +6704,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		every_state = {
 			limit = {
@@ -6914,10 +6766,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -6978,10 +6830,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7041,10 +6893,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7104,10 +6956,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7164,10 +7016,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -7225,10 +7077,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7285,10 +7137,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7345,10 +7197,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7408,10 +7260,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7472,10 +7324,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7535,10 +7387,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7598,10 +7450,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7661,10 +7513,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -7725,10 +7577,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -7789,10 +7641,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -7853,10 +7705,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7916,10 +7768,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -7976,10 +7828,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8036,10 +7888,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8096,10 +7948,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8156,10 +8008,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8216,10 +8068,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8276,10 +8128,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8336,10 +8188,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8407,10 +8259,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8467,10 +8319,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8527,10 +8379,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8587,10 +8439,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8647,10 +8499,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8707,10 +8559,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8790,10 +8642,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8850,10 +8702,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -8940,10 +8792,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -9224,10 +9076,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -9355,10 +9207,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -9417,10 +9269,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -9482,10 +9334,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -9555,10 +9407,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -9627,10 +9479,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 			every_state = {
@@ -9698,10 +9550,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 
 	}
@@ -9762,10 +9614,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -9825,10 +9677,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -9888,10 +9740,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -9951,10 +9803,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10014,10 +9866,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10077,10 +9929,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10140,10 +9992,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10203,10 +10055,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10266,10 +10118,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10329,10 +10181,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10392,10 +10244,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10455,10 +10307,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10518,10 +10370,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10581,10 +10433,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10644,10 +10496,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10707,10 +10559,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10770,10 +10622,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10833,10 +10685,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10896,10 +10748,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -10959,10 +10811,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11022,10 +10874,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11156,10 +11008,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11302,10 +11154,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		IF = {
 			limit = {
@@ -11358,10 +11210,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		IF = {
 			limit = {
@@ -11507,10 +11359,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11570,10 +11422,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11680,10 +11532,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11738,10 +11590,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -11885,10 +11737,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -11958,10 +11810,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -12110,10 +11962,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	option = {
@@ -12204,10 +12056,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -12395,10 +12247,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		IF = {
 			limit = {
@@ -12719,10 +12571,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -12788,10 +12640,10 @@ country_event = {
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 
@@ -13023,9 +12875,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 				add_state_core = 16
 			}
@@ -13092,9 +12944,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 			}
 			puppet = BRI
@@ -13147,9 +12999,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 			}
 			puppet = OCC
@@ -13199,10 +13051,10 @@ country_event = {			# - Actual Partition Event
 							has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 						}
 						load_focus_tree = generic_focus
+				remove_all_ideas = yes
 					}
 					drop_cosmetic_tag = yes
-						remove_all_ideas = yes
-				remove_all_claims = yes
+						remove_all_claims = yes
 					add_state_core = 16
 				}
 			}
@@ -13324,10 +13176,10 @@ country_event = {			# - Corsica Event
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	
@@ -13509,10 +13361,10 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				} 
 				drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 			}
 		}
 	}
@@ -13642,10 +13494,10 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				} 
 				drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 			}
 		}
 	}
@@ -13796,10 +13648,10 @@ country_event = {			# - Slovenia Event
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 		every_state = {
 			limit = {
@@ -15545,10 +15397,10 @@ country_event = {			# - Transylvania
 					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 				}
 				load_focus_tree = generic_focus
+				remove_all_ideas = yes
 			}
 			drop_cosmetic_tag = yes
-				remove_all_ideas = yes
-				remove_all_claims = yes
+			remove_all_claims = yes
 		}
 	}
 	
@@ -16433,9 +16285,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes	
 			}
 		}
@@ -16488,9 +16340,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 			}
 		}
@@ -16511,9 +16363,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes	
 			}
 		}
@@ -16534,9 +16386,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 			}
 		}
@@ -16733,9 +16585,9 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
+				remove_all_ideas = yes
 				}
 				drop_cosmetic_tag = yes
-					remove_all_ideas = yes
 				remove_all_claims = yes
 			}
 
