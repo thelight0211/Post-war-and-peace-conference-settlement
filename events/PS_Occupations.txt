@@ -8836,7 +8836,20 @@ country_event = {
 	option = {
 		trigger = {
 			YUG = { exists = yes }
-			YUG = { is_ally_with = ROOT }
+			OR = {
+				AND = {
+					NOT = {
+						has_global_flag = road_to_56_is_active
+					}
+					YUG = { owns_state = 970 }	
+				}
+				AND = {
+					has_global_flag = road_to_56_is_active
+					YUG = { owns_state = 950 }	
+				}
+				YUG = { is_ally_with = ROOT }
+			}
+			YUG = { owns_state = 803 }
 			OR = {
 			owns_state = 106
 			any_country = { is_subject_of = ROOT owns_state = 106 }
@@ -8880,7 +8893,19 @@ country_event = {
 	option = {
 		trigger = {
 			SER = { exists = yes }
-			SER = { is_subject_of = ROOT }
+			OR = {
+				AND = {
+					NOT = {
+						has_global_flag = road_to_56_is_active
+					}
+					SER = { owns_state = 970 }	
+				}
+				AND = {
+					has_global_flag = road_to_56_is_active
+					SER = { owns_state = 950 }	
+				}
+				SER = { is_subject_of = ROOT }
+			}
 			SER = { owns_state = 803 }
 			OR = {
 			owns_state = 106

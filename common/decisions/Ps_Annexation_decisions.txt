@@ -7094,9 +7094,9 @@ annexation_decisions = {
 				original_tag = SER
 			}
 		}
-			NOT = {
-					has_active_mission = annexation_BUL_CONQ
-			}
+		NOT = {
+				has_active_mission = annexation_BUL_CONQ
+		}
 		NOT = { has_country_flag = MAC_OCCUPIED }
 		MAC = { exists = no }
 		106 = { 
