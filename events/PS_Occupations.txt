@@ -119,6 +119,16 @@ country_event = {
 				transfer_state = 96 
 				transfer_state = 784
 			}
+		}
+		IF = {
+			limit = { 
+				BLR = { is_subject_of = ROOT } 
+				has_global_flag = road_to_56_is_active
+			} 
+			BLR = { 
+				transfer_state = 935
+				transfer_state = 936
+			}			
 		}		
 	}
 	option = {
@@ -4786,6 +4796,21 @@ country_event = {
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
 		}
+		if = {
+			limit = {
+				tag = JAP
+				RNG = { is_subject_of = ROOT }
+			}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = MAN
+					is_claimed_by = MAN
+				}
+			}
+			remove_core_of = RNG
+		}
+		}
 	}
 	option = {
 		name = "Maintain Military occupation."
@@ -5120,6 +5145,15 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = TIB
+					is_claimed_by = TIB
+				}
+			}
+			remove_core_of = RNG
 		}
 	}
 	option = {
@@ -11364,6 +11398,15 @@ country_event = {
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
 		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SIK
+					is_claimed_by = SIK
+				}
+			}
+			remove_core_of = RNG
+		}
 	}
 	option = {
 		name = "Maintain Military occupation."
@@ -11536,6 +11579,15 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = YUN
+					is_claimed_by = YUN
+				}
+			}
+			remove_core_of = RNG
 		}
 	}
 	option = {
@@ -11741,6 +11793,15 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = GXC
+					is_claimed_by = GXC
+				}
+			}
+			remove_core_of = RNG
 		}
 	}
 	option = {
@@ -11966,6 +12027,15 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = XSM
+					is_claimed_by = XSM
+				}
+			}
+			remove_core_of = RNG
 		}
 	}
 	option = {
@@ -12413,6 +12483,27 @@ country_event = {
 			MEN = {
 				transfer_state = 1119
 			}
+		}
+		if = {
+			limit = { MEN = { is_subject_of = ROOT }}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MEN
+						is_claimed_by = MEN
+					}
+				}
+				remove_core_of = RNG
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SHX
+					is_claimed_by = SHX
+				}
+			}
+			remove_core_of = RNG
 		}
 	}
 	option = {

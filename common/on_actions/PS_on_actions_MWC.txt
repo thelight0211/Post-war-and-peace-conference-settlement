@@ -287,6 +287,17 @@ on_actions = {
 				if = {
 					limit = {				
        						 JAP = {
+           						owns_state = 609
+       						 }
+							 PRC = { is_ally_with = JAP }
+   				 	}
+					JAP = {
+     						remove_state_claim = 609
+   				   	}	
+				}
+				if = {
+					limit = {				
+       						 JAP = {
            						 owns_state = 609
        						 }
 							 PRC = { is_subject_of = SOV }
@@ -2189,6 +2200,61 @@ on_actions = {
 						add_state_core = 329
 					}
 				}
+
+				if = {
+					limit = {				
+						 MEN = {
+							 exists = no
+						}
+						328 = { is_core_of = MAN }
+   				 	}
+					every_state = {
+						limit = {
+							is_core_of = MEN
+						}
+						add_core_of = MAN
+					}
+				}
+				if = {
+					limit = {				
+						NOT = { 328 = { is_core_of = MAN } }
+   				 	}
+					every_state = {
+						limit = {
+							is_core_of = MEN
+						}
+						remove_core_of = MAN
+					}
+				}
+				if = {
+					limit = {
+						SHX = {
+							owns_state = 615
+						}
+						PRC = {
+							exists = no
+						}
+					}
+					SHX = {
+						add_state_core = 622
+					}
+					if = {
+						limit = {
+							has_global_flag = road_to_56_is_active
+						}
+						SHX = {
+							add_state_core = 1111
+							add_state_core = 1125
+						}
+					}
+					else = {
+						SHX = {
+							add_state_core = 1032
+							add_state_core = 1046
+						}
+					}
+				}
+
 				if = {
 					limit = {				
        						 JAP = {
@@ -2593,6 +2659,18 @@ on_actions = {
 					every_state = {
 						limit = {
 							is_core_of = CHI 
+							NOT = {
+								OR = {
+									AND = { OR = { is_core_of = YUN is_claimed_by = YUN } YUN = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = XSM is_claimed_by = XSM } XSM = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = SHX is_claimed_by = SHX } SHX = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = SIK is_claimed_by = SIK } SIK = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = TIB is_claimed_by = TIB } TIB = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = MEN is_claimed_by = MEN } MEN = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = MAN is_claimed_by = MAN } MAN = { is_subject_of = JAP } }
+									AND = { OR = { is_core_of = GXC is_claimed_by = XSM } GXC = { is_subject_of = JAP } }
+								}
+							}
 						}
 						add_core_of = RNG
 					}
