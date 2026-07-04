@@ -2660,33 +2660,6 @@ on_actions = {
 							remove_claim_by = GER
    				 		}     	
 				}
-				if = { 
-					limit = {
-						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
-						RNG = { is_subject_of = JAP }
-					}
-					RNG = { 
-						load_focus_tree = generic_focus
-					}
-					every_state = {
-						limit = {
-							is_core_of = CHI 
-							NOT = {
-								OR = {
-									AND = { OR = { is_core_of = YUN is_claimed_by = YUN } YUN = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = XSM is_claimed_by = XSM } XSM = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = SHX is_claimed_by = SHX } SHX = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = SIK is_claimed_by = SIK } SIK = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = TIB is_claimed_by = TIB } TIB = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = MEN is_claimed_by = MEN } MEN = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = MAN is_claimed_by = MAN } MAN = { is_subject_of = JAP } }
-									AND = { OR = { is_core_of = GXC is_claimed_by = XSM } GXC = { is_subject_of = JAP } }
-								}
-							}
-						}
-						add_core_of = RNG
-					}
-				}
 
 			}
 	}
