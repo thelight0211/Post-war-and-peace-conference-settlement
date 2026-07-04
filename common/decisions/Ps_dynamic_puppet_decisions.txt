@@ -1,626 +1,660 @@
-dynamic_puppet_category = {  
+dynamic_puppet_category = {
+creat_dynamic_puppet = {
 
-	creat_dynamic_puppet = {
-
-		icon = generic_military
-		days_re_enable = 1
-		visible = {
-				is_subject = no
-				NOT = { has_country_flag = bureaucratic_cooldown }
-		}
-		fire_only_once = no
-		
-		target_trigger = {
-			OR = {
-				AND = {
-					is_ai = yes
-					NOT = {
-						any_country_with_original_tag = {
-							original_tag_to_check = FROM
-							exists = yes
-							is_ally_with = ROOT
-						}
-					}
-					NOT = {
-						any_other_country = {
-							is_ally_with = ROOT
-							any_core_state = {
-								is_owned_by = ROOT
-								is_core_of = FROM
-							}
-						}
-					}
-					any_owned_state = {
-						is_core_of = FROM
-					}
-				}
-				AND = {
-					is_ai = no
-					NOT = {
-						any_country_with_original_tag = {
-							original_tag_to_check = FROM
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			ROOT = {	
-			    NOT = {
-					AND = {
-						FROM = { has_country_flag = is_dynamic_tag }
-						any_country = { 
-							is_dynamic_country = no
-							original_tag = FROM 
-							exists = yes
-						}
+	icon = generic_military
+	days_re_enable = 1
+	visible = {
+			is_subject = no
+			NOT = { has_country_flag = bureaucratic_cooldown }
+	}
+	fire_only_once = no
+	
+	target_trigger = {
+		OR = {
+			AND = {
+				is_ai = yes
+				NOT = {
+					any_country_with_original_tag = {
+						original_tag_to_check = FROM
+						exists = yes
+						is_ally_with = ROOT
 					}
 				}
 				NOT = {
-					FROM = { is_ally_with = ROOT }
-			    }
+					any_other_country = {
+						is_ally_with = ROOT
+						any_core_state = {
+							is_owned_by = ROOT
+							is_core_of = FROM
+						}
+					}
+				}
 				any_owned_state = {
 					is_core_of = FROM
-					is_owned_by = ROOT
-					is_fully_controlled_by = ROOT				
-					NOT = {
-						any_country_with_core = {
-							exists = yes
-							NOT = { tag = FROM }
-							NOT = { tag = ROOT }
-							capital_scope = {
-								is_core_of = FROM
-							}
-							NOT = {
-								FROM = {
-									capital_scope = {
-										is_core_of = PREV.PREV
-									}
+				}
+			}
+			AND = {
+				is_ai = no
+				NOT = {
+					any_country_with_original_tag = {
+						original_tag_to_check = FROM
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		ROOT = {	
+		    NOT = {
+				AND = {
+					FROM = { has_country_flag = is_dynamic_tag }
+					any_country = { 
+						is_dynamic_country = no
+						original_tag = FROM 
+						exists = yes
+					}
+				}
+			}
+			NOT = {
+				FROM = { is_ally_with = ROOT }
+		    }
+			any_owned_state = {
+				is_core_of = FROM
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT				
+				NOT = {
+					any_country_with_core = {
+						exists = yes
+						NOT = { tag = FROM }
+						NOT = { tag = ROOT }
+						capital_scope = {
+							is_core_of = FROM
+						}
+						NOT = {
+							FROM = {
+								capital_scope = {
+									is_core_of = PREV.PREV
 								}
 							}
 						}
 					}
-					NOT = { 
-						is_core_of = ROOT 
-						is_claimed_by = ROOT
+				}
+				NOT = { 
+					is_core_of = ROOT 
+					is_claimed_by = ROOT
 
-							OR = {
-								# 1. Eccezioni con ROOT generico e FROM specifico (senza stato)
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = AFA }
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = CRO }
-									OR = {
-										state = 103 # Croatia
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = KUR }
-									OR = {
-										state = 680 # Deir-az-Zur
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = SIB }
-									SOV = { exists = yes }
-								}
-
-								# Eccezioni con ROOT generico e FROM generico + stati specifici
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = FROM }
-									OR = {
-										state = 273 # Italian Africa
-										state = 163 # Dalmatia
-										state = 164 # Dodecanese
-										state = 321 # Goa
-										state = 320 # French India
-										state = 137 # Crimea
-									}
-								}
-
-								# Eccezioni per GER fascista
-								AND = {
-									ROOT = {
-										tag = GER
-										has_government = fascism
-									}
-									FROM = {
-											tag = VIC
-									}
-								}
-
-								# Eccezioni per ITA
-								AND = {
-									ROOT = { tag = ITA }
-									FROM = {
-										OR = {
-											tag = ETH
-											tag = SOM
-										}
-									}
-								}
-								AND = {
-									ROOT = { tag = ITA }
-									FROM = { tag = FROM }
-									OR = {
-										state = 116 # Malta
-										state = 846 # Ticino
-									}
-								}
-								
-								# Eccezioni per SOV
-								AND = {
-									ROOT = { tag = SOV }
-									FROM = {
-										OR = {
-											tag = LIT
-											tag = LAT
-											tag = EST
-										}
-									}
-								}
-
-								# Eccezioni per TUR
-								AND = {
-									ROOT = { tag = TUR }
-									FROM = {
-										OR = {
-											tag = KUR
-											tag = IRQ
-										}
-									}
-								}
-								AND = {
-									ROOT = { tag = TUR }
-									FROM = { tag = FROM }
-									OR = {
-										state = 680 # Deir-az-Zur
-									}
-								}
-
-								# Eccezioni per FRA
-								AND = {
-									ROOT = { tag = FRA }
-									FROM = {
-										OR = {
-											tag = SOM
-											tag = AFA
-										}
-									}
-								}
-								AND = {
-									ROOT = { tag = FRA }
-									FROM = { tag = FROM }
-									OR = {
-										state = 1 # Corsica
-										state = 735 # Savoy
-									}
-								}
-
-								# Eccezioni per SWE
-								AND = {
-									ROOT = { tag = SWE }
-									FROM = { tag = DEN }
-									OR = {
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 910
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 1024
-										}
-									}
-								}
-
-								# Eccezioni per USA
-								AND = {
-									OR = {
-									has_global_flag = road_to_56_is_active
-									1050 = { is_core_of = CUB }
-									}
-									ROOT = { tag = USA }
-									FROM = { tag = FROM }
-									OR = {
-										state = 1050
-									}
-								}
-								# Eccezioni per GRE
-								AND = {
-									ROOT = { tag = GRE }
-									FROM = { tag = TUR }
-								}
-
-								# Eccezioni per SPR
-								AND = {
-									ROOT = { tag = SPR }
-									FROM = { tag = MOR }
-								}
-
-								# Eccezioni per JAP
-								AND = {
-									ROOT = { tag = JAP }
-									FROM = {
-										OR = {
-											tag = CHI
-											tag = PRC
-										}
-									}
-								}
-
-								# Eccezioni generali per stati (ROOT generico + FROM generico)
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = FROM }
-									OR = {
-										state = 728
-										state = 123
-										state = 646
-										state = 28
-										state = 664
-										state = 73
-										state = 76
-										state = 66
-										state = 67
-										state = 68
-										state = 63
-										state = 763
-										state = 5
-										state = 84
-										state = 83
-										state = 82
-										state = 77
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 971
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 955
-										}
-										state = 766
-										state = 80
-										state = 184
-										state = 908
-										state = 39
-										state = 119
-										state = 146
-										state = 729
-										state = 118
-										state = 685
-										state = 326
-										state = 106
-										state = 731
-										state = 329
-										state = 799
-										state = 1
-										state = 852
-										state = 735
-										state = 45
-										state = 743
-										state = 736
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 912
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 964
-										}
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 975
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 1086
-										}
-										state = 802
-									}
-								}
-
-								# Eccezioni con stati specifici per tag diversi
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = SAU }
-									OR = {
-										state = 658 # Arab UK 1
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = SAU }
-									OR = {
-										state = 858
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = COG }
-									OR = {
-										state = 539 # Gabon
-										state = 540 # Angola
-										state = 772 # Middle Congo
-										state = 796 # North Angola
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = CZE }
-									OR = {
-										state = 69
-										state = 72
-										state = 74
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 972
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 1078
-										}
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = SOM }
-									OR = {
-										state = 269 # British Somaliland
-										state = 903 # Garissa
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = YEM }
-									OR = {
-										state = 659
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 992
-										}
-										state = 906
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = LAT }
-									OR = {
-										state = 814 # Suduva
-										state = 11 # Kaunas
-										state = 815 # Aukstaitija
-										state = 189 # Kaunas
-										state = 188 # Memel
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = HUN }
-									OR = {
-										state = 764 # West Banat
-									}
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = FROM }
-									OR = {
-										has_state_flag = dec_later
-									}
-								}
-
-								# Eccezioni con tag dinamici o condizioni speciali
-								AND = {
-									ROOT = { has_government = communism }
-									PRC = { exists = yes }
-									FROM = { tag = CHI }
-								}
-								AND = {
-									ROOT = { NOT = { has_government = communism } }
-									CHI = { exists = yes }
-									FROM = { tag = PRC }
-								}
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = { tag = MEN }
-								}
-								# stop dynamic puppets on chinese cliques
-								AND = {
-									ROOT = { tag = ROOT }
-									FROM = {
-										capital_scope = {
-											OR = {
-												is_core_of = CHI
-												is_core_of = PRC
-											}
-										}
-									}
-								}
+						OR = {
+							# 1. Eccezioni con ROOT generico e FROM specifico (senza stato)
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = AFA }
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = CRO }
 								OR = {
-									AND = { ROOT = { has_country_flag = POL_OCCUPIED } FROM = { tag = POL } }
-									AND = { ROOT = { has_country_flag = UKR_OCCUPIED } FROM = { tag = UKR } }
-									AND = { ROOT = { has_country_flag = HOL_OCCUPIED } FROM = { tag = HOL } }
-									AND = { ROOT = { has_country_flag = SOV_OCCUPIED } FROM = { tag = SOV } }
-									AND = { ROOT = { has_country_flag = NOR_OCCUPIED } FROM = { tag = NOR } }
-									AND = { ROOT = { has_country_flag = decided_UK } FROM = { tag = ENG } }
-									AND = { ROOT = { has_country_flag = BEL_OCCUPIED } FROM = { tag = BEL } }
-									AND = { ROOT = { has_country_flag = EST_OCCUPIED } FROM = { tag = EST } }
-									AND = { ROOT = { has_country_flag = LAT_OCCUPIED } FROM = { tag = LAT } }
-									AND = { ROOT = { has_country_flag = LIT_OCCUPIED } FROM = { tag = LIT } }
-									AND = { ROOT = { has_country_flag = BLR_OCCUPIED } FROM = { tag = BLR } }
-									AND = { ROOT = { has_country_flag = GEO_OCCUPIED } FROM = { tag = GEO } }
-									AND = { ROOT = { has_country_flag = AZR_OCCUPIED } FROM = { tag = AZR } }
-									AND = { ROOT = { has_country_flag = ARM_OCCUPIED } FROM = { tag = ARM } }
-									AND = { ROOT = { has_country_flag = TAJ_OCCUPIED } FROM = { tag = TAJ } }
-									AND = { ROOT = { has_country_flag = KYR_OCCUPIED } FROM = { tag = KYR } }
-									AND = { ROOT = { has_country_flag = KAZ_OCCUPIED } FROM = { tag = KAZ } }
-									AND = { ROOT = { has_country_flag = UZB_OCCUPIED } FROM = { tag = UZB } }
-									AND = { ROOT = { has_country_flag = TRK_OCCUPIED } FROM = { tag = TMS } }
-									AND = { ROOT = { has_country_flag = SPM_OCCUPIED } FROM = { tag = SPR } }
-									AND = { ROOT = { has_country_flag = POR_OCCUPIED } FROM = { tag = POR } }
-									AND = { ROOT = { has_country_flag = BUL_OCCUPIED } FROM = { tag = BUL } }
-									AND = { ROOT = { has_country_flag = SER_OCCUPIED } FROM = { tag = SER } }
-									AND = { ROOT = { has_country_flag = MAC_OCCUPIED } FROM = { tag = MAC } }
-									AND = { ROOT = { has_country_flag = MNT_OCCUPIED } FROM = { tag = MNT } }
-									AND = { ROOT = { has_country_flag = BOS_OCCUPIED } FROM = { tag = BOS } }
-									AND = { ROOT = { has_country_flag = CRO_OCCUPIED } FROM = { tag = CRO } }
-									AND = { ROOT = { has_country_flag = ROM_OCCUPIED } FROM = { tag = ROM } }
-									AND = { ROOT = { has_country_flag = ALB_OCCUPIED } FROM = { tag = ALB } }
-									AND = { ROOT = { has_country_flag = GRE_OCCUPIED } FROM = { tag = GRE } }
-									AND = { ROOT = { has_country_flag = HUN_OCCUPIED } FROM = { tag = HUN } }
-									AND = { ROOT = { has_country_flag = SLO_OCCUPIED } FROM = { tag = SLO } }
-									AND = { ROOT = { has_country_flag = IRE_OCCUPIED } FROM = { tag = IRE } }
-									AND = { ROOT = { has_country_flag = BRA_OCCUPIED } FROM = { tag = BRA } }
-									AND = { ROOT = { has_country_flag = PAR_OCCUPIED } FROM = { tag = PAR } }
-									AND = { ROOT = { has_country_flag = VEN_OCCUPIED } FROM = { tag = VEN } }
-									AND = { ROOT = { has_country_flag = URG_OCCUPIED } FROM = { tag = URG } }
-									AND = { ROOT = { has_country_flag = GYA_OCCUPIED } FROM = { tag = GYA } }
-									AND = { ROOT = { has_country_flag = SUR_OCCUPIED } FROM = { tag = SUR } }
-									AND = { ROOT = { has_country_flag = CAY_OCCUPIED } FROM = { tag = CAY } }
-									AND = { ROOT = { has_country_flag = CHL_OCCUPIED } FROM = { tag = CHL } }
-									AND = { ROOT = { has_country_flag = ARG_OCCUPIED } FROM = { tag = ARG } }
-									AND = { ROOT = { has_country_flag = BOL_OCCUPIED } FROM = { tag = BOL } }
-									AND = { ROOT = { has_country_flag = PRU_OCCUPIED } FROM = { tag = PRU } }
-									AND = { ROOT = { has_country_flag = ECU_OCCUPIED } FROM = { tag = ECU } }
-									AND = { ROOT = { has_country_flag = COL_OCCUPIED } FROM = { tag = COL } }
-									AND = { ROOT = { has_country_flag = MEX_OCCUPIED } FROM = { tag = MEX } }
-									AND = { ROOT = { has_country_flag = GUA_OCCUPIED } FROM = { tag = GUA } }
-									AND = { ROOT = { has_country_flag = ELS_OCCUPIED } FROM = { tag = ELS } }
-									AND = { ROOT = { has_country_flag = HON_OCCUPIED } FROM = { tag = HON } }
-									AND = { ROOT = { has_country_flag = NIC_OCCUPIED } FROM = { tag = NIC } }
-									AND = { ROOT = { has_country_flag = COS_OCCUPIED } FROM = { tag = COS } }
-									AND = { ROOT = { has_country_flag = PAN_OCCUPIED } FROM = { tag = PAN } }
-									AND = { ROOT = { has_country_flag = CUB_OCCUPIED } FROM = { tag = CUB } }
-									AND = { ROOT = { has_country_flag = HAI_OCCUPIED } FROM = { tag = HAI } }
-									AND = { ROOT = { has_country_flag = DOM_OCCUPIED } FROM = { tag = DOM } }
-									AND = { ROOT = { has_country_flag = BLZ_OCCUPIED } FROM = { tag = BLZ } }
-									AND = { ROOT = { has_country_flag = USA_OCCUPIED } FROM = { tag = USA } }
-									AND = { ROOT = { has_country_flag = CAN_OCCUPIED } FROM = { tag = CAN } }
-									AND = { ROOT = { has_country_flag = IRQ_OCCUPIED } FROM = { tag = IRQ } }
-									AND = { ROOT = { has_country_flag = ARB_OCCUPIED } FROM = { tag = SAU } }
-									AND = { ROOT = { has_country_flag = PHN_OCCUPIED } FROM = { tag = PHN } }
-									AND = { ROOT = { has_country_flag = OMA_OCCUPIED } FROM = { tag = OMA } }
-									AND = { ROOT = { has_country_flag = YEM_OCCUPIED } FROM = { tag = YEM } }
-									AND = { ROOT = { has_country_flag = JOR_OCCUPIED } FROM = { tag = JOR } }
-									AND = { ROOT = { has_country_flag = PAL_OCCUPIED } FROM = { tag = PAL } }
-									AND = { ROOT = { has_country_flag = UAE_OCCUPIED } FROM = { tag = UAE } }
-									AND = { ROOT = { has_country_flag = QAT_OCCUPIED } FROM = { tag = QAT } }
-									AND = { ROOT = { has_country_flag = KUW_OCCUPIED } FROM = { tag = KUW } }
-									AND = { ROOT = { has_country_flag = SYR_OCCUPIED } FROM = { tag = SYR } }
-									AND = { ROOT = { has_country_flag = TUR_OCCUPIED } FROM = { tag = TUR } }
-									AND = { ROOT = { has_country_flag = PER_OCCUPIED } FROM = { tag = PER } }
-									AND = { ROOT = { has_country_flag = KUR_OCCUPIED } FROM = { tag = KUR } }
-									AND = { ROOT = { has_country_flag = TAN_OCCUPIED } FROM = { tag = TAN } }
-									AND = { ROOT = { has_country_flag = SIK_OCCUPIED } FROM = { tag = SIK } }
-									AND = { ROOT = { has_country_flag = AFG_OCCUPIED } FROM = { tag = AFG } }
-									AND = { ROOT = { has_country_flag = TIB_OCCUPIED } FROM = { tag = TIB } }
-									AND = { ROOT = { has_country_flag = BRM_OCCUPIED } FROM = { tag = BRM } }
-									AND = { ROOT = { has_country_flag = IND_OCCUPIED } FROM = { tag = IND } }
-									AND = { ROOT = { has_country_flag = BHU_OCCUPIED } FROM = { tag = BHU } }
-									AND = { ROOT = { has_country_flag = NEP_OCCUPIED } FROM = { tag = NEP } }
-									AND = { ROOT = { has_country_flag = SRL_OCCUPIED } FROM = { tag = SRL } }
-									AND = { ROOT = { has_country_flag = PAK_OCCUPIED } FROM = { tag = PAK } }
-									AND = { ROOT = { has_country_flag = MON_OCCUPIED } FROM = { tag = MON } }
-									AND = { ROOT = { has_country_flag = MAN_OCCUPIED } FROM = { tag = MAN } }
-									AND = { ROOT = { has_country_flag = KOR_OCCUPIED } FROM = { tag = KOR } }
-									AND = { ROOT = { has_country_flag = VIN_OCCUPIED } FROM = { tag = VIN } }
-									AND = { ROOT = { has_country_flag = JAP_OCCUPIED } FROM = { tag = JAP } }
-									AND = { ROOT = { has_country_flag = SHX_OCCUPIED } FROM = { tag = SHX } }
-									AND = { ROOT = { has_country_flag = XSM_OCCUPIED } FROM = { tag = XSM } }
-									AND = { ROOT = { has_country_flag = GXC_OCCUPIED } FROM = { tag = GXC } }
-									AND = { ROOT = { has_country_flag = YUN_OCCUPIED } FROM = { tag = YUN } }
-									AND = { ROOT = { has_country_flag = CHI_OCCUPIED } FROM = { tag = CHI } }
-									AND = { ROOT = { has_country_flag = PHI_OCCUPIED } FROM = { tag = PHI } }
-									AND = { ROOT = { has_country_flag = SIA_OCCUPIED } FROM = { tag = SIA } }
-									AND = { ROOT = { has_country_flag = CAM_OCCUPIED } FROM = { tag = CAM } }
-									AND = { ROOT = { has_country_flag = LAO_OCCUPIED } FROM = { tag = LAO } }
-									AND = { ROOT = { has_country_flag = INS_OCCUPIED } FROM = { tag = INS } }
-									AND = { ROOT = { has_country_flag = MAL_OCCUPIED } FROM = { tag = MAL } }
-									AND = { ROOT = { has_country_flag = AST_OCCUPIED } FROM = { tag = AST } }
-									AND = { ROOT = { has_country_flag = PNG_OCCUPIED } FROM = { tag = PNG } }
-									AND = { ROOT = { has_country_flag = NZL_OCCUPIED } FROM = { tag = NZL } }
-									AND = { ROOT = { has_country_flag = CHA_OCCUPIED } FROM = { tag = CHA } }
-									AND = { ROOT = { has_country_flag = SUD_OCCUPIED } FROM = { tag = SUD } }
-									AND = { ROOT = { has_country_flag = NGR_OCCUPIED } FROM = { tag = NGR } }
-									AND = { ROOT = { has_country_flag = MRT_OCCUPIED } FROM = { tag = MRT } }
-									AND = { ROOT = { has_country_flag = SEN_OCCUPIED } FROM = { tag = SEN } }
-									AND = { ROOT = { has_country_flag = GAM_OCCUPIED } FROM = { tag = GAM } }
-									AND = { ROOT = { has_country_flag = ALG_OCCUPIED } FROM = { tag = ALG } }
-									AND = { ROOT = { has_country_flag = MOR_OCCUPIED } FROM = { tag = MOR } }
-									AND = { ROOT = { has_country_flag = TUN_OCCUPIED } FROM = { tag = TUN } }
-									AND = { ROOT = { has_country_flag = LBA_OCCUPIED } FROM = { tag = LBA } }
-									AND = { ROOT = { has_country_flag = ETH_OCCUPIED } FROM = { tag = ETH } }
-									AND = { ROOT = { has_country_flag = ANG_OCCUPIED } FROM = { tag = ANG } }
-									AND = { ROOT = { has_country_flag = BOT_OCCUPIED } FROM = { tag = BOT } }
-									AND = { ROOT = { has_country_flag = RHO_OCCUPIED } FROM = { tag = ZIM } }
-									AND = { ROOT = { has_country_flag = MZB_OCCUPIED } FROM = { tag = MZB } }
-									AND = { ROOT = { has_country_flag = ZAM_OCCUPIED } FROM = { tag = ZAM } }
-									AND = { ROOT = { has_country_flag = TZN_OCCUPIED } FROM = { tag = TZN } }
-									AND = { ROOT = { has_country_flag = KEN_OCCUPIED } FROM = { tag = KEN } }
-									AND = { ROOT = { has_country_flag = SOM_OCCUPIED } FROM = { tag = SOM } }
-									AND = { ROOT = { has_country_flag = COG_OCCUPIED } FROM = { tag = COG } }
-									AND = { ROOT = { has_country_flag = EQG_OCCUPIED } FROM = { tag = EQG } }
-									AND = { ROOT = { has_country_flag = BRD_OCCUPIED } FROM = { tag = BRD } }
-									AND = { ROOT = { has_country_flag = RWA_OCCUPIED } FROM = { tag = RWA } }
-									AND = { ROOT = { has_country_flag = UGA_OCCUPIED } FROM = { tag = UGA } }
-									AND = { ROOT = { has_country_flag = DJI_OCCUPIED } FROM = { tag = DJI } }
-									AND = { ROOT = { has_country_flag = ERI_OCCUPIED } FROM = { tag = ERI } }
-									AND = { ROOT = { has_country_flag = CAR_OCCUPIED } FROM = { tag = CAR } }
-									AND = { ROOT = { has_country_flag = MLI_OCCUPIED } FROM = { tag = MLI } }
-									AND = { ROOT = { has_country_flag = DAH_OCCUPIED } FROM = { tag = DAH } }
-									AND = { ROOT = { has_country_flag = VOL_OCCUPIED } FROM = { tag = VOL } }
-									AND = { ROOT = { has_country_flag = IVO_OCCUPIED } FROM = { tag = IVO } }
-									AND = { ROOT = { has_country_flag = GNA_OCCUPIED } FROM = { tag = GNA } }
-									AND = { ROOT = { has_country_flag = SIE_OCCUPIED } FROM = { tag = SIE } }
-									AND = { ROOT = { has_country_flag = LIB_OCCUPIED } FROM = { tag = LIB } }
-									AND = { ROOT = { has_country_flag = TOG_OCCUPIED } FROM = { tag = TOG } }
-									AND = { ROOT = { has_country_flag = NGA_OCCUPIED } FROM = { tag = NGA } }
-									AND = { ROOT = { has_country_flag = GHA_OCCUPIED } FROM = { tag = GHA } }
-									AND = { ROOT = { has_country_flag = GNB_OCCUPIED } FROM = { tag = GNB } }
-									AND = { ROOT = { has_country_flag = CMR_OCCUPIED } FROM = { tag = CMR } }
-									AND = { ROOT = { has_country_flag = RCG_OCCUPIED } FROM = { tag = RCG } }
-									AND = { ROOT = { has_country_flag = MLW_OCCUPIED } FROM = { tag = MLW } }
+									state = 103 # Croatia
 								}
 							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = KUR }
+								OR = {
+									state = 680 # Deir-az-Zur
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = SIB }
+								SOV = { exists = yes }
+							}
+
+							# Eccezioni con ROOT generico e FROM generico + stati specifici
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = FROM }
+								OR = {
+									state = 273 # Italian Africa
+									state = 163 # Dalmatia
+									state = 164 # Dodecanese
+									state = 321 # Goa
+									state = 320 # French India
+									state = 137 # Crimea
+								}
+							}
+
+							# Eccezioni per GER fascista
+							AND = {
+								ROOT = {
+									tag = GER
+									has_government = fascism
+								}
+								FROM = {
+										tag = VIC
+								}
+							}
+
+							# Eccezioni per ITA
+							AND = {
+								ROOT = { tag = ITA }
+								FROM = {
+									OR = {
+										tag = ETH
+										tag = SOM
+									}
+								}
+							}
+							AND = {
+								ROOT = { tag = ITA }
+								FROM = { tag = FROM }
+								OR = {
+									state = 116 # Malta
+									state = 846 # Ticino
+								}
+							}
+							
+							# Eccezioni per SOV
+							AND = {
+								ROOT = { tag = SOV }
+								FROM = {
+									OR = {
+										tag = LIT
+										tag = LAT
+										tag = EST
+									}
+								}
+							}
+
+							# Eccezioni per TUR
+							AND = {
+								ROOT = { tag = TUR }
+								FROM = {
+									OR = {
+										tag = KUR
+										tag = IRQ
+									}
+								}
+							}
+							AND = {
+								ROOT = { tag = TUR }
+								FROM = { tag = FROM }
+								OR = {
+									state = 680 # Deir-az-Zur
+								}
+							}
+
+							# Eccezioni per FRA
+							AND = {
+								ROOT = { tag = FRA }
+								FROM = {
+									OR = {
+										tag = SOM
+										tag = AFA
+									}
+								}
+							}
+							AND = {
+								ROOT = { tag = FRA }
+								FROM = { tag = FROM }
+								OR = {
+									state = 1 # Corsica
+									state = 735 # Savoy
+								}
+							}
+
+							# Eccezioni per SWE
+							AND = {
+								ROOT = { tag = SWE }
+								FROM = { tag = DEN }
+								OR = {
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 910
+									}
+									AND = {
+										has_global_flag = road_to_56_is_active
+										state = 1024
+									}
+								}
+							}
+							# Eccezioni per USA
+							AND = {
+								ROOT = { tag = USA }
+								FROM = { tag = FROM }
+								state = 1050
+								OR = {
+									has_global_flag = road_to_56_is_active
+									is_core_of = CUB
+								}
+							}
+
+							# Eccezioni per GRE
+							AND = {
+								ROOT = { tag = GRE }
+								FROM = { tag = TUR }
+							}
+
+							# Eccezioni per SPR
+							AND = {
+								ROOT = { tag = SPR }
+								FROM = { tag = MOR }
+							}
+
+							# Eccezioni per JAP
+							AND = {
+								ROOT = { tag = JAP }
+								FROM = {
+									OR = {
+										tag = CHI
+										tag = PRC
+									}
+								}
+							}
+
+							# Eccezioni generali per stati (ROOT generico + FROM generico)
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = FROM }
+								OR = {
+									state = 728
+									state = 123
+									state = 646
+									state = 28
+									state = 664
+									state = 73
+									state = 76
+									state = 66
+									state = 67
+									state = 68
+									state = 63
+									state = 763
+									state = 5
+									state = 84
+									state = 83
+									state = 82
+									state = 77
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 971
+									}
+									AND = {
+										has_global_flag = road_to_56_is_active
+										state = 955
+									}
+									state = 766
+									state = 80
+									state = 184
+									state = 908
+									state = 39
+									state = 119
+									state = 146
+									state = 729
+									state = 118
+									state = 685
+									state = 326
+									state = 106
+									state = 731
+									state = 329
+									state = 799
+									state = 1
+									state = 852
+									state = 735
+									state = 45
+									state = 743
+									state = 736
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 912
+									}
+									AND = {
+										has_global_flag = road_to_56_is_active
+										state = 964
+									}
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 975
+									}
+									AND = {
+										has_global_flag = road_to_56_is_active
+										state = 1086
+									}
+									state = 802
+								}
+							}
+
+							# Eccezioni con stati specifici per tag diversi
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = SAU }
+								OR = {
+									state = 658 # Arab UK 1
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = SAU }
+								OR = {
+									state = 858
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = COG }
+								OR = {
+									state = 539 # Gabon
+									state = 540 # Angola
+									state = 772 # Middle Congo
+									state = 796 # North Angola
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = CZE }
+								OR = {
+									state = 69
+									state = 72
+									state = 74
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 972
+									}
+									AND = {
+										has_global_flag = road_to_56_is_active
+										state = 1078
+									}
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = SOM }
+								OR = {
+									state = 269 # British Somaliland
+									state = 903 # Garissa
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = YEM }
+								OR = {
+									state = 659
+									AND = {
+										NOT = {
+											has_global_flag = road_to_56_is_active
+										}
+										state = 992
+									}
+									state = 906
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = LAT }
+								OR = {
+									state = 814 # Suduva
+									state = 11 # Kaunas
+									state = 815 # Aukstaitija
+									state = 189 # Kaunas
+									state = 188 # Memel
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = HUN }
+								OR = {
+									state = 764 # West Banat
+								}
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = FROM }
+								OR = {
+									has_state_flag = dec_later
+								}
+							}
+
+							# Eccezioni con tag dinamici o condizioni speciali
+							AND = {
+								ROOT = { has_government = communism }
+								PRC = { exists = yes }
+								FROM = { tag = CHI }
+							}
+							AND = {
+								ROOT = { NOT = { has_government = communism } }
+								CHI = { exists = yes }
+								FROM = { tag = PRC }
+							}
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = { tag = MEN }
+							}
+							# stop dynamic puppets on chinese cliques
+							AND = {
+								ROOT = { tag = ROOT }
+								FROM = {
+									capital_scope = {
+										OR = {
+											is_core_of = CHI
+											is_core_of = PRC
+										}
+									}
+								}
+							}
+							OR = {
+								AND = { ROOT = { has_country_flag = POL_OCCUPIED } FROM = { tag = POL } }
+								AND = { ROOT = { has_country_flag = UKR_OCCUPIED } FROM = { tag = UKR } }
+								AND = { ROOT = { has_country_flag = HOL_OCCUPIED } FROM = { tag = HOL } }
+								AND = { ROOT = { has_country_flag = SOV_OCCUPIED } FROM = { tag = SOV } }
+								AND = { ROOT = { has_country_flag = NOR_OCCUPIED } FROM = { tag = NOR } }
+								AND = { ROOT = { has_country_flag = decided_UK } FROM = { tag = ENG } }
+								AND = { ROOT = { has_country_flag = BEL_OCCUPIED } FROM = { tag = BEL } }
+								AND = { ROOT = { has_country_flag = EST_OCCUPIED } FROM = { tag = EST } }
+								AND = { ROOT = { has_country_flag = LAT_OCCUPIED } FROM = { tag = LAT } }
+								AND = { ROOT = { has_country_flag = LIT_OCCUPIED } FROM = { tag = LIT } }
+								AND = { ROOT = { has_country_flag = BLR_OCCUPIED } FROM = { tag = BLR } }
+								AND = { ROOT = { has_country_flag = GEO_OCCUPIED } FROM = { tag = GEO } }
+								AND = { ROOT = { has_country_flag = AZR_OCCUPIED } FROM = { tag = AZR } }
+								AND = { ROOT = { has_country_flag = ARM_OCCUPIED } FROM = { tag = ARM } }
+								AND = { ROOT = { has_country_flag = TAJ_OCCUPIED } FROM = { tag = TAJ } }
+								AND = { ROOT = { has_country_flag = KYR_OCCUPIED } FROM = { tag = KYR } }
+								AND = { ROOT = { has_country_flag = KAZ_OCCUPIED } FROM = { tag = KAZ } }
+								AND = { ROOT = { has_country_flag = UZB_OCCUPIED } FROM = { tag = UZB } }
+								AND = { ROOT = { has_country_flag = TRK_OCCUPIED } FROM = { tag = TMS } }
+								AND = { ROOT = { has_country_flag = SPM_OCCUPIED } FROM = { tag = SPR } }
+								AND = { ROOT = { has_country_flag = POR_OCCUPIED } FROM = { tag = POR } }
+								AND = { ROOT = { has_country_flag = BUL_OCCUPIED } FROM = { tag = BUL } }
+								AND = { ROOT = { has_country_flag = SER_OCCUPIED } FROM = { tag = SER } }
+								AND = { ROOT = { has_country_flag = MAC_OCCUPIED } FROM = { tag = MAC } }
+								AND = { ROOT = { has_country_flag = MNT_OCCUPIED } FROM = { tag = MNT } }
+								AND = { ROOT = { has_country_flag = BOS_OCCUPIED } FROM = { tag = BOS } }
+								AND = { ROOT = { has_country_flag = CRO_OCCUPIED } FROM = { tag = CRO } }
+								AND = { ROOT = { has_country_flag = ROM_OCCUPIED } FROM = { tag = ROM } }
+								AND = { ROOT = { has_country_flag = ALB_OCCUPIED } FROM = { tag = ALB } }
+								AND = { ROOT = { has_country_flag = GRE_OCCUPIED } FROM = { tag = GRE } }
+								AND = { ROOT = { has_country_flag = HUN_OCCUPIED } FROM = { tag = HUN } }
+								AND = { ROOT = { has_country_flag = SLO_OCCUPIED } FROM = { tag = SLO } }
+								AND = { ROOT = { has_country_flag = IRE_OCCUPIED } FROM = { tag = IRE } }
+								AND = { ROOT = { has_country_flag = BRA_OCCUPIED } FROM = { tag = BRA } }
+								AND = { ROOT = { has_country_flag = PAR_OCCUPIED } FROM = { tag = PAR } }
+								AND = { ROOT = { has_country_flag = VEN_OCCUPIED } FROM = { tag = VEN } }
+								AND = { ROOT = { has_country_flag = URG_OCCUPIED } FROM = { tag = URG } }
+								AND = { ROOT = { has_country_flag = GYA_OCCUPIED } FROM = { tag = GYA } }
+								AND = { ROOT = { has_country_flag = SUR_OCCUPIED } FROM = { tag = SUR } }
+								AND = { ROOT = { has_country_flag = CAY_OCCUPIED } FROM = { tag = CAY } }
+								AND = { ROOT = { has_country_flag = CHL_OCCUPIED } FROM = { tag = CHL } }
+								AND = { ROOT = { has_country_flag = ARG_OCCUPIED } FROM = { tag = ARG } }
+								AND = { ROOT = { has_country_flag = BOL_OCCUPIED } FROM = { tag = BOL } }
+								AND = { ROOT = { has_country_flag = PRU_OCCUPIED } FROM = { tag = PRU } }
+								AND = { ROOT = { has_country_flag = ECU_OCCUPIED } FROM = { tag = ECU } }
+								AND = { ROOT = { has_country_flag = COL_OCCUPIED } FROM = { tag = COL } }
+								AND = { ROOT = { has_country_flag = MEX_OCCUPIED } FROM = { tag = MEX } }
+								AND = { ROOT = { has_country_flag = GUA_OCCUPIED } FROM = { tag = GUA } }
+								AND = { ROOT = { has_country_flag = ELS_OCCUPIED } FROM = { tag = ELS } }
+								AND = { ROOT = { has_country_flag = HON_OCCUPIED } FROM = { tag = HON } }
+								AND = { ROOT = { has_country_flag = NIC_OCCUPIED } FROM = { tag = NIC } }
+								AND = { ROOT = { has_country_flag = COS_OCCUPIED } FROM = { tag = COS } }
+								AND = { ROOT = { has_country_flag = PAN_OCCUPIED } FROM = { tag = PAN } }
+								AND = { ROOT = { has_country_flag = CUB_OCCUPIED } FROM = { tag = CUB } }
+								AND = { ROOT = { has_country_flag = HAI_OCCUPIED } FROM = { tag = HAI } }
+								AND = { ROOT = { has_country_flag = DOM_OCCUPIED } FROM = { tag = DOM } }
+								AND = { ROOT = { has_country_flag = BLZ_OCCUPIED } FROM = { tag = BLZ } }
+								AND = { ROOT = { has_country_flag = USA_OCCUPIED } FROM = { tag = USA } }
+								AND = { ROOT = { has_country_flag = CAN_OCCUPIED } FROM = { tag = CAN } }
+								AND = { ROOT = { has_country_flag = IRQ_OCCUPIED } FROM = { tag = IRQ } }
+								AND = { ROOT = { has_country_flag = ARB_OCCUPIED } FROM = { tag = SAU } }
+								AND = { ROOT = { has_country_flag = PHN_OCCUPIED } FROM = { tag = PHN } }
+								AND = { ROOT = { has_country_flag = OMA_OCCUPIED } FROM = { tag = OMA } }
+								AND = { ROOT = { has_country_flag = YEM_OCCUPIED } FROM = { tag = YEM } }
+								AND = { ROOT = { has_country_flag = JOR_OCCUPIED } FROM = { tag = JOR } }
+								AND = { ROOT = { has_country_flag = PAL_OCCUPIED } FROM = { tag = PAL } }
+								AND = { ROOT = { has_country_flag = UAE_OCCUPIED } FROM = { tag = UAE } }
+								AND = { ROOT = { has_country_flag = QAT_OCCUPIED } FROM = { tag = QAT } }
+								AND = { ROOT = { has_country_flag = KUW_OCCUPIED } FROM = { tag = KUW } }
+								AND = { ROOT = { has_country_flag = SYR_OCCUPIED } FROM = { tag = SYR } }
+								AND = { ROOT = { has_country_flag = TUR_OCCUPIED } FROM = { tag = TUR } }
+								AND = { ROOT = { has_country_flag = PER_OCCUPIED } FROM = { tag = PER } }
+								AND = { ROOT = { has_country_flag = KUR_OCCUPIED } FROM = { tag = KUR } }
+								AND = { ROOT = { has_country_flag = TAN_OCCUPIED } FROM = { tag = TAN } }
+								AND = { ROOT = { has_country_flag = SIK_OCCUPIED } FROM = { tag = SIK } }
+								AND = { ROOT = { has_country_flag = AFG_OCCUPIED } FROM = { tag = AFG } }
+								AND = { ROOT = { has_country_flag = TIB_OCCUPIED } FROM = { tag = TIB } }
+								AND = { ROOT = { has_country_flag = BRM_OCCUPIED } FROM = { tag = BRM } }
+								AND = { ROOT = { has_country_flag = IND_OCCUPIED } FROM = { tag = IND } }
+								AND = { ROOT = { has_country_flag = BHU_OCCUPIED } FROM = { tag = BHU } }
+								AND = { ROOT = { has_country_flag = NEP_OCCUPIED } FROM = { tag = NEP } }
+								AND = { ROOT = { has_country_flag = SRL_OCCUPIED } FROM = { tag = SRL } }
+								AND = { ROOT = { has_country_flag = PAK_OCCUPIED } FROM = { tag = PAK } }
+								AND = { ROOT = { has_country_flag = MON_OCCUPIED } FROM = { tag = MON } }
+								AND = { ROOT = { has_country_flag = MAN_OCCUPIED } FROM = { tag = MAN } }
+								AND = { ROOT = { has_country_flag = KOR_OCCUPIED } FROM = { tag = KOR } }
+								AND = { ROOT = { has_country_flag = VIN_OCCUPIED } FROM = { tag = VIN } }
+								AND = { ROOT = { has_country_flag = JAP_OCCUPIED } FROM = { tag = JAP } }
+								AND = { ROOT = { has_country_flag = SHX_OCCUPIED } FROM = { tag = SHX } }
+								AND = { ROOT = { has_country_flag = XSM_OCCUPIED } FROM = { tag = XSM } }
+								AND = { ROOT = { has_country_flag = GXC_OCCUPIED } FROM = { tag = GXC } }
+								AND = { ROOT = { has_country_flag = YUN_OCCUPIED } FROM = { tag = YUN } }
+								AND = { ROOT = { has_country_flag = CHI_OCCUPIED } FROM = { tag = CHI } }
+								AND = { ROOT = { has_country_flag = PHI_OCCUPIED } FROM = { tag = PHI } }
+								AND = { ROOT = { has_country_flag = SIA_OCCUPIED } FROM = { tag = SIA } }
+								AND = { ROOT = { has_country_flag = CAM_OCCUPIED } FROM = { tag = CAM } }
+								AND = { ROOT = { has_country_flag = LAO_OCCUPIED } FROM = { tag = LAO } }
+								AND = { ROOT = { has_country_flag = INS_OCCUPIED } FROM = { tag = INS } }
+								AND = { ROOT = { has_country_flag = MAL_OCCUPIED } FROM = { tag = MAL } }
+								AND = { ROOT = { has_country_flag = AST_OCCUPIED } FROM = { tag = AST } }
+								AND = { ROOT = { has_country_flag = PNG_OCCUPIED } FROM = { tag = PNG } }
+								AND = { ROOT = { has_country_flag = NZL_OCCUPIED } FROM = { tag = NZL } }
+								AND = { ROOT = { has_country_flag = CHA_OCCUPIED } FROM = { tag = CHA } }
+								AND = { ROOT = { has_country_flag = SUD_OCCUPIED } FROM = { tag = SUD } }
+								AND = { ROOT = { has_country_flag = NGR_OCCUPIED } FROM = { tag = NGR } }
+								AND = { ROOT = { has_country_flag = MRT_OCCUPIED } FROM = { tag = MRT } }
+								AND = { ROOT = { has_country_flag = SEN_OCCUPIED } FROM = { tag = SEN } }
+								AND = { ROOT = { has_country_flag = GAM_OCCUPIED } FROM = { tag = GAM } }
+								AND = { ROOT = { has_country_flag = ALG_OCCUPIED } FROM = { tag = ALG } }
+								AND = { ROOT = { has_country_flag = MOR_OCCUPIED } FROM = { tag = MOR } }
+								AND = { ROOT = { has_country_flag = TUN_OCCUPIED } FROM = { tag = TUN } }
+								AND = { ROOT = { has_country_flag = LBA_OCCUPIED } FROM = { tag = LBA } }
+								AND = { ROOT = { has_country_flag = ETH_OCCUPIED } FROM = { tag = ETH } }
+								AND = { ROOT = { has_country_flag = ANG_OCCUPIED } FROM = { tag = ANG } }
+								AND = { ROOT = { has_country_flag = BOT_OCCUPIED } FROM = { tag = BOT } }
+								AND = { ROOT = { has_country_flag = RHO_OCCUPIED } FROM = { tag = ZIM } }
+								AND = { ROOT = { has_country_flag = MZB_OCCUPIED } FROM = { tag = MZB } }
+								AND = { ROOT = { has_country_flag = ZAM_OCCUPIED } FROM = { tag = ZAM } }
+								AND = { ROOT = { has_country_flag = TZN_OCCUPIED } FROM = { tag = TZN } }
+								AND = { ROOT = { has_country_flag = KEN_OCCUPIED } FROM = { tag = KEN } }
+								AND = { ROOT = { has_country_flag = SOM_OCCUPIED } FROM = { tag = SOM } }
+								AND = { ROOT = { has_country_flag = COG_OCCUPIED } FROM = { tag = COG } }
+								AND = { ROOT = { has_country_flag = EQG_OCCUPIED } FROM = { tag = EQG } }
+								AND = { ROOT = { has_country_flag = BRD_OCCUPIED } FROM = { tag = BRD } }
+								AND = { ROOT = { has_country_flag = RWA_OCCUPIED } FROM = { tag = RWA } }
+								AND = { ROOT = { has_country_flag = UGA_OCCUPIED } FROM = { tag = UGA } }
+								AND = { ROOT = { has_country_flag = DJI_OCCUPIED } FROM = { tag = DJI } }
+								AND = { ROOT = { has_country_flag = ERI_OCCUPIED } FROM = { tag = ERI } }
+								AND = { ROOT = { has_country_flag = CAR_OCCUPIED } FROM = { tag = CAR } }
+								AND = { ROOT = { has_country_flag = MLI_OCCUPIED } FROM = { tag = MLI } }
+								AND = { ROOT = { has_country_flag = DAH_OCCUPIED } FROM = { tag = DAH } }
+								AND = { ROOT = { has_country_flag = VOL_OCCUPIED } FROM = { tag = VOL } }
+								AND = { ROOT = { has_country_flag = IVO_OCCUPIED } FROM = { tag = IVO } }
+								AND = { ROOT = { has_country_flag = GNA_OCCUPIED } FROM = { tag = GNA } }
+								AND = { ROOT = { has_country_flag = SIE_OCCUPIED } FROM = { tag = SIE } }
+								AND = { ROOT = { has_country_flag = LIB_OCCUPIED } FROM = { tag = LIB } }
+								AND = { ROOT = { has_country_flag = TOG_OCCUPIED } FROM = { tag = TOG } }
+								AND = { ROOT = { has_country_flag = NGA_OCCUPIED } FROM = { tag = NGA } }
+								AND = { ROOT = { has_country_flag = GHA_OCCUPIED } FROM = { tag = GHA } }
+								AND = { ROOT = { has_country_flag = GNB_OCCUPIED } FROM = { tag = GNB } }
+								AND = { ROOT = { has_country_flag = CMR_OCCUPIED } FROM = { tag = CMR } }
+								AND = { ROOT = { has_country_flag = RCG_OCCUPIED } FROM = { tag = RCG } }
+								AND = { ROOT = { has_country_flag = MLW_OCCUPIED } FROM = { tag = MLW } }
+							}
+						}
+				}
+			}
+		}
+    }
+
+	cost = 0
+	days_remove = 0
+	
+	ai_will_do = {
+		factor = 100
+	}
+
+	complete_effect = {
+		set_variable = { ROOT_from_states_count = 0 }
+		every_owned_state = {
+			limit = {
+				any_country_with_core = { original_tag = FROM }
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				is_fully_controlled_by = ROOT
+				NOT = {
+					any_country_with_core = {
+						is_ally_with = ROOT
+						NOT = { original_tag = FROM }
+						NOT = {
+							any_core_state = {
+								is_capital = yes
+								owner = { original_tag = FROM }
+							}
+						}
 					}
 				}
 			}
-        }
-
-		cost = 0
-		days_remove = 0
-		
-		ai_will_do = {
-			factor = 100
+			set_state_flag = valid_for_dynamic_puppet
+			ROOT = { add_to_variable = { ROOT_from_states_count = 1 } }
 		}
 
-		complete_effect = {
-			set_variable = { ROOT_from_states_count = 0 }
+		set_variable = { combined_from_states_count = ROOT_from_states_count }
+		set_variable = { ROOT_is_dominant = 1 }
+
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+				NOT = {
+						capital_scope = {
+							NOT = { is_core_of = PREV }
+						}
+				}
+				NOT = { tag = ROOT }
+			}
+			set_temp_variable = { ally_from_states_count = 0 }
 			every_owned_state = {
 				limit = {
 					any_country_with_core = { original_tag = FROM }
-					NOT = { is_core_of = ROOT }
-					NOT = { is_claimed_by = ROOT }
-					is_fully_controlled_by = ROOT
+					NOT = { is_core_of = PREV }
+					NOT = { is_claimed_by = PREV }
+					is_fully_controlled_by = PREV
 					NOT = {
 						any_country_with_core = {
-							is_ally_with = ROOT
+							is_ally_with = PREV
 							NOT = { original_tag = FROM }
 							NOT = {
 								any_core_state = {
@@ -631,262 +665,224 @@ dynamic_puppet_category = {
 						}
 					}
 				}
-				set_state_flag = valid_for_dynamic_puppet
-				ROOT = { add_to_variable = { ROOT_from_states_count = 1 } }
-			}
-
-			set_variable = { combined_from_states_count = ROOT_from_states_count }
-			set_variable = { ROOT_is_dominant = 1 }
-
-			every_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					NOT = {
-							capital_scope = {
-								NOT = { is_core_of = PREV }
-							}
-					}
-					NOT = { tag = ROOT }
-				}
-				set_temp_variable = { ally_from_states_count = 0 }
-				every_owned_state = {
-					limit = {
-						any_country_with_core = { original_tag = FROM }
-						NOT = { is_core_of = PREV }
-						NOT = { is_claimed_by = PREV }
-						is_fully_controlled_by = PREV
-						NOT = {
-							any_country_with_core = {
-								is_ally_with = PREV
-								NOT = { original_tag = FROM }
-								NOT = {
-									any_core_state = {
-										is_capital = yes
-										owner = { original_tag = FROM }
-									}
-								}
-							}
-						}
-					}
-					if = {
-						limit = {
-							PREV = { is_ai = yes }
-						}
-						set_state_flag = valid_for_dynamic_puppet
-					}
-					PREV = { add_to_temp_variable = { ally_from_states_count = 1 } }
-				}
-
 				if = {
 					limit = {
-						check_variable = { ally_from_states_count > ROOT.ROOT_from_states_count }
+						PREV = { is_ai = yes }
+					}
+					set_state_flag = valid_for_dynamic_puppet
+				}
+				PREV = { add_to_temp_variable = { ally_from_states_count = 1 } }
+			}
+
+			if = {
+				limit = {
+					check_variable = { ally_from_states_count > ROOT.ROOT_from_states_count }
+				}
+				ROOT = { set_variable = { ROOT_is_dominant = 0 } }
+			}
+			else_if = {
+				limit = {
+					check_variable = { ally_from_states_count = ROOT.ROOT_from_states_count }
+					check_variable = { ally_from_states_count > 0 }
+				}
+				
+				set_temp_variable = { ally_power = 0 }
+				set_temp_variable = { ally_armies = num_armies }
+				add_to_temp_variable = { ally_power = num_of_factories }
+				add_to_temp_variable = { ally_power = ally_armies }
+				
+				set_temp_variable = { root_power = 0 }
+				ROOT = {
+					set_temp_variable = { root_armies = num_armies }
+					add_to_temp_variable = { root_power = num_of_factories }
+					add_to_temp_variable = { root_power = root_armies }
+				}
+				
+				if = {
+					limit = {
+						is_faction_leader = yes
+						ROOT = { is_faction_leader = no }
 					}
 					ROOT = { set_variable = { ROOT_is_dominant = 0 } }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ally_from_states_count = ROOT.ROOT_from_states_count }
-						check_variable = { ally_from_states_count > 0 }
+						is_faction_leader = no
+						ROOT = { is_faction_leader = no }
+						check_variable = { ally_power > root_power }
 					}
+					ROOT = { set_variable = { ROOT_is_dominant = 0 } }
+				}
+				else_if = {
+					limit = {
+						is_faction_leader = no
+						ROOT = { is_faction_leader = no }
+						check_variable = { ally_power = root_power }
+					}
+					set_temp_variable = { ally_manpower = 0 }
+					add_to_temp_variable = { ally_manpower = manpower }
 					
-					set_temp_variable = { ally_power = 0 }
-					set_temp_variable = { ally_armies = num_armies }
-					add_to_temp_variable = { ally_power = num_of_factories }
-					add_to_temp_variable = { ally_power = ally_armies }
-					
-					set_temp_variable = { root_power = 0 }
+					set_temp_variable = { root_manpower = 0 }
 					ROOT = {
-						set_temp_variable = { root_armies = num_armies }
-						add_to_temp_variable = { root_power = num_of_factories }
-						add_to_temp_variable = { root_power = root_armies }
+						add_to_temp_variable = { root_manpower = manpower }
 					}
-					
 					if = {
 						limit = {
-							is_faction_leader = yes
-							ROOT = { is_faction_leader = no }
+							check_variable = { ally_manpower > root_manpower }
 						}
 						ROOT = { set_variable = { ROOT_is_dominant = 0 } }
-					}
-					else_if = {
-						limit = {
-							is_faction_leader = no
-							ROOT = { is_faction_leader = no }
-							check_variable = { ally_power > root_power }
-						}
-						ROOT = { set_variable = { ROOT_is_dominant = 0 } }
-					}
-					else_if = {
-						limit = {
-							is_faction_leader = no
-							ROOT = { is_faction_leader = no }
-							check_variable = { ally_power = root_power }
-						}
-						set_temp_variable = { ally_manpower = 0 }
-						add_to_temp_variable = { ally_manpower = manpower }
-						
-						set_temp_variable = { root_manpower = 0 }
-						ROOT = {
-							add_to_temp_variable = { root_manpower = manpower }
-						}
-						if = {
-							limit = {
-								check_variable = { ally_manpower > root_manpower }
-							}
-							ROOT = { set_variable = { ROOT_is_dominant = 0 } }
-						}
 					}
 				}
-				ROOT = { add_to_variable = { combined_from_states_count = ally_from_states_count } }
 			}
+			ROOT = { add_to_variable = { combined_from_states_count = ally_from_states_count } }
+		}
 
-			set_variable = { FROM_total_cores = 0 }
+		set_variable = { FROM_total_cores = 0 }
+		every_state = {
+			limit = { is_core_of = FROM }
+			ROOT = { add_to_variable = { FROM_total_cores = 1 } }
+		}
+		set_variable = { puppet_ratio = combined_from_states_count }
+		divide_variable = { puppet_ratio = FROM_total_cores }
+		clear_variable = FROM_total_cores
+		clear_variable = combined_from_states_count
+
+		if = {
+			limit = {
+				check_variable = { ROOT_is_dominant = 1 }
+			}
+			set_country_flag = ROOT_creates_puppet
+		}
+
+		clear_variable = ROOT_from_states_count
+
+		if = {
+			limit = { has_country_flag = ROOT_creates_puppet }
+
 			every_state = {
-				limit = { is_core_of = FROM }
-				ROOT = { add_to_variable = { FROM_total_cores = 1 } }
-			}
-			set_variable = { puppet_ratio = combined_from_states_count }
-			divide_variable = { puppet_ratio = FROM_total_cores }
-			clear_variable = FROM_total_cores
-			clear_variable = combined_from_states_count
-
-			if = {
 				limit = {
-					check_variable = { ROOT_is_dominant = 1 }
+					has_state_flag = valid_for_dynamic_puppet
+					any_country_with_core = {
+						exists = yes
+						NOT = { tag = FROM }
+						NOT = { tag = ROOT }
+						capital_scope = { is_core_of = FROM }
+						NOT = {
+							FROM = {
+								capital_scope = { is_core_of = PREV.PREV }
+							}
+						}
+					}
 				}
-				set_country_flag = ROOT_creates_puppet
+				set_state_flag = dec_later_dynamic
 			}
 
-			clear_variable = ROOT_from_states_count
-
-			if = {
-				limit = { has_country_flag = ROOT_creates_puppet }
-
+			create_dynamic_country = {
+				original_tag = FROM
+				copy_tag = FROM
+				set_cosmetic_tag = FROM
 				every_state = {
 					limit = {
 						has_state_flag = valid_for_dynamic_puppet
+						NOT = { has_state_flag = dec_later_dynamic }
+					}
+					FROM = {
+						transfer_state = PREV
+						set_country_flag = is_dynamic_tag
+					}
+				}
+				ROOT = { puppet = PREV }
+				drop_cosmetic_tag = yes
+				
+				every_state = {
+					limit = { has_state_flag = dec_later_dynamic }
+					clr_state_flag = dec_later_dynamic
+				}
+				every_state = {
+					limit = {
+						has_state_flag = valid_for_dynamic_puppet
+						is_core_of = FROM
+						is_owned_by = FROM
 						any_country_with_core = {
-							exists = yes
-							NOT = { tag = FROM }
-							NOT = { tag = ROOT }
-							capital_scope = { is_core_of = FROM }
 							NOT = {
-								FROM = {
-									capital_scope = { is_core_of = PREV.PREV }
+								any_core_state = {
+									is_capital = yes
+									owner = { original_tag = FROM }
 								}
 							}
+							is_ally_with = ROOT
+							NOT = { tag = FROM }
 						}
 					}
-					set_state_flag = dec_later_dynamic
+					random_other_country = {
+						limit = {
+							is_ally_with = ROOT
+							NOT = { tag = FROM }
+							PREV = { is_core_of = PREV }
+						}
+						transfer_state = PREV
+					}
 				}
 
-				create_dynamic_country = {
-					original_tag = FROM
-					copy_tag = FROM
-					set_cosmetic_tag = FROM
-					every_state = {
-						limit = {
-							has_state_flag = valid_for_dynamic_puppet
-							NOT = { has_state_flag = dec_later_dynamic }
-						}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								check_variable = { ROOT.puppet_ratio < 0.20 }  
+								FROM = { num_of_controlled_states < 7 }        
+							}                                              
+							FROM = { num_of_controlled_states < 2 }        
+						} 
+						ROOT = {
+							check_variable = { ROOT_is_dominant = 1 }
+						}                                                
 						FROM = {
-							transfer_state = PREV
-							set_country_flag = is_dynamic_tag
-						}
-					}
-					ROOT = { puppet = PREV }
-					drop_cosmetic_tag = yes
-					
-					every_state = {
-						limit = { has_state_flag = dec_later_dynamic }
-						clr_state_flag = dec_later_dynamic
-					}
-					every_state = {
-						limit = {
-							has_state_flag = valid_for_dynamic_puppet
-							is_core_of = FROM
-							is_owned_by = FROM
-							any_country_with_core = {
-								NOT = {
-									any_core_state = {
-										is_capital = yes
-										owner = { original_tag = FROM }
-									}
-								}
-								is_ally_with = ROOT
-								NOT = { tag = FROM }
+							OR = {
+								any_neighbor_country = { original_tag = FROM }
+								all_owned_state = { is_coastal = yes }
 							}
 						}
+						any_other_country = {
+							original_tag = FROM
+							exists = yes
+						}
+					}
+					if = {
+						limit = { ROOT = { is_ai = yes } }
+						random_other_country = {
+							limit = { 
+								original_tag = FROM
+							}
+							annex_country = { target = PREV }
+						}
+					}
+					else = {
+						set_country_flag = is_small_dynamic_puppet
+						save_global_event_target_as = small_dynamic_puppet_global
+						
 						random_other_country = {
 							limit = {
-								is_ally_with = ROOT
-								NOT = { tag = FROM }
-								PREV = { is_core_of = PREV }
-							}
-							transfer_state = PREV
-						}
-					}
-
-					if = {
-						limit = {
-							OR = {
-								AND = {
-									check_variable = { ROOT.puppet_ratio < 0.20 }  
-									FROM = { num_of_controlled_states < 7 }        
-								}                                              
-								FROM = { num_of_controlled_states < 2 }        
-							} 
-							ROOT = {
-								check_variable = { ROOT_is_dominant = 1 }
-							}                                                
-							FROM = {
-								OR = {
-									any_neighbor_country = { original_tag = FROM }
-									all_owned_state = { is_coastal = yes }
-								}
-							}
-							any_other_country = {
 								original_tag = FROM
 								exists = yes
 							}
+							set_country_flag = will_annex_small_puppet
+							save_global_event_target_as = will_annex_puppet_global
 						}
-						if = {
-							limit = { ROOT = { is_ai = yes } }
-							random_other_country = {
-								limit = { 
-									original_tag = FROM
-								}
-								annex_country = { target = PREV }
-							}
-						}
-						else = {
-							set_country_flag = is_small_dynamic_puppet
-							save_global_event_target_as = small_dynamic_puppet_global
-							
-							random_other_country = {
-								limit = {
-									original_tag = FROM
-									exists = yes
-								}
-								set_country_flag = will_annex_small_puppet
-								save_global_event_target_as = will_annex_puppet_global
-							}
-							ROOT = { country_event = { id = id.settlement.16 } }
-						}
+						ROOT = { country_event = { id = id.settlement.16 } }
 					}
 				}
+			}
 
-				clear_variable = puppet_ratio
-				clear_variable = ROOT_is_dominant
-				clr_country_flag = ROOT_creates_puppet
-			}
-			
-			every_state = {
-				limit = { has_state_flag = valid_for_dynamic_puppet }
-				clr_state_flag = valid_for_dynamic_puppet
-			}
+			clear_variable = puppet_ratio
+			clear_variable = ROOT_is_dominant
+			clr_country_flag = ROOT_creates_puppet
 		}
-
+		
+		every_state = {
+			limit = { has_state_flag = valid_for_dynamic_puppet }
+			clr_state_flag = valid_for_dynamic_puppet
+		}
 	}
-	
+
+}
 }
