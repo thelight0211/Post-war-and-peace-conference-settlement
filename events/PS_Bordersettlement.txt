@@ -857,3 +857,72 @@ country_event = {
 			}
 		}
 	}
+
+country_event = {
+    id = border_settlement.3	
+    fire_only_once = no
+    is_triggered_only = no
+    hidden = yes
+	mean_time_to_happen = { days = 20 }
+	trigger = {
+                				any_owned_state = {
+									is_fully_controlled_by = ROOT
+									is_coastal = no
+									is_impassable = yes
+									NOT = { is_in_home_area = no }
+									NOT = { 
+										any_neighbor_state = {
+											AND = {
+											is_owned_by = ROOT
+												OR = {
+													is_in_home_area = no
+													has_state_flag = connected_via_con
+													is_coastal = yes
+												}
+											}
+										}
+									}
+								}
+	}
+    immediate = { country_event = { id = id.settlement.10 days = 2 } }
+} 
+
+country_event = {
+    id = id.settlement.10
+    fire_only_once = no
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+							every_owned_state = {
+								limit = {
+									NOT = { is_in_home_area = no }
+									is_fully_controlled_by = ROOT
+									is_coastal = no
+									is_impassable = yes
+									NOT = { 
+										any_neighbor_state = {
+											AND = {
+											is_owned_by = ROOT
+												OR = {
+													is_in_home_area = no
+													has_state_flag = connected_via_con
+													is_coastal = yes
+												}
+											}
+										}
+									}
+								}
+								set_state_flag = Land_locked_state
+							}
+								every_state = {
+				        				limit = {
+											any_neighbor_state = {
+												has_state_flag = Land_locked_state
+											}
+				        				}
+				        		set_state_flag = borders_land_locked_state
+			    				}
+	}
+
+}

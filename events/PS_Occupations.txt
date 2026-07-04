@@ -1307,7 +1307,7 @@ country_event = {
 			any_country = { is_subject_of = ROOT owns_state = 107 }
 			}
 		}
-		immediate = {
+		hidden_effect = {
 			107 = { add_core_of = SER }
 			108 = { add_core_of = SER }
 			803 = { add_core_of = SER }

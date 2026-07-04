@@ -441,10 +441,18 @@ creat_dynamic_puppet = {
 							AND = {
 								ROOT = { tag = ROOT }
 								FROM = {
-									capital_scope = {
-										OR = {
-											is_core_of = CHI
-											is_core_of = PRC
+									AND = {
+										capital_scope = {
+											OR = {
+												is_core_of = CHI
+												is_core_of = PRC
+											}
+										}
+										NOT = {
+											OR = {
+												tag = PRC
+												tag = CHI
+											}
 										}
 									}
 								}
