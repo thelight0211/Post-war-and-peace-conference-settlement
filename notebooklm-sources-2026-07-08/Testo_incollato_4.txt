@@ -1,0 +1,24 @@
+Testo incollato
+===============
+
+Separazione tra Effect e Trigger: I comandi di gestione memoria, come save_event_target_as, sono classificati come Effect Scopes e non possono mai risiedere in un blocco trigger
+
+. Inserirli causa l'ignoramento silenzioso dell'intero blocco da parte del motore C++
+
+.
+
+Filtri di Trigger e Immediate: Il blocco trigger funge da scudo ottimizzato per la CPU. Le condizioni semplici vanno inserite qui, mentre i calcoli complessi che richiedono di scolpire l'identità di un bersaglio nella memoria (come valutare ic_ratio di un overlord) devono tassativamente avvenire nel blocco immediate usando puntatori assoluti
+
+.
+
+Automazione degli Eventi: Un evento configurato con mean_time_to_happen diventa un'entità autonoma valutata periodicamente dal gioco in background
+
+. Per evitare loop infiniti e spreco di risorse, il trigger deve includere condizioni bloccanti (come verificare con NOT l'assenza dell'idea che si intende aggiungere)
+
+.
+
+Trigger Dinamici vs Valori Statici: Utilizzare trigger relazionali nativi del motore (come compare_autonomy_progress_ratio) è sempre superiore all'impiego di valori numerici fissi, poiché permette al codice di scalare e adattarsi dinamicamente alla grandezza di qualsiasi nazione.
+
+Ottimizzazione delle Scansioni: Evitare pesanti cicli di filtro preventivi. L'uso di comandi ad azione diretta e mirata, combinati ai puntatori di memoria, elimina i falsi negativi causati dalle catene annidate di PREV e azzera il carico inutile sul processore
+
+.

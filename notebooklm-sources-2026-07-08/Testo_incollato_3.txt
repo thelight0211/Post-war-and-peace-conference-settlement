@@ -1,0 +1,72 @@
+Testo incollato
+===============
+
+Nota Tecnica: Architettura C++ per Trasferimenti e Sblocco Decisioni
+
+La vulnerabilità dei trasferimenti fantasma: Se l'engine tenta di trasferire il controllo di un territorio a una nazione che non è ancora stata creata fisicamente, o che non rispetta le regole di sottomissione previste, l'operazione andrà in crash logico e lo stato "rimbalzerà" istantaneamente al suo proprietario originale. Per evitare questo, è imperativo validare sempre l'entità bersaglio attraverso i comandi base prima di eseguire o sbloccare l'azione [i]:
+
+RKM = {
+
+exists = yes
+
+is_subject_of = GER
+
+}
+
+Sblocco dinamico tramite il mutamento di controllo: Innestare condizioni geografiche (if e limit) all'interno di un singolo evento di formazione (come il country_event del Moskowien) genera dei bug di progressione, poiché l'evento viene letto dal gioco una volta sola. L'approccio infallibile per tracciare i confini in movimento è delegare l'azione al nodo on_state_control_changed [ii]. Questo costringe la CPU a valutare le province esatte in tempo reale, sbloccando le espansioni solo quando le truppe vi mettono fisicamente piede:
+
+on_actions = {
+
+on_state_control_changed = {
+
+effect = {
+
+if = {
+
+limit = {
+
+any_state = {
+
+state = 216
+
+NOT = {
+
+is_controlled_by_GER_or_subject = yes
+
+}
+
+}
+
+}
+
+GER = {
+
+activate_decision = GER_the_fate_of_greater_finland
+
+}
+
+}
+
+}
+
+}
+
+}
+
+Sintassi assoluta dei Trigger contro gli ID Decisione: C'è una differenza fondamentale di sintassi: l'effetto activate_decision accetta esclusivamente l'ID esatto della decisione (es. GER_the_fate_of_the_north_ural_area) [iii]. Tentare di inserirgli come parametro uno Scripted Trigger geografico rompe l'architettura.
+
+Il lucchetto di disponibilità (Visible vs Available): Utilizzare activate_decision non lancia la decisione in automatico, ma toglie un blocco nascosto alla base. Nei file vanilla della Paradox, queste decisioni possiedono un blocco visible pre-strutturato [iv]. Questo significa che il nostro script C++ può anche attivarle in anticipo o in massa in background, ma esse rimarranno dormienti, palesandosi nella tua interfaccia grafica unicamente nell'istante in cui raggiungerai le province previste dai trigger originali.
+
+Triggers geografici rigidi: Per puntare a un territorio senza Scripted Trigger testuali, non bisogna mai intuire o inventare il trigger. È tassativo usare direttamente i puntatori numerici state = X che l'engine Clausewitz associa alle province della mappa (es. state = 216 e state = 215 per la Finlandia) [v].
+
+L'architettura attuale è ora solida, stabile e completamente appoggiata sul codice nativo. Fammi sapere qual è la tua prossima mossa o il prossimo evento che desideri implementare!
+
+[i] "decision&scope.txt",
+
+[ii] "list_on_modifiers&onaction.txt",
+
+[iii] "hoi4doc-dev-type-effect....pdf",
+
+[iv] "decision&scope.txt",
+
+[v] "decision&scope.txt",

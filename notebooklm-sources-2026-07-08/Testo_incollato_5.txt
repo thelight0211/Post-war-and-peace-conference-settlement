@@ -1,0 +1,12 @@
+Testo incollato
+===============
+
+La Race Condition dei Focus e l'invisibilità diplomatica: I wargoal forniti dal completamento di un focus aggirano totalmente il nodo on_generate_wargoal. Qualsiasi blocco impostato su base temporale (on_daily o on_weekly) fallirà sempre nel prevenire l'attacco, perché l'IA dichiara guerra nell'istante stesso in cui il focus termina. L'unica barriera inviolabile è l'uso dei Diplomacy Scripted Triggers (come DIPLOMACY_WAR_ENABLE_TRIGGER), che vengono interrogati dal motore di gioco nel millisecondo esatto dell'elaborazione diplomatica.
+
+La natura degli Scope (Effect vs Trigger): Esiste una rigida separazione tra i comandi. Cicli come every_faction_member o every_other_country appartengono alla categoria degli Effect Scopes e l'engine li ignorerà o causerà errori se inseriti in un Trigger (come i Diplomacy Scripted Triggers). Per calcoli complessi, è vitale scindere l'architettura: fare la logistica in un nodo effetto di background e limitarsi a leggere e confrontare il risultato finale (check_variable) all'interno del trigger.
+
+Ottimizzazione assoluta dei nodi periodici: I nodi temporali di sistema come on_daily, on_weekly e on_monthly scattano nativamente e separatamente per ogni singolo paese presente nel gioco. Inserire un ciclo globale come every_country al loro interno è un errore devastante per il processore, perché costringe il gioco a moltiplicare le scansioni in modo esponenziale.
+
+I limiti insidiosi dei calcoli di forza nativi: I comandi rapidi offerti dal gioco hanno limitazioni documentate severe. fighting_army_strength_ratio è eccellente per puntare a un bersaglio specifico (tag = FROM) ma calcola solo la nazione singola ignorando del tutto le fazioni. Al contrario, alliance_strength_ratio calcola le fazioni ma lo fa contro una media di "nemici stimati", non potendo puntare chirurgicamente al difensore. Per un calcolo fazione-contro-fazione esatto, la matematica manuale basata su num_equipment_in_armies_k resta la soluzione definitiva.
+
+Sintassi delle variabili temporanee: Le variabili temporanee (set_temp_variable) sono totalmente "unscoped", ovvero prive di un'identità nazionale. L'engine va in confusione se si cerca di richiamarle usando i prefissi di contesto. Devono essere sempre manipolate e accumulate in modo nudo e diretto all'interno del blocco.

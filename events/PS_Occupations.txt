@@ -13328,7 +13328,15 @@ country_event = {			# - Corsica Event
 		trigger = {
 					ITA = { is_ally_with = ROOT }
 		}
-		name = "Give Corsica to our Italian puppet"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				ITA = { is_ally_with = ROOT }
+				has_government = fascism
+			}
+		}
+		name = "Give Corsica to our Italian ally"
 		ITA = { transfer_state = 1 }
 		1 = { add_claim_by = ITA }
 	}

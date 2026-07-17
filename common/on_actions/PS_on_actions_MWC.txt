@@ -1,109 +1,103 @@
 on_actions = {
 
 	on_startup = {
-			effect = {
-				every_state = {
-					limit = {
-						is_owned_by = RAJ
-						NOT = {
-							OR = {
-							is_core_of = PAK 
+		effect = {
+			every_state = {
+				limit = {
+					is_owned_by = RAJ
+					NOT = {
+						OR = {
+							is_core_of = PAK
 							is_core_of = BAN
 							is_core_of = BRM
 							is_core_of = YEM
-							}
 						}
 					}
+				}
 				set_state_flag = indiaformerstates
-				}
-
-				every_state = {
-					limit = {
-						is_owned_by = OMA
-					}
+			}
+			every_state = {
+				limit = { is_owned_by = OMA }
 				set_state_flag = omanformerstates
-				}
-
-				every_state = {
-					limit = {
-						is_owned_by = INS
-					}
+			}
+			every_state = {
+				limit = { is_owned_by = INS }
 				set_state_flag = insformerstates
-				}
+			}
 		}
 	}
-	
-    on_war_relation_added = {
-        effect = {
-            # Caso normale - Nazioni indipendenti
-            if = {
-                limit = {
-                    OR = {
-                        AND = {
-                            ROOT = {
-                                OR = {
-                                    has_wargoal_against = { target = FROM type = annex_everything }
-                                    has_wargoal_against = { target = FROM type = take_state_focus }
-                                }
-                            }
-                            FROM = { capital_scope = { is_claimed_by = ROOT } }
-                        }
-                        AND = {
-                            FROM = {
-                                OR = {
-                                    has_wargoal_against = { target = ROOT type = annex_everything }
-                                    has_wargoal_against = { target = ROOT type = take_state_focus }
-                                }
-                            }
-                            ROOT = { capital_scope = { is_claimed_by = FROM } }
-                        }
-                    }
-                }
-                FROM = {
-                    every_owned_state = {
-                        limit = { is_claimed_by = ROOT }
-                        remove_claim_by = ROOT
-                    }
-                }
-                ROOT = {
-                    every_owned_state = {
-                        limit = { is_claimed_by = FROM }
-                        remove_claim_by = FROM
-                    }
-                }
-            }
 
-            # Caso fantocci - Backup per quando FROM è l'Overlord
-            if = {
-                limit = {
-                    FROM = { is_subject = no }
-                    ROOT = {
-                        OR = {
-                            has_wargoal_against = { target = FROM type = annex_everything }
-                            has_wargoal_against = { target = FROM type = take_state_focus }
-                        }
-                    }
-                }
-                FROM = {
-                    every_subject_country = {
-                        limit = {
-                            capital_scope = { is_claimed_by = ROOT }
-                            ROOT = {
-                                OR = {
-                                    has_wargoal_against = { target = PREV type = annex_everything }
-                                    has_wargoal_against = { target = PREV type = take_state_focus }
-                                }
-                            }
-                        }
-                        every_owned_state = {
-                            limit = { is_claimed_by = ROOT }
-                            remove_claim_by = ROOT
-                        }
-                    }
-                }
-            }
-        }
-    }
+	on_war_relation_added = {
+		effect = {
+			# Caso normale - Nazioni indipendenti
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							ROOT = {
+								OR = {
+									has_wargoal_against = { target = FROM type = annex_everything }
+									has_wargoal_against = { target = FROM type = take_state_focus }
+								}
+							}
+							FROM = { capital_scope = { is_claimed_by = ROOT } }
+						}
+						AND = {
+							FROM = {
+								OR = {
+									has_wargoal_against = { target = ROOT type = annex_everything }
+									has_wargoal_against = { target = ROOT type = take_state_focus }
+								}
+							}
+							ROOT = { capital_scope = { is_claimed_by = FROM } }
+						}
+					}
+				}
+				FROM = {
+					every_owned_state = {
+						limit = { is_claimed_by = ROOT }
+						remove_claim_by = ROOT
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_claimed_by = FROM }
+						remove_claim_by = FROM
+					}
+				}
+			}
+
+			# Caso fantocci - Backup per quando FROM è l'Overlord
+			if = {
+				limit = {
+					FROM = { is_subject = no }
+					ROOT = {
+						OR = {
+							has_wargoal_against = { target = FROM type = annex_everything }
+							has_wargoal_against = { target = FROM type = take_state_focus }
+						}
+					}
+				}
+				FROM = {
+					every_subject_country = {
+						limit = {
+							capital_scope = { is_claimed_by = ROOT }
+							ROOT = {
+								OR = {
+									has_wargoal_against = { target = PREV type = annex_everything }
+									has_wargoal_against = { target = PREV type = take_state_focus }
+								}
+							}
+						}
+						every_owned_state = {
+							limit = { is_claimed_by = ROOT }
+							remove_claim_by = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
 
 	on_before_peace_conference_start = {
 		effect = {
@@ -119,24 +113,29 @@ on_actions = {
 						limit = {
 							OR = {
 								AND = {
-									ROOT = {
-										is_subject = yes
+									ROOT = { 
+										is_subject = yes 
 									}
 									is_claimed_by = ROOT
 									OR = {
 										is_island_state = yes
 										is_one_state_island = yes
-										any_neighbor_state = {
-											is_owned_by = ROOT
-										}
+										any_neighbor_state = { is_owned_by = ROOT }
 									}
 								}
 								AND = {
 									ROOT = {
-										NOT = {
-											is_subject = yes
-										}
+										is_subject = yes
+										has_civil_war = yes
 									}
+									is_core_of = ROOT
+									owner = {
+										original_tag = ROOT
+										has_war_with = ROOT
+									}
+								}
+								AND = {
+									ROOT = { NOT = { is_subject = yes } }
 									OR = {
 										is_claimed_by = ROOT
 										is_core_of = ROOT
@@ -165,24 +164,29 @@ on_actions = {
 						limit = {
 							OR = {
 								AND = {
-									FROM = {
-										is_subject = yes
+									FROM = { 
+										is_subject = yes 
 									}
 									is_claimed_by = FROM
 									OR = {
 										is_island_state = yes
 										is_one_state_island = yes
-										any_neighbor_state = {
-											is_owned_by = FROM
-										}
+										any_neighbor_state = { is_owned_by = FROM }
 									}
 								}
 								AND = {
 									FROM = {
-										NOT = {
-											is_subject = yes
-										}
+										is_subject = yes
+										has_civil_war = yes
 									}
+									is_core_of = FROM
+									owner = {
+										original_tag = FROM
+										has_war_with = FROM
+									}
+								}
+								AND = {
+									FROM = { NOT = { is_subject = yes } }
 									OR = {
 										is_claimed_by = FROM
 										is_core_of = FROM
@@ -199,2468 +203,1520 @@ on_actions = {
 
 	on_peaceconference_ended = {
 		effect = {
-				every_country = {
-					limit = {
-							is_major = yes
-							NOT = { capital_scope = { is_on_continent = africa } }
-					}
-						set_country_flag = NGR_OCCUPIED
-						set_country_flag = MLI_OCCUPIED
-						set_country_flag = MRT_OCCUPIED
-						set_country_flag = DAH_OCCUPIED
-						set_country_flag = VOL_OCCUPIED
-						set_country_flag = IVO_OCCUPIED
-						set_country_flag = GNA_OCCUPIED
-						set_country_flag = SEN_OCCUPIED
-						set_country_flag = GAM_OCCUPIED
-						set_country_flag = SIE_OCCUPIED
-						set_country_flag = LIB_OCCUPIED
-						set_country_flag = GHA_OCCUPIED
-						set_country_flag = NGA_OCCUPIED
-						set_country_flag = TOG_OCCUPIED
-						set_country_flag = GNB_OCCUPIED
-						set_country_flag = ALG_OCCUPIED
-						set_country_flag = MOR_OCCUPIED
-						set_country_flag = TUN_OCCUPIED
-						set_country_flag = LBA_OCCUPIED
-						set_country_flag = CMR_OCCUPIED
-						set_country_flag = RCG_OCCUPIED
-						set_country_flag = MLW_OCCUPIED
-						set_country_flag = ETH_OCCUPIED
-						set_country_flag = ANG_OCCUPIED
-						set_country_flag = RHO_OCCUPIED
-						set_country_flag = MZB_OCCUPIED
-						set_country_flag = ZAM_OCCUPIED
-						set_country_flag = TZN_OCCUPIED
-						set_country_flag = KEN_OCCUPIED
-						set_country_flag = SOM_OCCUPIED
-						set_country_flag = GAB_OCCUPIED
-						set_country_flag = EQG_OCCUPIED
-						set_country_flag = BRD_OCCUPIED
-						set_country_flag = RWA_OCCUPIED
-						set_country_flag = UGA_OCCUPIED
-						set_country_flag = DJI_OCCUPIED
-						set_country_flag = ERI_OCCUPIED
-						set_country_flag = CAR_OCCUPIED
-						set_country_flag = CHA_OCCUPIED
-						set_country_flag = RIF_OCCUPIED
-						set_country_flag = COG_OCCUPIED 
-						set_country_flag = WES_OCCUPIED
-						if = {
-							limit = {
-								OR = {
-									SAF = { is_ally_with = ROOT }
-									owns_state = 681
-								}
-							}
-							set_country_flag = BOT_OCCUPIED
-						}
-						set_country_flag = nosmallprotectorates
+			every_country = {
+				limit = {
+					is_major = yes
+					NOT = { capital_scope = { is_on_continent = africa } }
 				}
+				set_country_flag = NGR_OCCUPIED
+				set_country_flag = MLI_OCCUPIED
+				set_country_flag = MRT_OCCUPIED
+				set_country_flag = DAH_OCCUPIED
+				set_country_flag = VOL_OCCUPIED
+				set_country_flag = IVO_OCCUPIED
+				set_country_flag = GNA_OCCUPIED
+				set_country_flag = SEN_OCCUPIED
+				set_country_flag = GAM_OCCUPIED
+				set_country_flag = SIE_OCCUPIED
+				set_country_flag = LIB_OCCUPIED
+				set_country_flag = GHA_OCCUPIED
+				set_country_flag = NGA_OCCUPIED
+				set_country_flag = TOG_OCCUPIED
+				set_country_flag = GNB_OCCUPIED
+				set_country_flag = ALG_OCCUPIED
+				set_country_flag = MOR_OCCUPIED
+				set_country_flag = TUN_OCCUPIED
+				set_country_flag = LBA_OCCUPIED
+				set_country_flag = CMR_OCCUPIED
+				set_country_flag = RCG_OCCUPIED
+				set_country_flag = MLW_OCCUPIED
+				set_country_flag = ETH_OCCUPIED
+				set_country_flag = ANG_OCCUPIED
+				set_country_flag = RHO_OCCUPIED
+				set_country_flag = MZB_OCCUPIED
+				set_country_flag = ZAM_OCCUPIED
+				set_country_flag = TZN_OCCUPIED
+				set_country_flag = KEN_OCCUPIED
+				set_country_flag = SOM_OCCUPIED
+				set_country_flag = GAB_OCCUPIED
+				set_country_flag = EQG_OCCUPIED
+				set_country_flag = BRD_OCCUPIED
+				set_country_flag = RWA_OCCUPIED
+				set_country_flag = UGA_OCCUPIED
+				set_country_flag = DJI_OCCUPIED
+				set_country_flag = ERI_OCCUPIED
+				set_country_flag = CAR_OCCUPIED
+				set_country_flag = CHA_OCCUPIED
+				set_country_flag = RIF_OCCUPIED
+				set_country_flag = COG_OCCUPIED
+				set_country_flag = WES_OCCUPIED
+				if = {
+					limit = {
+						OR = {
+							SAF = { is_ally_with = ROOT }
+							owns_state = 681
+						}
+					}
+					set_country_flag = BOT_OCCUPIED
+				}
+				set_country_flag = nosmallprotectorates
+			}
 		}
 	}
-	
+
 	on_state_control_changed = {
-			effect = {
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 97
-       						 }
-							 POL = { is_subject_of = SOV }
-   				 	}
-					SOV = {
-     						remove_state_claim = 97
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						owns_state = 609
-       						 }
-							 RNG = { is_subject_of = JAP }
-   				 	}
-					JAP = {
-     						remove_state_claim = 609
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						owns_state = 609
-       						 }
-							 PRC = { is_ally_with = JAP }
-   				 	}
-					JAP = {
-     						remove_state_claim = 609
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 609
-       						 }
-							 PRC = { is_subject_of = SOV }
-   				 	}
-					JAP = {
-     						remove_state_claim = 609
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 ENG = {
-           						 owns_state = 412
-       						 }
-   				 	}
-					ENG = {
-     						remove_state_claim = 412
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 ENG = {
-           						 owns_state = 413
-       						 }
-   				 	}
-					ENG = {
-     						remove_state_claim = 413
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 TUR = {
-           						 owns_state = 182
-       						 }
-   				 	}
-					TUR = {
-     						add_state_claim = 182
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 AUS = {
-           						 owns_state = 736
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 736
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 AUS = {
-           						 owns_state = 852
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 852
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 TUR = {
-           						 owns_state = 164
-       						 }
-   				 	}
-					TUR = {
-     						add_state_claim = 164
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 537
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 537
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 TUR = {
-           						 owns_state = 187
-       						 }
-   				 	}
-					TUR = {
-     						add_state_claim = 187
-   				   	}	
-				}
-				if = {
-						limit = {
-							NOT = {
-								has_global_flag = road_to_56_is_active
-							}
-							DEN = {
-								owns_state = 909
-							}
-						}
-						DEN = {
-							add_state_claim = 909
-						}
-				}
-				if = {
-						limit = {
-								has_global_flag = road_to_56_is_active
-							DEN = {
-								owns_state = 998
-							}
-						}
-						DEN = {
-							add_state_claim = 998
-						}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 86
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 86
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 763
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 763
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 FRA = {
-           						 owns_state = 845
-       						 }
-   				 	}
-					FRA = {
-     						add_state_claim = 845
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						owns_state = 978
-					}
-					every_country = {
-						limit = {
-							original_tag = GER
-						}
-						add_state_core = 978
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						owns_state = 923
-					}
-					every_country = {
-						limit = {
-							original_tag = GER
-						}
-						add_state_core = 923
-					}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 63
-       						 }
-   				 	}
-					GER = {
-     						add_state_core = 63
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 68
-       						 }
-   				 	}
-					GER = {
-     						add_state_core = 68
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 66
-       						 }
-   				 	}
-					GER = {
-     						add_state_core = 66
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 67
-       						 }
-   				 	}
-					GER = {
-     						add_state_core = 67
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 5
-       						 }
-   				 	}
-					GER = {
-     						add_state_core = 5
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 196
-							 	 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 196
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 195
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 195
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 137
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 137
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 86
-							     has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 86
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 797
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 797
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 807
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 807
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						GER = {
-							owns_state = 912
-						}
-					}
-					GER = {
-						add_state_claim = 912
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						GER = {
-							owns_state = 964
-						}
-					}
-					GER = {
-						add_state_claim = 964
-					}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 146
-       						 }
-   				 	}
-					SOV = {
-     						add_state_core = 146
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 198
-           						 owns_state = 834
-           						 owns_state = 78
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 78
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 89
-           						 owns_state = 91
-           						 owns_state = 73
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 73
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 766
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 766
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 80
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 80
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 147
-       						 }
-   				 	}
-					SOV = {
-     						add_state_core = 147
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 722
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 722
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 207
-           						 owns_state = 206
-           						 owns_state = 204
-           						 owns_state = 194
-           						 owns_state = 201
-           						 owns_state = 199
-           						 owns_state = 89
-           						 owns_state = 91
-           						 owns_state = 93
-           						 owns_state = 94
-           						 owns_state = 95
-           						 owns_state = 96
-           						 owns_state = 784
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 89
-     						add_state_claim = 91
-     						add_state_claim = 93
-     						add_state_claim = 94
-     						add_state_claim = 95
-     						add_state_claim = 96
-     						add_state_claim = 784
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 GER = {
-           						 owns_state = 85
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 85
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 AUS = {
-           						 owns_state = 52
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 52
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 SOV = {
-           						 owns_state = 555
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 555
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 AUS = {
-           						 owns_state = 53
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 53
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 AUS = {
-           						 owns_state = 853
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 853
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 CZE = {
-           						 owns_state = 66
-           						 owns_state = 67
-       						 }
-   				 	}
-					CZE = {
-     						add_state_claim = 66
-     						add_state_claim = 67
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 AUS = {
-           						 owns_state = 54
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 54
-   				   	}
-				}
-				if = {		
-					limit = {	
-       						 AUS = {
-           						 owns_state = 102
-       						 }
-   				 	}
-					AUS = {
-     						add_state_claim = 102
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						AUS = {
-							owns_state = 972
-						}
-					}
-					AUS = {
-						add_state_claim = 972
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						AUS = {
-							owns_state = 1078
-						}
-					}
-					AUS = {
-						add_state_claim = 1078
-					}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 owns_state = 762
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 762
-   				   	}
-				}
-				if = {	
-					limit = {		
-       						 GER = {
-           						 controls_state = 28
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 28
-   				   	}
-				}
-				if = {
-					limit = {			
-       						 GER = {
-           					 owns_state = 97
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 97
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 98
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 98
-   				   	}
-				}
-				if = {
-					limit = {			
-       						 GER = {
-           						 owns_state = 87
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 87
-   				   	}
-				}
-				if = {
-					limit = {			
-       						 GER = {
-           						 owns_state = 69
-							 	 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 69
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						GER = {
-							owns_state = 972
-							has_government = fascism
-						}
-					}
-					GER = {
-						add_state_claim = 972
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						GER = {
-							owns_state = 1078
-							has_government = fascism
-						}
-					}
-					GER = {
-						add_state_claim = 1078
-					}
-				}
-				if = {
-					limit = {			
-       						 GER = {
-           						 owns_state = 74
-							 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 74
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 5
-       						 }
-   				 	}
-					POL = {
-     						add_state_claim = 5
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 63
-       						 }
-   				 	}
-					POL = {
-     						add_state_claim = 63
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 68
-       						 }
-   				 	}
-					POL = {
-     						add_state_claim = 68
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 66
-       						 }
-   				 	}
-					POL = {
-     						add_state_claim = 66
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 POL = {
-           						 owns_state = 67
-       						 }
-   				 	}
-					POL = {
-     						add_state_claim = 67
-   				   	}
-				}
+		effect = {
 
-				if = {
-					limit = {				
-       						 SOV = {
-           						 owns_state = 763
-       						 }
-   				 	}
-					SOV = {
-     						add_state_claim = 763
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						 owns_state = 206
-								 owns_state = 207
-								 owns_state = 96
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 96
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						owns_state = 206
-								owns_state = 96
-								owns_state = 95
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 95
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						owns_state = 204
-								owns_state = 95
-								owns_state = 94
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 94
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						owns_state = 94
-								owns_state = 201
-								owns_state = 93
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 93
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						owns_state = 91
-								owns_state = 199
-								owns_state = 93
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 91
-   				   	}
-				}
-				if = {
-					limit = {				
-       						SOV = {
-           						owns_state = 89
-								owns_state = 91
-								owns_state = 199
-							}
-   				 	}
-					SOV = {
-     						add_state_claim = 89
-   				   	}
-				}
-				if = {
-					limit = {				
-						ITA = {
-							owns_state = 103
-						}
-					}
-					ITA = {
-						add_state_claim = 103
-					}
-				}
-				if = {
-					limit = {				
-						ITA = {
-							owns_state = 116
-						}
-					}
-					ITA = {
-						add_state_claim = 116
-					}
-				}
-				if = {
-					limit = {
-						ITA = {
-							owns_state = 802
-							NOT = { owns_state = 44 }
-						}
-						 ALB = {
-							 exists = yes
-							 is_subject_of = ITA
-						}
-					}
-					ALB = {
-						transfer_state = 802
-					}
-					ITA = {
-						remove_state_claim = 802
-					}
-				}
-				if = {
-					limit = {
-						 ALB = {
-							 exists = yes
-							 is_subject = yes
-						}
-					}
-					ALB = {
-						remove_state_claim = 185
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						ITA = {
-							owns_state = 970
-							NOT = {
-								owns_state = 44
-							}
-						}
-						ALB = {
-							exists = yes
-							is_subject_of = ITA
-						}
-					}
-					ALB = {
-						transfer_state = 970
-					}
-					ITA = {
-						remove_state_claim = 970
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						ITA = {
-							owns_state = 950
-							NOT = {
-								owns_state = 44
-							}
-						}
-						ALB = {
-							exists = yes
-							is_subject_of = ITA
-						}
-					}
-					ALB = {
-						transfer_state = 950
-					}
-					ITA = {
-						remove_state_claim = 950
-					}
-				}
-				if = {
-					limit = {				
-						ITA = {
-							owns_state = 736
-						}
-					}
-					ITA = {
-						add_state_core = 736
-					}
-				}
-				if = {
-					limit = {				
-						ALB = {
-							owns_state = 802
-						}
-					}
-					ALB = {
-						add_state_claim = 802
-					}
-				}
-				if = {
-					limit = {				
-						ALB = {
-							controls_state = 105
-						}
-					}
-					ALB = {
-						remove_state_claim = 105
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						ALB = {
-							owns_state = 970
-						}
-					}
-					ALB = {
-						add_state_claim = 970
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						ALB = {
-							owns_state = 950
-						}
-					}
-					ALB = {
-						add_state_claim = 950
-					}
-				}
-				if = {
-					limit = {				
-						ITA = {
-							owns_state = 852
-						}
-					}
-					ITA = {
-						add_state_claim = 852
-					}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 735
-       						 }
-   				 	}
-					ITA = {
-     						add_state_claim = 735
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 1
-       						 }
-   				 	}
-					ITA = {
-     						add_state_claim = 1
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 164
-       						 }
-   				 	}
-					ITA = {
-     						add_state_claim = 164
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 846
-       						 }
-   				 	}
-					ITA = {
-     						add_state_core = 846
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ENG = {
-           						 owns_state = 331
-       						 }
-   				 	}
-					ENG = {
-     						add_state_claim = 331
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ENG = {
-           						 owns_state = 326
-       						 }
-   				 	}
-					ENG = {
-     						add_state_claim = 326
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ENG = {
-           						 owns_state = 332
-       						 }
-   				 	}
-					ENG = {
-     						add_state_claim = 332
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROOT = {
-           						 owns_state = 320
-       						 }
-   				 	}
-					ROOT = {
-     						add_state_claim = 320
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROOT = {
-           						 owns_state = 321
-       						 }
-   				 	}
-					ROOT = {
-     						add_state_claim = 321
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						ROOT = {
-							owns_state = 446
-						}
-					}
-					ROOT = {
-						add_state_claim = 446
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						ROOT = {
-							owns_state = 995
-						}
-					}
-					ROOT = {
-						add_state_claim = 995
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						ROOT = {
-							owns_state = 911
-						}
-					}
-					ROOT = {
-						add_state_claim = 911
-					}
-				}
+			# ============================================================
+			# POLAND (POL)
+			# ============================================================
 
-				if = {
-					limit = {				
-       						 ROOT = {
-           						 owns_state = 685
-       						 }
-   				 	}
-					ROOT = {
-     						add_state_claim = 685
-   				   	}
-				}
-				if = {
-					limit = {				
-							513 = { is_core_of = ROOT }
-   				 	}
-					ROOT = {
-     						add_state_claim = 514
-   				   	}
-				}
-
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						OMA = {
-							owns_state = 1015
-						}
-					}
-					OMA = {
-						add_state_claim = 1015
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						OMA = {
-							owns_state = 1102
-						}
-					}
-					OMA = {
-						add_state_claim = 1102
-					}
-				}
-
-				if = {
-					limit = {				
-       						 POR = {
-           						 owns_state = 171
-       						 }
-   				 	}
-					POR = {
-     						add_state_claim = 171
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 85
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 85
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 28
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 28
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 807
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 807
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 102
-           						 owns_state = 4
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 102
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 102
-           						 owns_state = 853
-           						 owns_state = 4
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 853
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 39
-           						 owns_state = 4
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 39
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 39
-           						 NOT = { owns_state = 4 }
-       						 }
-   				 	}
-					GER = {
-     						remove_state_claim = 39
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 39
-           						 owns_state = 4
-           						 owns_state = 850
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 850
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 850
-           						 NOT = { owns_state = 4 }
-       						 }
-   				 	}
-					GER = {
-     						remove_state_claim = 850
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 852
-           						 owns_state = 736
-           						 owns_state = 102
-           						 owns_state = 853
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 852
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 852
-           						 owns_state = 736
-           						 owns_state = 102
-           						 owns_state = 853
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 736
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 76
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 76
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 73
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 73
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 45
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 45
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						HUN = {
-							owns_state = 975
-						}
-					}
-					HUN = {
-						add_state_claim = 975
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						HUN = {
-							owns_state = 1086
-						}
-					}
-					HUN = {
-						add_state_claim = 1086
-					}
-				}
-
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 45
-           						 owns_state = 76
-           						 owns_state = 83
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 83
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 45
-           						 owns_state = 76
-           						 owns_state = 84
-
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 84
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 45
-           						 owns_state = 76
-           						 owns_state = 83
-           						 owns_state = 84
-           						 owns_state = 82
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 82
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 45
-           						 owns_state = 76
-           						 owns_state = 83
-           						 owns_state = 84
-           						 owns_state = 82
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 764
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-								NOT = {
-								  OR = {
-									owns_state = 45
-									owns_state = 76
-								  }
-								}
-       						 }
-   				 	}
-					HUN = {
-     						remove_state_claim = 764
-							remove_state_core = 764
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 70	
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 70
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 71	
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 71
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 HUN = {
-           						 owns_state = 664	
-       						 }
-   				 	}
-					HUN = {
-     						add_state_claim = 664
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GRE = { exists = yes}
-   				 	}
-					GRE = {
-     						add_state_core = 184
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GRE = { exists = yes}
-   				 	}
-					GRE = {
-     						add_state_core = 731
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 YUG = { exists = yes}
-   				 	}
-					YUG = {
-     						add_state_core = 106
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						YUG = {
-							exists = yes
-						}
-					}
-					YUG = {
-						add_state_core = 970
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						YUG = {
-							exists = yes
-						}
-					}
-					YUG = {
-						add_state_core = 950
-					}
-				}
-				if = {
-					limit = {				
-       						 YUG = { exists = yes}
-   				 	}
-					YUG = {
-     						add_state_core = 803
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROM = {
-           						 owns_state = 192	
-       						 }
-   				 	}
-					ROM = {
-     						add_state_claim = 192
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROM = {
-           						 owns_state = 834
-       						 }
-   				 	}
-					ROM = {
-     						add_state_claim = 834
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROM = {
-           						 owns_state = 198	
-       						 }
-   				 	}
-					ROM = {
-     						add_state_claim = 198
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROM = {
-           						 owns_state = 80	
-       						 }
-   				 	}
-					ROM = {
-     						add_state_claim = 80
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ROM = {
-           						 owns_state = 766	
-       						 }
-   				 	}
-					ROM = {
-     						add_state_claim = 766
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 342	
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 342
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 339
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 339
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 347
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 347
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 340	
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 340
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 805
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 805
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 341
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 341
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GRE = {
-           						 owns_state = 797
-       						 }
-   				 	}
-					GRE = {
-     						add_state_claim = 797
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 TUR = {
-           						 owns_state = 230
-       						 }
-   				 	}
-					TUR = {
-     						add_state_claim = 230
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 TUR = {
-           						 owns_state = 184
-       						 }
-   				 	}
-					TUR = {
-     						add_state_claim = 184
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 RKM = {
-           						 exists = yes
-       						 }
-							 KAZ = { is_ally_with = GER }
-   				 	}
-					KAZ = {
-     						add_state_core = 40
-							add_state_core = 654
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 UKR = {
-           						 owns_state = 137	
-       						 }
-   				 	}
-					UKR = {
-     						add_state_claim = 137
-   				   	}	
-				}
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 188
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 188
-   				   	}
-				}
-
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 86
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 86
-   				   	}
-				}
-
-				if = {
-					limit = {				
-       						 GER = {
-           						 owns_state = 72
-								 has_government = fascism
-       						 }
-   				 	}
-					GER = {
-     						add_state_claim = 72
-   				   	}
-				}
-
-				if = {
-					limit = {				
-       						 YUG = {
-           						 owns_state = 45
-       						 }
-   				 	}
-					YUG = {
-     						add_state_claim = 45
-   				   	}
-				}
-
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 163
-       						 }
-   				 	}
-					ITA = {
-     						add_state_core = 163
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 102
-       						 }
-   				 	}
-					ITA = {
-     						remove_state_claim = 102
-   				   	}
-				}
-
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 856
-       						 }
-   				 	}
-					ITA = {
-     						remove_state_claim = 856
-   				   	}
-				}		
-
-				if = {
-					limit = {				
-       						 FIN = {
-           						 owns_state = 216
-       						 }
-   				 	}
-					FIN = {
-     						add_state_claim = 216
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 FIN = {
-           						 owns_state = 215
-       						 }
-   				 	}
-					FIN = {
-     						add_state_claim = 215
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 FIN = {
-           						 owns_state = 213
-       						 }
-   				 	}
-					FIN = {
-     						add_state_claim = 213
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 MAN = {
-           						 owns_state = 561
-       						 }
-   				 	}
-					MAN = {
-     						add_state_claim = 561
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 MAN = {
-           						 owns_state = 560
-       						 }
-   				 	}
-					MAN = {
-     						add_state_claim = 560
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 MAN = {
-           						 owns_state = 409
-       						 }
-   				 	}
-					MAN = {
-     						add_state_claim = 409
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 MAN = {
-           						 owns_state = 408
-       						 }
-   				 	}
-					MAN = {
-     						add_state_claim = 408
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 MAN = {
-           						 owns_state = 657
-       						 }
-   				 	}
-					MAN = {
-     						add_state_claim = 657
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 655
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 655
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 555
-       						 }
-   				 	}
-					JAP = {
-     						add_state_core = 555
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 537
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 537
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 326
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 326
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 728
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 728
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 743
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 743
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 609
-       						 }
-							 NOT = { RNG = { is_subject_of = JAP } }
-   				 	}
-					JAP = {
-     						add_state_claim = 609
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 637
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 637
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 591
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 591
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						JAP = {
-							owns_state = 1033
-						}
-					}
-					JAP = {
-						add_state_claim = 1033
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						JAP = {
-							owns_state = 1112
-						}
-					}
-					JAP = {
-						add_state_claim = 1112
-					}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 524
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 524
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 745
-       						 }
-   				 	}
-					JAP = {
-     						add_state_claim = 745
-   				   	}
-				}
-
-				if = {
-					limit = {				
-						 MEN = {
-							 is_subject_of = JAP
-						}
-						MON  = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MEN = {
-     						transfer_state = 818
-     						transfer_state = 820
-     						transfer_state = 330
-     						transfer_state = 817
-     						transfer_state = 819
-   				   	}
-					MEN = {
-						add_state_core = 818
-						add_state_core = 820
-						add_state_core = 330
-						add_state_core = 817
-						add_state_core = 819
-					}
-				}
-				if = {
-					limit = {				
-						 MEN = {
-							 is_subject_of = JAP
-						}
-						 TAN  = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MEN = {
-     						transfer_state = 329
-   				   	}
-					MEN = {
-						add_state_core = 329
-					}
-				}
-
-				if = {
-					limit = {				
-						 MEN = {
-							 exists = no
-						}
-						328 = { is_core_of = MAN }
-   				 	}
-					every_state = {
-						limit = {
-							is_core_of = MEN
-						}
-						add_core_of = MAN
-					}
-				}
-				if = {
-					limit = {				
-						NOT = { 328 = { is_core_of = MAN } }
-   				 	}
-					every_state = {
-						limit = {
-							is_core_of = MEN
-						}
-						remove_core_of = MAN
-					}
-				}
-				if = {
-					limit = {
-						SHX = {
-							owns_state = 615
-						}
-						PRC = {
-							exists = no
-						}
-					}
-					SHX = {
-						add_state_core = 622
-					}
-					if = {
-						limit = {
-							has_global_flag = road_to_56_is_active
-						}
-						SHX = {
-							add_state_core = 1111
-							add_state_core = 1125
-						}
-					}
-					else = {
-						SHX = {
-							add_state_core = 1032
-							add_state_core = 1046
-						}
-					}
-				}
-
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 561
-       						 }
-						 MAN = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MAN = {
-     						transfer_state = 561
-   				   	}
-					JAP = {
-						remove_state_claim = 561
-					}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 560
-       						 }
-						 MAN = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MAN = {
-     						transfer_state = 560
-   				   	}
-					JAP = {
-						remove_state_claim = 560
-					}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 409
-       						 }
-						 MAN = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MAN = {
-     						transfer_state = 409
-   				   	}
-					JAP = {
-						remove_state_claim = 409
-					}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 408
-       						 }
-						 MAN = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MAN = {
-     						transfer_state = 408
-   				   	}
-					JAP = {
-						remove_state_claim = 408
-					}
-				}
-				if = {
-					limit = {				
-       						 JAP = {
-           						 owns_state = 657
-       						 }
-						 MAN = {
-							 is_subject_of = JAP
-						}
-   				 	}
-					MAN = {
-     						transfer_state = 657
-   				   	}
-					JAP = {
-						remove_state_claim = 657
-					}
-				}
-				if = {
-					limit = {				
-       						 USA = {
-           						 owns_state = 484
-       						 }
-   				 	}
-					USA = {
-     						add_state_claim = 484
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 116
-       						 }
-   				 	}
-					ITA = {
-     						add_state_core = 116
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 1
-       						 }
-   				 	}
-					ITA = {
-     						add_state_core = 1
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						BUL = {
-							owns_state = 970
-						}
-					}
-					BUL = {
-						add_state_claim = 970
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						BUL = {
-							owns_state = 950
-						}
-					}
-					BUL = {
-						add_state_claim = 950
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = road_to_56_is_active
-						}
-						BUL = {
-							owns_state = 971
-						}
-					}
-					BUL = {
-						add_state_claim = 971
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = road_to_56_is_active
-						BUL = {
-							owns_state = 955
-						}
-					}
-					BUL = {
-						add_state_claim = 955
-					}
-				}
-				if = {
-					limit = {				
-       						 BUL = {
-           						 owns_state = 106
-       						 }
-   				 	}
-					BUL = {
-     						add_state_core = 106
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 BUL = {
-           						 owns_state = 341
-       						 }
-   				 	}
-					BUL = {
-     						add_state_core = 341
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 BUL = {
-           						 owns_state = 803
-       						 }
-   				 	}
-					BUL = {
-     						add_state_core = 803
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 LIT = {
-           						 owns_state = 784
-       						 }
-   				 	}
-					LIT = {
-     						add_state_core = 784
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 ITA = {
-           						 owns_state = 164
-       						 }
-   				 	}
-					ITA = {
-     						add_state_claim = 164
-   				   	}
-				}
-				if = {
-					limit = {				
-       						 GER = {
-							OR = {
-           						 owns_state = 9
-           						 owns_state = 75
-							}
-       						 }
-   				 	}
-					GER = {
-     						remove_state_claim = 9
-     						remove_state_claim = 75
-
-   				   	}
-				}
-				if = {
-					limit = {
-						NOT = { tag = RAJ }
-						any_owned_state = {                #indiafix
-							has_state_flag = indiaformerstates
-							NOT = { is_core_of = RAJ }
-						}
-					}
-					every_owned_state = {
-						limit = {
-							has_state_flag = indiaformerstates
-							NOT = { is_core_of = RAJ }
-						}
-						add_core_of = RAJ
-						clr_state_flag = indiaformerstates
-					}
-				}
-
-				if = {
-					limit = {
-						NOT = { tag = OMA }
-						any_owned_state = {               
-							has_state_flag = omanformerstates
-							NOT = { is_core_of = OMA }
-						}
-					}
-					every_owned_state = {
-						limit = {
-							has_state_flag = omanformerstates
-							NOT = { is_core_of = OMA }
-						}
-						add_core_of = OMA
-						clr_state_flag = omanformerstates
-					}
-				}
-
-
-				if = {
-					limit = {
-						NOT = { tag = INS }
-						any_owned_state = {               
-							has_state_flag = insformerstates
-							NOT = { is_core_of = INS }
-						}
-					}
-					every_owned_state = {
-						limit = {
-							has_state_flag = insformerstates
-							NOT = { is_core_of = INS }
-						}
-						add_core_of = INS
-						clr_state_flag = insformerstates
-					}
-				}
-
-				if = {
-					limit = { 
-						ITA = { exists = yes } 
-					}
-					every_state = {				
-							limit = {
-								NOT = { 
-									OR = {
-										state = 446 
-										state = 735
-										state = 103
-										state = 853
-										state = 1
-										state = 118
-										state = 177
-										state = 164
-									}
-								}
-								OR = {
-								is_core_of = ALB
-								is_core_of = CRO
-								is_core_of = YUG 
-								is_core_of = SOV
-								is_core_of = MNT
-								is_core_of = GRE
-								is_core_of = TUR
-								is_core_of = SYR
-								is_core_of = CYP
-								is_core_of = EGY
-								is_core_of = PAL
-								is_core_of = LEB
-								is_core_of = ALG
-								is_core_of = MOR
-								is_core_of = SPR
-								is_core_of = FRA
-								is_core_of = SPA
-								is_core_of = SOM
-								is_core_of = AFA
-								is_core_of = GIB
-								is_core_of = KEN
-								is_core_of = UGA
-								is_core_of = SUD
-								is_core_of = DEN
-								is_core_of = SAU
-								}
-
-							}
-							remove_claim_by = ITA
-   				 		}
-     	
-				}
-				if = {
-					limit = { 
-						GER = { exists = yes } 
-						has_government = fascism
-					}
-					every_state = {				
-							limit = {
-								NOT = { 
-									OR = {
-										state = 28
-										state = 8
-										state = 39
-										state = 850
-										state = 736
-										state = 852
-										state = 853
-										state = 102
-										state = 69
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 972
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 1078
-										}
-										state = 74
-										AND = {
-											NOT = {
-												has_global_flag = road_to_56_is_active
-											}
-											state = 912
-										}
-										AND = {
-											has_global_flag = road_to_56_is_active
-											state = 964
-										}
-										state = 86
-										state = 807
-										state = 87
-										state = 98
-										state = 97
-										state = 762
-										state = 188
-										state = 195
-										state = 196
-										state = 137 
-										state = 85
-										state = 72
-										state = 853
-										state = 102
-										state = 39
-										state = 850
-										state = 852
-										state = 730
-									}
-								}
-
-							}
-							remove_claim_by = GER
-   				 		}     	
-				}
-
+			# POL subject - SOV removes claim on Danzig (97)
+			if = {
+				limit = {
+					POL = { owns_state = 97 }
+					POL = { is_subject_of = SOV }
+				}
+				SOV = { remove_state_claim = 97 }
 			}
+
+			# POL simple claims
+			if = {
+				limit = { POL = { owns_state = 5 } }
+				POL = { add_state_claim = 5 }
+			}
+			if = {
+				limit = { POL = { owns_state = 63 } }
+				POL = { add_state_claim = 63 }
+			}
+			if = {
+				limit = { POL = { owns_state = 68 } }
+				POL = { add_state_claim = 68 }
+			}
+			if = {
+				limit = { POL = { owns_state = 66 } }
+				POL = { add_state_claim = 66 }
+			}
+			if = {
+				limit = { POL = { owns_state = 67 } }
+				POL = { add_state_claim = 67 }
+			}
+
+			# ============================================================
+			# ENGLAND (ENG)
+			# ============================================================
+
+			# ENG claim removals
+			if = {
+				limit = { ENG = { owns_state = 412 } }
+				ENG = { remove_state_claim = 412 }
+			}
+			if = {
+				limit = { ENG = { owns_state = 413 } }
+				ENG = { remove_state_claim = 413 }
+			}
+
+			# ENG simple claims
+			if = {
+				limit = { ENG = { owns_state = 331 } }
+				ENG = { add_state_claim = 331 }
+			}
+			if = {
+				limit = { ENG = { owns_state = 326 } }
+				ENG = { add_state_claim = 326 }
+			}
+			if = {
+				limit = { ENG = { owns_state = 332 } }
+				ENG = { add_state_claim = 332 }
+			}
+
+			# ============================================================
+			# FRANCE (FRA)
+			# ============================================================
+
+			if = {
+				limit = { FRA = { owns_state = 845 } }
+				FRA = { add_state_claim = 845 }
+			}
+
+			# ============================================================
+			# GERMANY (GER)
+			# ============================================================
+
+			# --- GER cores ---
+			if = {
+				limit = { GER = { owns_state = 63 } }
+				GER = { add_state_core = 63 }
+			}
+			if = {
+				limit = { GER = { owns_state = 68 } }
+				GER = { add_state_core = 68 }
+			}
+			if = {
+				limit = { GER = { owns_state = 66 } }
+				GER = { add_state_core = 66 }
+			}
+			if = {
+				limit = { GER = { owns_state = 67 } }
+				GER = { add_state_core = 67 }
+			}
+			if = {
+				limit = { GER = { owns_state = 5 } }
+				GER = { add_state_core = 5 }
+			}
+
+			# --- GER simple claims ---
+			if = {
+				limit = { GER = { owns_state = 86 } }
+				GER = { add_state_claim = 86 }
+			}
+			if = {
+				limit = { GER = { owns_state = 763 } }
+				GER = { add_state_claim = 763 }
+			}
+			if = {
+				limit = { GER = { owns_state = 797 } }
+				GER = { add_state_claim = 797 }
+			}
+			if = {
+				limit = { GER = { owns_state = 807 } }
+				GER = { add_state_claim = 807 }
+			}
+			if = {
+				limit = { GER = { owns_state = 85 } }
+				GER = { add_state_claim = 85 }
+			}
+			if = {
+				limit = { GER = { owns_state = 762 } }
+				GER = { add_state_claim = 762 }
+			}
+			if = {
+				limit = { GER = { owns_state = 188 } }
+				GER = { add_state_claim = 188 }
+			}
+
+			# --- GER controls_state claim ---
+			if = {
+				limit = { GER = { controls_state = 28 } }
+				GER = { add_state_claim = 28 }
+			}
+
+			# --- GER fascism-conditional claims ---
+			if = {
+				limit = { GER = { owns_state = 196 has_government = fascism } }
+				GER = { add_state_claim = 196 }
+			}
+			if = {
+				limit = { GER = { owns_state = 195 has_government = fascism } }
+				GER = { add_state_claim = 195 }
+			}
+			if = {
+				limit = { GER = { owns_state = 137 has_government = fascism } }
+				GER = { add_state_claim = 137 }
+			}
+			if = {
+				limit = { GER = { owns_state = 86 has_government = fascism } }
+				GER = { add_state_claim = 86 }
+			}
+			if = {
+				limit = { GER = { owns_state = 97 has_government = fascism } }
+				GER = { add_state_claim = 97 }
+			}
+			if = {
+				limit = { GER = { owns_state = 98 has_government = fascism } }
+				GER = { add_state_claim = 98 }
+			}
+			if = {
+				limit = { GER = { owns_state = 87 has_government = fascism } }
+				GER = { add_state_claim = 87 }
+			}
+			if = {
+				limit = { GER = { owns_state = 69 has_government = fascism } }
+				GER = { add_state_claim = 69 }
+			}
+			if = {
+				limit = { GER = { owns_state = 74 has_government = fascism } }
+				GER = { add_state_claim = 74 }
+			}
+			if = {
+				limit = { GER = { owns_state = 72 has_government = fascism } }
+				GER = { add_state_claim = 72 }
+			}
+
+			# --- GER road_to_56 conditional claims ---
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					GER = { owns_state = 912 }
+				}
+				GER = { add_state_claim = 912 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					GER = { owns_state = 964 }
+				}
+				GER = { add_state_claim = 964 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					GER = { owns_state = 972 has_government = fascism }
+				}
+				GER = { add_state_claim = 972 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					GER = { owns_state = 1078 has_government = fascism }
+				}
+				GER = { add_state_claim = 1078 }
+			}
+
+			# --- GER complex multi-state conditions ---
+			if = {
+				limit = { GER = { owns_state = 102 owns_state = 4 } }
+				GER = { add_state_claim = 102 }
+			}
+			if = {
+				limit = { GER = { owns_state = 102 owns_state = 853 owns_state = 4 } }
+				GER = { add_state_claim = 853 }
+			}
+			if = {
+				limit = { GER = { owns_state = 39 owns_state = 4 } }
+				GER = { add_state_claim = 39 }
+			}
+			if = {
+				limit = { GER = { owns_state = 39 NOT = { owns_state = 4 } } }
+				GER = { remove_state_claim = 39 }
+			}
+			if = {
+				limit = { GER = { owns_state = 39 owns_state = 4 owns_state = 850 } }
+				GER = { add_state_claim = 850 }
+			}
+			if = {
+				limit = { GER = { owns_state = 850 NOT = { owns_state = 4 } } }
+				GER = { remove_state_claim = 850 }
+			}
+			if = {
+				limit = { GER = { owns_state = 852 owns_state = 736 owns_state = 102 owns_state = 853 } }
+				GER = { add_state_claim = 852 add_state_claim = 736 }
+			}
+
+			# --- GER claim removals ---
+			if = {
+				limit = {
+					GER = {
+						OR = {
+							owns_state = 9
+							owns_state = 75
+						}
+					}
+				}
+				GER = {
+					remove_state_claim = 9
+					remove_state_claim = 75
+				}
+			}
+
+			# --- GER road_to_56 core restoration ---
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					owns_state = 978
+				}
+				every_country = {
+					limit = { original_tag = GER }
+					add_state_core = 978
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					owns_state = 923
+				}
+				every_country = {
+					limit = { original_tag = GER }
+					add_state_core = 923
+				}
+			}
+
+			# ============================================================
+			# SOVIET UNION (SOV)
+			# ============================================================
+
+			# --- SOV cores ---
+			if = {
+				limit = { SOV = { owns_state = 146 } }
+				SOV = { add_state_core = 146 }
+			}
+			if = {
+				limit = { SOV = { owns_state = 147 } }
+				SOV = { add_state_core = 147 }
+			}
+
+			# --- SOV simple claims ---
+			if = {
+				limit = { SOV = { owns_state = 537 } }
+				SOV = { add_state_claim = 537 }
+			}
+			if = {
+				limit = { SOV = { owns_state = 80 } }
+				SOV = { add_state_claim = 80 }
+			}
+			if = {
+				limit = { SOV = { owns_state = 722 } }
+				SOV = { add_state_claim = 722 }
+			}
+			if = {
+				limit = { SOV = { owns_state = 555 } }
+				SOV = { add_state_claim = 555 }
+			}
+			if = {
+				limit = { SOV = { owns_state = 763 } }
+				SOV = { add_state_claim = 763 }
+			}
+
+			# --- SOV multi-state conditional claims ---
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 198
+						owns_state = 834
+						owns_state = 78
+					}
+				}
+				SOV = { add_state_claim = 78 } # bessarabia
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 834
+						owns_state = 192
+						owns_state = 766
+					}
+				}
+				SOV = { add_state_claim = 766 } # south bessarabia
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 199
+						owns_state = 89
+						owns_state = 91
+						owns_state = 73
+					}
+				}
+				SOV = { add_state_claim = 73 } #carpathia ruthenia
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 206
+						owns_state = 207
+						owns_state = 95
+						owns_state = 96
+					}
+				}
+				SOV = { add_state_claim = 784 } #wilno
+			}
+			# --- SOV chain claims (3-state conditions) --- EST POL
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 206
+						owns_state = 207
+						owns_state = 96
+					}
+				}
+				SOV = { add_state_claim = 96 }
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 206
+						owns_state = 96
+						owns_state = 95
+					}
+				}
+				SOV = { add_state_claim = 95 }
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 204
+						owns_state = 95
+						owns_state = 94
+					}
+				}
+				SOV = { add_state_claim = 94 }
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 94
+						owns_state = 201
+						owns_state = 93
+					}
+				}
+				SOV = { add_state_claim = 93 }
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 91
+						owns_state = 199
+						owns_state = 93
+					}
+				}
+				SOV = { add_state_claim = 91 }
+			}
+			if = {
+				limit = {
+					SOV = {
+						owns_state = 89
+						owns_state = 91
+						owns_state = 199
+					}
+				}
+				SOV = { add_state_claim = 89 }
+			}
+
+			# ============================================================
+			# ITALY (ITA)
+			# ============================================================
+
+			# --- ITA simple claims ---
+			if = {
+				limit = { ITA = { owns_state = 103 } }
+				ITA = { add_state_claim = 103 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 852 } }
+				ITA = { add_state_claim = 852 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 735 } }
+				ITA = { add_state_claim = 735 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 164 } }
+				ITA = { add_state_claim = 164 }
+			}
+
+			# --- ITA cores ---
+			if = {
+				limit = { ITA = { owns_state = 736 } }
+				ITA = { add_state_core = 736 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 846 } }
+				ITA = { add_state_core = 846 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 163 } }
+				ITA = { add_state_core = 163 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 116 } }
+				ITA = { add_state_core = 116 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 1 } }
+				ITA = { add_state_core = 1 }
+			}
+
+			# --- ITA claim removals ---
+			if = {
+				limit = { ITA = { owns_state = 102 } }
+				ITA = { remove_state_claim = 102 }
+			}
+			if = {
+				limit = { ITA = { owns_state = 856 } }
+				ITA = { remove_state_claim = 856 }
+			}
+
+			# --- ITA → ALB state transfers ---
+			if = {
+				limit = {
+					ITA = {
+						owns_state = 802
+						NOT = { owns_state = 44 }
+					}
+					ALB = {
+						exists = yes
+						is_subject_of = ITA
+					}
+				}
+				ALB = { transfer_state = 802 }
+				ITA = { remove_state_claim = 802 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					ITA = {
+						owns_state = 970
+						NOT = { owns_state = 44 }
+					}
+					ALB = {
+						exists = yes
+						is_subject_of = ITA
+					}
+				}
+				ALB = { transfer_state = 970 }
+				ITA = { remove_state_claim = 970 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					ITA = {
+						owns_state = 950
+						NOT = { owns_state = 44 }
+					}
+					ALB = {
+						exists = yes
+						is_subject_of = ITA
+					}
+				}
+				ALB = { transfer_state = 950 }
+				ITA = { remove_state_claim = 950 }
+			}
+
+			# ============================================================
+			# ALBANIA (ALB)
+			# ============================================================
+
+			if = {
+				limit = {
+					ALB = {
+						exists = yes
+						is_subject = yes
+					}
+				}
+				ALB = { remove_state_claim = 185 }
+			}
+			if = {
+				limit = { ALB = { owns_state = 802 } }
+				ALB = { add_state_claim = 802 }
+			}
+			if = {
+				limit = { ALB = { controls_state = 105 } }
+				ALB = { remove_state_claim = 105 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					ALB = { owns_state = 970 }
+				}
+				ALB = { add_state_claim = 970 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					ALB = { owns_state = 950 }
+				}
+				ALB = { add_state_claim = 950 }
+			}
+
+			# ============================================================
+			# AUSTRIA (AUS)
+			# ============================================================
+
+			if = {
+				limit = { AUS = { owns_state = 736 } }
+				AUS = { add_state_claim = 736 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 852 } }
+				AUS = { add_state_claim = 852 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 52 } }
+				AUS = { add_state_claim = 52 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 53 } }
+				AUS = { add_state_claim = 53 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 853 } }
+				AUS = { add_state_claim = 853 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 54 } }
+				AUS = { add_state_claim = 54 }
+			}
+			if = {
+				limit = { AUS = { owns_state = 102 } }
+				AUS = { add_state_claim = 102 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					AUS = { owns_state = 972 }
+				}
+				AUS = { add_state_claim = 972 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					AUS = { owns_state = 1078 }
+				}
+				AUS = { add_state_claim = 1078 }
+			}
+
+			# ============================================================
+			# TURKEY (TUR)
+			# ============================================================
+
+			if = {
+				limit = { TUR = { owns_state = 182 } }
+				TUR = { add_state_claim = 182 }
+			}
+			if = {
+				limit = { TUR = { owns_state = 164 } }
+				TUR = { add_state_claim = 164 }
+			}
+			if = {
+				limit = { TUR = { owns_state = 187 } }
+				TUR = { add_state_claim = 187 }
+			}
+			if = {
+				limit = { TUR = { owns_state = 230 } }
+				TUR = { add_state_claim = 230 }
+			}
+			if = {
+				limit = { TUR = { owns_state = 184 } }
+				TUR = { add_state_claim = 184 }
+			}
+
+			# ============================================================
+			# HUNGARY (HUN)
+			# ============================================================
+
+			# --- HUN simple claims ---
+			if = {
+				limit = { HUN = { owns_state = 76 } }
+				HUN = { add_state_claim = 76 }
+			}
+			if = {
+				limit = { HUN = { owns_state = 73 } }
+				HUN = { add_state_claim = 73 }
+			}
+			if = {
+				limit = { HUN = { owns_state = 45 } }
+				HUN = { add_state_claim = 45 }
+			}
+			if = {
+				limit = { HUN = { owns_state = 70 } }
+				HUN = { add_state_claim = 70 }
+			}
+			if = {
+				limit = { HUN = { owns_state = 71 } }
+				HUN = { add_state_claim = 71 }
+			}
+			if = {
+				limit = { HUN = { owns_state = 664 } }
+				HUN = { add_state_claim = 664 }
+			}
+
+			# --- HUN road_to_56 conditional ---
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					HUN = { owns_state = 975 }
+				}
+				HUN = { add_state_claim = 975 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					HUN = { owns_state = 1086 }
+				}
+				HUN = { add_state_claim = 1086 }
+			}
+
+			# --- HUN multi-state conditional claims ---
+			if = {
+				limit = {
+					HUN = {
+						owns_state = 45
+						owns_state = 76
+						owns_state = 83
+					}
+				}
+				HUN = { add_state_claim = 83 }
+			}
+			if = {
+				limit = {
+					HUN = {
+						owns_state = 45
+						owns_state = 76
+						owns_state = 84
+					}
+				}
+				HUN = { add_state_claim = 84 }
+			}
+			if = {
+				limit = {
+					HUN = {
+						owns_state = 45
+						owns_state = 76
+						owns_state = 83
+						owns_state = 84
+						owns_state = 82
+					}
+				}
+				HUN = { add_state_claim = 82 add_state_claim = 764 }
+			}
+
+			# --- HUN 764 removal ---
+			if = {
+				limit = {
+					HUN = {
+						NOT = {
+							OR = {
+								owns_state = 45
+								owns_state = 76
+							}
+						}
+					}
+				}
+				HUN = {
+					remove_state_claim = 764
+					remove_state_core = 764
+				}
+			}
+
+			# ============================================================
+			# GREECE (GRE)
+			# ============================================================
+
+			# --- GRE exists-based cores ---
+			if = {
+				limit = { GRE = { exists = yes } }
+				GRE = { add_state_core = 184 }
+			}
+			if = {
+				limit = { GRE = { exists = yes } }
+				GRE = { add_state_core = 731 }
+			}
+
+			# --- GRE owns-based claims ---
+			if = {
+				limit = { GRE = { owns_state = 342 } }
+				GRE = { add_state_claim = 342 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 339 } }
+				GRE = { add_state_claim = 339 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 347 } }
+				GRE = { add_state_claim = 347 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 340 } }
+				GRE = { add_state_claim = 340 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 805 } }
+				GRE = { add_state_claim = 805 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 341 } }
+				GRE = { add_state_claim = 341 }
+			}
+			if = {
+				limit = { GRE = { owns_state = 797 } }
+				GRE = { add_state_claim = 797 }
+			}
+
+			# ============================================================
+			# YUGOSLAVIA (YUG)
+			# ============================================================
+
+			if = {
+				limit = { YUG = { exists = yes } }
+				YUG = { add_state_core = 106 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					YUG = { exists = yes }
+				}
+				YUG = { add_state_core = 970 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					YUG = { exists = yes }
+				}
+				YUG = { add_state_core = 950 }
+			}
+			if = {
+				limit = { YUG = { exists = yes } }
+				YUG = { add_state_core = 803 }
+			}
+			if = {
+				limit = { YUG = { owns_state = 45 } }
+				YUG = { add_state_claim = 45 }
+			}
+			if = {
+				limit = { YUG = { owns_state = 802 } }
+				YUG = { add_state_core = 802 }
+			}
+			# ============================================================
+			# ROMANIA (ROM)
+			# ============================================================
+
+			if = {
+				limit = { ROM = { owns_state = 192 } }
+				ROM = { add_state_claim = 192 }
+			}
+			if = {
+				limit = { ROM = { owns_state = 834 } }
+				ROM = { add_state_claim = 834 }
+			}
+			if = {
+				limit = { ROM = { owns_state = 198 } }
+				ROM = { add_state_claim = 198 }
+			}
+			if = {
+				limit = { ROM = { owns_state = 80 } }
+				ROM = { add_state_claim = 80 }
+			}
+			if = {
+				limit = { ROM = { owns_state = 766 } }
+				ROM = { add_state_claim = 766 }
+			}
+
+			# ============================================================
+			# CZECHOSLOVAKIA (CZE)
+			# ============================================================
+
+			if = {
+				limit = {
+					CZE = {
+						owns_state = 66
+						owns_state = 67
+					}
+				}
+				CZE = {
+					add_state_claim = 66
+					add_state_claim = 67
+				}
+			}
+
+			# ============================================================
+			# LITHUANIA (LIT)
+			# ============================================================
+
+			if = {
+				limit = { LIT = { owns_state = 784 } }
+				LIT = { add_state_core = 784 }
+			}
+
+			# ============================================================
+			# UKRAINE (UKR)
+			# ============================================================
+
+			if = {
+				limit = { UKR = { owns_state = 137 } }
+				UKR = { add_state_claim = 137 }
+			}
+
+			# ============================================================
+			# FINLAND (FIN)
+			# ============================================================
+
+			if = {
+				limit = { FIN = { owns_state = 216 } }
+				FIN = { add_state_claim = 216 }
+			}
+			if = {
+				limit = { FIN = { owns_state = 215 } }
+				FIN = { add_state_claim = 215 }
+			}
+			if = {
+				limit = { FIN = { owns_state = 213 } }
+				FIN = { add_state_claim = 213 }
+			}
+
+			# ============================================================
+			# BULGARIA (BUL)
+			# ============================================================
+
+			# --- BUL road_to_56 conditional claims ---
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					BUL = { owns_state = 970 }
+				}
+				BUL = { add_state_claim = 970 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					BUL = { owns_state = 950 }
+				}
+				BUL = { add_state_claim = 950 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					BUL = { owns_state = 971 }
+				}
+				BUL = { add_state_claim = 971 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					BUL = { owns_state = 955 }
+				}
+				BUL = { add_state_claim = 955 }
+			}
+
+			# --- BUL cores ---
+			if = {
+				limit = { BUL = { owns_state = 106 } }
+				BUL = { add_state_core = 106 }
+			}
+			if = {
+				limit = { BUL = { owns_state = 341 } }
+				BUL = { add_state_core = 341 }
+			}
+			if = {
+				limit = { BUL = { owns_state = 803 } }
+				BUL = { add_state_core = 803 }
+			}
+
+			# ============================================================
+			# DENMARK (DEN)
+			# ============================================================
+
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					DEN = { owns_state = 909 }
+				}
+				DEN = { add_state_claim = 909 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					DEN = { owns_state = 998 }
+				}
+				DEN = { add_state_claim = 998 }
+			}
+
+			# ============================================================
+			# PORTUGAL (POR)
+			# ============================================================
+
+			if = {
+				limit = { POR = { owns_state = 171 } }
+				POR = { add_state_claim = 171 }
+			}
+
+			# ============================================================
+			# OMAN (OMA)
+			# ============================================================
+
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					OMA = { owns_state = 1015 }
+				}
+				OMA = { add_state_claim = 1015 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					OMA = { owns_state = 1102 }
+				}
+				OMA = { add_state_claim = 1102 }
+			}
+
+			# ============================================================
+			# ROOT (generic - any country)
+			# ============================================================
+
+			if = {
+				limit = { ROOT = { owns_state = 320 } }
+				ROOT = { add_state_claim = 320 }
+			}
+			if = {
+				limit = { ROOT = { owns_state = 321 } }
+				ROOT = { add_state_claim = 321 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					ROOT = { owns_state = 446 }
+				}
+				ROOT = { add_state_claim = 446 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					ROOT = { owns_state = 995 }
+				}
+				ROOT = { add_state_claim = 995 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					ROOT = { owns_state = 911 }
+				}
+				ROOT = { add_state_claim = 911 }
+			}
+			if = {
+				limit = { ROOT = { owns_state = 685 } }
+				ROOT = { add_state_claim = 685 }
+			}
+			if = {
+				limit = { 513 = { is_core_of = ROOT } }
+				ROOT = { add_state_claim = 514 }
+			}
+
+			# ============================================================
+			# USA
+			# ============================================================
+
+			if = {
+				limit = { USA = { owns_state = 484 } }
+				USA = { add_state_claim = 484 }
+			}
+
+			# ============================================================
+			# KAZAKHSTAN (KAZ)
+			# ============================================================
+
+			if = {
+				limit = {
+					RKM = { exists = yes }
+					KAZ = { is_ally_with = GER }
+				}
+				KAZ = {
+					add_state_core = 40
+					add_state_core = 654
+				}
+			}
+
+			# ============================================================
+			# JAPAN (JAP)
+			# ============================================================
+
+			# --- JAP state 609 claim removals ---
+			if = {
+				limit = {
+					JAP = { owns_state = 609 }
+					RNG = { is_subject_of = JAP }
+				}
+				JAP = { remove_state_claim = 609 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 609 }
+					PRC = { is_ally_with = JAP }
+				}
+				JAP = { remove_state_claim = 609 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 609 }
+					PRC = { is_subject_of = SOV }
+				}
+				JAP = { remove_state_claim = 609 }
+			}
+
+			# --- JAP simple claims ---
+			if = {
+				limit = { JAP = { owns_state = 655 } }
+				JAP = { add_state_claim = 655 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 537 } }
+				JAP = { add_state_claim = 537 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 326 } }
+				JAP = { add_state_claim = 326 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 728 } }
+				JAP = { add_state_claim = 728 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 743 } }
+				JAP = { add_state_claim = 743 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 609 }
+					NOT = { RNG = { is_subject_of = JAP } }
+				}
+				JAP = { add_state_claim = 609 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 637 } }
+				JAP = { add_state_claim = 637 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 591 } }
+				JAP = { add_state_claim = 591 }
+			}
+			if = {
+				limit = { 1033 = { is_claimed_by = JAP } }
+				JAP = { add_state_claim = 591 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 524 } }
+				JAP = { add_state_claim = 524 }
+			}
+			if = {
+				limit = { JAP = { owns_state = 745 } }
+				JAP = { add_state_claim = 745 }
+			}
+
+			# --- JAP core ---
+			if = {
+				limit = { JAP = { owns_state = 555 } }
+				JAP = { add_state_core = 555 }
+			}
+
+			# --- JAP road_to_56 conditional ---
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					JAP = { owns_state = 1033 }
+				}
+				JAP = { add_state_claim = 1033 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					JAP = { owns_state = 1112 }
+				}
+				JAP = { add_state_claim = 1112 }
+			}
+
+			# --- JAP → MAN state transfers ---
+			if = {
+				limit = {
+					JAP = { owns_state = 561 }
+					MAN = { is_subject_of = JAP }
+				}
+				MAN = { transfer_state = 561 }
+				JAP = { remove_state_claim = 561 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 560 }
+					MAN = { is_subject_of = JAP }
+				}
+				MAN = { transfer_state = 560 }
+				JAP = { remove_state_claim = 560 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 409 }
+					MAN = { is_subject_of = JAP }
+				}
+				MAN = { transfer_state = 409 }
+				JAP = { remove_state_claim = 409 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 408 }
+					MAN = { is_subject_of = JAP }
+				}
+				MAN = { transfer_state = 408 }
+				JAP = { remove_state_claim = 408 }
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 657 }
+					MAN = { is_subject_of = JAP }
+				}
+				MAN = { transfer_state = 657 }
+				JAP = { remove_state_claim = 657 }
+			}
+
+			# ============================================================
+			# MANCHUKUO (MAN)
+			# ============================================================
+
+			if = {
+				limit = { MAN = { owns_state = 561 } }
+				MAN = { add_state_claim = 561 }
+			}
+			if = {
+				limit = { MAN = { owns_state = 560 } }
+				MAN = { add_state_claim = 560 }
+			}
+			if = {
+				limit = { MAN = { owns_state = 409 } }
+				MAN = { add_state_claim = 409 }
+			}
+			if = {
+				limit = { MAN = { owns_state = 408 } }
+				MAN = { add_state_claim = 408 }
+			}
+			if = {
+				limit = { MAN = { owns_state = 657 } }
+				MAN = { add_state_claim = 657 }
+			}
+
+			# ============================================================
+			# MENGJIANG (MEN)
+			# ============================================================
+
+			# --- MEN state transfers from JAP subjects ---
+			if = {
+				limit = {
+					MEN = { is_subject_of = JAP }
+					MON = { is_subject_of = JAP }
+				}
+				MEN = {
+					transfer_state = 818
+					transfer_state = 820
+					transfer_state = 330
+					transfer_state = 817
+					transfer_state = 819
+				}
+				MEN = {
+					add_state_core = 818
+					add_state_core = 820
+					add_state_core = 330
+					add_state_core = 817
+					add_state_core = 819
+				}
+			}
+			if = {
+				limit = {
+					MEN = { is_subject_of = JAP }
+					TAN = { is_subject_of = JAP }
+				}
+				MEN = { transfer_state = 329 }
+				MEN = { add_state_core = 329 }
+			}
+
+			# --- MEN core management ---
+			if = {
+				limit = {
+					MEN = { exists = no }
+					328 = { is_core_of = MAN }
+				}
+				every_state = {
+					limit = { is_core_of = MEN }
+					add_core_of = MAN
+				}
+			}
+			if = {
+				limit = { NOT = { 328 = { is_core_of = MAN } } }
+				every_state = {
+					limit = { is_core_of = MEN }
+					remove_core_of = MAN
+				}
+			}
+
+			# ============================================================
+			# SHANXI (SHX)
+			# ============================================================
+
+			if = {
+				limit = {
+					SHX = { owns_state = 615 }
+					PRC = { exists = no }
+				}
+				SHX = { add_state_core = 622 }
+				if = {
+					limit = { has_global_flag = road_to_56_is_active }
+					SHX = {
+						add_state_core = 1111
+						add_state_core = 1125
+					}
+				}
+				else = {
+					SHX = {
+						add_state_core = 1032
+						add_state_core = 1046
+					}
+				}
+			}
+
+			# ============================================================
+			# FORMER STATES RESTORATION
+			# ============================================================
+
+			# --- India (RAJ) ---
+			if = {
+				limit = {
+					NOT = { tag = RAJ }
+					any_owned_state = {
+						has_state_flag = indiaformerstates
+						NOT = { is_core_of = RAJ }
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = indiaformerstates
+						NOT = { is_core_of = RAJ }
+					}
+					add_core_of = RAJ
+					clr_state_flag = indiaformerstates
+				}
+			}
+
+			# --- Oman (OMA) ---
+			if = {
+				limit = {
+					NOT = { tag = OMA }
+					any_owned_state = {
+						has_state_flag = omanformerstates
+						NOT = { is_core_of = OMA }
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = omanformerstates
+						NOT = { is_core_of = OMA }
+					}
+					add_core_of = OMA
+					clr_state_flag = omanformerstates
+				}
+			}
+
+			# --- Ins (INS) ---
+			if = {
+				limit = {
+					NOT = { tag = INS }
+					any_owned_state = {
+						has_state_flag = insformerstates
+						NOT = { is_core_of = INS }
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = insformerstates
+						NOT = { is_core_of = INS }
+					}
+					add_core_of = INS
+					clr_state_flag = insformerstates
+				}
+			}
+
+			# ============================================================
+			# CLAIM CLEANUP (every_state)
+			# ============================================================
+
+			# --- ITA claim removal ---
+			if = {
+				limit = { ITA = { exists = yes } }
+				every_state = {
+					limit = {
+						NOT = {
+							OR = {
+								state = 446
+								state = 735
+								state = 103
+								state = 853
+								state = 1
+								state = 118
+								state = 177
+								state = 164
+							}
+						}
+						OR = {
+							is_core_of = ALB
+							is_core_of = CRO
+							is_core_of = YUG
+							is_core_of = SOV
+							is_core_of = MNT
+							is_core_of = GRE
+							is_core_of = TUR
+							is_core_of = SYR
+							is_core_of = CYP
+							is_core_of = EGY
+							is_core_of = PAL
+							is_core_of = LEB
+							is_core_of = ALG
+							is_core_of = MOR
+							is_core_of = SPR
+							is_core_of = FRA
+							is_core_of = SPA
+							is_core_of = SOM
+							is_core_of = AFA
+							is_core_of = GIB
+							is_core_of = KEN
+							is_core_of = UGA
+							is_core_of = SUD
+							is_core_of = DEN
+							is_core_of = SAU
+						}
+					}
+					remove_claim_by = ITA
+				}
+			}
+
+			# --- GER claim removal (fascism only) ---
+			if = {
+				limit = {
+					GER = { exists = yes }
+					has_government = fascism
+				}
+				every_state = {
+					limit = {
+						NOT = {
+							OR = {
+								state = 28
+								state = 8
+								state = 736
+								state = 69
+								AND = {
+									NOT = { has_global_flag = road_to_56_is_active }
+									state = 972
+								}
+								AND = {
+									has_global_flag = road_to_56_is_active
+									state = 1078
+								}
+								state = 74
+								AND = {
+									NOT = { has_global_flag = road_to_56_is_active }
+									state = 912
+								}
+								AND = {
+									has_global_flag = road_to_56_is_active
+									state = 964
+								}
+								state = 86
+								state = 807
+								state = 87
+								state = 98
+								state = 97
+								state = 762
+								state = 188
+								state = 195
+								state = 196
+								state = 137
+								state = 85
+								state = 72
+								state = 853
+								state = 102
+								state = 39
+								state = 850
+								state = 852
+								state = 730
+							}
+						}
+					}
+					remove_claim_by = GER
+				}
+			}
+
+		}
 	}
 }

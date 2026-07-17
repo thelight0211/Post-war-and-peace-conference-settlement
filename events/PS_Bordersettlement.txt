@@ -811,6 +811,16 @@ country_event = {
 		hidden = yes
 
 		trigger = {
+			NOT = {
+				OR = {
+					has_active_mission = annexation_YUN_CONQ
+					has_active_mission = annexation_SHX_CONQ
+					has_active_mission = annexation_XSM_CONQ
+					has_active_mission = annexation_SIK_CONQ
+					has_active_mission = annexation_GXC_CONQ
+					has_active_mission = annexation_CHI_CONQ
+				}
+			}
 			is_ai = yes
 			original_tag = JAP 
 			RNG = { is_subject_of = ROOT }

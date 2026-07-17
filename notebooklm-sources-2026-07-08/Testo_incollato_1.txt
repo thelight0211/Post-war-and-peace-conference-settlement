@@ -1,0 +1,8 @@
+Testo incollato
+===============
+
+Il ritardo dell'engine sulle proprietà: Nel nodo on_peaceconference_ended, l'engine non ha ancora formalmente registrato l'acquisizione delle nuove province. Usare every_owned_state fallisce perché il gioco non vede ancora le province come proprie. È tassativo usare every_state abbinato al trigger nativo pc_is_state_claimed_and_taken_by = ROOT.
+
+Il limite degli scope annidati: Il trigger pc_is_state_claimed_and_taken_by va in confusione e restituisce un valore falso se viene annidato troppo in profondità all'interno di scope di ricerca spaziale (come any_neighbor_state). Per aggirare questa cecità e far riconoscere i confini pre-guerra al motore, l'unico metodo supportato e infallibile è "marcare" preventivamente gli stati usando set_state_flag.
+
+L'ottimizzazione assoluta tramite Array: Per non sovraccaricare la CPU costringendo il gioco a scansionare tutti gli oltre 800 stati della mappa in cicli globali multipli, l'architettura perfetta prevede l'uso di add_to_temp_array all'interno di una singola passata di every_state. Tutte le analisi di adiacenza e i trasferimenti successivi si eseguono in modo fulmineo solo su quell'array mirato utilizzando for_each_scope_loop, ricordandosi di distruggerlo alla fine con clear_temp_array per liberare la memoria.

@@ -1,0 +1,32 @@
+Testo incollato
+===============
+
+Nota Tecnica: Architettura IA, Contesti e Variabili in HOI4
+
+Variabili Temporanee (Temp Variables): Le variabili temporanee sono "unscoped", ovvero non appartengono a nessuna nazione e mantengono il loro valore a prescindere dal contesto in cui vengono lette o modificate
+
+. È un errore critico sintattico assegnare loro prefissi di nazione (come PREV.nome_variabile) in un blocco di effetti, poiché questo confonde matematicamente l'engine.
+
+Trigger Scopes contro Effect Scopes: Comandi di interazione fisica con la mappa come every_country_division o every_faction_member sono classificati esclusivamente come Effect Scopes
+
+. Non possono mai essere utilizzati all'interno di blocchi Trigger (come limit o gli Scripted Triggers). Inserire un effetto dentro un trigger porta l'engine C++ a ignorare silenziosamente l'intero blocco.
+
+Valutazione Logistica Reale (Equipaggiamento): L'IA nativa fallisce nel sommare le forze delle coalizioni con i trigger base. In uno script di calcolo manuale, usare num_divisions o deployed_army_manpower_k è inesatto perché conta anche gli uomini sprovvisti di fucili o le divisioni prive di logistica
+
+. La variabile assoluta per calcolare la reale forza di fuoco schierata è num_equipment_in_armies_k@infantry_equipment
+
+. I comandi di inventario esigono sempre l'uso della chiocciola @ per specificare l'archetipo esatto dell'equipaggiamento.
+
+Blocco Assoluto della Guerra: Il parametro can_not_declare_war all'interno di add_relation_rule_override è instabile nell'applicazione pratica per impedire lo scoppio di nuovi conflitti
+
+. Il metodo documentato, invisibile al giocatore e inviolabile per inibire il tasto della diplomazia è l'utilizzo dell'effetto set_truce
+
+. Impostato su intervalli brevi e rinnovato tramite un innesco costante (come on_weekly), crea un lucchetto perfetto
+
+.
+
+Gestione Sicura dei Contesti (Scopes): Il comando THIS adotta l'identità del blocco esatto in cui si trova, ma in cicli multipli incrociati risulta estremamente fragile e prono a disconnessioni dell'engine
+
+. L'approccio infallibile è ancorare la matematica a nodi primari come ROOT e PREV, oppure scolpire l'identità delle nazioni nella memoria tramite il comando save_event_target_as
+
+.

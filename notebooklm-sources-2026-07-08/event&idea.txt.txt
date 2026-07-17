@@ -1,0 +1,650 @@
+event&idea.txt
+==============
+
+Paradox Wikis Hearts of Iron 4 Wiki Search Hearts of Iron 4 Log in
+
+Page Discussion Read Edit Edit source View history
+
+Event modding Events are defined in the /Hearts of Iron IV/events/ folder. There are several types of events, changing the appearance or the target of the events.
+
+This is a community maintained wiki. If you spot a mistake, please The list of event types includes country_event , news_event , state_event , unit_leader_event , and operative_leader_event . help with fixing it.
+
+In each event type, the ROOT scope refers to the country getting the event, however, the default assumed scope, also known as THIS, is not always purely the country. In state events, operative leader events, and unit leader events, the assumed scope is both the country and the event-specific scope type, accepting effects for either scope, sorting them at will. In case of overlap between something being possible for the country or the other scope (e.g. add_manpower  being both a state- and country-scoped effect), the country is preferred. Due to this confusion, it is recommended to avoid state events as they appear identical to country events (Event targets can be used within country events aimed to a specific state instead), however unit leader and operative leader events can be unavoidable due to their
+
+Hearts of Iron 4 Wiki distinct appearance. There is nearly no difference between event types, with the exception of appearance, default scopes, and the fact that news event can have their pop-up disabled (However, the country will still get them). If the player country gets an event and doesn't Recent changes pick a choice, the first option will get assumed by default. Random page
+
+When fired using an effect, the game ports over the regular event targets existing in the previous effect block to the event, as well as the ROOT scope of the block, which becomes FROM within the event. The previous effect block's FROM scopes get shifted one level down, Paradox Wikis with the effect block's FROM becoming FROM.FROM, previous FROM.FROM becoming FROM.FROM.FROM, and et cetera. Due to this, FROM is commonly called the 'sender' of the event in jargon, making FROM.FROM the sender to the sender. Although this does not
+
+- Main portal always apply, as FROM.FROM can be something else entirely, e.g. an additional scope within on actions or the target of a decision. Importantly, it's what the FROM block of the effect block that fired it is, which depends on where it's fired exactly.
+
+- Wikis discord This does not happen if the event gets fired using an on action's random_events block: the same scoping rules as in the regular on action apply.
+
+- Contact us
+
+- Style guidelines A country that doesn't exist may still get events if fired via an effect, but any other method doesn't work. However, if there's a time delay set in the effect that fires it, the timers in each delayed_event[a] will not decrease. This effectively puts any events with a time delay onto a
+
+backlog of the country, put on hold until it gets released. For example, if BHR doesn't exist when BHR = { country_event = { id = event.0 days = 1 } }  is executed, then the event will only fire a day after BHR starts existing. This also applies to the original HoI4 links recipient of major events.
+
+- Forums
+
+- Game discord Contents [hide]
+
+- Mods 1 Event creation
+
+- Store 1.1 ID rules
+
+- YouTube 1.2 Localisation Tools 1.3 Picture
+
+What links here 1.4 Triggering Related changes 1.5 Options Special pages 1.6 Additional arguments Printable version 2 Effect Permanent link 3 Common mistakes Page information 3.1 Unlogged errors
+
+3.2 Unintuitive logged errors 4 Event file example
+
+4.1 Integration with on actions 4.2 Integration with history
+
+5 Notes and references
+
+Event creation ​[ edit | edit source ]
+
+Each event is contained within a code block corresponding to the event type, such as country_event  or news_event . Within the event, a mandatory line is id , corresponding to the event's ID, such as id = my_event.123 .
+
+ID rules ​[ edit | edit source ]
+
+Within an event file, all events have to have an ID in the format of <namespace>.<integer ID> . For example, in an event my_event.123 , the namespace will be "my_event", while the ID is "123".
+
+A namespace must be first created before defining any events that use it. This is done with the line add_namespace = my_event  which must be outside of any event. If a namespace is not defined, then the event ID will be considered a malformed token, leading it to not working in-game. The event namespace consists of word characters (e.g. letters of the English alphabet or underscores). This includes dots: add_namespace = my_event.subtopic  can be used for events of the type of id = my_event.subtopic.1 . The numeric ID will be taken to be everything after the last dot converted to an integer, or 0 if the conversion fails.
+
+Internal IDs are defined for events by assigning an ID to each namespace (IDs are assigned in the order in the code, files being loaded by filename in the character  order), with the first-defined namespace being assigned an ID of 10, incrementing it by 1 for each next created namespace, multiplying it by 100000, and adding the integer ID. If the ID after the namespace fails conversion to an integer, then it'll default to 0. For this reason, every event with a non-integer ID will be considered the same event, so the ID of the event after the namespace must be an integer.
+
+Localisation ​[ edit | edit source ]
+
+The lines title  and desc  are used to assign a localisation key to the event, creating its title and description depending on the current language of the game. An example line is title = my_event.123.t  or desc = my_event_description . An event is required to have a title or a description unless it is hidden.
+
+Localisation is defined in the /Hearts of Iron IV/localisation/english/ folder for the English language. It is preferable to use a new file in the folder instead of overwriting any base game files. The newly-created file will have to end with _l_english.yml  in its filename (Note that it is a lowercase L, not an uppercase i) for it to be loaded properly. Additionally, it has to use the UTF-8-BOM text encoding. Exact details on how to change the encoding depend on the text editor used. Within the file, assuming that l_english:  is already added as the first line, localisation can be added as such:
+
+my_event.123.t: "My event title"
+
+my_event_description: "My event description"
+
+It is also possible to add multiple titles and descriptions to an event, making it choose one depending on conditions. This is done as the following:
+
+title = {
+
+}
+
+title = {
+
+}
+
+The game will choose the first localisation key where the conditions are met. In this case, the event title will use the my_event.123.t.a localisation key if the country receiving the event has the tag of ENG, and every other country will have the event title use the my_event.123.t.b localisation key. trigger  is a trigger block, requiring all of the triggers inside to be true by default. The formatting for event descriptions is the same, with title  changed for desc .
+
+Picture ​[ edit | edit source ]
+
+In order to add a picture to be shown for the event, the picture  argument is used with the name of the sprite leading to the file of the picture, such as picture = GFX_my_sprite .
+
+Sprites are defined in any /Hearts of Iron IV/interface/*.gfx file, by default using eventpictures.gfx, opened within any text editor. It is recommended to create a new file in the folder instead of using a base game file in the mod for update compatibility reasons.**Within the /Hearts of Iron IV/interface/*.gfx file of your choice, the following lines can be added within the spriteTypes = { ... }  block to define a sprite:
+
+spriteType = {
+
+}
+
+After creating this sprite, the file <yourmod>/gfx/event_pictures/my_event_picture.dds can be used within an event as picture = GFX_my_sprite
+
+Triggering ​[ edit | edit source ]
+
+The trigger = { ... }  block of triggers is used to declare conditions that must be met so that the event is possible to appear. If it's false, there's no way to fire the event aside from using the console command. This will look like the following:
+
+trigger = {
+
+}
+
+If the event is fired in console, the trigger will be written into it as the contents of a regular trigger tooltip, highlighting which conditions were met and which were not.
+
+By default, the event will fire automatically. This consists of the trigger being checked every 20 days.[1] If it is true, it changes to checking the mean_time_to_happen = { ... }  daily. That is a modified MTTH block: it is evaluated for a country and returns an amount of
+
+days; if the returned amount of days is  the chance for an event to fire on that day is , making this a median time to happen. If the trigger is false on a daily check, it reverts to checking the trigger every 20 days.
+
+mean_time_to_happen = { ... }  has the attributes of days , months , and years  to decide the base amount of days. A month is interpreted as being 30 days, a year is interpreted as being 365 days. If the amount of days should be dynamic, modifier = { ... }  serves as a trigger block with additional attributes of add = 123  (adding that amount of days) and factor = 0.2  (multiplying the amount of days by the specified number). The modifiers are evaluated in the order that they're placed in, and they
+
+support variables in the argument. An example mean time to happen looks like the following:
+
+mean_time_to_happen = {
+
+}
+
+The automatic firing can be disabled by adding is_triggered_only = yes  into the event. This doesn't prevent any other way to fire the event, whether by the effect used to do so, an on action's random_events , a border war, or anything else. This is entirely unrelated to trigger = { ... } : the conditions within must still be fulfilled for either of these to be possible to fire an event. If the effect used to fire an event (e.g. country_event or state_event) is set with a delay, then the trigger must be true when the event is intended to be fired.
+
+fire_only_once = yes  makes the event impossible to fire more than once. This is checked within the event itself: a country getting the event will also prevent any other country from receiving it. This is bypassed by using the console command.
+
+major = yes  is used to make the event fire for every country once any country receives it. This is done in every news event, since news events are purely a graphical reskin of country events. In case of overlap with fire_only_once = yes , the latter will take priority and remove any effect of the event being major, making it only appear for the country receiving it for the first time. Countries other than the first country receiving it will ignore trigger = { ... } . To make only some countries get the event shown while it's still major, show_major = { ... }  is used as a trigger block that makes the event show up only if it's true. If fire_for_sender = no  is also added, the event will fire for every country that meets show_major  aside from the country that was intended to receive it.
+
+Options ​[ edit | edit source ]
+
+An event option is added with an option = { ... }  block. An event option is an effect block, with a few extra options:
+
+name  decides the localisation key used for the option, such as name = my_option_name . It is not possible to make the option name depend on the triggers in the same way it's possible for event titles, instead, completely different event options can be used, disabling each one with a name that shouldn't be used.
+
+trigger = { ... }  is a trigger block, deciding when the option is visible to be picked. If the trigger is false at the time of being fired, it will not appear until the event is fired again. Additionally, for major events, original_recipient_only = yes  can be used to ensure that only the country that fired the event has this option available, with others not having it.
+
+ai_chance = { ... }  is a block deciding the AI chance for event options: deciding in a proportional way which option to pick. The AI chance in event options do not have to add up to 100, as it is proportional. It is structured in a near-identical way to the mean time to happen. If unset, assumed to be 1. The probability of each option is its weight divided by the sum of all option weights. If all options have a weight of zero, the first one is chosen. The randomized choice is made by rolling a d100, so options can't have an effective non-zero probability below 1%. The choice remains consistent across reloads, based on unique game seed, in-game time, country, and unit leader.
+
+As a MTTH block, the attributes are in the form of base = 10 , factor = 0.1 , add = 10 , with modifier = { ... }  serving as trigger blocks:
+
+ai_chance = {
+
+}
+
+Additional arguments ​[ edit | edit source ]
+
+immediate = { ... }  is an effect block, executed as soon as the event is fired, before an option is chosen by the player. This can also be used for AI: AI only picks an option after the event triggers are evaluated for every other country, while immediate is executed immediately, before evaluating other events. This can be used in mean-time-to-happen type major events: by making the immediate set a global flag, which is required to be unset in the event trigger, this will prevent it from being fired more than once for each country, but it is preferable to avoid mean-time-to-happen events in entirety. Note that the effect will appear in the tooltip after the event's description, so the hidden_effect flow tool can be helpful.
+
+after = { ... }  is an effect block, executed at the end of the event after an option is chosen by the player (as opposed to "immediate"). Introduced with War Effort | Patch 1.16.9
+
+timeout_days = 20  sets the amount of days that the player has to pick an option before the first option is automatically selected. This can be used to make the event be more or less urgent than default. If unset, assumed to be 13 days.[2]
+
+hidden = yes  will make an event hidden. A hidden event does not need a title or a description. The first defined option, if one is present, will be automatically picked upon being fired. Hidden events can be useful instead of scripted effects to delay the execution of an effect block by a period of time or to utilise the FROM scope.
+
+minor_flavor = yes  marks the event as being a minor flavour event. This does not change its appearance or change its effects, but allows turning off the pop-up within the game's decision menu.
+
+Effect ​[ edit | edit source ]
+
+Any effect block can be used to fire an event, such as focus rewards, event options, or decision effects. This is usually paired with is_triggered_only = yes  within the event as to disable automatic firing.
+
+In its simplest way, this is done with the effect of country_event = my_event.1  (or news_event = my_event.1 ), which'll instantly fire the event for the scoped country. As country and news events are the exact same thing under the surface, both shortened effects can be used for either country and news events, with there being no difference between them whatsoever. However, more options can be added primarily for setting up the delay. Additionally, expanded versions are mandatory for state and operative leader events.
+
+A more complex effect to fire is country_event = { id = my_event.1 days = 100 random_days = 123 } . This'll fire the event in 100 to 223 ( ) days. There are the following arguments that can go into the effect (All of them are optional with one exception):
+
+id = my_event.1  — The ID of the event to fire. This is mandatory as to let the game know which event to fire. hours = 1 | days = 2 | months = 3  — The lower bound on the needed time that the event will fire in. In this case, a month is treated as exactly 30 days. If multiple of these are used, the game will add them up together (e.g. the example with 1 hour, 2 days, and 3
+
+months will fire in 92 days and 1 hour). random_hours = 1 | random_days = 2  — This sets the upper bound on the needed time that the event will fire in. The game selects a random amount (uniform distribution) of days and hours between 0 and the set amount, including both ends, and adds them to the
+
+delay to fire the event. Similarly to above, if both are specified, the game will add them together. random = 123  also serves as an equivalent for random_hours = 123 . tooltip = my_event.1.t  — This decides what the name of the event that would fire would be displayed as in localisation. Defaults to the event's name, this may be useful if the title may change between the effect to fire it and its actual appearance.
+
+Example effect using several of these parameters:
+
+country_event = {
+
+}
+
+The optional delay is incredibly useful, as hidden events can be used to create a delay between an effect block's execution and the actual application of effects without the player detecting anything. This can also be used to make the events appear more "natural": news events can have a delay of a few hours (typically around 6-12) in order to simulate the time it takes for the news agencies to report on the event. Similarly can be done with other event types to simulate waiting a few hours for a diplomatic response, rather than it being unnaturally instant. trigger = { ... }  of the event gets checked when it would fire, meaning that it's also possible to fire the event on startup of the game with a needed delay to get it on a specific day, then use the event's trigger to simulate additional requirements.
+
+Additionally, there are these event type-specific arguments:
+
+trigger_for = TAG  (Unique to state events) — The country for which the event will fire for. This is mandatory as state events are to be fired in state scope. This can also be replaced with controller , owner , occupied , or a dual scope that can be used as a target, such as ROOT or FROM. originator = TAG  (Unique to operative leader events) — The country which serves as the originator of the event (i.e. FROM). Defaults to the operative's owner if unset. recipient = TAG  (Unique to operative leader events) — The country which would receive the event. Defaults to the operative's owner if unset. set_root = TAG  (Unique to operative leader events) — Changes the scope of ROOT within the dynamic localisation of the event, without actually changing it in code. set_from = TAG  (Unique to operative leader events) — Changes the scope of FROM within the dynamic localisation of the event, without actually changing it in code. set_from_from = TAG  (Unique to operative leader events) — Changes the scope of FROM.FROM within the dynamic localisation of the event, without actually changing it in code.
+
+Common mistakes ​[ edit | edit source ]
+
+Some errors are quite common to make when beginning to make events, whether it's poor practice or if it would prevent the event from working in entirely. Some of them may be hard to notice when modding, with the event seemingly working fine, such as the error that prevents news events from being fired for more than one country. This covers some of them, as well as the less intuitive errors in the log.
+
+Unlogged errors ​[ edit | edit source ]
+
+Leaving an event as triggered only when it's to be fired automatically (Event never fires) – is_triggered_only = yes  disables the automatic firing of the event, instead enforcing using the effect to do so. Therefore, if it is left in within an event intended to fire automatically, the event will never do so. Note that trigger = { ... }  can still co-exist with is_triggered_only = yes , so an event with both is_triggered_only = yes  and trigger = { ... }  may still be correct. Valid usages of them at the same time include the event being triggered via an on action's random_events  or the effect firing it has a delay (where the trigger would check if when the event is to be received), along others.
+
+Example event with this issue and a correction to it [Expand]
+
+Not checking the country in the trigger for country-specific auto-triggered events (Event fires for the wrong country/never fires) – The events are not assigned to countries in any way (namespaces and filenames serve a purely organisational purpose), and each event trigger is checked for each country in order specified in the tag list. In the provided example, the event requires ITA to have more than 123 political power, upon which the country receiving the event would annex AUS. However, once ITA has that much, this trigger would be true regardless of where it's checked. The first country in the taglist by default is GER, and so it'll be the first country where the triggers are checked. In practice, this event will result in GER annexing AUS rather than ITA. In the correction, a change is made: first it checks that the country that would receive the event is ITA, and only then then it checks that it has more than enough political power. This makes sure that no other countries can receive this event. Specifying the tag is unnecessary if the trigger itself already implies a certain tag (e.g. has_completed_focus  with a tag-specific focus tree), but is needed otherwise.
+
+Example event with this issue and a correction to it [Expand]
+
+Unnecessarily using auto-triggered events instead of ones that are triggered only (Poor practice/optimisation) – This is more of a poor practice than an error. In general, if an event's condition can be triggered with an effect, it should be. The example is the most obvious way of doing this: a has_completed_focus check instead of firing it directly in the focus. However, other such cases can occur, e.g. when a war starts between two countries, when a state gets occupied, or for firing one on a specific date. It's best practice to check on actions before creating an automatically-triggered event to see if they can be made to replicate. Firing it via an effect has a purpose of being instant instead of having to wait up to 20 days. If so desired, a delay of a few hours can be added to make it appear more natural to the player. Additionally, it serves as a way to optimise the modification, as this reduces the amount of trigger checks repeatedly done. Events with a large mean-time-to-happen are particularly awful for performance and can be replaced with an effect block firing one with a large delay created with random_days within the effect in some cases.
+
+Example event with this issue and a correction to it [Expand]
+
+Tight bounds on date triggers (Event never fires)/Auto-triggered event intended to be fired at a specific date (Event fires later than intended) – The trigger = { ... }  block is checked every 20 days by default, and this isn't possible to change for just one event in particular. If the date triggers are set with tight upper and lower bounds (e.g. date > 1936.1.1  and date < 1936.1.3 ), it's very likely that the event will never fire, as this will not force the game to check the trigger at that date, but just prevent it from firing the event if the range is never checked, as the game doesn't see into the future and cannot predict that the trigger will be true or false at some point. Similarly, just placing a date > 1936.1.1  will not ensure the event will be fired at exactly the second of January, but it may be anywhere between the 2nd and 21st (though it will be the same day on each reset). In order to fire an event at a certain date, it's best to fire it on startup with the needed delay, setting the event to never fire by itself with is_triggered_only = yes  and optionally adding additional prerequisites for it to appear within trigger = { ... } , which would be checked at the moment the event is intended to appear. For the calculation of the amount of days to be correct, leap days must be ignored as the game doesn't contain them. Any effect block executed before or during startup can be used. An example using the on_startup on action exists further down the article.
+
+Example event with this issue and a correction to it [Expand]
+
+Setting a news event to fire only once or not setting one as major (News event only fires for one country) – An event requires major = yes  in order to appear for every country. News events are purely a reskin of country events and are not set to fire for every country by default, so this line is mandatory. Alongside that, events that fire only once don't appear more than once globally rather than per country. The event appearing for more than one country counts as it firing once again, so setting an event to fire only once will lead to only one country getting the news event instead of every one as intended.
+
+Example events with this issue [Expand]
+
+Unintuitive logged errors ​[ edit | edit source ]
+
+Event is triggered only, but does not have a 1 base-factor. – This occurs when there are contradictory arguments within an event about whether it's allowed to be fired automatically or if it can only be fired manually. In particular, mean_time_to_happen = { ... } only has an effect when the event can only be fired automatically. However, if the event is triggered only, it cannot be fired automatically, resulting in the error being created.
+
+Example event with this issue [Expand]
+
+Event is set to trigger every day. – This occurs when all of the following is true for the event: The event is possible to be fired automatically. In other words, is_triggered_only = yes  is not present in the event. The event has a mean time to happen of 1 or less days. If it is omitted, it counts as 1 day. The event can fire more than once. In other words, fire_only_once = yes  is not present in the event.
+
+This error warns the player that the event may fire every day once the trigger = { ... }  evaluates as true in a check that happens every 20 days. In order to remove the error, either of the three necessary clauses can be made to be not true for the event. For example, in a lot of cases, it is possible to make the event not be fired automatically and use an effect block to fire it instead, such as by using on actions.
+
+Example event with this issue [Expand]
+
+Malformed token: event_id.123, near line on a line specifying the event ID – This occurs if the event namespace was not added as needed.
+
+Example event file [Expand]
+
+Failed to create id 12300000 50. Already exists in game. This might crash the game. Reverse id lookup: id 12300000 = my_namespace.0 – Note that this is the exact same error split into two instead of being two separate errors as it might seem on the first glance. This means that the internal event ID is used by 2 or more events. There are the following reasons for this error to appear:
+
+Putting 2 events with the exact same ID by error – id = my_namespace.0  is included in two events at once. This is self-explanatory. Using non-integers as the numeric ID after the namespace – One event has id = my_namespace.abc , the other has id = my_namespace.cba . Due to how the game generates internal IDs, a non-numeric ID is not supported, always becoming the number 0. As such, these are the exact same ID, even if they appear different. Using a numeric ID not smaller than 100000 – Two events across different namespaces got assigned the same internal IDs. By the virtue of how the game generates internal IDs, each namespace is assigned 100000 numeric IDs, from 0 to 99999. Anything larger than that will start encroaching to other namespaces' IDs. The game fully allows numbers this large as the numeric IDs, so the event might work, but the duplicate internal ID means that there is a pair of events that are treated as the same event, meaning one of them will fire the other one instead.
+
+Since the reverse id lookup is not always provided, the way to tell if this is event-related is the second number: 50  signifies that it's event-related, while a different number means a different database entry, e.g. 54  means country leader IDs and 55  means unit leader IDs, the numeric legacy IDs which are unneeded due to the 1.11-introduced character system
+
+Example event file with this issue [Expand]
+
+Event file example ​[ edit | edit source ]
+
+add_namespace = my_event
+
+add_namespace = my_hidden_event
+
+country_event = {
+
+}
+
+add_namespace = my_news_event
+
+news_event = {
+
+}
+
+country_event = {
+
+}
+
+state_event = {
+
+}
+
+Integration with on actions ​[ edit | edit source ] See also: On actions
+
+These events are the primary types to trigger via on_actions:
+
+add_namespace = on_action_events
+
+news_event = {      # City capture news event
+
+}
+
+country_event = {       # Fired on a specific day if circumstances are met
+
+}
+
+country_event = {       # Other types of on_actions
+
+}
+
+In order to fire this, code has to be created within any /Hearts of Iron IV/common/on_actions/*.txt file, sometimes paired with boolean flags to prevent them from being fired more than once if fire_only_once is impossible. In the above example, this would be used:
+
+on_actions = {
+
+}
+
+Integration with history ​[ edit | edit source ] See also: Country creation#History
+
+Alternatively, you can fire the event inside /Hearts of Iron IV/history/countries/*.txt file:
+
+# history/countries/BHR - Bahrain.txt
+
+# Other code is omitted
+
+country_event = {
+
+id = on_action_events.2
+
+days = 357
+
+random_days = 7     # Fires in the last week of 1936, assuming default start date.
+
+}
+
+Notes and references ​[ edit | edit source ]
+
+^ a:  delayed_event  is used for tracking events that are to be fired with a time delay in the save games (as they're formatted with save_as_binary=no  in /Hearts of Iron IV/settings.txt). This is used for every single event type, such as country events or state events.
+
+- ↑ NDefines.NCountry.EVENT_PROCESS_OFFSET = 20  in Defines.
+
+- ↑ NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 13  in Defines.
+
+Note that when editing defines, it is far preferable to use an override file than copying over the entire file, as defines are edited commonly even in 'minor' updates, which can cause crashes when the game updates.
+
+Modding Documentation Effects • Triggers • Defines • Modifiers • List of modifiers • Scopes • Localisation • On actions • Data structures (Flags, Event targets, Country tag aliases, Variables, Arrays)
+
+Achievements • AI • AI focuses • Autonomous states • Balances of power • Bookmarks/Scenarios (Game rules) • Buildings • Characters and traits • Cosmetic tags • Countries • Divisions • Decisions • Doctrines • Equipment • Events • Factions • Ideas • Ideologies • Military industrial organizations • Scripting
+
+National focuses • Resources • Scripted GUI • Technologies and doctrines • Units
+
+Map Map • States • Supply areas • Strategic regions
+
+Graphical Interface • Graphical assets • Entities • Posteffects • Particles • Fonts
+
+Cosmetic Portraits • Namelists • Music • Sound
+
+Other Console commands • Troubleshooting • Mod structure • Mods • Nudger
+
+Categories: 1.12 Modding
+
+About Hearts of Iron 4 Wiki Mobile view
+
+GAMES COMMUNITY ABOUT SOCIAL MEDIA
+
+Discover Paradox Forums News
+
+Our Brands Paradox Wikis About us Legal Information
+
+Browse Support Careers EU Online Dispute Resolution Report Illegal Content
+
+Play on Paradox technology Join our playtests
+
+Media contact
+
+Paradox Wikis Hearts of Iron 4 Wiki Search Hearts of Iron 4 Log in
+
+Page Discussion Read Edit Edit source View history
+
+Idea modding Ideas are a static way to apply modifiers to a country, notably including national spirits, laws, designers, officer corps spirits, and hidden ideas. Ideas themselves are defined in
+
+This is a community maintained wiki. If you spot a mistake, please /Hearts of Iron IV/common/ideas/*.txt, while idea categories are defined in /Hearts of Iron IV/common/idea_tags/*.txt help with fixing it.
+
+Contents [hide] 1 National spirit creation
+
+1.1 Localisation 1.2 Picture
+
+Hearts of Iron 4 Wiki 1.3 Implementation Recent changes 1.4 Modifiers Random page 1.5 Effects Paradox Wikis 1.6 Cancellation
+
+- Main portal 1.7 Additional arguments
+
+- Wikis discord 1.8 Full idea file example
+
+- Contact us 2 Other idea categories
+
+- Style guidelines 2.1 Hidden ideas
+
+HoI4 links 2.2 Idea category arguments 2.3 Additional arguments
+
+- Forums
+
+- Game discord 2.4 Example
+
+- Mods 3 Categories
+
+- Store 3.1 GFX and GUI
+
+- YouTube 4 Modifying cost of a slot
+
+5 Notes Tools What links here Related changes National spirit creation ​[ edit | edit source ] Special pages Printable version Spirits are created in /Hearts of Iron IV/common/ideas/*.txt. An example of a file with empty spirits, without modifiers yet still applicable if added via add_ideas = idea_name , is Permanent link Page information
+
+ideas = {
+
+}
+
+In this case, ideas = { ... }  encompasses each idea in the file, necessary to include due to the engine consraints. Meanwhile, country = {}  is an idea category, which is why the game would recognise my_idea_1  and my_idea_2  as spirits rather than laws or designers, which are also ideas.
+
+Localisation ​[ edit | edit source ]
+
+Localisation for ideas is defined in any /Hearts of Iron IV/localisation/english/*_l_english.yml file encoded in UTF-8-BOM, assuming the English language. If an idea does not have a name, the game uses the country's name-list in /Hearts of Iron IV/common/names to create a random name. This, however, does not apply to national spirits, where it uses the idea's ID. An idea can have both a name and a description that appears when hovering over it. Their localisation entries are defined as such, taking ZZZ_example_idea as an example:
+
+l_english:
+
+ZZZ_example_idea: "Idea's name"
+
+ZZZ_example_idea_desc: "Idea's description"
+
+name = new_idea_name  assigns the idea's name to use a different localisation key. This can be useful if you plan to modify an idea by swapping it multiple times, ensuring that you needn't create a duplicate localisation entry for every instance of the idea. This will get defined in a localisation file similarly:
+
+l_english:
+
+new_idea_name: "New idea's name"
+
+new_idea_name_desc: "New idea's description"
+
+Picture ​[ edit | edit source ]
+
+General sprite overview [Collapse]
+
+For loading GFX, the game uses the sprite system. Sprites are code definitions that attach a name to an image file, as well as optionally adding additional information, such as animation, the amount of frames, the way that the image will be loaded, and so on. This means placing an image into the gfx folder isn't enough for it to work, a sprite has to use that image file as well.
+
+Sprites are defined in any /Hearts of Iron IV/interface/*.gfx file (this is separate from gfx/interface/), opened with a text editor. To create a new .gfx file, a text file can be created and renamed to change the extension (on Windows, the Windows Explorer needs to show the extensions, which it doesn't by default ). In particular, sprites are defined within a spriteTypes = { ... }  block, as to separate from fonts and map arrows also defined in that folder, while the simplest sprite with the least mandatory properties is a spriteType = { ... } . The simplest sprite definition looks like the following:
+
+spriteTypes = {
+
+}
+
+In this case, this creates a sprite with the name of GFX_first_sprite  and attaches the /Hearts of Iron IV/gfx/interface/folder/filename.dds image to it, and a second sprite similarly. The second sprite will be split into 2 frames: this is decided by having the left half of the image as the first frame and the right half as the second frame (more frames would further split the image horizontally). This doesn't make the sprite animated, just turns on the option to switch between the two halves as needed. GFX_second_sprite:1  serves as a reference to the first frame, and GUI can be set up to change the shown frame depending on context, such as with radio stations.
+
+In order to add animation, a frameAnimatedSpriteType is used.
+
+It's never mandatory to copy a base game file to change a sprite. If there are duplicate definitions of a sprite with the same name in different files, the game will prioritise the one that would be evaluated later, based on the filename, and the older sprite will be ignored in entirety. This can be ensured by beginning the replacement file's name with a symbol late in the ASCII character table. Typically the lowercase letter 'z' is used for this purpose. For example, to change the amount of frames in GFX_idea_traits_strip  to 10, it is possible to define a sprite with that name with 10 frames in the mod's modname/interface/zz_replace.gfx file instead of copying over the base game file. Since most .gfx files define integral parts of the user interface, copying them over can lead to the mod's loaded files missing sprites upon a major game update, which would appear in-game as the default image, which is the error dog by default. As to ease the burden of needing to check the interface files, it's best to never copy over .gfx files, unless more additions would be actively harmful to the mod, such as with interface/subuniticons.gfx
+
+By default, an idea uses a sprite that is the same as the idea's name, but with GFX_idea_  prepended in the beginning. For example, an idea with the name of my_idea_1  will use the sprite with the name of GFX_idea_my_idea_1 .
+
+This is possible to change using the picture = my_sprite  attribute within the idea. The game still inserts a prefix of GFX_idea_  to the argument to decide the sprite that should be used, e.g. picture = XYZ  leads to GFX_idea_XYZ  being used as the sprite. If the game cannot find a sprite with the name it expects, the  default icon will be used instead. The prefix being inserted means that, most of the time, picture = GFX_XYZ  (which makes GFX_idea_GFX_XYZ  get used as the sprite) or picture = idea_XYZ  (which makes GFX_idea_idea_XYZ  get used as the sprite) will lead to the game expecting a sprite that doesn't exist and that sprites that do not follow the GFX_idea_XYZ  naming pattern cannot be used as idea pictures.
+
+If the texturefile  within the sprite is incorrect, the idea will be invisible in the country politics view, yet still apply the modifiers. Ensure that the idea is stored with the same folder path location, the same filename (including the extension), and that the right folder separator is used.
+
+It is also possible to make the picture depend on the graphical_culture_2d  of the country, defined in the /Hearts of Iron IV/common/countries/*.txt file. This is done by appending the name after the picture's name, separated by an underscore. For example, a sprite with the name of GFX_idea_my_picture_middle_eastern_2d  in its definition will show up instead of GFX_idea_my_picture  for countries that have the middle_eastern_2d  2D graphical culture.
+
+Implementation ​[ edit | edit source ]
+
+A spirit can only be added manually, using an effect. add_ideas = idea_name  within an effect block (Such a focus completion reward), while remove_ideas = idea_name  will remove it.
+
+In order to swap two ideas and have the game show the modifiers, swap_ideas  is used. There is no way to directly modify an idea, however in case the 2 swapped spirits have the same name in localisation, this will show up in-game as modifying the idea. swap_ideas is used as the following:
+
+swap_ideas = {
+
+}
+
+In most cases, it's enough to create multiple ideas and swap between them, such as if there's a direct progression of several stages (Scripted effects can be used to create one series of conditional statements and re-use them each time it's needed). If creating multiple ideas is too infeasible, such as if there are several progressions that would need to be modified, dynamic modifiers allow variable modifier values, but they only accept modifiers (not unrelated attributes such as research or equipment bonuses) and are harder to work with due to no hot- reloading.
+
+In order for a spirit to last for a period of time, the add_timed_idea  effect is used as such:
+
+add_timed_idea = {
+
+}
+
+modify_timed_idea can be used to extend or speed up the timer as needed.
+
+In order for a country to start with the idea, the file in /Hearts of Iron IV/history/countries/ for that country serves as an effect block that decides the starting historical information. Using add_ideas, usually in the expanded form to assign multiple ideas at once, in there will enforce it starting with the idea. In order for the idea to show up in country selection, the bookmark is edited to include the idea within its ideas = { ... }  block for the country's entry.
+
+Modifiers ​[ edit | edit source ]
+
+Modifiers are applied continuously as long as the spirit is applied to a country. Alongside modifiers, the spirit can also add a bonus to a technology category or modify an equipment archetype. The spirit can only apply modifiers towards the country that has the spirit, there is no way to scope into a different country. Each of these attributes is entirely separate within the idea and so each one should be located directly inside of the idea. For example, defining research_bonus  inside of modifier = { ... }  is erroneous, since research_bonus  is an attribute of the idea rather than a modifier.
+
+modifier = { ... }  stores the regular modifiers, applied to the country with the spirit. A modifier block can list multiple modifiers, and negatives are also allowed. Variables do not work in this section: instead, use dynamic modifiers. A typical example of a modifier block is the following:
+
+modifier = {
+
+}
+
+targeted_modifier = { ... }  is for using modifiers targeted towards a different country. The target is specified as tag = ABC , where ABC represents the target's tag. These are still applied towards the country with the spirit, but their effect is targeted towards a different country. For example, the following block will give the country with the idea a 10% attack bonus against  Afghanistan:
+
+targeted_modifier = {
+
+}
+
+research_bonus = { ... }  grants the country a boost to researching a specific technology category. An unsorted list of technology categories can be found in /Hearts of Iron IV/common/technology_tags/ or, if desiring to know which technologies exactly are assigned to each category, individual technologies can be checked in /Hearts of Iron IV/common/technologies/. The following example would provide a +10% bonus to researching destroyers and a -20% bonus to artillery:
+
+research_bonus = {
+
+}
+
+equipment_bonus = { ... }  applies the bonuses towards an equipment archetype or a type of equipment archetypes. By default, the bonus is not granted immediately, but rather requiring to research a new tech first, which is how it's done within designer ideas. This can be prevented by adding instant = yes  inside of the equipment archetype within the equipment bonus. Equipment archetypes are defined in /Hearts of Iron IV/common/units/equipment/*.txt, which is where you can also find what can be applied to**them. The name of the block within the /Hearts of Iron IV/common/units/equipment/*.txt file would be the archetype, while type = { ... }  or type = archetype_type  provides the types that the equipment archetype has. The following example will modify the cost to produce equipment within the artillery  type (including artillery, rocket artillery, and tank artillery) by -20%, applying immediately, as well as increasing soft attack of any infantry equipment researched after the spirit was added by 10%:
+
+equipment_bonus = {
+
+}
+
+rule  modifies the set of rules that decide what the country is allowed to do. This usually includes diplomatic options (such as peace conference options or being called to war). They show up in the tooltip only if the rule differs from the value without the idea, e.g. can_create_factions = no  will usually not appear in the tooltip as countries are already unable to create a faction by default.
+
+Game rule list  [Expand] rule = {
+
+}
+
+Effects ​[ edit | edit source ]
+
+A spirit can be set to apply effects when added or removed. This is done, respectively, with on_add  and on_remove  effect blocks, looking like the following example:
+
+on_add = {
+
+}
+
+on_remove = {
+
+}
+
+The effects will only get executed if the idea is added after the game has already started: if done via a history file or a bookmark's effect = { ... }  block, the effects will not be executed. In that case, it's needed to replicate the effects given when adding the idea within the same effect block that adds the idea.
+
+Cancellation ​[ edit | edit source ]
+
+A spirit can be set to automatically cancel itself once a set of triggers is met. This is done with the cancel  block. A cancellation will also trigger the on_remove  effect block in the idea if one is present. This will look like the following:
+
+cancel = {
+
+}
+
+Additional arguments ​[ edit | edit source ]
+
+Another trigger block that can go into an idea is allowed_civil_war = { ... } . When starting a civil war, this is evaluated for each side, and the spirit will only appear for sides where this is true. For instance, a has_government = democratic  will ensure that only the Democratic side in a civil war will obtain the spirit. By default, always false, leading to the spirits disappearing when a civil war starts. Setting it to be always true can be preferred over the default, making it appear for both sides.
+
+do_effect = { ... }  is a trigger block that assigns the necessary conditions for the idea to apply its modifiers. If false, the modifiers (including research and equipment bonuses) will not apply, but the idea will not be removed.
+
+Full idea file example ​[ edit | edit source ]
+
+ideas = {
+
+}
+
+Other idea categories ​[ edit | edit source ]
+
+Non-spirit ideas can use everything that can be within spirits, however there are more arguments that make sense to be added in them that do not do anything in spirits or don't have any reason to be added.
+
+Hidden ideas ​[ edit | edit source ]
+
+Hidden idea are exactly the same as regular spirits in every aspect in regards to creation, except for the fact that they have to be defined within the hidden_ideas  idea category instead of using country . This will ensure that the idea will be hidden and not show up in the spirit container. However, it can still make sense to create localisation for them: If a hidden idea cancels automatically, the pop-up will show up, and hovering over certain elements (Such as the stability counter or research speed) will show each idea that modifies it.
+
+Idea category arguments ​[ edit | edit source ]
+
+These arguments are used within the idea category within the /Hearts of Iron IV/common/ideas/*.txt file.
+
+designer = yes  marks the entire category as designer ideas. This is primarily used for AI. law = yes  marks the entire category as laws. This is primarily used for AI. use_list_view = yes  marks the entire category to use a list view for selecting the idea, akin to how the base game treats laws.
+
+These will look in the idea file like the following:
+
+ideas = {
+
+}
+
+Additional arguments ​[ edit | edit source ]
+
+This assumes that the idea is of the type that can be selected in-game, such as a law or a designer.
+
+allowed  is a trigger block that checks only at the game's start or when loading a save, primarily used to restrict an idea to a country (As tag = BHR  or original_tag = POL ) and/or a DLC (As has_dlc = "One Step Back" ). If an idea's allowed is unfulfilled, it will never appear within the selection unless it becomes true on the save being reloaded; however, manual assignment via add_ideas  bypasses the check. If left out, assumes to be always allowed. This only checks once! allowed_to_remove  is a trigger block that details when exactly you can remove the idea, changing it to a different one in the category. This is checked continuously, unlike allowed .
+
+visible  is a trigger block that continuously checks every frame if allowed was met, required to make the idea be visible in the decision selection screen. It is preferable to put country or DLC checks into allowed instead.
+
+available  is a trigger block that continuously checks every frame if visible was met, required to be possible to actually take the idea. If false, the idea will remain visible, but will be greyed out and be impossible to take. This is applied on top of the political power cost.
+
+cost = 123  is the price in political power it takes to add the idea. This becomes 150 political power if not set[a].
+
+removal_cost = 123  is the price in political power it takes to remove the idea. If set to -1, the idea cannot be removed manually. Defaults to 0 if not set.
+
+level = 2  is used in ideas to create the escalating price, akin to the recruitment laws. If you have the law with the level of 1, changing to level 3 will require the cost of the idea with the level 2 in addition to the level 3, and vise-versa.
+
+traits  is a block of traits that are assigned to this idea, defined in /Hearts of Iron IV/common/country_leader/*.txt, also granting a static modifier and showing up near the idea.
+
+ledger  decides which intelligence ledger the idea will be assigned to. This is primarily a leftover now applying to the character system, but this can still be used in officer corps spirits. Possible values are army , air , navy , military  (Appearing on each of the prior ledgers), civilian , all , and hidden .
+
+Example ​[ edit | edit source ]
+
+ideas = {
+
+}
+
+Categories ​[ edit | edit source ]
+
+Idea categories are defined in any /Hearts of Iron IV/common/idea_tags/*.txt file. All categories will be contained in the idea_categories  top element and can contain the following arguments:
+
+slot  is a proper idea category slot. This is what shows up in the GUI in the politics view menu, and this is what ideas have to have as their category in their definition. character_slot  is a character slot. Ideas can also be defined to use this slot and it will show up in the GUI like a regular idea slot, however. cost  is the default price in political power to add an idea within one of the slots of this category. This is applied if the idea doesn't have one. removal_cost  is the default price in political power to remove an idea within one of the slots of this category. ledger  is the intelligence ledger defined to ideas in this category, unless overridden within the slot, idea, or character. Possible values are army , air , navy , military  (Appearing on each of the prior ledgers), civilian , all , and hidden . Additionally, invalid  can be used, forcing the ledger to be defined one level lower. hidden  is a boolean value making this category not show up in the GUI. Optional, defaults to no. politics_tab  is a boolean value making this category show up in the politics tab. Optional, defaults to yes.
+
+This will look like the following:
+
+idea_categories = {
+
+}
+
+The category will then be used by the idea via the slot (which allows mapping an idea to a category) The file also includes slot_ledgers, which distributes idea slots to intelligence ledgers individually, which will take priority over the idea category's ledger. An example of it being used is
+
+slot_ledgers = {
+
+XXX_idea_slot = civilian
+
+ZZZ_idea_slot = invalid
+
+}
+
+Invalid will require specification in each idea individually.
+
+GFX and GUI ​[ edit | edit source ] See also: Interface modding
+
+Each idea category represents a row in the country politics view, while each slot represents a slot under that row. The country_politics_idea_category_entry  container window within the /Hearts of Iron IV/interface/countrypoliticsview.gui file decides the user inteface information about each row. The most important thing here is the gridbox, as it decides the following:
+
+The size of each idea slot within the category, by default 80 by width and 64 by height. This is used for distances between slots. The max amount of slots, by default 7 horizontally and 1 vertically. If not adjusted, it'd be impossible to have more than 7 idea slots in a category. The format of the gridbox, deciding in which direction the idea slots are added.
+
+The idea category's icon, shown on the left of the category's row, is decided by the GFX_idea_categories sprite. The sprite is split into multiple frames horizontally, and each category is assigned a part of it depending on its order defined in /Hearts of Iron IV/common/idea_tags/*.txt. The sprite is defined in /Hearts of Iron IV/interface/countrypoliticsview.gfx and its definition in the base game consists of the following:
+
+spriteType = {
+
+name = "GFX_idea_categories"
+
+texturefile = "gfx/interface/idea_categories.dds"
+
+noOfFrames = 6
+
+}
+
+When adding a new category, make sure to update the sprite and the amount of frames accordingly.
+
+An icon can be defined for idea slots, which will be used for them if there is no idea assigned to that slot. This definition in any /Hearts of Iron IV/interface/*.gfx file, taking XXX_idea_slot as an example, is done the following way:
+
+spriteType = {
+
+name = GFX_idea_slot_XXX_idea_slot
+
+textureFile = gfx/interface/filename.dds
+
+}
+
+In other words, the sprite must have the same name as the idea slot but with GFX_idea_slot_  prepended in the beginning.
+
+Modifying cost of a slot ​[ edit | edit source ]
+
+The <idea slot>_cost_factor  modifier can be used to modify the price in political power for adding ideas or characters in this slot. However, there is a restriction on that modifier. In order for it to work, the idea slot needs to have any ideas or characters defined beforehand.
+
+The files in the /Hearts of Iron IV/common/ideas/*.txt folder are loaded in the order of the Unicode character IDs, which put capital letters before underscores, which are put before lowercase letters. For example, this means that a file with the filename of TAG.txt  is loaded before _economy.txt  or _manpower.txt  (the base game's locations of laws), which would get loaded before country.txt . Due to the above quirk, this means that an idea with the modifier affecting a price of a law, for instance, economy_cost_factor = -0.10 , will throw an error if the filename starts with an uppercase character unless the laws are stored from files different from base game.
+
+There are two primary ways to fix this. The first one is to simply change the filename of the country's idea file, changing it from, for instance, GER.txt  to germany.txt . In case you have to keep the filename the same to overwrite a file, a new file can be created instead. Alternatively, assuming that you have a replace_path to the ideas folder, you could rename the files storing the laws to begin with a character with a smaller ID, for instance, to 00_economy.txt , which would get loaded prior to TAG.txt .
+
+Additionally, this also means that there have to be ideas defined within character slots for the modifier to work, such as political_advisor_cost_factor = 0.1 . This is because characters are loaded later than ideas or country leader traits, so they're not loaded yet when evaluating the modifier, causing the error. This can be bypassed by creating ideas for the character slots in /Hearts of Iron IV/common/ideas/*.txt files. These will never appear for the countries as these are character slots rather than idea slots, but an idea that was loaded beforehand will correct the error.
+
+Notes ​[ edit | edit source ]
+
+^ a: Depends on the value in the /Hearts of Iron IV/common/idea_tags/*.txt file, which is always 150 in base game
+
+Modding Documentation Effects • Triggers • Defines • Modifiers • List of modifiers • Scopes • Localisation • On actions • Data structures (Flags, Event targets, Country tag aliases, Variables, Arrays)
+
+Achievements • AI • AI focuses • Autonomous states • Balances of power • Bookmarks/Scenarios (Game rules) • Buildings • Characters and traits • Cosmetic tags • Countries • Divisions • Decisions • Doctrines • Equipment • Events • Factions • Ideas • Ideologies • Military industrial organizations • Scripting
+
+National focuses • Resources • Scripted GUI • Technologies and doctrines • Units
+
+Map Map • States • Supply areas • Strategic regions
+
+Graphical Interface • Graphical assets • Entities • Posteffects • Particles • Fonts
+
+Cosmetic Portraits • Namelists • Music • Sound
+
+Other Console commands • Troubleshooting • Mod structure • Mods • Nudger
+
+Categories: 1.11 Modding
+
+About Hearts of Iron 4 Wiki Mobile view
+
+GAMES COMMUNITY ABOUT SOCIAL MEDIA
+
+Discover Paradox Forums News
+
+Our Brands Paradox Wikis About us Legal Information
+
+Browse Support Careers EU Online Dispute Resolution Report Illegal Content
+
+Play on Paradox technology Join our playtests
+
+Media contact
