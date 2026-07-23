@@ -1,0 +1,314 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = RULE_DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS
+							option = Enable
+						}
+					}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+								GER = {
+									has_country_flag = RKU_decided
+									NOT = { has_country_flag = GER_expand_ukraine_adminsitrative_area_activated }
+									RKU = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_soviet_greater_romania_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_expand_ukraine_adminsitrative_area
+								set_country_flag = GER_expand_ukraine_adminsitrative_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKU_decided
+									NOT = { has_country_flag = GER_further_expand_ukraine_adminsitrative_area_activated }
+									RKU = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_additional_soviet_greater_romania_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_further_expand_ukraine_adminsitrative_area
+								set_country_flag = GER_further_expand_ukraine_adminsitrative_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKC_decided
+									NOT = { has_country_flag = GER_expand_rkc_adminsitrative_area_activated }
+									RKC = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_RKC_zadar_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_expand_rkc_adminsitrative_area
+								set_country_flag = GER_expand_rkc_adminsitrative_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKC_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_greek_area_activated }
+									RKC = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_south_RKC_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_greek_area
+								set_country_flag = GER_the_fate_of_the_greek_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKC_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_hungarian_area_activated }
+									RKC = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_north_RKC_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_hungarian_area
+								set_country_flag = GER_the_fate_of_the_hungarian_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKC_decided
+									NOT = { has_country_flag = GER_the_fate_of_slovakia_activated }
+									RKC = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										OR = { state = 73 state = 664 state = 71 state = 70 }
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_slovakia
+								set_country_flag = GER_the_fate_of_slovakia_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKM_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_south_ural_area_activated }
+									RKM = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										OR = { state = 401 state = 251 state = 652 state = 582 state = 651 state = 249 state = 256 state = 833 state = 399 }
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_south_ural_area
+								set_country_flag = GER_the_fate_of_the_south_ural_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKM_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_north_ural_area_activated }
+									RKM = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										OR = { state = 825 state = 262 state = 397 state = 400 state = 398 state = 581 state = 573 }
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_north_ural_area
+								set_country_flag = GER_the_fate_of_the_north_ural_area_activated
+							}
+						}
+
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKM_decided
+									NOT = { has_country_flag = GER_the_fate_of_greater_finland_activated }
+									RKM = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										OR = { state = 216 state = 215 state = 213 }
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_greater_finland
+								set_country_flag = GER_the_fate_of_greater_finland_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKM_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_volga_german_autonomous_area_activated }
+									RKM = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										state = 829
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_volga_german_autonomous_area
+								set_country_flag = GER_the_fate_of_the_volga_german_autonomous_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RGB_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_irish_area_activated }
+									RGB = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_RGB_ireland_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_irish_area
+								set_country_flag = GER_the_fate_of_the_irish_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = RKA_decided
+									NOT = { has_country_flag = GER_the_fate_of_the_saf_area_activated }
+									RKA = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_additional_RKA_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_the_fate_of_the_saf_area
+								set_country_flag = GER_the_fate_of_the_saf_area_activated
+							}
+						}
+						if = {
+							limit = {
+								GER = { is_ai = yes }
+									GER = {
+									has_country_flag = GEN_decided
+									NOT = { has_country_flag = GER_expand_generalgouvernement_adminsitrative_area_activated }
+									GEN = {
+										exists = yes
+										is_subject_of = GER
+									}
+								}
+								NOT = {
+									any_state = {
+										GER_is_east_GEN_state = yes
+										NOT = { is_controlled_by_GER_or_subject = yes }
+									}
+								}
+							}
+							GER = {
+								activate_decision = GER_expand_generalgouvernement_adminsitrative_area
+								set_country_flag = GER_expand_generalgouvernement_adminsitrative_area_activated
+							}
+						}
+				}
+		}
+	}
+}

@@ -3,233 +3,652 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					ROOT = {
-						original_tag = GEN
+					has_game_rule = {
+						rule = RULE_DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS
+						option = Enable
 					}
 				}
-				FROM.FROM = {
-					set_state_flag = GER_is_GEN_state_dynamic
-				}
+					if = {
+						limit = {
+							ROOT = {
+								tag = GEN
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_GEN_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RAA
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RAA_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RAN
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RAN_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RAR
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RAR_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RCO
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RCO_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RGB
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RGB_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RHD
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RHD_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKA
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKA_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKB
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKB_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKC
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKC_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKG
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKG_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKH
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKH_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKI
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKI_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKK
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKK_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKM
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKM_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKN
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKN_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKO
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKO_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKT
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKT_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKU
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKU_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RKV
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RKV_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RNA
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RNA_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = ROA
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_ROA_state_dynamic
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tag = RUS
+							}
+						}
+						FROM.FROM = {
+							set_state_flag = GER_is_RUS_state_dynamic
+						}
+					}
 			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
 			if = {
 				limit = {
-					ROOT = {
-						original_tag = RAA
+					has_game_rule = {
+						rule = RULE_DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS
+						option = Enable
 					}
 				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RAA_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RAN
+					if = {
+						limit = {
+							original_tag = BEL
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKB_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKB = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKB
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RAN_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RAR
+					if = {
+						limit = {
+							OR = {
+								original_tag = EST
+								original_tag = LAT
+								original_tag = LIT
+								original_tag = BLR
+							}
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKO_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKO = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKO
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RAR_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RCO
+					if = {
+						limit = {
+							OR = {
+								original_tag = GEO
+								original_tag = AZR
+								original_tag = ARM
+							}
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKK_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKK = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKK
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RCO_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RGB
+					if = {
+						limit = {
+							original_tag = CZE
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKH_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKH = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKH
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RGB_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RHD
+					if = {
+						limit = {
+							original_tag = NOR
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKG_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKG = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKG
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RHD_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKA
+					if = {
+						limit = {
+							original_tag = HOL
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKN_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKN = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKN
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKA_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKB
+					if = {
+						limit = {
+							original_tag = UKR
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKU_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKU = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKU
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKB_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKC
+					if = {
+						limit = {
+							original_tag = POL
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = GEN_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							GEN = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = GEN
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKC_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKG
+					if = {
+						limit = {
+							original_tag = SOV
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RKM_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RKM = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RKM
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKG_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKH
+					if = {
+						limit = {
+							original_tag = ENG
+							is_subject_of = GER
+							GER = {
+								has_government = fascism
+								NOT = {
+									has_country_flag = RGB_decided
+								}
+							}
+						}
+						if = {
+							limit = {
+								GER = {
+									is_ai = yes
+								}
+							}
+							RGB = {
+								annex_country = {
+									target = ROOT
+									transfer_troops = yes
+								}
+							}
+							GER = {
+								puppet = RGB
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_country_flag = is_small_dynamic_puppet } }
+								GER = {
+									country_event = {
+										id = id.settlement.14
+										hours = 1
+									}
+								}
+							}
+						}
 					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKH_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKI
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKI_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKK
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKK_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKM
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKM_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKN
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKN_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKO
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKO_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKT
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKT_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKU
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKU_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RKV
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RKV_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RNA
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RNA_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = ROA
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_ROA_state_dynamic
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = RUS
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = GER_is_RUS_state_dynamic
-				}
 			}
 		}
 	}

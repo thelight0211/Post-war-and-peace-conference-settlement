@@ -793,6 +793,170 @@ country_event = {
 	}
 
 	country_event = {
+		id = id.settlement.14
+		title = id.settlement.14.t
+		desc = id.settlement.14.d
+		is_triggered_only = yes
+		
+		option = {
+			name = id.settlement.14.a
+			if = {
+				limit = {
+					FROM = {
+						original_tag = BEL
+					}
+				}
+				RKB = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKB
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = EST
+							original_tag = LAT
+							original_tag = LIT
+							original_tag = BLR
+						}
+					}
+				}
+				RKO = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKO
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = GEO
+							original_tag = AZR
+							original_tag = ARM
+						}
+					}
+				}
+				RKK = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKK
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = CZE
+					}
+				}
+				RKH = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKH
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = NOR
+					}
+				}
+				RKG = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKG
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = HOL
+					}
+				}
+				RKN = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKN
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = UKR
+					}
+				}
+				RKU = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKU
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = POL
+					}
+				}
+				GEN = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = GEN
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SOV
+					}
+				}
+				RKM = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RKM
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ENG
+					}
+				}
+				RGB = {
+					annex_country = {
+						target = FROM
+						transfer_troops = yes
+					}
+				}
+				puppet = RGB
+			}
+		}
+		
+		option = {
+			name = id.settlement.14.b
+		}
+	}
+
+	country_event = {
 		id = id.settlement.7
 		fire_only_once = yes
 		is_triggered_only = yes

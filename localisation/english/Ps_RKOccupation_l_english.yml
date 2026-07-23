@@ -23,3 +23,7 @@ rkoccupation.20.d:0 "Ukraine, the breadbasket of Europe, has been secured after 
 rkoccupation.21.d:0 "After a hard struggle against Polish forces, Poland has once again been brought to its knees. Warsaw has fallen. We must now decide whether to erase the Polish state created after the Great War or administer it through the Generalgouvernement."
 rkoccupation.22.d:0 "The central lands of the former Soviet Union lie defeated. Moscow itself has fallen to German arms. The time has come to decide the fate of Reichskommissariat Moskowien."
 rkoccupation.23.d:0 "The once-mighty British Empire has been broken. London has fallen and the British Isles are under German occupation. We must now decide the future of Reichskommissariat Grossbritannien."
+id.settlement.14.t: "The fate of [FROM.GetNameDefCap]"
+id.settlement.14.d: "We have established an administration for [FROM.GetNameDef]. We must decide whether to organize the territory as a Reichskommissariat or maintain it as a simple protectorate."
+id.settlement.14.a: "Establish a Reichskommissariat."
+id.settlement.14.b: "Maintain it as a protectorate."

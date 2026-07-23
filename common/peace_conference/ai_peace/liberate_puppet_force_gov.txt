@@ -1,0 +1,13 @@
+# Scripted AI desire for peace actions.
+# Perfect Peace - Block all non-annexation actions
+# AI should never puppet, liberate, or force government - only annex
+
+peace_ai_desires = {
+	do_not_puppet_liberate_or_force_government = {
+		peace_action_type = { puppet liberate force_government }
+		enable = {
+			always = yes
+		}
+		ai_desire = -9999
+	}
+}

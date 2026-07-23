@@ -1,12 +1,24 @@
 ﻿l_english:
 RULE_LOAD_GENERIC_FOCUS_PUPPET_T:0 "PS Focus trees for released puppets"
 DISABLE_GENERIC_FOCUS_PUPPET:0 "Load generic focus trees on puppets"
-DISABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, generic focus tree will be loaded"
+DISABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, generic focus tree will be loaded."
 ENABLE_GENERIC_FOCUS_PUPPET:0 "Maintein original focus for puppets"
-ENABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, the original focus for its tag will be loaded"
+ENABLE_GENERIC_FOCUS_PUPPET_DESC:0 "When a puppet is released, the original focus for its tag will be loaded."
 
-RULE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_T:0 "PS Enable automatic annexation of claims and cores"
+RULE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_T:0 "PS Automatic annexation of claims and cores"
 ENABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES:0 "Enable"
-ENABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_DESC:0 "When you occupy a state that is your claim or core, when the enemy capitulates, it automatically become yours"
+ENABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_DESC:0 "When you occupy a state that is your claim or core, when the enemy capitulates, it automatically become yours."
 DISABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES:0 "Disable"
 DISABLE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES_DESC:0 ""
+
+RULE_DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS_T:0 "PS Reichskommissariat modifications"
+ENABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS:0 "Enable"
+ENABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS_DESC:0 "AI and players will get an event to create a Reichskommissariat when it has its prerequisites. When a reicksprotectorat is created, you will able to turn it into a Reichskommissariat."
+DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS:0 "Disable"
+DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS_DESC:0 "Choose this option if you want to use the original Reichskommissariat system, or specific mods that modify it."
+
+RULE_DISABLE_DYNAMIC_PUPPETS_DECISIONS_T:0 "PS Dynamic puppets decisions"
+ENABLE_DYNAMIC_PUPPETS_DECISIONS:0 "Enable"
+ENABLE_DYNAMIC_PUPPETS_DECISIONS_DESC:0 "Allows player and AI to create a dynamic puppet when you own a significant part of a country that still exists. Also useful to partition a country between multiple factions."
+DISABLE_DYNAMIC_PUPPETS_DECISIONS:0 "Disable"
+DISABLE_DYNAMIC_PUPPETS_DECISIONS_DESC:0 "If you don't want to use the dynamic puppets system, choose this option. This option may lead to some territories remaining annexed."

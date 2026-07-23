@@ -18,4 +18,10 @@ germany_rk_category = {
 	icon = GFX_decision_cat_annexation
 	picture = GFX_decision_cat_picture_annexation
 	priority = 99999
+	visible = {
+		has_game_rule = {
+			rule = RULE_DISABLE_PS_REICHSKOMMISSARIAT_MODIFICATIONS
+			option = Enable
+		}
+	}
 }

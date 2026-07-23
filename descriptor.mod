@@ -3,9 +3,6 @@ tags={
 	"Gameplay"
 	"Fixes"
 }
-dependencies={
-	"Vaniliafix"
-}
 replace_path="common/peace_conference/ai_peace"
 replace_path="common/peace_conference/categories"
 replace_path="common/peace_conference/cost_modifiers"

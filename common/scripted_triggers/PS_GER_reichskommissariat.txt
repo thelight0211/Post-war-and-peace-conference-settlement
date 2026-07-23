@@ -13,3 +13,10 @@
 			is_core_of = ROOT
 		}
 	}
+	is_colony_or_reickskommissariat = {
+		NOT = {
+			any_owned_state = {
+				is_core_of = PREV
+			}
+		}
+	}

@@ -1,6 +1,7 @@
 # Scripted AI desire for peace actions.
-# See documentation.info file for more detailed scripting information.
-#I stole this from KR
+# Perfect Peace - Hierarchy annexation logic
+# Based on Fuhrerreich's approach
+
 peace_ai_desires = {
 	do_not_grant_states_randomly = {
 		peace_action_type = take_states
@@ -10,25 +11,23 @@ peace_ai_desires = {
 		ai_desire = -400
 	}
 
-    dont_grab_exclaves = {
-        peace_action_type = take_states
-        enable = {
-            ROOT.FROM.FROM.FROM = {
-                NOT = {
-                    OR = {
-                        is_claimed_by = ROOT.FROM
-                        any_neighbor_state = {
-                            OR = {
-                                is_owned_by = ROOT.FROM
-                                pc_is_state_claimed_by = ROOT.FROM
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        ai_desire = -10000
-    }
+	minors_should_stick_to_ambitions = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = {
+				tag = ROOT.FROM
+				is_major = no
+				is_subject = no
+			}
+			has_global_flag = pc_has_major_winner
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_claimed_by = ROOT.FROM }
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { has_variable = ambition_area_@ROOT.FROM }
+			}
+		}
+		ai_desire = -400
+	}
 
 	puppets_should_stick_to_cores_claims = {
 		peace_action_type = take_states
@@ -46,6 +45,43 @@ peace_ai_desires = {
 		ai_desire = -400
 	}
 
+	dont_take_ally_ambitions = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = {
+				tag = ROOT.FROM
+				is_in_faction = yes
+				ROOT.FROM.FROM.FROM = {
+					NOT = { is_claimed_by = ROOT.FROM }
+					NOT = { is_core_of = ROOT.FROM }
+					NOT = { has_variable = ambition_area_@ROOT.FROM }
+				}
+				any_allied_country = {
+					pc_is_winner = yes
+					if = {
+						limit = { is_subject = yes }
+						ROOT.FROM.FROM.FROM = {
+							OR = {
+								is_claimed_by = PREV
+								is_core_of = PREV
+							}
+						}
+					}
+					else = {
+						ROOT.FROM.FROM.FROM = {
+							OR = {
+								is_claimed_by = PREV
+								is_core_of = PREV
+								has_variable = ambition_area_@PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_desire = -400
+	}
+
 	dont_take_puppet_cores_or_claims = {
 		peace_action_type = take_states
 		enable = {
@@ -56,6 +92,7 @@ peace_ai_desires = {
 					pc_is_state_claimed = no
 					NOT = { is_claimed_by = ROOT }
 					NOT = { is_core_of = ROOT }
+					NOT = { has_variable = ambition_area_@ROOT }
 				}
 				any_subject_country = {
 					pc_is_winner = yes
@@ -88,9 +125,9 @@ peace_ai_desires = {
 						NOT = { tag = ROOT.FROM }
 						ROOT.FROM.FROM.FROM = {
 							OR = {
-								pc_is_state_claimed_by = PREV
 								is_core_of = PREV
 								is_claimed_by = PREV
+								has_variable = ambition_area_@PREV
 							}
 						}
 					}
@@ -113,6 +150,7 @@ peace_ai_desires = {
 					pc_is_state_claimed = no
 					NOT = { is_claimed_by = ROOT }
 					NOT = { is_core_of = ROOT }
+					NOT = { has_variable = ambition_area_@ROOT }
 				}
 				NOT = {
 					any_allied_country = {
@@ -121,13 +159,14 @@ peace_ai_desires = {
 							OR = {
 								is_core_of = PREV
 								is_claimed_by = PREV
+								has_variable = ambition_area_@PREV
 							}
 						}
 					}
 				}
 			}
 		}
-		ai_desire = 350 #offsets do_not_grant_states_randomly 350
+		ai_desire = 370 #offsets do_not_grant_states_randomly
 	}
 
 	faction_members_give_cores_to_ally = {
@@ -136,7 +175,6 @@ peace_ai_desires = {
 			pc_turn > 4
 			ROOT = {
 				is_in_faction = yes
-				is_faction_leader = no
 				is_subject = no
 			}
 			ROOT.FROM = {
@@ -149,6 +187,7 @@ peace_ai_desires = {
 				is_core_of = ROOT.FROM
 				NOT = { is_core_of = ROOT }
 				NOT = { is_claimed_by = ROOT }
+				NOT = { has_variable = ambition_area_@ROOT }
 			}
 		}
 		ai_desire = 400 #offsets do_not_grant_states_randomly
@@ -160,7 +199,6 @@ peace_ai_desires = {
 			pc_turn > 4
 			ROOT = {
 				is_in_faction = yes
-				is_faction_leader = no
 				is_subject = no
 			}
 			ROOT.FROM = {
@@ -173,18 +211,18 @@ peace_ai_desires = {
 				is_claimed_by = ROOT.FROM
 				NOT = { is_core_of = ROOT }
 				NOT = { is_claimed_by = ROOT }
+				NOT = { has_variable = ambition_area_@ROOT }
 			}
 		}
-		ai_desire = 380 #offsets do_not_grant_states_randomly
+		ai_desire = 390 #offsets do_not_grant_states_randomly
 	}
 
-	faction_members_give_claims_to_ally = {
+	faction_members_give_ambitions_to_ally = {
 		peace_action_type = take_states
 		enable = {
 			pc_turn > 4
 			ROOT = {
 				is_in_faction = yes
-				is_faction_leader = no
 				is_subject = no
 			}
 			ROOT.FROM = {
@@ -194,11 +232,13 @@ peace_ai_desires = {
 			}
 			ROOT.FROM.FROM.FROM = {
 				pc_is_state_claimed = no
+				has_variable = ambition_area_@ROOT.FROM
 				NOT = { is_core_of = ROOT }
 				NOT = { is_claimed_by = ROOT }
+				NOT = { has_variable = ambition_area_@ROOT }
 			}
 		}
-		ai_desire = 360 #offsets do_not_grant_states_randomly
+		ai_desire = 380 #offsets do_not_grant_states_randomly
 	}
 
 	majors_give_cores_to_allied_puppets = {
@@ -222,6 +262,7 @@ peace_ai_desires = {
 				is_core_of = ROOT.FROM
 				NOT = { is_claimed_by = ROOT }
 				NOT = { is_core_of = ROOT }
+				NOT = { has_variable = ambition_area_@ROOT }
 			}
 		}
 		ai_desire = 400 #offsets do_not_grant_states_randomly
@@ -248,8 +289,9 @@ peace_ai_desires = {
 				is_claimed_by = ROOT.FROM
 				NOT = { is_core_of = ROOT }
 				NOT = { is_claimed_by = ROOT }
+				NOT = { has_variable = ambition_area_@ROOT }
 			}
 		}
-		ai_desire = 380 #offsets do_not_grant_states_randomly
+		ai_desire = 390 #offsets do_not_grant_states_randomly
 	}
 }

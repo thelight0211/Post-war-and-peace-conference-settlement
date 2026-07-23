@@ -29,6 +29,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -75,6 +76,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -169,6 +171,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -229,6 +232,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -289,6 +293,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -356,6 +361,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -417,6 +423,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -503,6 +510,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -636,6 +644,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -682,6 +691,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -750,6 +760,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -818,6 +829,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -886,6 +898,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -946,6 +959,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1009,6 +1023,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1070,6 +1085,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1137,6 +1153,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1191,6 +1208,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1214,6 +1232,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = ITA }
 						}
 						NOT = {
@@ -1270,6 +1289,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1322,6 +1342,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1396,6 +1417,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1447,6 +1469,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1483,6 +1506,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1564,6 +1588,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1624,6 +1649,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1686,6 +1712,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1747,6 +1774,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1807,6 +1835,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1883,6 +1912,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1926,6 +1956,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -1976,6 +2007,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2036,6 +2068,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2096,6 +2129,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2175,6 +2209,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2243,6 +2278,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2311,6 +2347,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2388,6 +2425,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2449,6 +2487,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2516,6 +2555,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2584,6 +2624,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = CRI }
 						}
 						NOT = {
@@ -2674,6 +2715,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = ITA }
 						}
 						NOT = {
@@ -2763,6 +2805,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2823,6 +2866,7 @@ country_event = { # Fate of Paraguay
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2885,6 +2929,7 @@ country_event = { # Fate of Chile
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -2947,6 +2992,7 @@ country_event = { # Fate of Argentina
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3008,6 +3054,7 @@ country_event = { # Fate of Bolivia
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3068,6 +3115,7 @@ country_event = { # Fate of Peru
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3131,6 +3179,7 @@ country_event = { # Fate of Ecuador
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3194,6 +3243,7 @@ country_event = { # Fate of Colombia
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3258,6 +3308,7 @@ country_event = { # Fate of Venezuela
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3321,6 +3372,7 @@ country_event = { # Fate of Uruguay
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3384,6 +3436,7 @@ country_event = { # Fate of Brazil
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3444,6 +3497,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3503,6 +3557,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3562,6 +3617,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3619,6 +3675,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3676,6 +3733,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3735,6 +3793,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3794,6 +3853,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3853,6 +3913,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3912,6 +3973,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -3971,6 +4033,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4030,6 +4093,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4089,6 +4153,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4149,6 +4214,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4208,6 +4274,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4282,6 +4349,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4350,6 +4418,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4417,6 +4486,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = MAN }
 						}
 						NOT = {
@@ -4457,6 +4527,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4528,6 +4599,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4564,6 +4636,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4593,6 +4666,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4675,6 +4749,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4768,6 +4843,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4841,6 +4917,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4888,6 +4965,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -4947,6 +5025,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5007,6 +5086,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5072,6 +5152,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5118,6 +5199,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5187,6 +5269,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5255,6 +5338,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5300,6 +5384,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5365,6 +5450,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5427,6 +5513,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5471,6 +5558,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5519,6 +5607,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5563,6 +5652,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5615,6 +5705,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5675,6 +5766,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5735,6 +5827,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5796,6 +5889,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5862,6 +5956,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5926,6 +6021,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -5989,6 +6085,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6053,6 +6150,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6114,6 +6212,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6175,6 +6274,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6239,6 +6339,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6303,6 +6404,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6366,6 +6468,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6429,6 +6532,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6492,6 +6596,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6558,6 +6663,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6622,6 +6728,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6649,6 +6756,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6715,6 +6823,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6751,6 +6860,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6777,6 +6887,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6841,6 +6952,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6904,6 +7016,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -6967,6 +7080,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7027,6 +7141,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7088,6 +7203,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7148,6 +7264,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7208,6 +7325,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7271,6 +7389,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7335,6 +7454,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7398,6 +7518,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7461,6 +7582,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7524,6 +7646,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7588,6 +7711,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7652,6 +7776,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7716,6 +7841,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7779,6 +7905,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7839,6 +7966,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7899,6 +8027,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -7959,6 +8088,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8019,6 +8149,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8079,6 +8210,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8139,6 +8271,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8199,6 +8332,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8270,6 +8404,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8330,6 +8465,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8390,6 +8526,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8450,6 +8587,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8510,6 +8648,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8570,6 +8709,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8653,6 +8793,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8713,6 +8854,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8803,6 +8945,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8864,6 +9007,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8921,6 +9065,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -8972,6 +9117,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = ALB }
 						}
 						NOT = {
@@ -9044,6 +9190,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9080,6 +9227,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9113,6 +9261,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9160,6 +9309,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9195,6 +9345,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9243,6 +9394,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9305,6 +9457,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9369,6 +9522,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9442,6 +9596,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9515,6 +9670,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9586,6 +9742,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9650,6 +9807,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9713,6 +9871,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9776,6 +9935,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9839,6 +9999,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9902,6 +10063,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -9965,6 +10127,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10028,6 +10191,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10091,6 +10255,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10154,6 +10319,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10217,6 +10383,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10280,6 +10447,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10343,6 +10511,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10406,6 +10575,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10469,6 +10639,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10532,6 +10703,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10595,6 +10767,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10658,6 +10831,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10721,6 +10895,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10784,6 +10959,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10847,6 +11023,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10910,6 +11087,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -10977,6 +11155,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11013,6 +11192,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11044,6 +11224,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11123,6 +11304,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11190,6 +11372,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11244,6 +11427,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11329,6 +11513,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11394,6 +11579,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11466,6 +11652,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11530,6 +11717,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11576,6 +11764,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11643,6 +11832,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11705,6 +11895,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11729,6 +11920,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11765,6 +11957,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11789,6 +11982,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11847,6 +12041,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11871,6 +12066,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11933,6 +12129,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -11970,6 +12167,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = MEN }
 						}
 						NOT = {
@@ -11995,6 +12193,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = MEN }
 						}
 						NOT = {
@@ -12022,6 +12221,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = MEN }
 						}
 						NOT = {
@@ -12077,6 +12277,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12101,6 +12302,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12126,6 +12328,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12189,6 +12392,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12318,6 +12522,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12663,6 +12868,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -12730,6 +12936,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = MAN } 
 							NOT = { tag = RKT }
 						}
@@ -12739,6 +12946,17 @@ country_event = {
 												is_core_of = SIB
 											}
 										}
+						}
+						NOT = {
+								state = 329
+								329 = { 
+									owner = {
+										OR = {
+											tag = MEN
+											tag = MON
+										}
+									}
+								}
 						}
 					}
 				}
@@ -12794,6 +13012,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 										owner = {
@@ -12846,6 +13065,7 @@ country_event = {
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 										owner = {
@@ -12960,6 +13180,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = RKB }
 						}
 						NOT = {
@@ -13035,6 +13256,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13090,6 +13312,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13137,6 +13360,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13284,6 +13508,17 @@ country_event = {			# - Corsica Event
 	
 	option = {
 		name = "Liberate Corsica"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					FRA = { is_ally_with = ROOT }
+					OCC = { is_ally_with = ROOT }
+					ITA = { is_ally_with = ROOT }
+				}
+			}
+		}
 		COR = { add_state_core = 1 }
 		release_puppet = COR
 		COR = {
@@ -13327,14 +13562,6 @@ country_event = {			# - Corsica Event
 	option = {
 		trigger = {
 					ITA = { is_ally_with = ROOT }
-		}
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 100
-				ITA = { is_ally_with = ROOT }
-				has_government = fascism
-			}
 		}
 		name = "Give Corsica to our Italian ally"
 		ITA = { transfer_state = 1 }
@@ -13460,6 +13687,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13593,6 +13821,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13749,6 +13978,7 @@ country_event = {			# - Slovenia Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = { tag = ITA }
 						}
 						NOT = {
@@ -13805,6 +14035,7 @@ country_event = {			# - Slovenia Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -13841,6 +14072,7 @@ country_event = {			# - Slovenia Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -15499,6 +15731,7 @@ country_event = {			# - Transylvania
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -16379,6 +16612,7 @@ country_event = {			# - Actual Partition Event
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 						}
 						NOT = {
 							owner = {
@@ -16659,8 +16893,22 @@ country_event = {			# - Actual Partition Event
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
+						NOT = {
+							AND = {
+								state = 329
+								329 = { 
+									owner = {
+										OR = {
+											tag = MEN
+											tag = MON
+										}
+									}
+								}
+							}
+						}
 						owner = { 
 							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
 							NOT = {
 								OR = {
 									tag = UKR
@@ -16688,6 +16936,17 @@ country_event = {			# - Actual Partition Event
 												is_core_of = SOV
 											}
 										}
+						}
+						NOT = {
+								state = 329
+								329 = { 
+									owner = {
+										OR = {
+											tag = MEN
+											tag = MON
+										}
+									}
+								}
 						}
 					}
 				}
