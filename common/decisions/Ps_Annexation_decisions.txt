@@ -54,65 +54,7 @@ annexation_decisions = {
 			}
 		}
 	}
-	
-	annexation_SWI_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 90
-		days_re_enable = 3
-		is_good = no
-		highlight_states = {
-            highlight_state_targets = { state = 3 }
-		}
 
-		activation = {
-			NOT = {
-				OR = {
-					is_subject = yes
-					AND = {
-					original_tag = GER
-					has_government = fascism
-					}
-					original_tag = SWI
-				}
-			}
-			NOT = { has_country_flag = SWI_OCCUPIED }
-			SWI = { exists = no }
-			3 = { 
-				is_owned_and_controlled_by = ROOT 
-				is_claim_or_core_of_ROOT = no
-			}
-		}
-		cancel_trigger = {
-			OR = {
-			is_subject = yes
-			has_country_flag = SWI_OCCUPIED
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SWI_CONQ"
-			country_event = occupation.2
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SWI_CONQ"
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				country_event = occupation.2
-			}
-			else = {
-				set_country_flag = SWI_OCCUPIED
-			}
-		}
-		ai_will_do = {
-			base = 20000
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-		}
-	}
 	
 	annexation_SWE_CONQ = {
 		icon = generic_form_nation
@@ -268,62 +210,6 @@ annexation_decisions = {
 			}
 			else = {
 				set_country_flag = DEN_OCCUPIED
-			}
-		}
-		ai_will_do = {
-			base = 20000
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-		}
-	}
-	
-	annexation_AUS_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 90
-		days_re_enable = 3
-		is_good = no
-		highlight_states = {
-            highlight_state_targets = { state = 4 }
-		}
-
-		activation = {
-			NOT = {
-				OR = {
-					is_subject = yes
-					original_tag = AUS
-					original_tag = GER
-				}
-			}
-			NOT = { has_country_flag = AUS_OCCUPIED }
-			AUS = { exists = no }
-			4 = { 
-				is_owned_and_controlled_by = ROOT 
-				is_claim_or_core_of_ROOT = no
-			}
-		}
-		cancel_trigger = {
-			OR = {
-			is_subject = yes
-			has_country_flag = AUS_OCCUPIED
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_AUS_CONQ"
-			country_event = occupation.6
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AUS_CONQ"
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				country_event = occupation.6
-			}
-			else = {
-				set_country_flag = AUS_OCCUPIED
 			}
 		}
 		ai_will_do = {
@@ -9640,7 +9526,474 @@ annexation_decisions = {
 			}
 		}
 	}
+
+	### British Events
 	
+	annexation_UK_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 126 }
+		}
+
+		activation = {
+		
+			has_country_flag = conquest_UK
+			126 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			ENG = { exists = no }
+			NOT = { 
+				OR = {
+					is_subject = yes
+					has_country_flag = decided_UK 
+					original_tag = ENG
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+			is_subject = yes
+			has_country_flag = decided_UK
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_UK_CONQ"
+			country_event = uk.partition.2
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_UK_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = uk.partition.2
+			}
+			else = {
+				set_country_flag = decided_UK
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_BAY_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 52 }
+		}
+
+		activation = {
+
+			has_global_flag = partitioned_germany
+
+			52 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = BAY
+					original_tag = GER
+				}
+			}
+			NOT = { has_country_flag = decided_BAY }
+		}
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_country_flag = decided_BAY
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_BAY_CONQ"
+			country_event = ita.partition.23
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_BAY_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = ita.partition.23
+			}
+			else = {
+				set_country_flag = decided_BAY
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_HAN_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 59 }
+		}
+
+		activation = {
+
+			has_global_flag = partitioned_germany
+
+			59 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = THU
+					original_tag = GER
+				}
+			}
+			NOT = { has_country_flag = decided_HAN }
+		}
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_country_flag = decided_HAN
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_HAN_CONQ"
+			country_event = ita.partition.25
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_HAN_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = ita.partition.25
+			}
+			else = {
+				set_country_flag = decided_HAN
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_RHI_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 42 }
+		}
+
+		activation = {
+
+			has_global_flag = partitioned_germany
+
+			42 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = RHI
+					original_tag = GER
+				}
+			}
+			NOT = { has_active_mission = annexation_RHI_CONQ }
+			NOT = { has_country_flag = decided_RHI }
+		}
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_country_flag = decided_RHI
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_RHI_CONQ"
+			country_event = ita.partition.24
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_RHI_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = ita.partition.24
+			}
+			else = {
+				set_country_flag = decided_RHI
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_PRE_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 64 }
+		}
+
+		activation = {
+
+			has_global_flag = partitioned_germany
+
+			64 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = PRE
+					original_tag = GER
+				}
+			}
+			NOT = { has_country_flag = decided_PRE }
+		}
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_country_flag = decided_PRE
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_PRE_CONQ"
+			country_event = ita.partition.26
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PRE_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = ita.partition.26
+			}
+			else = {
+				set_country_flag = decided_PRE
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_SHL_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 58 }
+		}
+
+		activation = {
+
+			has_global_flag = partitioned_germany
+
+			58 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = SHL
+					original_tag = GER
+				}
+			}
+			NOT = { has_country_flag = decided_SHL }
+		}
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_country_flag = decided_SHL
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SHL_CONQ"
+			country_event = ita.partition.27
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SHL_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = ita.partition.27
+			}
+			else = {
+				set_country_flag = decided_SHL
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_AUS_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 4 }
+		}
+
+		activation = {
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = AUS
+					original_tag = GER
+				}
+			}
+			NOT = { has_country_flag = AUS_OCCUPIED }
+			AUS = { exists = no }
+			4 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+					OR = {
+						has_active_mission = annexation_GER_CONQ
+						has_active_mission = annexation_BAY_CONQ
+					}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+			is_subject = yes
+			has_country_flag = AUS_OCCUPIED
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_AUS_CONQ"
+			country_event = occupation.6
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AUS_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = occupation.6
+			}
+			else = {
+				set_country_flag = AUS_OCCUPIED
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	annexation_SWI_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 90
+		days_re_enable = 3
+		is_good = no
+		highlight_states = {
+            highlight_state_targets = { state = 3 }
+		}
+
+		activation = {
+			NOT = {
+				OR = {
+					is_subject = yes
+					AND = {
+					original_tag = GER
+					has_government = fascism
+					}
+					original_tag = SWI
+				}
+			}
+			NOT = { has_country_flag = SWI_OCCUPIED }
+			SWI = { exists = no }
+			3 = { 
+				is_owned_and_controlled_by = ROOT 
+				is_claim_or_core_of_ROOT = no
+			}
+			NOT = {
+						has_active_mission = annexation_BAY_CONQ
+			}
+		}
+		cancel_trigger = {
+			OR = {
+			is_subject = yes
+			has_country_flag = SWI_OCCUPIED
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SWI_CONQ"
+			country_event = occupation.2
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SWI_CONQ"
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = occupation.2
+			}
+			else = {
+				set_country_flag = SWI_OCCUPIED
+			}
+		}
+		ai_will_do = {
+			base = 20000
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+	############################################################## SPECIFIC EVENTS ##############################################################
 	annexation_STR_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -10364,28 +10717,43 @@ annexation_decisions = {
 			NOT = {
 				OR = {
 					has_active_mission = annexation_AUS_CONQ
+					has_active_mission = annexation_GER_CONQ
+					has_active_mission = annexation_BAY_CONQ
 					has_active_mission = annexation_HUN_CONQ
 				}
 			}
 			OR = {
+				AUS = { is_ally_with = ROOT }
+				HUN = { is_ally_with = ROOT }
 				AND = {
-					OR = {
-						AUS = {
-							is_subject_of = ROOT
-						}
-						AUS = {
-							is_in_faction_with = ROOT
-						}
+					AUS = {
+						exists = no
 					}
+					GER = {
+						is_ally_with = ROOT
+					}
+					4 = {
+						owner = GER
+						is_core_of = GER
+					}					
 				}
 				AND = {
-					OR = {
-						HUN = {
-							is_subject_of = ROOT
-						}
-						HUN = {
-							is_in_faction_with = ROOT
-						}
+					AUS = {
+						exists = no
+					}
+					GER = {
+						exists = no
+					}
+					BAY = {
+						is_ally_with = ROOT
+					}
+					4 = {
+						owner = BAY
+						is_core_of = BAY
+					}
+					50 = { 
+						is_owned_by = BAY
+						is_core_of = BAY
 					}
 				}
 			}
@@ -10996,6 +11364,7 @@ annexation_decisions = {
 					has_active_mission = annexation_GER_CONQ
 					has_active_mission = annexation_POL_CONQ
 					has_active_mission = annexation_CZE_CONQ
+					has_active_mission = annexation_PRE_CONQ
 				}
 			}
 			OR = {
@@ -11003,6 +11372,12 @@ annexation_decisions = {
 					OR = {
 					GER = { is_subject_of = ROOT }
 					GER = { is_in_faction_with = ROOT }
+					}
+				}
+				AND = {
+					OR = {
+					PRE = { is_subject_of = ROOT }
+					PRE = { is_in_faction_with = ROOT }
 					}
 				}
 				AND = {
@@ -11078,6 +11453,7 @@ annexation_decisions = {
 				OR = {
 					has_active_mission = annexation_GER_CONQ
 					has_active_mission = annexation_POL_CONQ
+					has_active_mission = annexation_PRE_CONQ
 				}
 			}
 			OR = {
@@ -11085,6 +11461,12 @@ annexation_decisions = {
 					OR = {
 					GER = { is_subject_of = ROOT }
 					GER = { is_in_faction_with = ROOT }
+					}
+				}
+				AND = {
+					OR = {
+						PRE = { is_subject_of = ROOT }
+						PRE = { is_in_faction_with = ROOT }
 					}
 				}
 				AND = {
@@ -11154,9 +11536,16 @@ annexation_decisions = {
 					has_active_mission = annexation_GER_CONQ
 					has_active_mission = annexation_POL_CONQ
 					has_active_mission = annexation_LIT_CONQ
+					has_active_mission = annexation_PRE_CONQ
 				}
 			}
 			OR = {
+				AND = {
+					OR = {
+						PRE = { is_subject_of = ROOT }
+						PRE = { is_in_faction_with = ROOT }
+					}
+				}
 				AND = {
 					OR = {
 					GER = { is_subject_of = ROOT }
@@ -11210,65 +11599,6 @@ annexation_decisions = {
 			}
 			else = {
 				set_country_flag = decided_KNB
-			}
-		}
-		ai_will_do = {
-			base = 20000
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-		}
-	}
-
-	### British Events
-	
-	annexation_UK_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 90
-		days_re_enable = 3
-		is_good = no
-		highlight_states = {
-            highlight_state_targets = { state = 126 }
-		}
-
-		activation = {
-		
-			has_country_flag = conquest_UK
-			126 = { 
-				is_owned_and_controlled_by = ROOT 
-				is_claim_or_core_of_ROOT = no
-			}
-			ENG = { exists = no }
-			NOT = { 
-				OR = {
-					is_subject = yes
-					has_country_flag = decided_UK 
-					original_tag = ENG
-				}
-			}
-		}
-		cancel_trigger = {
-			OR = {
-			is_subject = yes
-			has_country_flag = decided_UK
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_UK_CONQ"
-			country_event = uk.partition.2
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_UK_CONQ"
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				country_event = uk.partition.2
-			}
-			else = {
-				set_country_flag = decided_UK
 			}
 		}
 		ai_will_do = {

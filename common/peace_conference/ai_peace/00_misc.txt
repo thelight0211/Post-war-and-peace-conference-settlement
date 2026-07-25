@@ -1,6 +1,6 @@
 # Scripted AI desire for peace actions.
 # Perfect Peace - Solo annexation system
-# Fuhrerreich + faction losers + exclave protection + respect claims
+# Controlled + mild adjacent + faction losers + exclave protection + respect claims
 
 peace_ai_desires = {
 	take_our_cores = {
@@ -12,6 +12,16 @@ peace_ai_desires = {
 		ai_desire = 100
 	}
 
+	# === TAKE WHAT YOU CONTROL ===
+	take_controlled = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = { is_controlled_by = ROOT }
+		}
+		ai_desire = 400
+	}
+
 	# === DON'T TAKE FROM NEUTRALS ===
 	not_at_war_with_owner = {
 		peace_action_type = { take_states liberate puppet force_government }
@@ -21,11 +31,12 @@ peace_ai_desires = {
 		ai_desire = -1000
 	}
 
-	# === RESPECT INFLUENCE ZONES (on ALL countries) ===
+	# === RESPECT INFLUENCE ZONES (only for non-capitulated) ===
 	generic_influence_cutoff = {
 		peace_action_type = { take_states puppet force_government liberate }
 		enable = {
 			check_variable = { global.pc_winners_array^num > 1 }
+			ROOT.FROM.FROM = { has_capitulated = no }
 			ROOT.FROM.FROM.FROM = {
 				pc_is_state_outside_influence_for_winner = ROOT
 				NOT = { is_core_of = ROOT.FROM }
@@ -63,38 +74,19 @@ peace_ai_desires = {
 		ai_desire = -20
 	}
 
-	dont_grab_exclaves = {
-		peace_action_type = take_states
-		enable = {
-			ROOT.FROM.FROM.FROM = {
-				NOT = {
-					OR = {
-						is_claimed_by = ROOT.FROM
-						any_neighbor_state = {
-							OR = {
-								is_owned_by = ROOT.FROM
-								pc_is_state_claimed_by = ROOT.FROM
-							}
-						}
-					}
-				}
-			}
-		}
-		ai_desire = -40
-	}
-
-	do_grab_stuff_near_us = {
+	# === DONT GRAB CONTROLLED EXCLAVES ===
+	dont_take_controlled_exclaves = {
 		peace_action_type = take_states
 		enable = {
 			ROOT = { tag = ROOT.FROM }
 			ROOT.FROM.FROM.FROM = {
-				OR = {
-					is_claimed_by = ROOT.FROM
-					any_neighbor_state = { is_owned_by = ROOT.FROM }
-				}
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { is_claimed_by = ROOT.FROM }
+				NOT = { any_neighbor_state = { is_owned_by = ROOT.FROM } }
 			}
 		}
-		ai_desire = 10
+		ai_desire = -2000
 	}
 
 	generic_occupies_state = {
@@ -119,20 +111,6 @@ peace_ai_desires = {
 		ai_desire = -20
 	}
 
-	it_is_a_non_coastal_adjacency = {
-		peace_action_type = take_states
-		enable = {
-			ROOT.FROM = { tag = ROOT }
-			ROOT.FROM.FROM.FROM = {
-				is_coastal = no
-				any_neighbor_state = {
-					is_owned_by = ROOT
-				}
-			}
-		}
-		ai_desire = 10
-	}
-
 	leave_player_controlled_land_until_later_in_the_process = {
 		peace_action_type = { take_states puppet force_government liberate }
 		enable = {
@@ -150,8 +128,31 @@ peace_ai_desires = {
 		ai_desire = -9999
 	}
 
-	# === FINISH FACTION LOSERS (Hungary, Denmark) - controlled only ===
-	# Uses is_in_faction_with to identify non-capitulated faction members
+	# === FINISH CAPITULATED ENEMIES - controlled ===
+	finish_capitulated_controlled = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = { is_controlled_by = ROOT }
+		}
+		ai_desire = 2000
+	}
+
+	# === FINISH CAPITULATED ENEMIES - adjacent ===
+	finish_capitulated_adjacent = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = {
+				any_neighbor_state = { is_owned_by = ROOT.FROM }
+			}
+		}
+		ai_desire = 500
+	}
+
+	# === FINISH FACTION LOSERS (Hungary, Denmark) - controlled ===
 	finish_faction_losers_controlled = {
 		peace_action_type = take_states
 		enable = {
@@ -166,7 +167,7 @@ peace_ai_desires = {
 		ai_desire = 2000
 	}
 
-	# === FINISH FACTION LOSERS (Hungary, Denmark) - adjacent only ===
+	# === FINISH FACTION LOSERS (Hungary, Denmark) - adjacent ===
 	finish_faction_losers_adjacent = {
 		peace_action_type = take_states
 		enable = {
@@ -201,6 +202,6 @@ peace_ai_desires = {
 				}
 			}
 		}
-		ai_desire = -1000
+		ai_desire = -2000
 	}
 }

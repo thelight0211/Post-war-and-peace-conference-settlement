@@ -857,28 +857,33 @@ on_actions = {
 			# ============================================================
 
 			if = {
-				limit = { AUS = { owns_state = 736 } }
+				limit = { 
+					AUS = { 
+						owns_state = 736 
+						owns_state = 102
+					} 
+				}
+
 				AUS = { add_state_claim = 736 }
 			}
 			if = {
-				limit = { AUS = { owns_state = 852 } }
+				limit = { 
+					AUS = { 
+						owns_state = 852 
+						owns_state = 736
+						owns_state = 102
+					} 
+				}
 				AUS = { add_state_claim = 852 }
 			}
 			if = {
-				limit = { AUS = { owns_state = 52 } }
-				AUS = { add_state_claim = 52 }
-			}
-			if = {
-				limit = { AUS = { owns_state = 53 } }
-				AUS = { add_state_claim = 53 }
-			}
-			if = {
-				limit = { AUS = { owns_state = 853 } }
+				limit = { 
+					AUS = { 
+						owns_state = 853 
+						owns_state = 102
+					} 
+				}
 				AUS = { add_state_claim = 853 }
-			}
-			if = {
-				limit = { AUS = { owns_state = 54 } }
-				AUS = { add_state_claim = 54 }
 			}
 			if = {
 				limit = { AUS = { owns_state = 102 } }

@@ -151,6 +151,40 @@ country_event = {
 	desc = occupation.2.d
 	is_triggered_only = yes
 	option = {
+		name = "Give Switzerland to our Southern German ally"
+		ai_chance = { factor = 95 }
+		trigger = {
+			BAY = { is_ally_with = ROOT }
+			50 = { is_owned_by = BAY }
+		}
+		every_state = {
+			limit = {
+				is_core_of = SWI
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = SWI
+								}
+							}
+						}
+					}
+				}				
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			BAY = { transfer_state = PREV }
+			BAY = { add_state_core = PREV }
+		}
+	}
+	option = {
 		name = "A friendly regime will save lives."
 		ai_chance = { factor = 100 }
 				IF = {
@@ -413,6 +447,40 @@ country_event = {
 
 	is_triggered_only = yes
 	option = {
+		name = "Give Austria to our Southern German ally"
+		ai_chance = { factor = 95 }
+		trigger = {
+			BAY = { is_ally_with = ROOT }
+			50 = { is_owned_by = BAY }
+		}
+		every_state = {
+			limit = {
+				is_core_of = AUS
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = AUS
+								}
+							}
+						}
+					}
+				}				
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			BAY = { transfer_state = PREV }
+			BAY = { add_state_core = PREV }
+		}
+	}
+	option = {
 		name = "Install a collaborationist regime."
 		ai_chance = { factor = 95 }
 		every_state = {
@@ -454,12 +522,41 @@ country_event = {
 		}
 	}
 	option = {
+		name = "Give Austria to Germany"
+		trigger = {
+			GER = { is_ally_with = ROOT }
+		}
+		every_state = {
+			limit = {
+				is_core_of = AUS
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = AUS
+								}
+							}
+						}
+					}
+				}				
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			GER = { transfer_state = PREV }
+			GER = { add_state_core = PREV }
+		}
+	}
+	option = {
 		name = "Maintain Military occupation."
 		trigger = { is_ai = no }
 		set_country_flag = AUS_OCCUPIED
-
-
-
 	}
 	option = {
 		name = "Do nothing for now"
@@ -1011,7 +1108,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "Install a collaborationist regime."
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 100 }
 		trigger = {
 			BEL = { exists = no }
 		}
@@ -1054,12 +1151,49 @@ country_event = {
 		}
 	}
 	option = {
+		name = "Integrate Belgium"
+		trigger = {
+			BEL = { exists = no }
+			OR = {
+				original_tag = FRA
+				original_tag = HOL
+			}
+			any_owned_state = { 
+				any_neighbor_state = { 
+					is_core_of = BEL
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = BEL
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			ROOT = { add_state_claim = PREV }
+		}
+	}	
+	option = {
 		name = "Maintain Military occupation."
 		trigger = { is_ai = no }
 		set_country_flag = BEL_OCCUPIED
-
-
-
 	}
 	option = {
 		name = "Do nothing for now"
@@ -2517,6 +2651,46 @@ country_event = {
 			remove_all_claims = yes
 		}
 	}
+	option = {
+		name = "Integrate Luxembourg"
+		trigger = {
+			LUX = { exists = no }
+			OR = {
+				original_tag = FRA
+				original_tag = HOL
+			}
+			any_owned_state = { 
+				any_neighbor_state = { 
+					is_core_of = LUX
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = LUX
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = LUX
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			ROOT = { add_state_claim = PREV }
+		}
+	}	
 	option = {
 		name = "Maintain Military occupation."
 		trigger = { is_ai = no }
@@ -4653,6 +4827,7 @@ country_event = {
 			}
 			CZE = { transfer_state = PREV }
 		}
+		remove_mission = annexation_SLO_CONQ
 	}
 
 	option = {
@@ -13673,12 +13848,13 @@ country_event = {			# - Actual Partition Event
 			28 = { remove_claim_by = GER }
 		}
 	}
+
 	option = {
 		name = "Release Germany"
 		ai_chance = {
 			base = 100
 		}
-
+		clr_global_flag = partitioned_germany
 		every_state = {
 			limit = {
 				is_core_of = GER
@@ -13719,6 +13895,15 @@ country_event = {			# - Actual Partition Event
 			remove_all_claims = yes
 			}
 		}
+	}
+
+	option = {
+		name = "Partition Germany"
+		ai_chance = {
+			base = 0
+		}
+		set_global_flag = partitioned_germany
+		set_country_flag = decided_GER
 	}
 
 	option = {
@@ -15082,9 +15267,6 @@ country_event = {
 	option = {
 		trigger = {
 			AUS = {
-				exists = yes
-			}
-			AUS = {
 				is_ally_with = ROOT
 			}
 		}
@@ -15128,9 +15310,115 @@ country_event = {
 
 	option = {
 		trigger = {
-			HUN = {
-				exists = yes
+			AUS = {
+				exists = no
 			}
+			GER = {
+				is_ally_with = ROOT
+			}
+			4 = {
+				owner = GER
+				is_core_of = GER
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		name = "Give Burgenland to Germany"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = road_to_56_is_active
+				}
+				OR = {
+					owns_state = 975
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 975
+					}
+				}
+			}
+			GER = {
+				transfer_state = 975
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = road_to_56_is_active
+				OR = {
+					owns_state = 1086
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 1086
+					}
+				}
+			}
+			GER = {
+				transfer_state = 1086
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			AUS = {
+				exists = no
+			}
+			GER = {
+				exists = no
+			}
+			BAY = {
+				is_ally_with = ROOT
+			}
+			4 = {
+				owner = BAY
+				is_core_of = BAY
+			}
+			50 = { 
+				is_owned_by = BAY
+				is_core_of = BAY
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		name = "Give Burgenland to our South German ally"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = road_to_56_is_active
+				}
+				OR = {
+					owns_state = 975
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 975
+					}
+				}
+			}
+			BAY = {
+				transfer_state = 975
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = road_to_56_is_active
+				OR = {
+					owns_state = 1086
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 1086
+					}
+				}
+			}
+			BAY = {
+				transfer_state = 1086
+			}
+		}
+	}
+
+	option = {
+		trigger = {
 			HUN = {
 				is_ally_with = ROOT
 			}
@@ -16178,6 +16466,35 @@ country_event = {			#Silesia
 	}
 	option = {
 		trigger = {
+			PRE = { is_ally_with = ROOT }
+		}
+		name = "Return Silesia to Prussia"
+		ai_chance = { 
+			factor = 0 
+		}
+		IF = {
+			limit = {
+				OR = {
+				owns_state = 66
+				any_country = { is_subject_of = ROOT owns_state = 66 }
+				}
+			}
+			PRE = { transfer_state = 66 }
+			PRE = { add_state_claim = 66 }
+		}
+		IF = {
+			limit = {
+				OR = {
+				owns_state = 67
+				any_country = { is_subject_of = ROOT owns_state = 67 }
+				}
+			}
+			PRE = { transfer_state = 67 }
+			PRE = { add_state_claim = 67 }
+		}
+	}
+	option = {
+		trigger = {
 			POL = { is_ally_with = ROOT }
 		}
 		name = "Give Silesia to Poland"
@@ -16344,6 +16661,40 @@ country_event = {			#Pomerania
 	}
 	option = {
 		trigger = {
+			PRE = { is_ally_with = ROOT }
+		}
+		name = "Return Pomerania to Prussia"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+					has_government = communism 
+					tag = SOV
+			}
+		}
+		IF = {
+			limit = {
+				OR = {
+				owns_state = 63
+				any_country = { is_subject_of = ROOT owns_state = 63 }
+				}
+			}
+			PRE = { transfer_state = 63 }
+			PRE = { add_state_claim = 63 }
+		}
+		IF = {
+			limit = {
+				OR = {
+				owns_state = 68
+				any_country = { is_subject_of = ROOT owns_state = 68 }
+				}
+			}
+			PRE = { transfer_state = 68 }
+			PRE = { add_state_claim = 68 }
+		}
+	}
+	option = {
+		trigger = {
 			POL = { is_ally_with = ROOT }
 		}
 		ai_chance = {
@@ -16431,6 +16782,41 @@ country_event = {			#Koenigsberg
 			}
 			GER = { transfer_state = 5 }
 			GER = { add_state_claim = 5 }
+		}
+	}
+	option = {
+		trigger = {
+			PRE = { is_ally_with = ROOT }
+		}
+		name = "Return Koenigsberg to Prussia"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_government = communism 
+				tag = SOV
+			}
+		}
+		IF = {
+			limit = {
+				763 = { NOT = { OR = { is_core_of = ROOT is_claimed_by = ROOT } } }
+				OR = {
+				owns_state = 763
+				any_country = { is_subject_of = ROOT owns_state = 763 }
+				}
+			}
+			PRE = { transfer_state = 763 }
+			PRE = { add_state_claim = 763 }
+		}
+		IF = {
+			limit = {
+				OR = {
+				owns_state = 5
+				any_country = { is_subject_of = ROOT owns_state = 5 }
+				}
+			}
+			PRE = { transfer_state = 5 }
+			PRE = { add_state_claim = 5 }
 		}
 	}
 	option = {
@@ -16808,6 +17194,629 @@ country_event = {			# - Northern Ireland Event
 	option = {
 		name = "Maintain Occupation"
 		set_country_flag = decided_NIR
+		trigger = { is_ai = no }
+	}
+	option = {
+		name = "Do nothing for now"
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = {			# - Bavaria
+	id = ita.partition.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ita.partition.23"}
+	title = "The Fate of South Germany"
+	desc = ita.partition.23.d
+	
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			original_tag = AUS
+		}
+		name = "Integrate Bavaria"
+		ai_chance = { factor = 100 }
+		every_state = { limit = { is_core_of = AUS} remove_core_of = BAY }	
+		every_state = { limit = { is_core_of = WUR} remove_core_of = BAY }	
+		every_state = {
+			limit = {
+				is_core_of = BAY
+				NOT = { is_core_of = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			ROOT = { add_state_core = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = WUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			WUR = { transfer_state = PREV }
+		}
+		if = {
+			limit = { 
+				WUR = { 
+					is_subject = no
+					exists = yes
+				}
+			}
+			puppet = WUR
+			WUR = {
+				if = { 
+					limit = {
+						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+					}
+					load_focus_tree = generic_focus
+					remove_all_ideas = yes
+				}
+				drop_cosmetic_tag = yes
+				remove_all_claims = yes
+			}
+		}
+	}	
+	
+	option = {
+		name = "Release Southern Germany"
+		ai_chance = { factor = 100 }
+		trigger = {
+			owns_state = 50
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = BAY
+					is_core_of = WUR
+				}
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = BAY
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			BAY = { transfer_state = PREV }
+			BAY = { add_state_core = PREV }
+		}
+		puppet = BAY
+		BAY = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+			set_cosmetic_tag = BAY_SOUTH_GER
+		}
+	}
+
+	option = {
+		name = "Release Bavaria"
+		every_state = { limit = { is_core_of = AUS } remove_core_of = BAY }	
+		every_state = { limit = { is_core_of = WUR } remove_core_of = BAY }	
+		every_state = {
+			limit = {
+				is_core_of = BAY
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = BAY
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			BAY = { transfer_state = PREV }
+		}
+		puppet = BAY
+		BAY = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = WUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			WUR = { transfer_state = PREV }
+		}
+		if = {
+			limit = { 
+				WUR = { 
+					is_subject = no
+					exists = yes
+				}
+			}
+			puppet = WUR
+			WUR = {
+				if = { 
+					limit = {
+						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+					}
+					load_focus_tree = generic_focus
+					remove_all_ideas = yes
+				}
+				drop_cosmetic_tag = yes
+				remove_all_claims = yes
+			}
+		}
+	}
+
+	option = {
+		name = "Maintain Occupation"
+		set_country_flag = decided_BAY
+		trigger = { is_ai = no }
+	}
+	option = {
+		name = "Do nothing for now"
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = {			# - Rhineland
+	id = ita.partition.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ita.partition.24"}
+	title = "The Fate of Rhineland"
+	desc = ita.partition.24.d
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "Release Rhineland"
+		ai_chance = { factor = 40 }
+		every_state = {
+			limit = {
+				is_core_of = RHI
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = RHI
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			RHI = { transfer_state = PREV }
+		}
+		puppet = RHI
+		RHI = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = WUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			WUR = { transfer_state = PREV }
+		}
+		if = {
+			limit = { 
+				WUR = { 
+					is_subject = no
+					exists = yes
+				}
+			}
+			puppet = WUR
+			WUR = {
+				if = { 
+					limit = {
+						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+					}
+					load_focus_tree = generic_focus
+					remove_all_ideas = yes
+				}
+				drop_cosmetic_tag = yes
+				remove_all_claims = yes
+			}
+		}
+	}
+
+	option = {
+		trigger = { 
+			THU = { is_ally_with = ROOT }
+		}
+		ai_chance = { factor = 40 }
+		name = "Give Rhineland to our West German ally"
+		every_state = {
+			limit = {
+				is_core_of = RHI
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = RHI
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			THU = { transfer_state = PREV }
+			THU = { add_state_core = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = WUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			THU = { transfer_state = PREV }
+			THU = { add_state_core = PREV }
+		}
+	}
+
+
+	option = {
+		trigger = {
+			original_tag = FRA
+		}
+		name = "Integrate Rhineland"
+		ai_chance = { factor = 0 }
+		every_state = {
+			limit = {
+				is_core_of = RHI
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			ROOT = { add_state_claim = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = WUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			WUR = { transfer_state = PREV }
+		}
+		if = {
+			limit = { 
+				WUR = { 
+					is_subject = no
+					exists = yes
+				}
+			}
+			puppet = WUR
+			WUR = {
+				if = { 
+					limit = {
+						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+					}
+					load_focus_tree = generic_focus
+					remove_all_ideas = yes
+				}
+				drop_cosmetic_tag = yes
+				remove_all_claims = yes
+			}
+		}
+	}
+
+	option = {
+		name = "Maintain Occupation"
+		set_country_flag = decided_RHI
+		trigger = { is_ai = no }
+	}
+
+	option = {
+		name = "Do nothing for now"
+		trigger = { is_ai = no }
+	}
+}
+
+
+country_event = {			# - West Germany
+	id = ita.partition.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ita.partition.25"}
+	title = "The Fate of West Germany"
+	desc = ita.partition.25.d
+	
+	is_triggered_only = yes	
+	
+	immediate = {
+		hidden_effect = { remove_mission = annexation_RHI_CONQ }
+	}
+
+	option = {
+		name = "Establish West Germany"
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = HAN
+					is_core_of = HES
+				}
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = HAN
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			THU = { transfer_state = PREV }
+			THU = { add_state_core = PREV }
+		}
+		puppet = THU
+		THU = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+			set_cosmetic_tag = HAN_WEST_GER
+		}
+	}
+
+	option = {
+		name = "Maintain Occupation"
+		set_country_flag = decided_HAN
+		trigger = { is_ai = no }
+	}
+	option = {
+		name = "Do nothing for now"
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = {			# - East Prussia
+	id = ita.partition.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ita.partition.26"}
+	title = "The Fate of East Prussia"
+	desc = ita.partition.26.d
+	
+	is_triggered_only = yes	
+
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = { 
+					OR = {
+						is_core_of = SAX
+						is_core_of = MEK
+						is_core_of = THU
+					}
+				}
+				PRE = { add_state_core = PREV }
+			}
+			every_state = {
+				limit = { 
+					OR = {
+						is_core_of = RHI
+						is_core_of = HES
+						is_core_of = HAN
+						is_core_of = SHL
+					}
+				}
+				PRE = { remove_state_core = PREV }
+			}
+		}
+	}
+	option = {
+		name = "Establish East Prussia"
+		every_state = {
+			limit = {
+				is_core_of = PRE
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = PRE
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			PRE = { transfer_state = PREV }
+			PRE = { add_state_core = PREV }
+		}
+		puppet = PRE
+		PRE = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+		}
+	}
+
+	option = {
+		name = "Maintain Occupation"
+		set_country_flag = decided_PRE
+		trigger = { is_ai = no }
+	}
+	option = {
+		name = "Do nothing for now"
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = {			# - Schleswig-Holstein
+	id = ita.partition.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ita.partition.27"}
+	title = "The Fate of Schleswig-Holstein"
+	desc = ita.partition.27.d
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "Establish a puppet in Schleswig-Holstein"
+		ai_chance = { factor = 60 }
+		every_state = {
+			limit = {
+				is_core_of = SHL 
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = SHL
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			SHL = { transfer_state = PREV }
+			SHL = { add_state_core = PREV }
+		}
+		puppet = SHL
+		SHL = {
+			if = { 
+				limit = {
+					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
+				}
+				load_focus_tree = generic_focus
+				remove_all_ideas = yes
+			}
+			drop_cosmetic_tag = yes
+			remove_all_claims = yes
+		}
+	}
+
+	option = {
+		name = "Give Schleswig-Holstein to Prussia"
+		ai_chance = { factor = 40 }
+		every_state = {
+			limit = {
+				is_core_of = SHL 
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = SHL
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			PRE = { transfer_state = PREV }
+			PRE = { add_state_core = PREV }
+		}
+	}
+
+	option = {
+		name = "Maintain Occupation"
+		set_country_flag = decided_SHL
 		trigger = { is_ai = no }
 	}
 	option = {
