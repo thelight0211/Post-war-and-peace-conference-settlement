@@ -13300,6 +13300,8 @@ country_event = {			# - Hidden Event which determines who has control over Frenc
 				is_core_of = FRA
 				is_on_continent = europe
 				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
             }
 			ROOT = { 
 				modify_country_flag = { flag = fra_state_count value = 1 } 
@@ -13770,17 +13772,11 @@ country_event = {			# - Hidden Event which determines who has control over Germa
 	
 	trigger = {
 		owns_state = 64 # Berlin
-		NOT = {
-			tag = GER
-		}
-		OR = {
-			GER = { exists = no }
-		}
-		
+		GER = { exists = no }
 		NOT = { has_country_flag = conquest_GER }
 		NOT = { has_country_flag = nocontrol_GER }
 	}
-	#fire_only_once = no
+	fire_only_once = no
 	immediate = {
 		set_country_flag = { flag = ger_state_count value = 0 }
 		every_owned_state = {
@@ -13934,11 +13930,6 @@ country_event = {			# - Hidden Event which determines who has control over Itali
 	trigger = {
 		owns_state = 2
 		ITA = { exists = no }
-		NOT = {
-			OR = {
-				tag = ITA
-			}
-		}
 		NOT = { has_country_flag = conquest_ITA }
 		NOT = { has_country_flag = nocontrol_ITA }
 	}
@@ -13951,6 +13942,8 @@ country_event = {			# - Hidden Event which determines who has control over Itali
 				is_core_of = ITA
 				is_on_continent = europe
 				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
             }
 			ROOT = { 
 				modify_country_flag = { flag = ita_state_count value = 1 } 
@@ -16426,119 +16419,126 @@ country_event = {			# - Thrace
 	}
 }
 
-country_event = {			#Silesia
-	id = ita.partition.20
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ita.partition.20"}
-	title = "The Fate of Silesia"
-	desc = ita.partition.20.d
-	
-	is_triggered_only = yes
+	country_event = {			#Silesia
+		id = ita.partition.20
+		immediate = {log = "[GetDateText]: [Root.GetName]: event ita.partition.20"}
+		title = "The Fate of Silesia"
+		desc = ita.partition.20.d
+		
+		is_triggered_only = yes
 
 
-	option = {
-		trigger = {
-			GER = { is_ally_with = ROOT }
-		}
-		name = "Return Silesia to Germany"
-		ai_chance = { 
-			factor = 0 
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 66
-				any_country = { is_subject_of = ROOT owns_state = 66 }
-				}
+		option = {
+			trigger = {
+				GER = { is_ally_with = ROOT }
 			}
-			GER = { transfer_state = 66 }
-			GER = { add_state_claim = 66 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 67
-				any_country = { is_subject_of = ROOT owns_state = 67 }
-				}
+			name = "Return Silesia to Germany"
+			ai_chance = { 
+				factor = 0 
 			}
-			GER = { transfer_state = 67 }
-			GER = { add_state_claim = 67 }
-		}
-	}
-	option = {
-		trigger = {
-			PRE = { is_ally_with = ROOT }
-		}
-		name = "Return Silesia to Prussia"
-		ai_chance = { 
-			factor = 0 
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 66
-				any_country = { is_subject_of = ROOT owns_state = 66 }
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 66
+					any_country = { is_subject_of = ROOT owns_state = 66 }
+					}
 				}
+				GER = { transfer_state = 66 }
+				GER = { add_state_claim = 66 }
 			}
-			PRE = { transfer_state = 66 }
-			PRE = { add_state_claim = 66 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 67
-				any_country = { is_subject_of = ROOT owns_state = 67 }
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 67
+					any_country = { is_subject_of = ROOT owns_state = 67 }
+					}
 				}
+				GER = { transfer_state = 67 }
+				GER = { add_state_claim = 67 }
 			}
-			PRE = { transfer_state = 67 }
-			PRE = { add_state_claim = 67 }
 		}
-	}
-	option = {
-		trigger = {
-			POL = { is_ally_with = ROOT }
+		option = {
+			trigger = {
+				PRE = { is_ally_with = ROOT }
+			}
+			name = "Return Silesia to Prussia"
+			ai_chance = { 
+				factor = 0 
+			}
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 66
+					any_country = { is_subject_of = ROOT owns_state = 66 }
+					}
+				}
+				PRE = { transfer_state = 66 }
+				PRE = { add_state_claim = 66 }
+			}
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 67
+					any_country = { is_subject_of = ROOT owns_state = 67 }
+					}
+				}
+				PRE = { transfer_state = 67 }
+				PRE = { add_state_claim = 67 }
+			}
 		}
-		name = "Give Silesia to Poland"
+		option = {
+			trigger = {
+				POL = { is_ally_with = ROOT }
+			}
+			name = "Give Silesia to Poland"
 		ai_chance = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT = { 
-					has_government = communism 
-					tag = SOV
+				NOT = {
+					OR = {
+						AND = {
+							tag = SOV
+							has_government = communism
+						}
+						POL = {
+							owns_state = 63
+						}
+					}
 				}
 			}
 		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 66
-				any_country = { is_subject_of = ROOT owns_state = 66 }
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 66
+					any_country = { is_subject_of = ROOT owns_state = 66 }
+					}
 				}
+				POL = { transfer_state = 66 }
+				POL = { add_state_claim = 66 }
 			}
-			POL = { transfer_state = 66 }
-			POL = { add_state_claim = 66 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 67
-				any_country = { is_subject_of = ROOT owns_state = 67 }
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 67
+					any_country = { is_subject_of = ROOT owns_state = 67 }
+					}
 				}
+				POL = { transfer_state = 67 }
+				POL = { add_state_claim = 67 }
 			}
-			POL = { transfer_state = 67 }
-			POL = { add_state_claim = 67 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 762
-				any_country = { is_subject_of = ROOT owns_state = 762 }
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 762
+					any_country = { is_subject_of = ROOT owns_state = 762 }
+					}
 				}
+				POL = { transfer_state = 762 }
+				POL = { add_state_claim = 762 }
 			}
-			POL = { transfer_state = 762 }
-			POL = { add_state_claim = 762 }
 		}
-	}
 	option = {
 		trigger = {
 			POL = { is_ally_with = ROOT }
@@ -16942,6 +16942,7 @@ country_event = {			# - Hidden Event which determines who has control over Briti
 	hidden = yes
 	
 	trigger = {
+		owns_state = 126
 		ENG = { exists = no }
 		NOT = { has_country_flag = conquest_UK }
 		NOT = { has_country_flag = nocontrol_UK }
@@ -16955,6 +16956,8 @@ country_event = {			# - Hidden Event which determines who has control over Briti
 				is_core_of = ENG
 				is_on_continent = europe
 				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
             }
 			ROOT = { 
 				modify_country_flag = { flag = uk_state_count value = 1 } 
@@ -17532,6 +17535,12 @@ country_event = {			# - Rhineland
 			}
 			ROOT = { add_state_claim = PREV }
 		}
+		if = {
+			limit = {
+				6 = { is_claimed_by = ROOT }
+			}
+			add_state_claim = 35
+		}
 		every_state = {
 			limit = {
 				is_core_of = WUR
@@ -17786,6 +17795,7 @@ country_event = {			# - Schleswig-Holstein
 	option = {
 		name = "Give Schleswig-Holstein to Prussia"
 		ai_chance = { factor = 40 }
+		trigger = { PRE = { is_ally_with = ROOT } }
 		every_state = {
 			limit = {
 				is_core_of = SHL 
@@ -17840,6 +17850,7 @@ country_event = {			# - Hidden Event which determines who has control over Russi
 	hidden = yes
 	
 	trigger = {
+		owns_state = 219
 		SOV = { exists = no }
 		NOT = { has_country_flag = conquest_SOV }
 		NOT = { has_country_flag = nocontrol_SOV }
@@ -17853,6 +17864,8 @@ country_event = {			# - Hidden Event which determines who has control over Russi
 				is_core_of = SOV
 				is_on_continent = europe
 				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
             }
 			ROOT = { 
 				modify_country_flag = { flag = sov_state_count value = 1 } 

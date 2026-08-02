@@ -22,6 +22,60 @@ peace_ai_desires = {
 		ai_desire = 400
 	}
 
+	# === TAKE FROM ZERO-SCORE ALLIES ===
+	# Countries with 0 peace conference points (Olanda, Belgio, Grecia, etc.)
+	# cannot afford any peace actions. Their controlled states should be
+	# taken by active faction members with points (UK, URSS, USA)
+	take_zero_score_allies = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = {
+				controller = { 
+					is_in_faction_with = ROOT
+					pc_current_score = 0
+				}
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { is_claimed_by = ROOT.FROM }
+			}
+		}
+		ai_desire = 1500
+	}
+	
+	major_secures_minor_controlled_land = {
+		peace_action_type = {
+			take_states
+		}
+		enable = {
+			ROOT = {
+				tag = ROOT.FROM
+			}
+			ROOT = {
+				is_major = yes
+			}
+			FROM.FROM.FROM = {
+				NOT = {
+					any_country_with_core = {
+						pc_is_winner = yes
+					}
+				}
+				controller = {
+					is_in_faction_with = ROOT
+					is_major = no
+					PREV = {
+						NOT = {
+							is_core_of = PREV
+						}
+						NOT = {
+							is_claimed_by = PREV
+						}
+					}
+				}
+			}
+		}
+		ai_desire = 3000
+	}
+	
 	# === DON'T TAKE FROM NEUTRALS ===
 	not_at_war_with_owner = {
 		peace_action_type = { take_states liberate puppet force_government }
@@ -93,28 +147,6 @@ peace_ai_desires = {
 		peace_action_type = { take_states puppet liberate force_government }
 		enable = {
 			ROOT.FROM.FROM.FROM = { NOT = { is_controlled_by = ROOT } }
-		}
-		ai_desire = -10
-	}
-
-	generic_occupies_player_state = {
-		peace_action_type = { take_states puppet liberate force_government }
-		enable = {
-			ROOT.FROM.FROM.FROM = {
-				NOT = { is_controlled_by = ROOT }
-				controller = {
-					pc_is_loser = no
-					is_ai = no
-				}
-			}
-		}
-		ai_desire = -20
-	}
-
-	leave_player_controlled_land_until_later_in_the_process = {
-		peace_action_type = { take_states puppet force_government liberate }
-		enable = {
-			ROOT.FROM.FROM.FROM = { controller = { is_ai = no } }
 		}
 		ai_desire = -10
 	}

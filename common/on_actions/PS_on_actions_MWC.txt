@@ -107,6 +107,14 @@ on_actions = {
 						rule = RULE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES
 						option = Enable
 					}
+					OR = {
+						FROM = {
+							has_capitulated = yes
+						}
+						FROM = {
+							surrender_progress > 0.99
+						}
+					}
 				}
 				ROOT = {
 					every_controlled_state = {
@@ -175,6 +183,14 @@ on_actions = {
 						rule = RULE_AUTOMATIC_ANNEXATION_OF_CLAIMS_AND_CORES
 						option = Enable
 					}
+					OR = {
+						ROOT = {
+							has_capitulated = yes
+						}
+						ROOT = {
+							surrender_progress > 0.99
+						}
+					}
 				}
 				FROM = {
 					every_controlled_state = {
@@ -234,7 +250,6 @@ on_actions = {
 			}
 		}
 	}
-
 	on_peaceconference_ended = {
 		effect = {
 			every_country = {

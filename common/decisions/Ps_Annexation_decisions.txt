@@ -9315,18 +9315,19 @@ annexation_decisions = {
 		}
 
 		activation = {
-		NOT = {
-			OR = {
-				is_subject = yes
-				original_tag = SOV
+			219 = { 
+					is_owned_and_controlled_by = ROOT 
+					is_claim_or_core_of_ROOT = no
+				}
+			has_country_flag = conquest_SOV
+			SOV = { exists = no }
+			NOT = {
+				OR = {
+					is_subject = yes
+					original_tag = SOV
+				}
 			}
-		}
-		NOT = { has_country_flag = SOV_OCCUPIED }
-		SOV = { exists = no }
-		219 = { 
-				is_owned_and_controlled_by = ROOT 
-				is_claim_or_core_of_ROOT = no
-			}
+			NOT = { has_country_flag = SOV_OCCUPIED }
 		}
 		cancel_trigger = {
 			OR = {
@@ -9827,7 +9828,7 @@ annexation_decisions = {
 		activation = {
 
 			has_global_flag = partitioned_germany
-
+			NOT = { has_active_mission = annexation_PRE_CONQ }
 			58 = { 
 				is_owned_and_controlled_by = ROOT 
 				is_claim_or_core_of_ROOT = no

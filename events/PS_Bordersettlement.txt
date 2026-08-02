@@ -1,495 +1,500 @@
-add_namespace = id.settlement
-add_namespace = border_settlement
+ add_namespace = id.settlement
+ add_namespace = border_settlement
 
-country_event = {
-    id = border_settlement.1	
-    fire_only_once = no
-    is_triggered_only = no
-    hidden = yes
-	mean_time_to_happen = { days = 20 }
-	trigger = {
-                				any_owned_state = {
-									is_fully_controlled_by = ROOT
-									is_coastal = no
-									NOT = { is_in_home_area = no }
-									NOT = { has_state_flag = connected_via_con }
-								}
-	}
-	immediate = { 
-		if = {
-			limit = {
-				any_owned_state = {
-						is_coastal = no 
-						NOT = { has_state_flag = connected_via_con }
-						NOT = { is_in_home_area = no }
-						any_neighbor_state = {
-							owner = { 
-								OR = {
-									is_subject_of = ROOT 
-									has_subject = ROOT
-								}
-							}
-						}
-				}		
-			}
-			country_event = { id = id.settlement.6 days = 1 }
-		}
-		if = {
-			limit = {
-				any_owned_state = {
-						NOT = { is_in_home_area = no }
-						NOT = { has_state_flag = connected_via_con }
-						any_neighbor_state = {
-								OR = {
-								is_in_home_area = no
-								is_coastal = yes
-								has_state_flag = connected_via_con
-							    is_capital = yes
-								}
-								is_owned_by = ROOT
-						}
-				}		
-			}
-			country_event = { id = id.settlement.8 days = 1 }
-		}
-		if = {
-			limit = {
-				capital_scope = {
-					impassable = yes
-				}
-				any_owned_state = {
-					impassable = no
-					is_controlled_by = ROOT
-				}
-			}
-			country_event = { id = id.settlement.15 days = 1 }
-		}
-	}
-    immediate = { country_event = { id = id.settlement.1 days = 2 } }
-} 
-
-country_event = {
-    id = border_settlement.2
-    fire_only_once = no
-    is_triggered_only = no
-    hidden = yes
-	mean_time_to_happen = { days = 20 }
-	trigger = {
-                		any_owned_state = {
-							any_neighbor_state = {
-								has_state_flag = Land_locked_state
-               				}
-							has_state_flag = borders_land_locked_state
-               			}
-
-	}
-    immediate = { country_event = { id = id.settlement.2 days = 1 } }
-}
-
-country_event = {
-    id = id.settlement.1	
-    fire_only_once = no
-    is_triggered_only = yes
-    hidden = yes
-
-    immediate = {
-	                	if = {		
-							limit = {	
-                				any_owned_state = {
-									is_fully_controlled_by = ROOT
-									is_coastal = no
-									NOT = { is_in_home_area = no }
-									NOT = { has_state_flag = connected_via_con }
-								}
-							}
-							every_owned_state = {
-								limit = {
-									NOT = { 
-										any_neighbor_state = {
-											is_coastal = yes
-											is_owned_by = ROOT
-										}
-									}
-									NOT = { 
-										any_neighbor_state = {
-											has_state_flag = connected_via_con
-											is_owned_by = ROOT
-										}
-									}
-									NOT = { 
-										any_neighbor_state = {
-											is_in_home_area = no
-											is_owned_by = ROOT
-										}
-									}
-									is_fully_controlled_by = ROOT
-									is_coastal = no
-									NOT = { is_in_home_area = no }
-									NOT = { has_state_flag = connected_via_con }
-								}
-								set_state_flag = Land_locked_state
-							}
-								every_state = {
-				        				limit = {
-											any_neighbor_state = {
-												has_state_flag = Land_locked_state
-											}
-				        				}
-				        		set_state_flag = borders_land_locked_state
-			    				}
-						}
-						if = {		
-							limit = {	
-              				  			any_owned_state = {
-											is_fully_controlled_by = ROOT
-											is_coastal = no
-											NOT = { is_in_home_area = no }
-											NOT = { has_state_flag = connected_via_con }
-										}
-							}
-							country_event = { id = border_settlement.1 days = 1 }
-						}
-					if = {
-						limit = {
-							any_owned_state = {
-									is_coastal = no 
-									NOT = { has_state_flag = connected_via_con }
-									NOT = { is_in_home_area = no }
-									any_neighbor_state = {
-										owner = { 
-											OR = {
-												is_subject_of = ROOT 
-												has_subject = ROOT
-											}
-										}
-									}
-							}		
-						}
-						country_event = { id = id.settlement.6 days = 1 }
-					}
-					every_country = {
-						limit = {
-                			any_owned_state = {
-							any_neighbor_state = {
-									has_state_flag = Land_locked_state
-               					}
-								has_state_flag = borders_land_locked_state
-               				}
-						}
-					country_event = { id = id.settlement.2 days = 1 }
-					}
-			}
-}
-###################################################### REDISTRIBUTION ###################################################### 
 	country_event = {
-		id = id.settlement.2	
+		id = id.settlement.1
 		fire_only_once = no
 		is_triggered_only = yes
 		hidden = yes
 
-		immediate = {
-					every_country = {
-						limit = {
-							any_owned_state = {
-									NOT = { is_in_home_area = no }
-									NOT = { has_state_flag = connected_via_con }
-									any_neighbor_state = {
-											OR = {
-											is_in_home_area = no
-											is_coastal = yes
-											has_state_flag = connected_via_con
-											is_capital = yes
-											}
-											is_owned_by = ROOT
-									}
-							}		
-						}
-						country_event = id.settlement.8
+		trigger = {
+			surrender_progress < 0.001
+			has_capitulated = no
+			NOT = {
+				has_country_flag = PS_calculated_delay
+			}
+			any_owned_state = {
+				is_fully_controlled_by = ROOT
+				is_coastal = no
+				NOT = {
+					is_in_home_area = no
+				}
+				NOT = {
+					has_state_flag = connected_via_con
+				}
+				NOT = {
+					any_neighbor_state = {
+						is_coastal = yes
+						is_owned_by = ROOT
 					}
-					if = {		
-						limit = {	
-							any_owned_state = {
-								any_neighbor_state = {
-									has_state_flag = Land_locked_state
-								}
-								has_state_flag = borders_land_locked_state
+				}
+				NOT = {
+					any_neighbor_state = {
+						has_state_flag = connected_via_con
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_neighbor_state = {
+						is_in_home_area = no
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_neighbor_state = {
+						owner = {
+							OR = {
+								is_subject_of = ROOT
+								has_subject = ROOT
 							}
 						}
-						country_event = { id = id.settlement.3 days = 1 }
-					}		
-						every_state = {
-							limit = {
-										has_state_flag = borders_land_locked_state
-										NOT = {
-											any_neighbor_state = {
+					}
+				}
+			}
+		}
+			immediate = {
+				every_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_coastal = no
+						NOT = {
+							is_in_home_area = no
+						}
+						NOT = {
+							has_state_flag = connected_via_con
+						}
+						NOT = {
+							any_neighbor_state = {
+								is_coastal = yes
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								has_state_flag = connected_via_con
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								is_in_home_area = no
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							AND = {
+								impassable = yes
+								any_neighbor_state = {
+									OR = {
+										AND = {
+											NOT = {
 												has_state_flag = Land_locked_state
 											}
+											impassable = no
+											is_owned_by = ROOT
 										}
+										AND = {
+											impassable = yes
+											is_owned_by = ROOT
+											any_neighbor_state = {
+												NOT = {
+													has_state_flag = Land_locked_state
+												}
+												impassable = no
+												is_owned_by = ROOT
+											}
+										}
+									}
+								}
 							}
-							clr_state_flag = borders_land_locked_state
 						}
+						NOT = {
+							any_neighbor_state = {
+								owner = {
+									OR = {
+										is_subject_of = ROOT
+										has_subject = ROOT
+									}
+								}
+							}
+						}
+					}
+					set_state_flag = Land_locked_state
+					every_neighbor_state = {
+						limit = {
+							NOT = {
+								is_owned_by = ROOT
+							}
+						}
+						set_state_flag = borders_land_locked_state
+					}
+				}
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ROOT
+						}
+						has_capitulated = no
+						any_owned_state = {
+							has_state_flag = borders_land_locked_state
+						}
+					}
+					country_event = {
+						id = id.settlement.3
+						days = 1
+					}
+				}
+			}
 		}
-	}
 
+###################################################### REDISTRIBUTION ######################################################
 	country_event = {
 		id = id.settlement.3
 		fire_only_once = no
 		is_triggered_only = yes
 		hidden = yes
 
-		immediate = {	
-						every_state = {
-							limit = {
-										any_neighbor_state = {
-											has_state_flag =  borders_land_locked_state
-											is_owned_by = ROOT
-										}
-										owner = {
-											is_neighbor_of = ROOT 
-										}
-										is_core_of = ROOT
-										has_state_flag = Land_locked_state
-							}
-							ROOT = { transfer_state = PREV }
-							clr_state_flag = Land_locked_state
-						}
-						every_state = {
-							limit = {
-										has_state_flag = borders_land_locked_state
-										NOT = {
-											any_neighbor_state = {
-												has_state_flag = Land_locked_state
-											}
-										}
-							}
-							clr_state_flag = borders_land_locked_state
-						}
-					if = {		
-						limit = {	
-							any_owned_state = {
-								any_neighbor_state = {
-									has_state_flag = Land_locked_state
-									is_core_of = ROOT
-								}
-								has_state_flag = borders_land_locked_state
-								
-							}
-						}
-					country_event = { id = id.settlement.3 days = 1 }
-					}
-					if = {		
-						limit = {	
-							NOT = { ROOT = { is_subject = yes } }
-							any_owned_state = {
-								any_neighbor_state = {
-									has_state_flag = Land_locked_state
-									NOT = { is_core_of = ROOT }
-								}
-								has_state_flag = borders_land_locked_state
-							}
-						}
-						country_event = { id = id.settlement.4 days = 1 }
-					}
-		}
-	}
-
-	country_event = {
-		id = id.settlement.4
-		fire_only_once = no
-		is_triggered_only = yes
-		hidden = yes
-
-		immediate = {
-						every_state = {
-							limit = {
-									any_neighbor_state = {
-										has_state_flag =  borders_land_locked_state
-										is_owned_by = ROOT
-									}
-									has_state_flag = Land_locked_state
-									NOT = { is_core_of = ROOT }
-									owner = {
-										is_neighbor_of = ROOT 
-									}
-							}
-							ROOT = { transfer_state = PREV }
-							clr_state_flag = Land_locked_state
-						}
-						every_state = {
-							limit = {
-										has_state_flag = borders_land_locked_state
-										NOT = {
-											any_neighbor_state = {
-												has_state_flag = Land_locked_state
-											}
-										}
-							}
-							clr_state_flag = borders_land_locked_state
-						}
-		}
-	}
-
-###########################################################################################################################
-
-	country_event = {                                                    #subjects/overlords
-		id = id.settlement.6
-		fire_only_once = no
-		is_triggered_only = no
-		hidden = yes
-		mean_time_to_happen = { days = 20 }
 		trigger = {
-				any_owned_state = {
-						is_coastal = no 
-						NOT = { has_state_flag = connected_via_con }
-						NOT = { is_in_home_area = no }
-						any_neighbor_state = {
-								owner = { 
-									OR = {
-										is_subject_of = ROOT 
-										has_subject = ROOT
-									}
-								}
-						}
-				}		
+			surrender_progress < 0.001
 		}
 
 		immediate = {
-				every_owned_state = {
-					limit = {
-						is_coastal = no
-						NOT = { has_state_flag = connected_via_con }
-						NOT = { is_in_home_area = no }
-						any_neighbor_state = {
-							owner = { 
-									OR = {
-										is_subject_of = ROOT 
-										has_subject = ROOT
-									}
-								}
-						}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord = {
+					save_event_target_as = state_receiver
+				}
+			}
+			else = {
+				save_event_target_as = state_receiver
+			}
+
+			every_state = {
+				limit = {
+					has_state_flag = Land_locked_state
+					OR = {
+						is_core_of = ROOT
+						is_core_of = event_target:state_receiver
 					}
-				set_state_flag = {
-					flag = connected_via_con
-					days = 28
-					value = 1
+					event_target:state_receiver = {
+						has_capitulated = no
+					}
+					any_neighbor_state = {
+						has_state_flag = borders_land_locked_state
+						OR = {
+							is_owned_by = ROOT
+							is_owned_by = event_target:state_receiver
+							owner = {
+								is_subject_of = ROOT
+							}
+							owner = {
+								is_subject_of = event_target:state_receiver
+							}
+						}
 					}
 				}
+				transfer_state_to = event_target:state_receiver
+				clr_state_flag = Land_locked_state
+				set_state_flag = borders_land_locked_state
+			}
+			every_state = {
+				limit = {
+					has_state_flag = Land_locked_state
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_core_of = event_target:state_receiver
+					}
+					event_target:state_receiver = {
+						has_capitulated = no
+					}
+					any_neighbor_state = {
+						has_state_flag = borders_land_locked_state
+						OR = {
+							is_owned_by = ROOT
+							is_owned_by = event_target:state_receiver
+							owner = {
+								is_subject_of = ROOT
+							}
+							owner = {
+								is_subject_of = event_target:state_receiver
+							}
+						}
+					}
+				}
+				save_event_target_as = target_landlocked_state
+				owner = {
+					save_event_target_as = current_landlocked_owner
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_neighbor_state = {
+								NOT = {
+									has_state_flag = Land_locked_state
+								}
+								owner = {
+									OR = {
+										AND = {
+											has_capitulated = no
+											NOT = {
+												tag = ROOT
+											}
+											NOT = {
+												tag = event_target:state_receiver
+											}
+											NOT = {
+												tag = event_target:current_landlocked_owner
+											}
+											event_target:target_landlocked_state = {
+												is_core_of = PREV
+											}
+										}
+										AND = {
+											is_subject = yes
+											overlord = {
+												has_capitulated = no
+												NOT = {
+													tag = ROOT
+												}
+												NOT = {
+													tag = event_target:state_receiver
+												}
+												NOT = {
+													tag = event_target:current_landlocked_owner
+												}
+												event_target:target_landlocked_state = {
+													is_core_of = PREV
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					transfer_state_to = event_target:state_receiver
+					clr_state_flag = Land_locked_state
+					set_state_flag = borders_land_locked_state
+				}
+			}
+			every_state = {
+				limit = {
+					has_state_flag = borders_land_locked_state
+					NOT = {
+						any_neighbor_state = {
+							has_state_flag = Land_locked_state
+						}
+					}
+				}
+				clr_state_flag = borders_land_locked_state
+			}
 
+			if = {
+				limit = {
+					event_target:state_receiver = {
+						has_capitulated = no
+					}
+					any_state = {
+						has_state_flag = Land_locked_state
+						any_neighbor_state = {
+							has_state_flag = borders_land_locked_state
+							OR = {
+								is_owned_by = ROOT
+								is_owned_by = event_target:state_receiver
+								owner = {
+									is_subject_of = ROOT
+								}
+								owner = {
+									is_subject_of = event_target:state_receiver
+								}
+							}
+						}
+					}
+				}
+				event_target:state_receiver = {
+					country_event = {
+						id = id.settlement.3
+						days = 1
+					}
+				}
+			}
 		}
 	}
 
 	country_event = {
 		id = id.settlement.8
 		fire_only_once = no
-		is_triggered_only = no
+		is_triggered_only = yes
 		hidden = yes
-		mean_time_to_happen = { days = 20 }
-		trigger = {
-				any_owned_state = {
-						NOT = { is_in_home_area = no }
-						NOT = { has_state_flag = connected_via_con }
-						any_neighbor_state = {
-								OR = {
-								is_in_home_area = no
-								is_coastal = yes
-								has_state_flag = connected_via_con
-								is_capital = yes
-								}
-								is_owned_by = ROOT
-						}
-				}		
-		}
 
 		immediate = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = PS_calculated_delay
+					}
+				}
 				every_owned_state = {
 					limit = {
-						NOT = { is_in_home_area = no }
-						NOT = { has_state_flag = connected_via_con }
+						has_state_flag = connected_via_con
+					}
+					clr_state_flag = connected_via_con
+				}
+				set_country_flag = PS_calculated_delay
+			}
+
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					NOT = {
+						is_in_home_area = no
+					}
+					NOT = {
+						has_state_flag = connected_via_con
+					}
+					OR = {
+						is_coastal = yes
+						any_neighbor_state = {
+							is_owned_by = ROOT
+							has_state_flag = connected_via_con
+						}
+					}
+				}
+				set_state_flag = connected_via_con
+			}
+
+			if = {
+				limit = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						NOT = {
+							is_in_home_area = no
+						}
+						NOT = {
+							has_state_flag = connected_via_con
+						}
+						any_neighbor_state = {
+							is_owned_by = ROOT
+							has_state_flag = connected_via_con
+						}
+					}
+				}
+				country_event = {
+					id = id.settlement.8
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					surrender_progress < 0.001
+				}
+				clr_country_flag = PS_calculated_delay
+				country_event = {
+					id = id.settlement.1
+				}
+			}
+			else = {
+				clr_country_flag = PS_calculated_delay
+			}
+		}
+	}
+
+	###########################################################################################################################
+
+		country_event = {                                                    #subjects/overlords
+			id = id.settlement.6
+			fire_only_once = no
+			is_triggered_only = yes
+			hidden = yes
+
+			trigger = {
+					any_owned_state = {
+							is_coastal = no
+							NOT = { is_in_home_area = no }
+							NOT = { has_state_flag = connected_via_con }
+
+								NOT = { 
+									any_neighbor_state = {
+										is_coastal = yes
+										is_owned_by = ROOT
+									}
+								}
+								NOT = { 
+									any_neighbor_state = {
+										has_state_flag = connected_via_con
+										is_owned_by = ROOT
+									}
+								}
+								NOT = { 
+									any_neighbor_state = {
+										is_in_home_area = no
+										is_owned_by = ROOT
+									}
+								}
+
 							any_neighbor_state = {
-								OR = {
-								is_in_home_area = no
-								is_coastal = yes
-								has_state_flag = connected_via_con
-								is_capital = yes
-								}
-								is_owned_by = ROOT
+								owner = { 
+										OR = {
+											is_subject_of = ROOT 
+											has_subject = ROOT
+										}
+									}
 							}
-					}
-				set_state_flag = {
-					flag = connected_via_con
-					days = 28
-					value = 1
-				}
-				}
-		}
-	}
-
-	country_event = {                              #no sea access
-		id = id.settlement.9
-		fire_only_once = no
-		is_triggered_only = no
-		hidden = yes
-		mean_time_to_happen = { days = 20 }
-		trigger = { 
-			NOT = { 
-				any_owned_state = { 
-					is_coastal = yes 
-					is_in_home_area = no
-				} 
+					}		
 			}
-			NOT = { 
-				any_state = { 
-					owner = { 
-						is_subject_of = ROOT 
-						is_neighbor_of = ROOT
-					}
-					is_coastal = yes 
-				} 
-			}
-				
-							any_owned_state = {
-								is_fully_controlled_by = ROOT
-								is_coastal = yes
-								NOT = { is_in_home_area = no }
-								NOT = { has_state_flag = connected_via_con }
-							}	
-		}
 
-		immediate = {
-				every_owned_state = {
-					limit = {
-								is_fully_controlled_by = ROOT
-								is_coastal = yes
-								NOT = { is_in_home_area = no }
-								NOT = { has_state_flag = connected_via_con }
-					}
-					set_state_flag = Land_locked_state
-				}
-				every_state = {
-							limit = {
-								any_neighbor_state = {
-										has_state_flag = Land_locked_state
+			immediate = {
+					every_owned_state = {
+						limit = {
+							is_coastal = no
+							NOT = { is_in_home_area = no }
+							NOT = { has_state_flag = connected_via_con }
+
+								NOT = { 
+									any_neighbor_state = {
+										is_coastal = yes
+										is_owned_by = ROOT
+									}
 								}
+								NOT = { 
+									any_neighbor_state = {
+										has_state_flag = connected_via_con
+										is_owned_by = ROOT
+									}
+								}
+								NOT = { 
+									any_neighbor_state = {
+										is_in_home_area = no
+										is_owned_by = ROOT
+									}
+								}
+
+							any_neighbor_state = {
+								owner = { 
+										OR = {
+											is_subject_of = ROOT 
+											has_subject = ROOT
+										}
+									}
 							}
-					set_state_flag = borders_land_locked_state
-				}
-				every_country = {
-					limit = {
-						any_owned_state = {
-						any_neighbor_state = {
-								has_state_flag = Land_locked_state
-							}
-							has_state_flag = borders_land_locked_state
 						}
-					}
-				country_event = { id = id.settlement.2 days = 1 }
-				}
+						set_state_flag = {
+							flag = connected_via_con
+							days = 9
+							value = 1
+							}
+						}
+			}
 		}
-	}
+		
 
 	country_event = {                                      #impassable capital
 		id = id.settlement.15
-		is_triggered_only = no
+		is_triggered_only = yes
 		hidden = yes
 
 		trigger = {
@@ -498,20 +503,27 @@ country_event = {
 			}
 			any_owned_state = {
 				impassable = no
-				is_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
 			}
 		}
 
 		immediate = {
-			random_owned_state = {
-				limit = {
-					impassable = no
-					is_controlled_by = ROOT
+			if = { 
+				limit = { 
+					capital_scope = {
+						impassable = yes
+					}
 				}
-				ROOT = {
-					set_capital = {
-						state = PREV
-						remember_old_capital = no
+				random_owned_state = {
+					limit = {
+						impassable = no
+						is_fully_controlled_by = ROOT
+					}
+					ROOT = {
+						set_capital = {
+							state = PREV
+							remember_old_capital = no
+						}
 					}
 				}
 			}
@@ -521,9 +533,8 @@ country_event = {
 	country_event = {                        #peaceful unification
 		id = id.settlement.11
 		fire_only_once = no
-		is_triggered_only = no
+		is_triggered_only = yes
 		hidden = yes
-		mean_time_to_happen = { days = 20 }
 		trigger = { 
 			has_war = no
 			OR = {
@@ -705,9 +716,9 @@ country_event = {
 	country_event = {                        #ussr occupies Poland
 		id = id.settlement.17
 		fire_only_once = yes
-		is_triggered_only = no
+		is_triggered_only = yes
 		hidden = yes
-		mean_time_to_happen = { days = 20 }
+
 		trigger = { 
 						POL = {
 							 exists = yes
@@ -970,8 +981,7 @@ country_event = {
 	country_event = {
 		id = id.settlement.5
 		fire_only_once = yes
-		is_triggered_only = No
-		mean_time_to_happen = { days = 20 }
+		is_triggered_only = yes
 		hidden = yes
 
 		trigger = {
@@ -991,13 +1001,14 @@ country_event = {
 			RNG = { 
 				OR = {
 					owns_state = 325
-					owns_state = 625
+					owns_state = 615
 					owns_state = 754
 					owns_state = 617
 					owns_state = 594
 				}
 			}
 		}
+
 		immediate = {
 			if = {
 				limit = {
@@ -1031,72 +1042,3 @@ country_event = {
 			}
 		}
 	}
-
-country_event = {
-    id = border_settlement.3	
-    fire_only_once = no
-    is_triggered_only = no
-    hidden = yes
-	mean_time_to_happen = { days = 20 }
-	trigger = {
-                				any_owned_state = {
-									is_fully_controlled_by = ROOT
-									is_coastal = no
-									is_impassable = yes
-									NOT = { is_in_home_area = no }
-									NOT = { 
-										any_neighbor_state = {
-											AND = {
-											is_owned_by = ROOT
-												OR = {
-													is_in_home_area = no
-													has_state_flag = connected_via_con
-													is_coastal = yes
-												}
-											}
-										}
-									}
-								}
-	}
-    immediate = { country_event = { id = id.settlement.10 days = 2 } }
-} 
-
-country_event = {
-    id = id.settlement.10
-    fire_only_once = no
-    is_triggered_only = yes
-    hidden = yes
-
-    immediate = {
-							every_owned_state = {
-								limit = {
-									NOT = { is_in_home_area = no }
-									is_fully_controlled_by = ROOT
-									is_coastal = no
-									is_impassable = yes
-									NOT = { 
-										any_neighbor_state = {
-											AND = {
-											is_owned_by = ROOT
-												OR = {
-													is_in_home_area = no
-													has_state_flag = connected_via_con
-													is_coastal = yes
-												}
-											}
-										}
-									}
-								}
-								set_state_flag = Land_locked_state
-							}
-								every_state = {
-				        				limit = {
-											any_neighbor_state = {
-												has_state_flag = Land_locked_state
-											}
-				        				}
-				        		set_state_flag = borders_land_locked_state
-			    				}
-	}
-
-}

@@ -110,7 +110,10 @@ dynamic_puppet_category = {
 							# -------------------------------------------------------
 							# 2. Eccezioni per FROM specifico + stati
 							# -------------------------------------------------------
-
+							AND = {
+								FROM = { tag = TUR }
+								OR = { state = 799 }  # Hatay
+							}
 							AND = {
 								FROM = { tag = KUR }
 								OR = { state = 680 }  # Deir-az-Zur
