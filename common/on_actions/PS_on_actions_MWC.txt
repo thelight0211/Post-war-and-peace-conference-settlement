@@ -1666,6 +1666,59 @@ on_actions = {
 			# CLAIM CLEANUP (every_state)
 			# ============================================================
 
+			if = {
+				limit = {
+					tag = SOV
+				}
+				every_subject_country = {
+					limit = {
+						OR = {
+							original_tag = UKR
+							original_tag = BLR
+							original_tag = LAT
+							original_tag = EST
+							original_tag = LIT
+							original_tag = KAZ
+							original_tag = TMS
+							original_tag = UZB
+							original_tag = KYR
+							original_tag = TAJ
+							original_tag = ARM
+							original_tag = GEO
+							original_tag = AZR
+						}
+					}
+					every_core_state = {
+						limit = {
+							is_claimed_by = SOV
+						}
+						remove_claim_by = SOV
+					}
+				}
+			}
+			if = { 
+				limit = {
+					UKR = { is_subject_of = SOV }
+				}
+				every_state = {
+					limit = {
+						is_core_of = ROM 
+					}
+					remove_claim_by = SOV
+				}
+			}
+			if = { 
+				limit = {
+					BLR = { is_subject_of = SOV }
+				}
+				every_state = {
+					limit = {
+						is_core_of = POL
+					}
+					remove_claim_by = SOV
+				}
+			}
+
 			# --- ITA claim removal ---
 			if = {
 				limit = { ITA = { exists = yes } }

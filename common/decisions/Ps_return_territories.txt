@@ -26,9 +26,18 @@ return_core_category = {
 						has_state_flag = KR_keeping_stateROOT
 					}
 				}
+				NOT = {
+					has_state_flag = Land_locked_state
+				}
 				OR = {
-					any_neighbor_state = { is_owned_by = FROM }
 					is_coastal = yes
+					has_state_flag = connected_via_con
+					any_neighbor_state = {
+						is_owned_by = FROM
+						NOT = {
+							has_state_flag = Land_locked_state
+						}
+					}
 				}
 				NOT = {
 					any_country_with_core = {
@@ -211,9 +220,18 @@ return_core_category = {
 						has_state_flag = KR_keeping_stateROOT
 					}
 				}
+				NOT = {
+					has_state_flag = Land_locked_state
+				}
 				OR = {
-					any_neighbor_state = { is_owned_by = FROM }
 					is_coastal = yes
+					has_state_flag = connected_via_con
+					any_neighbor_state = {
+						is_owned_by = FROM
+						NOT = {
+							has_state_flag = Land_locked_state
+						}
+					}
 				}
 				NOT = {
 					any_country_with_core = {
@@ -369,9 +387,22 @@ return_core_category = {
 				is_subject_of = ROOT
 				any_owned_state = {
 					is_fully_controlled_by = FROM
-					OR= {
+					OR = {
 						is_core_of = ROOT
 						is_claimed_by = ROOT
+					}
+					NOT = {
+						has_state_flag = Land_locked_state
+					}
+					OR = {
+						is_coastal = yes
+						has_state_flag = connected_via_con
+						any_neighbor_state = {
+							is_owned_by = ROOT
+							NOT = {
+								has_state_flag = Land_locked_state
+							}
+						}
 					}
 				}
 				NOT = {

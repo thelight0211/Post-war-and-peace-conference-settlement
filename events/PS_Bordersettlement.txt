@@ -405,91 +405,112 @@
 
 	###########################################################################################################################
 
-		country_event = {                                                    #subjects/overlords
-			id = id.settlement.6
-			fire_only_once = no
-			is_triggered_only = yes
-			hidden = yes
+	country_event = {															#subjects/overlord
+		id = id.settlement.6
+		fire_only_once = no
+		is_triggered_only = yes
+		hidden = yes
 
-			trigger = {
-					any_owned_state = {
-							is_coastal = no
-							NOT = { is_in_home_area = no }
-							NOT = { has_state_flag = connected_via_con }
-
-								NOT = { 
-									any_neighbor_state = {
-										is_coastal = yes
-										is_owned_by = ROOT
-									}
-								}
-								NOT = { 
-									any_neighbor_state = {
-										has_state_flag = connected_via_con
-										is_owned_by = ROOT
-									}
-								}
-								NOT = { 
-									any_neighbor_state = {
-										is_in_home_area = no
-										is_owned_by = ROOT
-									}
-								}
-
-							any_neighbor_state = {
-								owner = { 
-										OR = {
-											is_subject_of = ROOT 
-											has_subject = ROOT
-										}
-									}
-							}
-					}		
-			}
-
-			immediate = {
-					every_owned_state = {
-						limit = {
-							is_coastal = no
-							NOT = { is_in_home_area = no }
-							NOT = { has_state_flag = connected_via_con }
-
-								NOT = { 
-									any_neighbor_state = {
-										is_coastal = yes
-										is_owned_by = ROOT
-									}
-								}
-								NOT = { 
-									any_neighbor_state = {
-										has_state_flag = connected_via_con
-										is_owned_by = ROOT
-									}
-								}
-								NOT = { 
-									any_neighbor_state = {
-										is_in_home_area = no
-										is_owned_by = ROOT
-									}
-								}
-
-							any_neighbor_state = {
-								owner = { 
-										OR = {
-											is_subject_of = ROOT 
-											has_subject = ROOT
-										}
-									}
-							}
+		trigger = {
+			any_owned_state = {
+				is_coastal = no
+				NOT = {
+					is_in_home_area = no
+				}
+				NOT = {
+					has_state_flag = connected_via_con
+				}
+				NOT = {
+					any_neighbor_state = {
+						is_coastal = yes
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_neighbor_state = {
+						has_state_flag = connected_via_con
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_neighbor_state = {
+						is_in_home_area = no
+						is_owned_by = ROOT
+					}
+				}
+				any_neighbor_state = {
+					owner = {
+						OR = {
+							is_subject_of = ROOT
+							has_subject = ROOT
 						}
-						set_state_flag = {
-							flag = connected_via_con
-							days = 9
-							value = 1
-							}
-						}
+					}
+				}
 			}
 		}
+
+		immediate = {
+			every_owned_state = {
+				limit = {
+					is_coastal = no
+					NOT = {
+						is_in_home_area = no
+					}
+					NOT = {
+						has_state_flag = connected_via_con
+					}
+					NOT = {
+						any_neighbor_state = {
+							is_coastal = yes
+							is_owned_by = ROOT
+						}
+					}
+					NOT = {
+						any_neighbor_state = {
+							has_state_flag = connected_via_con
+							is_owned_by = ROOT
+						}
+					}
+					NOT = {
+						any_neighbor_state = {
+							is_in_home_area = no
+							is_owned_by = ROOT
+						}
+					}
+					any_neighbor_state = {
+						owner = {
+							OR = {
+								is_subject_of = ROOT
+								has_subject = ROOT
+							}
+						}
+					}
+				}
+				set_state_flag = connected_via_con
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						NOT = {
+							is_in_home_area = no
+						}
+						NOT = {
+							has_state_flag = connected_via_con
+						}
+						any_neighbor_state = {
+							is_owned_by = ROOT
+							has_state_flag = connected_via_con
+						}
+					}
+				}
+				country_event = {
+					id = id.settlement.8
+					days = 1
+				}
+			}
+		}
+	}
 		
 
 	country_event = {                                      #impassable capital
