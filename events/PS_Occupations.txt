@@ -664,14 +664,14 @@ country_event = {
 		trigger = {
 			OR = {
 			owns_state = 70
-			any_country = { is_subject_of = ROOT owns_state = 70 }
+			any_subject_country = { owns_state = 70 }
 			}
 		}
 		IF = {
 			limit = {
 				OR = {
 					owns_state = 70
-					any_country = { is_subject_of = ROOT owns_state = 70 }
+					any_subject_country = { owns_state = 70 }
 				}
 				70 = {
 				NOT = {
@@ -688,7 +688,7 @@ country_event = {
 			limit = {
 				OR = {
 				owns_state = 71
-				any_country = { is_subject_of = ROOT owns_state = 71 }
+				any_subject_country = { owns_state = 71 }
 				}
 				71 = {
 				NOT = {
@@ -729,7 +729,7 @@ country_event = {
 			HUN = { exists = yes }
 			OR = {
 			owns_state = 70
-			any_country = { is_subject_of = ROOT owns_state = 70 }
+			any_subject_country = { owns_state = 70 }
 			}
 			HUN = { is_ally_with = ROOT }
 		}
@@ -1458,7 +1458,7 @@ country_event = {
 		trigger = {
 			OR = {
 			owns_state = 107
-			any_country = { is_subject_of = ROOT owns_state = 107 }
+			any_subject_country = { owns_state = 107 }
 			}
 		}
 		hidden_effect = {
@@ -1528,7 +1528,7 @@ country_event = {
 		trigger = {
 			OR = {
 			owns_state = 105
-			any_country = { is_subject_of = ROOT owns_state = 105 }
+			any_subject_country = { owns_state = 105 }
 			}
 		}
 		IF = {
@@ -1590,7 +1590,7 @@ country_event = {
 			YUG = { is_ally_with = ROOT }
 			OR = {
 			owns_state = 105
-			any_country = { is_subject_of = ROOT owns_state = 105 }
+			any_subject_country = { owns_state = 105 }
 			}
 		}
 		name = "Return Montenegro to Yugoslavia"
@@ -1628,7 +1628,7 @@ country_event = {
 			SER = { is_subject_of = ROOT }
 			OR = {
 			owns_state = 105
-			any_country = { is_subject_of = ROOT owns_state = 105 }
+			any_subject_country = { owns_state = 105 }
 			}
 		}
 		name = "Give Montenegro to Serbia"
@@ -2878,7 +2878,7 @@ country_event = {
 		trigger = {
 			OR = {
 			owns_state = 109
-			any_country = { is_subject_of = ROOT owns_state = 109 }
+			any_subject_country = { owns_state = 109 }
 			}
 		}
 		every_state = {
@@ -2932,7 +2932,7 @@ country_event = {
 			YUG = { is_ally_with = ROOT }
 			OR = {
 			owns_state = 109
-			any_country = { is_subject_of = ROOT owns_state = 109 }
+			any_subject_country = { owns_state = 109 }
 			}
 		}
 		name = "Return Croatia to Yugoslavia"
@@ -2941,7 +2941,7 @@ country_event = {
 			limit = {
 				OR = {
 				owns_state = 109
-				any_country = { is_subject_of = ROOT owns_state = 109 }
+				any_subject_country = { owns_state = 109 }
 				}
 			}
 			YUG = { transfer_state = 109 }
@@ -4758,7 +4758,7 @@ country_event = {
 			owns_state = 70
 			OR = {
 			ROOT = { owns_state = 9 }
-			any_country = { is_subject_of = ROOT owns_state = 9 }
+			any_subject_country = { owns_state = 9 }
 			}
 		}
 		ai_chance = { 
@@ -9170,7 +9170,7 @@ country_event = {
 			YUG = { owns_state = 803 }
 			OR = {
 			owns_state = 106
-			any_country = { is_subject_of = ROOT owns_state = 106 }
+			any_subject_country = { owns_state = 106 }
 			}
 		}
 		name = "Return Macedonia to Yugoslavia"
@@ -9202,7 +9202,7 @@ country_event = {
 			limit = {
 				OR = {
 				owns_state = 803
-				any_country = { is_subject_of = ROOT owns_state = 803 }
+				any_subject_country = { owns_state = 803 }
 				}
 			}
 			YUG = { transfer_state = 803 }	
@@ -9228,7 +9228,7 @@ country_event = {
 			SER = { owns_state = 803 }
 			OR = {
 			owns_state = 106
-			any_country = { is_subject_of = ROOT owns_state = 106 }
+			any_subject_country = { owns_state = 106 }
 			}
 		}
 		name = "Return Macedonia to Serbia"
@@ -9261,7 +9261,7 @@ country_event = {
 			limit = {
 				OR = {
 				owns_state = 803
-				any_country = { is_subject_of = ROOT owns_state = 803 }
+				any_subject_country = { owns_state = 803 }
 				}
 			}
 			SER = { transfer_state = 803 }	
@@ -9278,7 +9278,7 @@ country_event = {
 			}
 			OR = {
 			owns_state = 106
-			any_country = { is_subject_of = ROOT owns_state = 106 }
+			any_subject_country = { owns_state = 106 }
 			}
 			
 		}
@@ -9314,7 +9314,7 @@ country_event = {
 			limit = {
 				OR = {
 				owns_state = 803
-				any_country = { is_subject_of = ROOT owns_state = 803 }
+				any_subject_country = { owns_state = 803 }
 				}
 			}
 			BUL = { transfer_state = 803 add_state_claim = 803 }
@@ -9349,7 +9349,7 @@ country_event = {
 			is_ai = yes
 			OR = {
 			owns_state = 104
-			any_country = { is_subject_of = ROOT owns_state = 104 }
+			any_subject_country = { owns_state = 104 }
 			}
 		}
 			ai_chance = {
@@ -9390,7 +9390,7 @@ country_event = {
 			is_ai = no
 			OR = {
 			owns_state = 104
-			any_country = { is_subject_of = ROOT owns_state = 104 }
+			any_subject_country = { owns_state = 104 }
 			}
 		}
 		name = "Give it to Croatia"
@@ -9425,7 +9425,7 @@ country_event = {
 		trigger = {
 			OR = {
 			owns_state = 104
-			any_country = { is_subject_of = ROOT owns_state = 104 }
+			any_subject_country = { owns_state = 104 }
 			}
 		}
 		every_state = {
@@ -9471,7 +9471,7 @@ country_event = {
 			YUG = { is_ally_with = ROOT }
 			OR = {
 			owns_state = 104
-			any_country = { is_subject_of = ROOT owns_state = 104 }
+			any_subject_country = { owns_state = 104 }
 			}
 		}
 		name = "Return Bosnia to Yugoslavia"
@@ -9508,7 +9508,7 @@ country_event = {
 			SER = { is_subject_of = ROOT }
 			OR = {
 			owns_state = 104
-			any_country = { is_subject_of = ROOT owns_state = 104 }
+			any_subject_country = { owns_state = 104 }
 			}
 		}
 		name = "Give Bosnia to Serbia"
@@ -13403,15 +13403,15 @@ country_event = {			# - Actual Partition Event
 		trigger = {
 				OR = {
 				owns_state = 14
-				any_country = { is_subject_of = ROOT owns_state = 14 }
+				any_subject_country = { owns_state = 14 }
 				}
 				OR = {
 				owns_state = 21
-				any_country = { is_subject_of = ROOT owns_state = 21 }
+				any_subject_country = { owns_state = 21 }
 				}
 				OR = {
 				owns_state = 15
-				any_country = { is_subject_of = ROOT owns_state = 15 }
+				any_subject_country = { owns_state = 15 }
 				}
 		}
 		name = "Liberate smaller states"
@@ -13419,7 +13419,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 14
-				any_country = { is_subject_of = ROOT owns_state = 14 }
+				any_subject_country = { owns_state = 14 }
 				}
 			}
 			BRI = {
@@ -13470,7 +13470,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 21
-				any_country = { is_subject_of = ROOT owns_state = 21 }
+				any_subject_country = { owns_state = 21 }
 				}
 			}
 			every_state = {
@@ -13526,7 +13526,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 16
-				any_country = { is_subject_of = ROOT owns_state = 16 }
+				any_subject_country = { owns_state = 16 }
 				}
 			}
 			every_state = {
@@ -13622,7 +13622,7 @@ country_event = {			# - A-L Event
 			limit = {
 				OR = {
 				owns_state = 28
-				any_country = { is_subject_of = ROOT owns_state = 28 }
+				any_subject_country = { owns_state = 28 }
 				}
 			}
 			GER = { transfer_state = 28 }
@@ -13642,7 +13642,7 @@ country_event = {			# - A-L Event
 			limit = {
 				OR = {
 				owns_state = 28
-				any_country = { is_subject_of = ROOT owns_state = 28 }
+				any_subject_country = { owns_state = 28 }
 				}
 				NOT = { has_war_with = FRA }
 			}
@@ -13652,7 +13652,7 @@ country_event = {			# - A-L Event
 			limit = {
 				OR = {
 				owns_state = 28
-				any_country = { is_subject_of = ROOT owns_state = 28 }
+				any_subject_country = { owns_state = 28 }
 				}
 				FRA = { is_puppet_of = ROOT }
 			}
@@ -14066,7 +14066,7 @@ country_event = {			# - Sud Tirol Event
 			limit = {
 				OR = {
 				owns_state = 39
-				any_country = { is_subject_of = ROOT owns_state = 39 }
+				any_subject_country = { owns_state = 39 }
 				}
 			}
 			AUS = { transfer_state = 39 }
@@ -14085,7 +14085,7 @@ country_event = {			# - Sud Tirol Event
 			limit = {
 				OR = {
 				owns_state = 39
-				any_country = { is_subject_of = ROOT owns_state = 39 }
+				any_subject_country = { owns_state = 39 }
 				}
 			}
 			AUS = { transfer_state = 39 }
@@ -14095,7 +14095,7 @@ country_event = {			# - Sud Tirol Event
 			limit = {
 				OR = {
 				owns_state = 850
-				any_country = { is_subject_of = ROOT owns_state = 850 }
+				any_subject_country = { owns_state = 850 }
 				}
 			}
 			AUS = { transfer_state = 850 }
@@ -14113,7 +14113,7 @@ country_event = {			# - Sud Tirol Event
 			limit = {
 				OR = {
 				owns_state = 39
-				any_country = { is_subject_of = ROOT owns_state = 39 }
+				any_subject_country = { owns_state = 39 }
 				}
 			}
 			ITA = { transfer_state = 39 }
@@ -14145,7 +14145,7 @@ country_event = {			# - Slovenia Event
 		trigger = {
 			OR = {
 			owns_state = 102
-			any_country = { is_subject_of = ROOT owns_state = 102 }
+			any_subject_country = { owns_state = 102 }
 			}
 		}
 		every_state = {
@@ -14200,7 +14200,7 @@ country_event = {			# - Slovenia Event
 			YUG = { is_ally_with = ROOT }
 			OR = {
 			owns_state = 102
-			any_country = { is_subject_of = ROOT owns_state = 102 }
+			any_subject_country = { owns_state = 102 }
 			}
 		}
 		name = "Return Slovenia to Yugoslavia"
@@ -14237,7 +14237,7 @@ country_event = {			# - Slovenia Event
 			AUS = { is_puppet_of = ROOT }
 			OR = {
 			owns_state = 102
-			any_country = { is_subject_of = ROOT owns_state = 102 }
+			any_subject_country = { owns_state = 102 }
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -14302,7 +14302,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 163
-				any_country = { is_subject_of = ROOT owns_state = 163 }
+				any_subject_country = { owns_state = 163 }
 				}
 			}
 			YUG = { transfer_state = 163 }
@@ -14311,7 +14311,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 103
-				any_country = { is_subject_of = ROOT owns_state = 103 }
+				any_subject_country = { owns_state = 103 }
 				}
 			}
 			YUG = { transfer_state = 103 }
@@ -14328,7 +14328,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 163
-				any_country = { is_subject_of = ROOT owns_state = 163 }
+				any_subject_country = { owns_state = 163 }
 				}
 			}
 			CRO = { transfer_state = 163 }
@@ -14337,7 +14337,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 103
-				any_country = { is_subject_of = ROOT owns_state = 103 }
+				any_subject_country = { owns_state = 103 }
 				}
 			}
 			CRO = { transfer_state = 103 }
@@ -14353,7 +14353,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 163
-				any_country = { is_subject_of = ROOT owns_state = 163 }
+				any_subject_country = { owns_state = 163 }
 				}
 			}
 			ITA = { transfer_state = 163 }
@@ -14362,7 +14362,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 103
-				any_country = { is_subject_of = ROOT owns_state = 103 }
+				any_subject_country = { owns_state = 103 }
 				}
 			}
 			ITA = { transfer_state = 103 }
@@ -14371,7 +14371,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 736
-				any_country = { is_subject_of = ROOT owns_state = 736 }
+				any_subject_country = { owns_state = 736 }
 				}
 			}
 			ITA = { transfer_state = 736 }
@@ -14380,7 +14380,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 852
-				any_country = { is_subject_of = ROOT owns_state = 852 }
+				any_subject_country = { owns_state = 852 }
 				}
 			}
 			ITA = { transfer_state = 852 }
@@ -14400,7 +14400,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 163
-				any_country = { is_subject_of = ROOT owns_state = 163 }
+				any_subject_country = { owns_state = 163 }
 				}
 			}
 			ITA = { transfer_state = 163 }
@@ -14409,7 +14409,7 @@ country_event = {			# - Dalmatia Event
 			limit = {
 				OR = {
 				owns_state = 103
-				any_country = { is_subject_of = ROOT owns_state = 103 }
+				any_subject_country = { owns_state = 103 }
 				}
 			}
 			CRO = { transfer_state = 103 }
@@ -14443,7 +14443,7 @@ country_event = {			# - Somaliland Event
 			limit = {
 				OR = {
 				owns_state = 269
-				any_country = { is_subject_of = ROOT owns_state = 269 }
+				any_subject_country = { owns_state = 269 }
 				}
 				269 = {
 				NOT = {
@@ -14491,7 +14491,7 @@ country_event = {			# - Somaliland Event
 			limit = {
 				OR = {
 				owns_state = 559
-				any_country = { is_subject_of = ROOT owns_state = 559 }
+				any_subject_country = { owns_state = 559 }
 				}
 				559 = {
 				NOT = {
@@ -14508,7 +14508,7 @@ country_event = {			# - Somaliland Event
 			limit = {
 				OR = {
 				owns_state = 844
-				any_country = { is_subject_of = ROOT owns_state = 844 }
+				any_subject_country = { owns_state = 844 }
 				}
 				844 = {
 				NOT = {
@@ -14556,7 +14556,7 @@ country_event = {			# - Somaliland Event
 			limit = {
 				OR = {
 				owns_state = 659
-				any_country = { is_subject_of = ROOT owns_state = 659 }
+				any_subject_country = { owns_state = 659 }
 				}
 				659 = {
 				NOT = {
@@ -14573,7 +14573,7 @@ country_event = {			# - Somaliland Event
 			limit = {
 				OR = {
 				owns_state = 906
-				any_country = { is_subject_of = ROOT owns_state = 906 }
+				any_subject_country = { owns_state = 906 }
 				}
 				906 = {
 				NOT = {
@@ -14641,7 +14641,7 @@ country_event = {			# - Vojvodina Event
 			limit = {
 				OR = {
 				owns_state = 45
-				any_country = { is_subject_of = ROOT owns_state = 45 }
+				any_subject_country = { owns_state = 45 }
 				}
 			}
 			CRO = { transfer_state = 45 }
@@ -14667,7 +14667,7 @@ country_event = {			# - Vojvodina Event
 			limit = {
 				OR = {
 				owns_state = 45
-				any_country = { is_subject_of = ROOT owns_state = 45 }
+				any_subject_country = { owns_state = 45 }
 				}
 			}
 			HUN = { transfer_state = 45 }
@@ -14686,7 +14686,7 @@ country_event = {			# - Vojvodina Event
 			limit = {
 				OR = {
 				owns_state = 45
-				any_country = { is_subject_of = ROOT owns_state = 45 }
+				any_subject_country = { owns_state = 45 }
 				}
 			}
 			YUG = { transfer_state = 45 }
@@ -14731,7 +14731,7 @@ country_event = {			# - Savoy Event
 			limit = {
 				OR = {
 				owns_state = 735
-				any_country = { is_subject_of = ROOT owns_state = 735 }
+				any_subject_country = { owns_state = 735 }
 				}
 			}
 			ITA = { transfer_state = 735 }
@@ -14749,7 +14749,7 @@ country_event = {			# - Savoy Event
 			limit = {
 				OR = {
 				owns_state = 735
-				any_country = { is_subject_of = ROOT owns_state = 735 }
+				any_subject_country = { owns_state = 735 }
 				}
 			}
 			FRA = { transfer_state = 735 }
@@ -14766,7 +14766,7 @@ country_event = {			# - Savoy Event
 			limit = {
 				OR = {
 				owns_state = 735
-				any_country = { is_subject_of = ROOT owns_state = 735 }
+				any_subject_country = { owns_state = 735 }
 				}
 			}
 			OCC = { transfer_state = 735 }
@@ -14810,7 +14810,7 @@ country_event = {			# - Sudetenland Event
 				tag = GER
 				OR = {
 				owns_state = 69
-				any_country = { is_subject_of = ROOT owns_state = 69 }
+				any_subject_country = { owns_state = 69 }
 				}
 			}
 			GER = { add_state_claim = 69 }
@@ -14820,7 +14820,7 @@ country_event = {			# - Sudetenland Event
 				tag = GER
 				OR = {
 				owns_state = 74
-				any_country = { is_subject_of = ROOT owns_state = 74 }
+				any_subject_country = { owns_state = 74 }
 				}
 			}
 			GER = { add_state_claim = 74 }
@@ -14947,7 +14947,7 @@ country_event = {			# - Sudetenland Event
 				CZE = { is_subject_of = ROOT }
 				OR = {
 				owns_state = 69
-				any_country = { is_subject_of = ROOT owns_state = 69 }
+				any_subject_country = { owns_state = 69 }
 				}
 			}
 			CZE = { transfer_state = 69 }
@@ -14958,7 +14958,7 @@ country_event = {			# - Sudetenland Event
 				CZE = { is_subject_of = ROOT }
 				OR = {
 				owns_state = 74
-				any_country = { is_subject_of = ROOT owns_state = 74 }
+				any_subject_country = { owns_state = 74 }
 				}
 			}
 			CZE = { transfer_state = 74 }
@@ -14982,7 +14982,7 @@ country_event = {			# - Sudetenland Event
 			limit = {
 				OR = {
 				owns_state = 69
-				any_country = { is_subject_of = ROOT owns_state = 69 }
+				any_subject_country = { owns_state = 69 }
 				}
 			}
 			CZE = { transfer_state = 69 }
@@ -14991,7 +14991,7 @@ country_event = {			# - Sudetenland Event
 			limit = {
 				OR = {
 				owns_state = 74
-				any_country = { is_subject_of = ROOT owns_state = 74 }
+				any_subject_country = { owns_state = 74 }
 				}
 			}
 			CZE = { transfer_state = 74 }
@@ -15110,7 +15110,7 @@ country_event = {			# - Kosovo Event
 			limit = {
 				OR = {
 				owns_state = 802
-				any_country = { is_subject_of = ROOT owns_state = 802 }
+				any_subject_country = { owns_state = 802 }
 				}
 			}
 			YUG = { transfer_state = 802 }
@@ -15168,7 +15168,7 @@ country_event = {			# - Kosovo Event
 			limit = {
 				OR = {
 				owns_state = 802
-				any_country = { is_subject_of = ROOT owns_state = 802 }
+				any_subject_country = { owns_state = 802 }
 				}
 			}
 			SER = { transfer_state = 802 }
@@ -15192,7 +15192,7 @@ country_event = {			# - Kosovo Event
 			limit = {
 				OR = {
 				owns_state = 802
-				any_country = { is_subject_of = ROOT owns_state = 802 }
+				any_subject_country = { owns_state = 802 }
 				}
 			}
 			ALB = { transfer_state = 802 }
@@ -15591,7 +15591,7 @@ country_event = {			# - Southern Slovakia
 			limit = {
 				OR = {
 				owns_state = 664
-				any_country = { is_subject_of = ROOT owns_state = 664 }
+				any_subject_country = { owns_state = 664 }
 				}
 			}
 			CZE = { transfer_state = 664 }
@@ -15607,7 +15607,7 @@ country_event = {			# - Southern Slovakia
 			limit = {
 				OR = {
 				owns_state = 664
-				any_country = { is_subject_of = ROOT owns_state = 664 }
+				any_subject_country = { owns_state = 664 }
 				}
 			}
 			SLO = { transfer_state = 664 }
@@ -15623,7 +15623,7 @@ country_event = {			# - Southern Slovakia
 			limit = {
 				OR = {
 				owns_state = 664
-				any_country = { is_subject_of = ROOT owns_state = 664 }
+				any_subject_country = { owns_state = 664 }
 				}
 			}
 			HUN = { transfer_state = 664 }
@@ -15854,7 +15854,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 76
-				any_country = { is_subject_of = ROOT owns_state = 76 }
+				any_subject_country = { owns_state = 76 }
 				}
 			}
 			ROM = { transfer_state = 76 }
@@ -15863,7 +15863,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 84
-				any_country = { is_subject_of = ROOT owns_state = 84 }
+				any_subject_country = { owns_state = 84 }
 				}
 			}
 			ROM = { transfer_state = 84 }
@@ -15872,7 +15872,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 83
-				any_country = { is_subject_of = ROOT owns_state = 83 }
+				any_subject_country = { owns_state = 83 }
 				}
 			}
 			ROM = { transfer_state = 83 }
@@ -15881,7 +15881,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 82
-				any_country = { is_subject_of = ROOT owns_state = 82 }
+				any_subject_country = { owns_state = 82 }
 				}
 			}
 			ROM = { transfer_state = 82 }
@@ -15897,7 +15897,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 76
-				any_country = { is_subject_of = ROOT owns_state = 76 }
+				any_subject_country = { owns_state = 76 }
 				}
 			}
 			HUN = { transfer_state = 76 }
@@ -15907,7 +15907,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 84
-				any_country = { is_subject_of = ROOT owns_state = 84 }
+				any_subject_country = { owns_state = 84 }
 				}
 			}
 			HUN = { transfer_state = 84 }
@@ -15917,7 +15917,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 83
-				any_country = { is_subject_of = ROOT owns_state = 83 }
+				any_subject_country = { owns_state = 83 }
 				}
 			}
 			HUN = { transfer_state = 83 }
@@ -15927,7 +15927,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 82
-				any_country = { is_subject_of = ROOT owns_state = 82 }
+				any_subject_country = { owns_state = 82 }
 				}
 			}
 			HUN = { transfer_state = 82 }
@@ -15967,7 +15967,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 76
-				any_country = { is_subject_of = ROOT owns_state = 76 }
+				any_subject_country = { owns_state = 76 }
 				}
 			}
 			HUN = { transfer_state = 76 }
@@ -15977,7 +15977,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 84
-				any_country = { is_subject_of = ROOT owns_state = 84 }
+				any_subject_country = { owns_state = 84 }
 				}
 			}
 			ROM = { transfer_state = 84 }
@@ -15986,7 +15986,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 83
-				any_country = { is_subject_of = ROOT owns_state = 83 }
+				any_subject_country = { owns_state = 83 }
 				}
 			}
 			ROM = { transfer_state = 83 }
@@ -15995,7 +15995,7 @@ country_event = {			# - Transylvania
 			limit = {
 				OR = {
 				owns_state = 82
-				any_country = { is_subject_of = ROOT owns_state = 82 }
+				any_subject_country = { owns_state = 82 }
 				}
 			}
 			ROM = { transfer_state = 82 }
@@ -16129,7 +16129,7 @@ country_event = {			# - Dobrudja
 			limit = {
 				OR = {
 				owns_state = 77
-				any_country = { is_subject_of = ROOT owns_state = 77 }
+				any_subject_country = { owns_state = 77 }
 				}
 			}
 			ROM = { transfer_state = 77 }
@@ -16203,7 +16203,7 @@ country_event = {			# - Dobrudja
 			limit = {
 				OR = {
 				owns_state = 77
-				any_country = { is_subject_of = ROOT owns_state = 77 }
+				any_subject_country = { owns_state = 77 }
 				}
 			}
 			BUL = { transfer_state = 77 }
@@ -16278,7 +16278,7 @@ country_event = {			# - Dobrudja
 			limit = {
 				OR = {
 				owns_state = 77
-				any_country = { is_subject_of = ROOT owns_state = 77 }
+				any_subject_country = { owns_state = 77 }
 				}
 			}
 			BUL = { transfer_state = 77 }
@@ -16333,7 +16333,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 184
-				any_country = { is_subject_of = ROOT owns_state = 184 }
+				any_subject_country = { owns_state = 184 }
 				}
 			}
 			GRE = { transfer_state = 184 }
@@ -16365,7 +16365,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 184
-				any_country = { is_subject_of = ROOT owns_state = 184 }
+				any_subject_country = { owns_state = 184 }
 				}
 			}
 			BUL = { transfer_state = 184 }
@@ -16400,7 +16400,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 184
-				any_country = { is_subject_of = ROOT owns_state = 184 }
+				any_subject_country = { owns_state = 184 }
 				}
 			}
 			BUL = { transfer_state = 184 }
@@ -16440,7 +16440,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 66
-					any_country = { is_subject_of = ROOT owns_state = 66 }
+					any_subject_country = { owns_state = 66 }
 					}
 				}
 				GER = { transfer_state = 66 }
@@ -16450,7 +16450,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 67
-					any_country = { is_subject_of = ROOT owns_state = 67 }
+					any_subject_country = { owns_state = 67 }
 					}
 				}
 				GER = { transfer_state = 67 }
@@ -16469,7 +16469,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 66
-					any_country = { is_subject_of = ROOT owns_state = 66 }
+					any_subject_country = { owns_state = 66 }
 					}
 				}
 				PRE = { transfer_state = 66 }
@@ -16479,7 +16479,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 67
-					any_country = { is_subject_of = ROOT owns_state = 67 }
+					any_subject_country = { owns_state = 67 }
 					}
 				}
 				PRE = { transfer_state = 67 }
@@ -16512,7 +16512,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 66
-					any_country = { is_subject_of = ROOT owns_state = 66 }
+					any_subject_country = { owns_state = 66 }
 					}
 				}
 				POL = { transfer_state = 66 }
@@ -16522,7 +16522,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 67
-					any_country = { is_subject_of = ROOT owns_state = 67 }
+					any_subject_country = { owns_state = 67 }
 					}
 				}
 				POL = { transfer_state = 67 }
@@ -16532,7 +16532,7 @@ country_event = {			# - Thrace
 				limit = {
 					OR = {
 					owns_state = 762
-					any_country = { is_subject_of = ROOT owns_state = 762 }
+					any_subject_country = { owns_state = 762 }
 					}
 				}
 				POL = { transfer_state = 762 }
@@ -16550,7 +16550,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 66
-				any_country = { is_subject_of = ROOT owns_state = 66 }
+				any_subject_country = { owns_state = 66 }
 				}
 			}
 			GER = { transfer_state = 66 }
@@ -16560,7 +16560,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 67
-				any_country = { is_subject_of = ROOT owns_state = 67 }
+				any_subject_country = { owns_state = 67 }
 				}
 			}
 			POL = { transfer_state = 67 }
@@ -16570,7 +16570,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 762
-				any_country = { is_subject_of = ROOT owns_state = 762 }
+				any_subject_country = { owns_state = 762 }
 				}
 			}
 			POL = { transfer_state = 762 }
@@ -16587,7 +16587,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 66
-				any_country = { is_subject_of = ROOT owns_state = 66 }
+				any_subject_country = { owns_state = 66 }
 				}
 			}
 			CZE = { transfer_state = 66 }
@@ -16597,7 +16597,7 @@ country_event = {			# - Thrace
 			limit = {
 				OR = {
 				owns_state = 67
-				any_country = { is_subject_of = ROOT owns_state = 67 }
+				any_subject_country = { owns_state = 67 }
 				}
 			}
 			CZE = { transfer_state = 67 }
@@ -16642,7 +16642,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 63
-				any_country = { is_subject_of = ROOT owns_state = 63 }
+				any_subject_country = { owns_state = 63 }
 				}
 			}
 			GER = { transfer_state = 63 }
@@ -16652,7 +16652,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 68
-				any_country = { is_subject_of = ROOT owns_state = 68 }
+				any_subject_country = { owns_state = 68 }
 				}
 			}
 			GER = { transfer_state = 68 }
@@ -16676,7 +16676,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 63
-				any_country = { is_subject_of = ROOT owns_state = 63 }
+				any_subject_country = { owns_state = 63 }
 				}
 			}
 			PRE = { transfer_state = 63 }
@@ -16686,7 +16686,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 68
-				any_country = { is_subject_of = ROOT owns_state = 68 }
+				any_subject_country = { owns_state = 68 }
 				}
 			}
 			PRE = { transfer_state = 68 }
@@ -16712,7 +16712,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 63
-				any_country = { is_subject_of = ROOT owns_state = 63 }
+				any_subject_country = { owns_state = 63 }
 				}
 			}
 			POL = { transfer_state = 63 }
@@ -16722,7 +16722,7 @@ country_event = {			#Pomerania
 			limit = {
 				OR = {
 				owns_state = 68
-				any_country = { is_subject_of = ROOT owns_state = 68 }
+				any_subject_country = { owns_state = 68 }
 				}
 			}
 			POL = { transfer_state = 68 }
@@ -16767,7 +16767,7 @@ country_event = {			#Koenigsberg
 				763 = { NOT = { OR = { is_core_of = ROOT is_claimed_by = ROOT } } }
 				OR = {
 				owns_state = 763
-				any_country = { is_subject_of = ROOT owns_state = 763 }
+				any_subject_country = { owns_state = 763 }
 				}
 			}
 			GER = { transfer_state = 763 }
@@ -16777,7 +16777,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 5
-				any_country = { is_subject_of = ROOT owns_state = 5 }
+				any_subject_country = { owns_state = 5 }
 				}
 			}
 			GER = { transfer_state = 5 }
@@ -16802,7 +16802,7 @@ country_event = {			#Koenigsberg
 				763 = { NOT = { OR = { is_core_of = ROOT is_claimed_by = ROOT } } }
 				OR = {
 				owns_state = 763
-				any_country = { is_subject_of = ROOT owns_state = 763 }
+				any_subject_country = { owns_state = 763 }
 				}
 			}
 			PRE = { transfer_state = 763 }
@@ -16812,7 +16812,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 5
-				any_country = { is_subject_of = ROOT owns_state = 5 }
+				any_subject_country = { owns_state = 5 }
 				}
 			}
 			PRE = { transfer_state = 5 }
@@ -16839,7 +16839,7 @@ country_event = {			#Koenigsberg
 				763 = { NOT = { OR = { is_core_of = ROOT is_claimed_by = ROOT } } }
 				OR = {
 				owns_state = 763
-				any_country = { is_subject_of = ROOT owns_state = 763 }
+				any_subject_country = { owns_state = 763 }
 				}
 			}
 			POL = { transfer_state = 763 }
@@ -16849,7 +16849,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 5
-				any_country = { is_subject_of = ROOT owns_state = 5 }
+				any_subject_country = { owns_state = 5 }
 				}
 			}
 			POL = { transfer_state = 5 }
@@ -16868,7 +16868,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 763
-				any_country = { is_subject_of = ROOT owns_state = 763 }
+				any_subject_country = { owns_state = 763 }
 				}
 			}
 			GER = { transfer_state = 763 }
@@ -16878,7 +16878,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 5
-				any_country = { is_subject_of = ROOT owns_state = 5 }
+				any_subject_country = { owns_state = 5 }
 				}
 			}
 			POL = { transfer_state = 5 }
@@ -16898,7 +16898,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 763
-				any_country = { is_subject_of = ROOT owns_state = 763 }
+				any_subject_country = { owns_state = 763 }
 				}
 			}
 			LIT = { transfer_state = 763 }
@@ -16908,7 +16908,7 @@ country_event = {			#Koenigsberg
 			limit = {
 				OR = {
 				owns_state = 5
-				any_country = { is_subject_of = ROOT owns_state = 5 }
+				any_subject_country = { owns_state = 5 }
 				}
 			}
 			POL = { transfer_state = 5 }
@@ -17044,15 +17044,15 @@ country_event = {			# - Actual Partition Event
 		trigger = {
 				OR = {
 				owns_state = 126
-				any_country = { is_subject_of = ROOT owns_state = 126 }
+				any_subject_country = { owns_state = 126 }
 				}
 				OR = {
 				owns_state = 121
-				any_country = { is_subject_of = ROOT owns_state = 121 }
+				any_subject_country = { owns_state = 121 }
 				}
 				OR = {
 				owns_state = 122
-				any_country = { is_subject_of = ROOT owns_state = 122 }
+				any_subject_country = { owns_state = 122 }
 				}
 		}
 		name = "Break up the United Kingdom"
@@ -17077,7 +17077,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 126
-				any_country = { is_subject_of = ROOT owns_state = 126 }
+				any_subject_country = { owns_state = 126 }
 				}
 			}
 			release_puppet = ENG
@@ -17097,7 +17097,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 122
-				any_country = { is_subject_of = ROOT owns_state = 122 }
+				any_subject_country = { owns_state = 122 }
 				}
 			}
 			WLS = { 
@@ -17120,7 +17120,7 @@ country_event = {			# - Actual Partition Event
 			limit = {
 				OR = {
 				owns_state = 121
-				any_country = { is_subject_of = ROOT owns_state = 121 }
+				any_subject_country = { owns_state = 121 }
 				}
 			}
 			SCO = { 
