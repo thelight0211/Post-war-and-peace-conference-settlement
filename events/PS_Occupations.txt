@@ -14348,6 +14348,21 @@ country_event = {			# - Dalmatia Event
 		trigger = {
 			ITA = { is_ally_with = ROOT }
 		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				ITA = { is_ally_with = ROOT }
+				ITA = { 
+					NOT = {
+						OR = {
+							owns_state = 736 
+							owns_state = 852
+						}
+					}
+				}
+			}
+		}
 		name = "Return Dalmatia to Italy"
 		IF = {
 			limit = {
@@ -14367,24 +14382,6 @@ country_event = {			# - Dalmatia Event
 			}
 			ITA = { transfer_state = 103 }
 		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 736
-				any_subject_country = { owns_state = 736 }
-				}
-			}
-			ITA = { transfer_state = 736 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				owns_state = 852
-				any_subject_country = { owns_state = 852 }
-				}
-			}
-			ITA = { transfer_state = 852 }
-		}
 	}
 
 	option = {
@@ -14395,7 +14392,22 @@ country_event = {			# - Dalmatia Event
 			CRO = { is_ally_with = ROOT }
 		}
 		name = "Split it between Italy and Croatia"
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				ITA = { is_ally_with = ROOT }
+				ITA = { 
+					NOT = {
+						OR = {
+							owns_state = 736 
+							owns_state = 852
+						}
+					}
+				}
+			}
+		}
+		nam
 		IF = {
 			limit = {
 				OR = {

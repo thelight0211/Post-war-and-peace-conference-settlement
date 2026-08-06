@@ -830,6 +830,39 @@ on_actions = {
 				ALB = { transfer_state = 950 }
 				ITA = { remove_state_claim = 950 }
 			}
+			# --- ITA claims when ALB does not exist & ITA owns Tirana (44) ---
+			if = {
+				limit = {
+					ITA = {
+						owns_state = 44
+						owns_state = 802
+					}
+					NOT = { ALB = { exists = yes } }
+				}
+				ITA = { add_state_claim = 802 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = road_to_56_is_active }
+					ITA = {
+						owns_state = 44
+						owns_state = 970
+					}
+					NOT = { ALB = { exists = yes } }
+				}
+				ITA = { add_state_claim = 970 }
+			}
+			if = {
+				limit = {
+					has_global_flag = road_to_56_is_active
+					ITA = {
+						owns_state = 44
+						owns_state = 950
+					}
+					NOT = { ALB = { exists = yes } }
+				}
+				ITA = { add_state_claim = 950 }
+			}
 
 			# ============================================================
 			# ALBANIA (ALB)
@@ -1734,34 +1767,9 @@ on_actions = {
 								state = 118
 								state = 177
 								state = 164
+								state = 970 
+								state = 802
 							}
-						}
-						OR = {
-							is_core_of = ALB
-							is_core_of = CRO
-							is_core_of = YUG
-							is_core_of = SOV
-							is_core_of = MNT
-							is_core_of = GRE
-							is_core_of = TUR
-							is_core_of = SYR
-							is_core_of = CYP
-							is_core_of = EGY
-							is_core_of = PAL
-							is_core_of = LEB
-							is_core_of = ALG
-							is_core_of = MOR
-							is_core_of = SPR
-							is_core_of = FRA
-							is_core_of = SPA
-							is_core_of = SOM
-							is_core_of = AFA
-							is_core_of = GIB
-							is_core_of = KEN
-							is_core_of = UGA
-							is_core_of = SUD
-							is_core_of = DEN
-							is_core_of = SAU
 						}
 					}
 					remove_claim_by = ITA

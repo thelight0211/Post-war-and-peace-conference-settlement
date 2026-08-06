@@ -6,6 +6,7 @@ return_core_category = {
 		priority = 999
 
 		visible = {
+			NOT = { has_country_flag = bureaucratic_cooldown }
 			is_in_faction = yes
 			NOT = { 
 				any_other_country = {
@@ -199,6 +200,7 @@ return_core_category = {
 		priority = 999
 
 		visible = {
+			NOT = { has_country_flag = bureaucratic_cooldown }
 			num_subjects > 0
 			NOT = { 
 				any_other_country = {
@@ -382,6 +384,7 @@ return_core_category = {
 		icon = generic_agreement
 		priority = 999
 		
+		visible = { NOT = { has_country_flag = bureaucratic_cooldown } }
 		target_trigger = {
 			FROM = {
 				is_subject_of = ROOT
