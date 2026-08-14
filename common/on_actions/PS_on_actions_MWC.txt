@@ -1153,6 +1153,10 @@ on_actions = {
 				limit = { YUG = { owns_state = 802 } }
 				YUG = { add_state_core = 802 }
 			}
+			if = {
+				limit = { 731 = { is_claimed_by = YUG } }
+				731 = { remove_claim_by = YUG }
+			}
 			# ============================================================
 			# ROMANIA (ROM)
 			# ============================================================

@@ -1,7 +1,6 @@
 on_actions = {
 	on_weekly = {
 		effect = {
-			ROOT = { country_event = { id = id.settlement.6  days = 1 } }
 			ROOT = { country_event = { id = id.settlement.8  days = 1 } }
 
 			ROOT = { country_event = { id = id.settlement.15 days = 1 } }

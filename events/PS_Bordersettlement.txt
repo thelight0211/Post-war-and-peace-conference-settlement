@@ -344,6 +344,41 @@
 					}
 					clr_state_flag = connected_via_con
 				}
+				# ex-id.settlement.6: marca stati connessi esclusivamente via soggetti/overlord
+				every_owned_state = {
+					limit = {
+						is_coastal = no
+						NOT = { is_in_home_area = no }
+						NOT = { has_state_flag = connected_via_con }
+						NOT = {
+							any_neighbor_state = {
+								is_coastal = yes
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								has_state_flag = connected_via_con
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								is_in_home_area = no
+								is_owned_by = ROOT
+							}
+						}
+						any_neighbor_state = {
+							owner = {
+								OR = {
+									is_subject_of = ROOT
+									has_subject = ROOT
+								}
+							}
+						}
+					}
+					set_state_flag = connected_via_con
+				}
 				set_country_flag = PS_calculated_delay
 			}
 
@@ -405,112 +440,9 @@
 
 	###########################################################################################################################
 
-	country_event = {															#subjects/overlord
-		id = id.settlement.6
-		fire_only_once = no
-		is_triggered_only = yes
-		hidden = yes
-
-		trigger = {
-			any_owned_state = {
-				is_coastal = no
-				NOT = {
-					is_in_home_area = no
-				}
-				NOT = {
-					has_state_flag = connected_via_con
-				}
-				NOT = {
-					any_neighbor_state = {
-						is_coastal = yes
-						is_owned_by = ROOT
-					}
-				}
-				NOT = {
-					any_neighbor_state = {
-						has_state_flag = connected_via_con
-						is_owned_by = ROOT
-					}
-				}
-				NOT = {
-					any_neighbor_state = {
-						is_in_home_area = no
-						is_owned_by = ROOT
-					}
-				}
-				any_neighbor_state = {
-					owner = {
-						OR = {
-							is_subject_of = ROOT
-							has_subject = ROOT
-						}
-					}
-				}
-			}
-		}
-
-		immediate = {
-			every_owned_state = {
-				limit = {
-					is_coastal = no
-					NOT = {
-						is_in_home_area = no
-					}
-					NOT = {
-						has_state_flag = connected_via_con
-					}
-					NOT = {
-						any_neighbor_state = {
-							is_coastal = yes
-							is_owned_by = ROOT
-						}
-					}
-					NOT = {
-						any_neighbor_state = {
-							has_state_flag = connected_via_con
-							is_owned_by = ROOT
-						}
-					}
-					NOT = {
-						any_neighbor_state = {
-							is_in_home_area = no
-							is_owned_by = ROOT
-						}
-					}
-					any_neighbor_state = {
-						owner = {
-							OR = {
-								is_subject_of = ROOT
-								has_subject = ROOT
-							}
-						}
-					}
-				}
-				set_state_flag = connected_via_con
-			}
-			if = {
-				limit = {
-					any_owned_state = {
-						is_fully_controlled_by = ROOT
-						NOT = {
-							is_in_home_area = no
-						}
-						NOT = {
-							has_state_flag = connected_via_con
-						}
-						any_neighbor_state = {
-							is_owned_by = ROOT
-							has_state_flag = connected_via_con
-						}
-					}
-				}
-				country_event = {
-					id = id.settlement.8
-					days = 1
-				}
-			}
-		}
-	}
+	# id.settlement.6 — RIMOSSO: logica fusa dentro id.settlement.8 (blocco inizializzazione)
+	# La marcatura degli stati connessi via soggetti/overlord ora avviene al primo step
+	# del flood-fill, prima di set_country_flag = PS_calculated_delay.
 		
 
 	country_event = {                                      #impassable capital

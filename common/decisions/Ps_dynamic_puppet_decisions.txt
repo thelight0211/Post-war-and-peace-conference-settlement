@@ -98,7 +98,12 @@ dynamic_puppet_category = {
 
 							AND = { FROM = { tag = AFA } }
 							
-							AND = { FROM = { tag = VIC } }
+							AND = { 
+								FROM = { 
+									tag = VIC 
+									is_subject = no
+								} 
+							}
 
 							AND = {
 								FROM = { tag = SIB }

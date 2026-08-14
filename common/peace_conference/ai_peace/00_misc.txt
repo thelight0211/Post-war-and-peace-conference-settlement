@@ -1,7 +1,3 @@
-# Scripted AI desire for peace actions.
-# Perfect Peace - Solo annexation system
-# Controlled + mild adjacent + faction losers + exclave protection + respect claims
-
 peace_ai_desires = {
 	take_our_cores = {
 		peace_action_type = { take_states }
@@ -11,8 +7,6 @@ peace_ai_desires = {
 		}
 		ai_desire = 100
 	}
-
-	# === TAKE WHAT YOU CONTROL ===
 	take_controlled = {
 		peace_action_type = take_states
 		enable = {
@@ -21,19 +15,27 @@ peace_ai_desires = {
 		}
 		ai_desire = 400
 	}
-
-	# === TAKE FROM ZERO-SCORE ALLIES ===
-	# Countries with 0 peace conference points (Olanda, Belgio, Grecia, etc.)
-	# cannot afford any peace actions. Their controlled states should be
-	# taken by active faction members with points (UK, URSS, USA)
+	take_faction_controlled = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_controlled_by = ROOT }
+				controller = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		ai_desire = 400
+	}
 	take_zero_score_allies = {
 		peace_action_type = take_states
 		enable = {
 			ROOT = { tag = ROOT.FROM }
 			ROOT.FROM.FROM.FROM = {
-				controller = { 
+				controller = {
 					is_in_faction_with = ROOT
-					pc_current_score = 0
+					pc_current_score < 100
 				}
 				NOT = { is_core_of = ROOT.FROM }
 				NOT = { is_claimed_by = ROOT.FROM }
@@ -41,42 +43,21 @@ peace_ai_desires = {
 		}
 		ai_desire = 1500
 	}
-	
 	major_secures_minor_controlled_land = {
-		peace_action_type = {
-			take_states
-		}
+		peace_action_type = { take_states }
 		enable = {
-			ROOT = {
-				tag = ROOT.FROM
-			}
-			ROOT = {
-				is_major = yes
-			}
-			FROM.FROM.FROM = {
-				NOT = {
-					any_country_with_core = {
-						pc_is_winner = yes
-					}
-				}
+			ROOT = { tag = ROOT.FROM }
+			ROOT = { is_major = yes }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_controlled_by = ROOT }
 				controller = {
 					is_in_faction_with = ROOT
 					is_major = no
-					PREV = {
-						NOT = {
-							is_core_of = PREV
-						}
-						NOT = {
-							is_claimed_by = PREV
-						}
-					}
 				}
 			}
 		}
 		ai_desire = 3000
 	}
-	
-	# === DON'T TAKE FROM NEUTRALS ===
 	not_at_war_with_owner = {
 		peace_action_type = { take_states liberate puppet force_government }
 		enable = {
@@ -84,8 +65,6 @@ peace_ai_desires = {
 		}
 		ai_desire = -1000
 	}
-
-	# === RESPECT INFLUENCE ZONES (only for non-capitulated) ===
 	generic_influence_cutoff = {
 		peace_action_type = { take_states puppet force_government liberate }
 		enable = {
@@ -114,7 +93,6 @@ peace_ai_desires = {
 		}
 		ai_desire = -1000
 	}
-
 	doesnt_control_no_claim = {
 		peace_action_type = { take_states }
 		enable = {
@@ -128,21 +106,6 @@ peace_ai_desires = {
 		ai_desire = -20
 	}
 
-	# === DONT GRAB CONTROLLED EXCLAVES ===
-	dont_take_controlled_exclaves = {
-		peace_action_type = take_states
-		enable = {
-			ROOT = { tag = ROOT.FROM }
-			ROOT.FROM.FROM.FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT.FROM }
-				NOT = { is_claimed_by = ROOT.FROM }
-				NOT = { any_neighbor_state = { is_owned_by = ROOT.FROM } }
-			}
-		}
-		ai_desire = -2000
-	}
-
 	generic_occupies_state = {
 		peace_action_type = { take_states puppet liberate force_government }
 		enable = {
@@ -150,8 +113,6 @@ peace_ai_desires = {
 		}
 		ai_desire = -10
 	}
-
-	# === BLOCK ALL NON-STATE ACTIONS ===
 	do_not_puppet_liberate_or_force_government = {
 		peace_action_type = { puppet liberate force_government }
 		enable = {
@@ -159,8 +120,6 @@ peace_ai_desires = {
 		}
 		ai_desire = -9999
 	}
-
-	# === FINISH CAPITULATED ENEMIES - controlled ===
 	finish_capitulated_controlled = {
 		peace_action_type = take_states
 		enable = {
@@ -170,21 +129,15 @@ peace_ai_desires = {
 		}
 		ai_desire = 2000
 	}
-
-	# === FINISH CAPITULATED ENEMIES - adjacent ===
 	finish_capitulated_adjacent = {
 		peace_action_type = take_states
 		enable = {
 			ROOT = { tag = ROOT.FROM }
 			ROOT.FROM.FROM = { has_capitulated = yes }
-			ROOT.FROM.FROM.FROM = {
-				any_neighbor_state = { is_owned_by = ROOT.FROM }
-			}
+			ROOT.FROM.FROM.FROM = { any_neighbor_state = { is_owned_by = ROOT.FROM } }
 		}
 		ai_desire = 500
 	}
-
-	# === FINISH FACTION LOSERS (Hungary, Denmark) - controlled ===
 	finish_faction_losers_controlled = {
 		peace_action_type = take_states
 		enable = {
@@ -198,16 +151,12 @@ peace_ai_desires = {
 		}
 		ai_desire = 2000
 	}
-
-	# === FINISH FACTION LOSERS (Hungary, Denmark) - adjacent ===
 	finish_faction_losers_adjacent = {
 		peace_action_type = take_states
 		enable = {
 			ROOT = { tag = ROOT.FROM }
 			ROOT.FROM.FROM = { has_capitulated = no }
-			ROOT.FROM.FROM.FROM = {
-				any_neighbor_state = { is_owned_by = ROOT.FROM }
-			}
+			ROOT.FROM.FROM.FROM = { any_neighbor_state = { is_owned_by = ROOT.FROM } }
 			any_country = {
 				has_capitulated = yes
 				ROOT.FROM.FROM = { is_in_faction_with = PREV }
@@ -215,8 +164,6 @@ peace_ai_desires = {
 		}
 		ai_desire = 1200
 	}
-
-	# === RESPECT OTHER WINNERS' CORES AND CLAIMS ===
 	respect_other_winner_claims = {
 		peace_action_type = take_states
 		enable = {
@@ -234,6 +181,232 @@ peace_ai_desires = {
 				}
 			}
 		}
-		ai_desire = -2000
+		ai_desire = -4000
+	}
+	block_uncontrolled_landgrab = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { is_claimed_by = ROOT.FROM }
+				NOT = { is_controlled_by = ROOT.FROM }
+				NOT = { any_neighbor_state = { is_owned_by = ROOT.FROM } }
+				NOT = { controller = { pc_is_winner = yes } }
+			}
+			NOT = {
+				ROOT.FROM.FROM = {
+					any_owned_state = { is_controlled_by = ROOT }
+				}
+			}
+			ROOT.FROM.FROM = {
+				any_owned_state = {
+					controller = {
+						pc_is_winner = yes
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+		}
+		ai_desire = -4000
+	}
+	block_rival_controlled_state = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { is_claimed_by = ROOT.FROM }
+				NOT = { is_controlled_by = ROOT.FROM }
+				controller = {
+					pc_is_winner = yes
+					NOT = { is_in_faction_with = ROOT }
+					save_event_target_as = current_rival
+				}
+			}
+			NOT = {
+				ROOT.FROM.FROM = {
+					is_major = no
+					any_owned_state = {
+						OR = {
+							any_country = {
+								OR = { tag = ROOT is_in_faction_with = ROOT }
+								PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+							}
+							any_neighbor_state = {
+								any_country = {
+									OR = { tag = ROOT is_in_faction_with = ROOT }
+									PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+								}
+							}
+						}
+					}
+					NOT = {
+						any_owned_state = {
+							OR = {
+								any_country = {
+									OR = { tag = event_target:current_rival is_in_faction_with = event_target:current_rival }
+									PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+								}
+								any_neighbor_state = {
+									any_country = {
+										OR = { tag = event_target:current_rival is_in_faction_with = event_target:current_rival }
+										PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_desire = -10000
+	}
+	block_isolated_exclave_rival_capital = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = {
+				OR = {
+					is_controlled_by = ROOT
+					controller = { is_in_faction_with = ROOT }
+				}
+				NOT = { is_core_of = ROOT.FROM }
+				NOT = { is_claimed_by = ROOT.FROM }
+			}
+			NOT = {
+				ROOT.FROM.FROM = {
+					any_owned_state = {
+						is_capital = yes
+						OR = {
+							is_controlled_by = ROOT
+							controller = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+			}
+			NOT = {
+				ROOT.FROM.FROM = {
+					any_owned_state = {
+						OR = {
+							is_controlled_by = ROOT
+							controller = { is_in_faction_with = ROOT }
+						}
+						any_neighbor_state = {
+							OR = {
+								is_core_of = ROOT
+								any_country = {
+									is_in_faction_with = ROOT
+									NOT = { tag = ROOT }
+									PREV = {
+										is_core_of = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_desire = -10000
+	}
+	block_taking_other_faction_cores = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = { NOT = { is_controlled_by = ROOT } }
+			ROOT.FROM.FROM.FROM = { NOT = { is_core_of = ROOT } }
+			ROOT.FROM.FROM.FROM = { NOT = { is_claimed_by = ROOT } }
+			any_country = {
+				NOT = { is_in_faction_with = ROOT }
+				OR = {
+					pc_is_winner = yes
+					any_other_country = {
+						pc_is_winner = yes
+						PREV = { is_in_faction_with = PREV }
+					}
+				}
+				ROOT.FROM.FROM.FROM = { is_core_of = PREV }
+			}
+		}
+		ai_desire = -10000
+	}
+	secure_monopoly_sphere = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT.FROM.FROM = { has_capitulated = yes }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_controlled_by = ROOT }
+				controller = {
+					pc_is_winner = yes
+					NOT = { is_in_faction_with = ROOT }
+					save_event_target_as = current_rival
+				}
+			}
+			ROOT.FROM.FROM = {
+				is_major = no
+				any_owned_state = {
+					OR = {
+						any_country = {
+							OR = { tag = ROOT is_in_faction_with = ROOT }
+							PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+						}
+						any_neighbor_state = {
+							any_country = {
+								OR = { tag = ROOT is_in_faction_with = ROOT }
+								PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+							}
+						}
+					}
+				}
+				NOT = {
+					any_owned_state = {
+						OR = {
+							any_country = {
+								OR = { tag = event_target:current_rival is_in_faction_with = event_target:current_rival }
+								PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+							}
+							any_neighbor_state = {
+								any_country = {
+									OR = { tag = event_target:current_rival is_in_faction_with = event_target:current_rival }
+									PREV = { OR = { is_core_of = PREV is_owned_by = PREV } }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_desire = 5000
+	}
+	major_secures_ally_cores = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = { is_major = yes }
+			ROOT.FROM = { is_in_faction_with = ROOT }
+			ROOT.FROM.FROM.FROM = { is_core_of = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = {
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+		ai_desire = 3000
+	}
+	secure_neutral_ally_core = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = { tag = ROOT.FROM }
+			ROOT = { is_major = yes }
+			any_country = {
+				is_in_faction_with = ROOT
+				NOT = { tag = ROOT }
+				NOT = { pc_is_winner = yes }
+				ROOT.FROM.FROM.FROM = { is_core_of = PREV }
+			}
+		}
+		ai_desire = 3000
 	}
 }

@@ -1,5 +1,6 @@
 ﻿l_english:
  germany_rk_category: "Return Territories to Reichskommissariats"
+ rk_territory_return_category_desc: "Manage the administration of occupied territories by transferring them to our established civil governments."
  return_territory_to_gen: "Return territory to [FROM.GetNameDef]"
  return_territory_to_gen_desc: "Transfer all historically assigned territories currently under our control to the administration of [FROM.GetNameDef]."
  return_territory_to_raa: "Return territory to [FROM.GetNameDef]"
