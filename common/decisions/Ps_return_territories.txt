@@ -32,7 +32,6 @@ return_core_category = {
 				}
 				OR = {
 					is_coastal = yes
-					has_state_flag = connected_via_con
 					any_neighbor_state = {
 						is_owned_by = FROM
 						NOT = {
@@ -227,7 +226,6 @@ return_core_category = {
 				}
 				OR = {
 					is_coastal = yes
-					has_state_flag = connected_via_con
 					any_neighbor_state = {
 						is_owned_by = FROM
 						NOT = {
@@ -373,7 +371,7 @@ return_core_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision return_cores_to_ally target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision return_cores_to_subject target: [From.GetName]"
 			set_country_flag = KR_returning_land
 			FROM = { save_event_target_as = return_to }
 			country_event = { id = kr.political.75 days = 1 }
@@ -385,6 +383,12 @@ return_core_category = {
 		priority = 999
 		
 		visible = { NOT = { has_country_flag = bureaucratic_cooldown } }
+		
+		target_root_trigger = {
+			num_subjects > 0
+		}
+		target_array = subjects
+		
 		target_trigger = {
 			FROM = {
 				is_subject_of = ROOT

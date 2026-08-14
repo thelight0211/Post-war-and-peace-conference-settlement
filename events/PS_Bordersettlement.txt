@@ -933,7 +933,7 @@
 
 	country_event = {
 		id = id.settlement.5
-		fire_only_once = yes
+		fire_only_once = no
 		is_triggered_only = yes
 		hidden = yes
 

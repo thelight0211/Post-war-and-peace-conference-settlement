@@ -5060,6 +5060,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 		}
 	}
@@ -5120,53 +5121,6 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
-		}
-	}
-	option = {
-		##ZHILI CLIQUE
-		name = "Establish a Military Mandate of China."
-		trigger = {
-			original_tag = ZHI
-		}
-		ai_chance = {
-			factor = 100
-		}
-		KOR = { set_cosmetic_tag = KOR_ZHI }
-		every_state = {
-			limit = {
-				is_core_of = KOR
-				OR = {
-					is_fully_controlled_by = ROOT
-					AND = {
-						owner = { 
-							is_subject_of = ROOT 
-							NOT = { is_colony_or_reickskommissariat = yes }
-						}
-						NOT = {
-							owner = {
-								capital_scope = {
-									is_core_of = KOR
-								}
-							}
-						}
-					}
-				}
-				NOT = { is_core_of = ROOT }
-			}
-			KOR = { transfer_state = PREV }
-		}
-		puppet = KOR
-		KOR = {
-			if = { 
-				limit = {
-					has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
-				}
-				load_focus_tree = generic_focus
-				remove_all_ideas = yes
-			}
-			drop_cosmetic_tag = yes
-			remove_all_claims = yes
-
 		}
 	}
 	option = {
@@ -5411,6 +5365,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -11616,9 +11571,19 @@ country_event = {
 				NOT = { is_core_of = ROOT }
 				NOT = { is_claimed_by = ROOT }
 				NOT = { has_state_flag = dec_later }
+				NOT = { has_state_flag = not_core_of_RNG }
 			}
 			RNG = { transfer_state = PREV }
-			add_core_of = RNG
+		}
+		every_state = {
+			limit = {
+				is_core_of = CHI
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+				NOT = { has_state_flag = not_core_of_RNG }
+			}
+			RNG = { add_state_core = PREV }
 		}
 		puppet = RNG
 		RNG = {
@@ -11791,6 +11756,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -11929,8 +11895,19 @@ country_event = {
 				}
 			}
 			YUN = { transfer_state = 603 }
-			YUN = { add_state_core = 603 }
 		}
+		YUN = { add_state_core = 603 }
+		IF = {
+			limit = {
+				OR = {
+				controls_state = 748
+				748 = { owner = { is_subject_of = ROOT } } 
+				}
+			}
+			YUN = { transfer_state = 748 }
+		}
+		YUN = { add_state_core = 748 }
+
 		every_state = {
 			limit = {
 				is_core_of = YUN
@@ -11976,6 +11953,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -11997,8 +11975,18 @@ country_event = {
 				}
 			}
 			YUN = { transfer_state = 603 }
-			YUN = { add_state_core = 603 }
 		}
+		YUN = { add_state_core = 603 }
+		IF = {
+			limit = {
+				OR = {
+				controls_state = 748
+				748 = { owner = { is_subject_of = ROOT } } 
+				}
+			}
+			YUN = { transfer_state = 748 }
+		}
+		YUN = { add_state_core = 748 }
 		every_state = {
 			limit = {
 				is_core_of = YUN
@@ -12065,6 +12053,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GXC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12090,6 +12079,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GDC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12117,7 +12107,6 @@ country_event = {
 		trigger = {
 			original_tag = JAP
 			NOT = { has_government = communism }
-
 		}
 		name = "Release Guangxi"
 			ai_chance = {
@@ -12127,6 +12116,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GXC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12152,6 +12142,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GDC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12195,6 +12186,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -12211,6 +12203,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GXC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12236,6 +12229,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GDC
+				region = 248
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12299,6 +12293,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = XSM
+				region = 200
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12337,13 +12332,13 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = XSM
+				region = 200
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
 							NOT = { is_colony_or_reickskommissariat = yes }
-							NOT = { tag = MEN }
 						}
 						NOT = {
 							owner = {
@@ -12363,13 +12358,13 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GSM
+				region = 144
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
 							NOT = { is_colony_or_reickskommissariat = yes }
-							NOT = { tag = MEN }
 						}
 						NOT = {
 							owner = {
@@ -12385,19 +12380,27 @@ country_event = {
 				NOT = { has_state_flag = dec_later }				
 			}
 			XSM = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = GSM
+				region = 144
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
+			}
 			XSM = { add_state_core = PREV }
 		}
 		every_state = {
 			limit = {
 				is_core_of = NXM
-				
+				region = 144
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
 						owner = { 
 							is_subject_of = ROOT 
 							NOT = { is_colony_or_reickskommissariat = yes }
-							NOT = { tag = MEN }
 						}
 						NOT = {
 							owner = {
@@ -12413,6 +12416,15 @@ country_event = {
 				NOT = { has_state_flag = dec_later }				
 			}
 			XSM = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = NXM
+				region = 144
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
+			}
 			XSM = { add_state_core = PREV }
 		}
 		puppet = XSM
@@ -12435,6 +12447,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -12447,6 +12460,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = XSM
+				region = 200
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12472,6 +12486,7 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = GSM
+				region = 144
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12493,11 +12508,21 @@ country_event = {
 				NOT = { has_state_flag = dec_later }				
 			}
 			XSM = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = GSM
+				region = 144
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
+			}
 			XSM = { add_state_core = PREV }
 		}
 		every_state = {
 			limit = {
 				is_core_of = NXM
+				region = 144
 				OR = {
 					is_fully_controlled_by = ROOT
 					AND = {
@@ -12519,6 +12544,15 @@ country_event = {
 				NOT = { has_state_flag = dec_later }				
 			}
 			XSM = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = NXM
+				region = 144
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
+			}
 			XSM = { add_state_core = PREV }
 		}
 		puppet = XSM
@@ -12597,98 +12631,16 @@ country_event = {
 			base = 100
 			factor = 100
 		}
-		IF = {
+		every_state = {
 			limit = {
-				OR = {
-				controls_state = 622
-				622 = { owner = { is_subject_of = ROOT } } 
-				}
+				region = 245
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
 			}
-			SHX = { transfer_state = 622 }
-			SHX = { add_state_core = 622 }
+			SHX = { add_state_core = PREV }
 		}
-		IF = {
-			limit = {
-				OR = {
-				controls_state = 744
-				744 = { owner = { is_subject_of = ROOT } } 
-				}
-			}
-			SHX = { transfer_state = 744 }
-			SHX = { add_state_core = 744 }
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = road_to_56_is_active
-				}
-				OR = {
-					controls_state = 1032
-					1032 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1032
-				add_state_core = 1032
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = road_to_56_is_active
-				OR = {
-					controls_state = 1111
-					1111 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1111
-				add_state_core = 1111
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = road_to_56_is_active
-				}
-				OR = {
-					controls_state = 1046
-					1046 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1046
-				add_state_core = 1046
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = road_to_56_is_active
-				OR = {
-					controls_state = 1125
-					1125 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1125
-				add_state_core = 1125
-			}
-		}
+		SHX = { add_state_core = 744 }
 		every_state = {
 			limit = {
 				is_core_of = SHX
@@ -12898,6 +12850,7 @@ country_event = {
 					}
 				}
 				remove_core_of = RNG
+				set_state_flag = not_core_of_RNG
 			}
 		}
 		every_state = {
@@ -12908,6 +12861,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			set_state_flag = not_core_of_RNG
 		}
 	}
 	option = {
@@ -12921,120 +12875,16 @@ country_event = {
 				factor = 0
 			}
 		name = "Release Shanxi"
-		IF = {
+		every_state = {
 			limit = {
-				OR = {
-				controls_state = 621
-				621 = { owner = { is_subject_of = ROOT } } 
-				}
-				MEN = { exists = yes }
-				MEN = { is_subject_of = ROOT }
+				region = 245
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }				
 			}
-			MEN = { transfer_state = 621 }
+			SHX = { add_state_core = PREV }
 		}
-		IF = {
-			limit = {
-				OR = {
-				controls_state = 746
-				746 = { owner = { is_subject_of = ROOT } } 
-				}
-				MEN = { exists = yes }
-				MEN = { is_subject_of = ROOT }
-			}
-			MEN = { transfer_state = 746 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				controls_state = 622
-				622 = { owner = { is_subject_of = ROOT } } 
-				}
-			}
-			SHX = { transfer_state = 622 }
-			SHX = { add_state_core = 622 }
-		}
-		IF = {
-			limit = {
-				OR = {
-				controls_state = 744
-				744 = { owner = { is_subject_of = ROOT } } 
-				}
-			}
-			SHX = { transfer_state = 744 }
-			SHX = { add_state_core = 744 }
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = road_to_56_is_active
-				}
-				OR = {
-					controls_state = 1046
-					1046 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1046
-				add_state_core = 1046
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = road_to_56_is_active
-				OR = {
-					controls_state = 1125
-					1125 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1125
-				add_state_core = 1125
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = road_to_56_is_active
-				}
-				OR = {
-					controls_state = 1032
-					1032 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1032
-				add_state_core = 1032
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = road_to_56_is_active
-				OR = {
-					controls_state = 1111
-					1111 = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			SHX = {
-				transfer_state = 1111
-				add_state_core = 1111
-			}
-		}
+		SHX = { add_state_core = 744 }
 		every_state = {
 			limit = {
 				is_core_of = SHX
