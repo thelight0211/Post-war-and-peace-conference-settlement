@@ -98,6 +98,13 @@ on_actions = {
 					}
 				}
 			}
+
+
+
+			ITA = { add_state_core = 163 }
+			ENG = { add_state_claim = 332 }
+			ENG = { add_state_claim = 331 }
+			ENG = { add_state_claim = 326 }
 		}
 	}
 		
@@ -328,6 +335,9 @@ on_actions = {
 						NOT = {
 							has_country_flag = defeated_leader_retired_flag
 						}
+						NOT = {
+							has_civil_war = yes
+						}
 					}
 					every_character = {
 						limit = {
@@ -479,6 +489,15 @@ on_actions = {
 			set_country_flag = {
 				flag = bureaucratic_cooldown
 				days = 7
+				value = 1
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			set_country_flag = {
+				flag = bureaucratic_cooldown_short
+				days = 3
 				value = 1
 			}
 		}

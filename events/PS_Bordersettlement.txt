@@ -8,6 +8,7 @@
 		hidden = yes
 
 		trigger = {
+			has_civil_war = no
 			surrender_progress < 0.001
 			has_capitulated = no
 			NOT = {
@@ -330,6 +331,10 @@
 		fire_only_once = no
 		is_triggered_only = yes
 		hidden = yes
+
+		trigger = {
+			has_civil_war = no
+		}
 
 		immediate = {
 			if = {

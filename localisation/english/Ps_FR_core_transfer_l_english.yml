@@ -3,6 +3,7 @@
  kr.political.75.t:0 "The [From.From.GetAdjective] Lands"
  kr.political.75.d:0 "The [Root.GetAdjective] government has been discussing what to do with the [return_to.GetAdjective] lands we currently occupy - land which we have no rightful claim to. Should we return this land to them?"
  kr.political.75.a:0 "Yes, return all land to them"
+ returned_cores_autonomy_tt:0 "Because we are returning territory to an ally's subject, §Y[return_to.GetNameDef]§! will gradually gain §G[?autonomy_to_add|0]§! autonomy points and §Y[?pp_to_add|0]§! political power over the next few months."
  KR_will_return_all:0 "All coastal or contiguous owned states which are [return_to.GetAdjective] cores or claims will be returned to §Y[return_to.GetNameDef]§!.\n\nNote this will §Rnot§! include states that are [Root.GetAdjective] §Yclaimed§! or §Ycore§! states."
  kr.political.75.b:0 "Yes, return land to them... but keep the most vital states"
  KR_will_return_rest:0 "All coastal or contiguous owned states which are [return_to.GetAdjective] cores or claims will be returned to §Y[return_to.GetNameDef]§!.\n\nNote this will §Rnot§! include states that are [Root.GetAdjective] §Yclaimed§! or §Ycore§! states, nor will it include §Yvital§! states such as canals."

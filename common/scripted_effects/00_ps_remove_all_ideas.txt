@@ -1,70 +1,5 @@
+# remove all ideas
 remove_all_ideas_chunk_1 = {
-	if = {
-		limit = {
-			has_idea = ABDA_corps_expeditionnaire_spirit
-		}
-		remove_ideas = ABDA_corps_expeditionnaire_spirit
-	}
-	if = {
-		limit = {
-			has_idea = ABDA_maintain_strategic_flexibility_spirit
-		}
-		remove_ideas = ABDA_maintain_strategic_flexibility_spirit
-	}
-	if = {
-		limit = {
-			has_idea = ADU_aa2
-		}
-		remove_ideas = ADU_aa2
-	}
-	if = {
-		limit = {
-			has_idea = ADU_acas
-		}
-		remove_ideas = ADU_acas
-	}
-	if = {
-		limit = {
-			has_idea = ADU_acd2
-		}
-		remove_ideas = ADU_acd2
-	}
-	if = {
-		limit = {
-			has_idea = ADU_acgs
-		}
-		remove_ideas = ADU_acgs
-	}
-	if = {
-		limit = {
-			has_idea = ADU_aco2
-		}
-		remove_ideas = ADU_aco2
-	}
-	if = {
-		limit = {
-			has_idea = ADU_acr
-		}
-		remove_ideas = ADU_acr
-	}
-	if = {
-		limit = {
-			has_idea = ADU_ai2
-		}
-		remove_ideas = ADU_ai2
-	}
-	if = {
-		limit = {
-			has_idea = ADU_ar
-		}
-		remove_ideas = ADU_ar
-	}
-	if = {
-		limit = {
-			has_idea = ADU_awt
-		}
-		remove_ideas = ADU_awt
-	}
 	if = {
 		limit = {
 			has_idea = ADU_coi
@@ -91,36 +26,6 @@ remove_all_ideas_chunk_1 = {
 	}
 	if = {
 		limit = {
-			has_idea = ADU_mt
-		}
-		remove_ideas = ADU_mt
-	}
-	if = {
-		limit = {
-			has_idea = ADU_nccr
-		}
-		remove_ideas = ADU_nccr
-	}
-	if = {
-		limit = {
-			has_idea = ADU_ncm
-		}
-		remove_ideas = ADU_ncm
-	}
-	if = {
-		limit = {
-			has_idea = ADU_ncs
-		}
-		remove_ideas = ADU_ncs
-	}
-	if = {
-		limit = {
-			has_idea = ADU_nt
-		}
-		remove_ideas = ADU_nt
-	}
-	if = {
-		limit = {
 			has_idea = ADU_pot
 		}
 		remove_ideas = ADU_pot
@@ -130,12 +35,6 @@ remove_all_ideas_chunk_1 = {
 			has_idea = ADU_stc
 		}
 		remove_ideas = ADU_stc
-	}
-	if = {
-		limit = {
-			has_idea = AFG
-		}
-		remove_ideas = AFG
 	}
 	if = {
 		limit = {
@@ -538,12 +437,6 @@ remove_all_ideas_chunk_1 = {
 			has_idea = AOI_africa_orientale_italiana_idea
 		}
 		remove_ideas = AOI_africa_orientale_italiana_idea
-	}
-	if = {
-		limit = {
-			has_idea = ARG
-		}
-		remove_ideas = ARG
 	}
 	if = {
 		limit = {
@@ -1018,36 +911,6 @@ remove_all_ideas_chunk_2 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_IRE_out_of_the_den_idea
-		}
-		remove_ideas = AST_IRE_out_of_the_den_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_IRE_stationed_troops_idea
-		}
-		remove_ideas = AST_IRE_stationed_troops_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_TAOG_central_bureau
-		}
-		remove_ideas = AST_TAOG_central_bureau
-	}
-	if = {
-		limit = {
-			has_idea = AST_a_sense_of_place
-		}
-		remove_ideas = AST_a_sense_of_place
-	}
-	if = {
-		limit = {
-			has_idea = AST_a_sense_of_place_upgraded
-		}
-		remove_ideas = AST_a_sense_of_place_upgraded
-	}
-	if = {
-		limit = {
 			has_idea = AST_abandon_the_westminster_system
 		}
 		remove_ideas = AST_abandon_the_westminster_system
@@ -1066,27 +929,9 @@ remove_all_ideas_chunk_2 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_all_dressed_up_idea
-		}
-		remove_ideas = AST_all_dressed_up_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_all_in
 		}
 		remove_ideas = AST_all_in
-	}
-	if = {
-		limit = {
-			has_idea = AST_american_car_and_foundry_organization_idea
-		}
-		remove_ideas = AST_american_car_and_foundry_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_anti_fascist_measures
-		}
-		remove_ideas = AST_anti_fascist_measures
 	}
 	if = {
 		limit = {
@@ -1102,99 +947,9 @@ remove_all_ideas_chunk_2 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_australian_comforts_fund_idea
-		}
-		remove_ideas = AST_australian_comforts_fund_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_australian_culture_investments_idea
-		}
-		remove_ideas = AST_australian_culture_investments_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_australian_war_cabinet_idea
-		}
-		remove_ideas = AST_australian_war_cabinet_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_australian_war_cabinet_war_idea
-		}
-		remove_ideas = AST_australian_war_cabinet_war_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_australian_womens_army_service
 		}
 		remove_ideas = AST_australian_womens_army_service
-	}
-	if = {
-		limit = {
-			has_idea = AST_bradford_cotton_mills_ic
-		}
-		remove_ideas = AST_bradford_cotton_mills_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_bradford_cotton_mills_improved_ic
-		}
-		remove_ideas = AST_bradford_cotton_mills_improved_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_british_intel_sharing
-		}
-		remove_ideas = AST_british_intel_sharing
-	}
-	if = {
-		limit = {
-			has_idea = AST_british_military_construction_aid_idea
-		}
-		remove_ideas = AST_british_military_construction_aid_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_broken_hill_proprietary_company_ic
-		}
-		remove_ideas = AST_broken_hill_proprietary_company_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_broken_hill_proprietary_company_improved_ic
-		}
-		remove_ideas = AST_broken_hill_proprietary_company_improved_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_cabinet_trust_state_1_idea
-		}
-		remove_ideas = AST_cabinet_trust_state_1_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_cabinet_trust_state_2_idea
-		}
-		remove_ideas = AST_cabinet_trust_state_2_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_cabinet_trust_state_3_idea
-		}
-		remove_ideas = AST_cabinet_trust_state_3_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_cabinet_trust_state_4_idea
-		}
-		remove_ideas = AST_cabinet_trust_state_4_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_cabinet_trust_state_5_idea
-		}
-		remove_ideas = AST_cabinet_trust_state_5_idea
 	}
 	if = {
 		limit = {
@@ -1205,12 +960,6 @@ remove_all_ideas_chunk_2 = {
 }
 
 remove_all_ideas_chunk_3 = {
-	if = {
-		limit = {
-			has_idea = AST_citizen_army_spirit_fake
-		}
-		remove_ideas = AST_citizen_army_spirit_fake
-	}
 	if = {
 		limit = {
 			has_idea = AST_citizen_military_forces
@@ -1225,57 +974,9 @@ remove_all_ideas_chunk_3 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_cockatoo_docks_organization_idea
-		}
-		remove_ideas = AST_cockatoo_docks_organization_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_commonwealth_aircraft_corporation
 		}
 		remove_ideas = AST_commonwealth_aircraft_corporation
-	}
-	if = {
-		limit = {
-			has_idea = AST_commonwealth_aircraft_corporation_organization_idea
-		}
-		remove_ideas = AST_commonwealth_aircraft_corporation_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_communist_ideals
-		}
-		remove_ideas = AST_communist_ideals
-	}
-	if = {
-		limit = {
-			has_idea = AST_country_party_influence_alp
-		}
-		remove_ideas = AST_country_party_influence_alp
-	}
-	if = {
-		limit = {
-			has_idea = AST_country_party_influence_uap
-		}
-		remove_ideas = AST_country_party_influence_uap
-	}
-	if = {
-		limit = {
-			has_idea = AST_cruising_for_a_bruising_idea
-		}
-		remove_ideas = AST_cruising_for_a_bruising_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_de_havilland_australia_organization_idea
-		}
-		remove_ideas = AST_de_havilland_australia_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_defying_american_interference_idea
-		}
-		remove_ideas = AST_defying_american_interference_idea
 	}
 	if = {
 		limit = {
@@ -1285,63 +986,9 @@ remove_all_ideas_chunk_3 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_election_campaign_pp_cost_hidden_idea
-		}
-		remove_ideas = AST_election_campaign_pp_cost_hidden_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_electrical_engineer_hidden_idea
-		}
-		remove_ideas = AST_electrical_engineer_hidden_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_empire_air_training_scheme
 		}
 		remove_ideas = AST_empire_air_training_scheme
-	}
-	if = {
-		limit = {
-			has_idea = AST_evan_deakin_and_company_organization_idea
-		}
-		remove_ideas = AST_evan_deakin_and_company_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_faction_training_initiative_idea_1
-		}
-		remove_ideas = AST_faction_training_initiative_idea_1
-	}
-	if = {
-		limit = {
-			has_idea = AST_faction_training_initiative_idea_2
-		}
-		remove_ideas = AST_faction_training_initiative_idea_2
-	}
-	if = {
-		limit = {
-			has_idea = AST_ford_australia_organization_idea
-		}
-		remove_ideas = AST_ford_australia_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_general_electric_company_ic
-		}
-		remove_ideas = AST_general_electric_company_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_gloster_aircraft_organization_idea
-		}
-		remove_ideas = AST_gloster_aircraft_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_government_aircraft_factories_organization_idea
-		}
-		remove_ideas = AST_government_aircraft_factories_organization_idea
 	}
 	if = {
 		limit = {
@@ -1363,27 +1010,9 @@ remove_all_ideas_chunk_3 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_great_depression_taog_spirit_fake
-		}
-		remove_ideas = AST_great_depression_taog_spirit_fake
-	}
-	if = {
-		limit = {
-			has_idea = AST_holden_organization_idea
-		}
-		remove_ideas = AST_holden_organization_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_indonesian_nationalists
 		}
 		remove_ideas = AST_indonesian_nationalists
-	}
-	if = {
-		limit = {
-			has_idea = AST_invasion_planning
-		}
-		remove_ideas = AST_invasion_planning
 	}
 	if = {
 		limit = {
@@ -1399,153 +1028,9 @@ remove_all_ideas_chunk_3 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_investigation_branch
-		}
-		remove_ideas = AST_investigation_branch
-	}
-	if = {
-		limit = {
-			has_idea = AST_john_brown_and_company_organization_idea
-		}
-		remove_ideas = AST_john_brown_and_company_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_kirov
-		}
-		remove_ideas = AST_kirov
-	}
-	if = {
-		limit = {
-			has_idea = AST_liberty_loans_idea
-		}
-		remove_ideas = AST_liberty_loans_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_lithgow_arms_organization_idea
-		}
-		remove_ideas = AST_lithgow_arms_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_lockheed_organization_idea
-		}
-		remove_ideas = AST_lockheed_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_lysaght_organization_idea
-		}
-		remove_ideas = AST_lysaght_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_make_common_cause_idea
-		}
-		remove_ideas = AST_make_common_cause_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_morts_dock_organization_idea
-		}
-		remove_ideas = AST_morts_dock_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_mount_isa_mines_ic
-		}
-		remove_ideas = AST_mount_isa_mines_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_mount_isa_mines_improved_ic
-		}
-		remove_ideas = AST_mount_isa_mines_improved_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_nationalizing_spirit
-		}
-		remove_ideas = AST_nationalizing_spirit
-	}
-	if = {
-		limit = {
 			has_idea = AST_naval_auxiliary_patrol
 		}
 		remove_ideas = AST_naval_auxiliary_patrol
-	}
-	if = {
-		limit = {
-			has_idea = AST_new_south_wales_government_railways_organization_idea
-		}
-		remove_ideas = AST_new_south_wales_government_railways_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_new_south_wales_rc_ic
-		}
-		remove_ideas = AST_new_south_wales_rc_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_no_foreign_battlefields_idea_1
-		}
-		remove_ideas = AST_no_foreign_battlefields_idea_1
-	}
-	if = {
-		limit = {
-			has_idea = AST_no_foreign_battlefields_idea_2
-		}
-		remove_ideas = AST_no_foreign_battlefields_idea_2
-	}
-	if = {
-		limit = {
-			has_idea = AST_nuffield_mechanizations_and_aero_organization_idea
-		}
-		remove_ideas = AST_nuffield_mechanizations_and_aero_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_phosphate_commission
-		}
-		remove_ideas = AST_phosphate_commission
-	}
-	if = {
-		limit = {
-			has_idea = AST_poor_population_growth
-		}
-		remove_ideas = AST_poor_population_growth
-	}
-	if = {
-		limit = {
-			has_idea = AST_referendum_aviation_idea
-		}
-		remove_ideas = AST_referendum_aviation_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_referendum_marketing_idea
-		}
-		remove_ideas = AST_referendum_marketing_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_scrap_iron_flotilla_taog_idea
-		}
-		remove_ideas = AST_scrap_iron_flotilla_taog_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_singapore_strategy_idea
-		}
-		remove_ideas = AST_singapore_strategy_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_south_australian_railways_ic
-		}
-		remove_ideas = AST_south_australian_railways_ic
 	}
 	if = {
 		limit = {
@@ -1555,129 +1040,15 @@ remove_all_ideas_chunk_3 = {
 	}
 	if = {
 		limit = {
-			has_idea = AST_strike_from_down_under_idea
-		}
-		remove_ideas = AST_strike_from_down_under_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_strike_ongoing
-		}
-		remove_ideas = AST_strike_ongoing
-	}
-	if = {
-		limit = {
 			has_idea = AST_support_indonesian_uprising
 		}
 		remove_ideas = AST_support_indonesian_uprising
 	}
 	if = {
 		limit = {
-			has_idea = AST_temp_political_power_factor_cost
-		}
-		remove_ideas = AST_temp_political_power_factor_cost
-	}
-	if = {
-		limit = {
-			has_idea = AST_the_pacific_garrison_1
-		}
-		remove_ideas = AST_the_pacific_garrison_1
-	}
-	if = {
-		limit = {
-			has_idea = AST_the_pacific_garrison_2
-		}
-		remove_ideas = AST_the_pacific_garrison_2
-	}
-	if = {
-		limit = {
-			has_idea = AST_the_pacific_garrison_eng
-		}
-		remove_ideas = AST_the_pacific_garrison_eng
-	}
-	if = {
-		limit = {
-			has_idea = AST_the_promise_of_nauru
-		}
-		remove_ideas = AST_the_promise_of_nauru
-	}
-	if = {
-		limit = {
-			has_idea = AST_thiess_bros_ic
-		}
-		remove_ideas = AST_thiess_bros_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_toe_the_line_spirit
-		}
-		remove_ideas = AST_toe_the_line_spirit
-	}
-	if = {
-		limit = {
-			has_idea = AST_unratified_westminster_act_idea
-		}
-		remove_ideas = AST_unratified_westminster_act_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_voluntary_foreign_service_idea
-		}
-		remove_ideas = AST_voluntary_foreign_service_idea
-	}
-	if = {
-		limit = {
 			has_idea = AST_volunteer_defence_corps
 		}
 		remove_ideas = AST_volunteer_defence_corps
-	}
-	if = {
-		limit = {
-			has_idea = AST_vulcan_foundry_organization_idea
-		}
-		remove_ideas = AST_vulcan_foundry_organization_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_war_carriers_idea
-		}
-		remove_ideas = AST_war_carriers_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_war_is_coming_spirit_fake
-		}
-		remove_ideas = AST_war_is_coming_spirit_fake
-	}
-	if = {
-		limit = {
-			has_idea = AST_war_plan_japan
-		}
-		remove_ideas = AST_war_plan_japan
-	}
-	if = {
-		limit = {
-			has_idea = AST_whyalla_steelworks_ic
-		}
-		remove_ideas = AST_whyalla_steelworks_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_whyalla_steelworks_improved_ic
-		}
-		remove_ideas = AST_whyalla_steelworks_improved_ic
-	}
-	if = {
-		limit = {
-			has_idea = AST_wool_agreement_idea
-		}
-		remove_ideas = AST_wool_agreement_idea
-	}
-	if = {
-		limit = {
-			has_idea = AST_yakovlev_design_bureau
-		}
-		remove_ideas = AST_yakovlev_design_bureau
 	}
 	if = {
 		limit = {
@@ -2044,60 +1415,6 @@ remove_all_ideas_chunk_4 = {
 	}
 	if = {
 		limit = {
-			has_idea = BAH_aa2
-		}
-		remove_ideas = BAH_aa2
-	}
-	if = {
-		limit = {
-			has_idea = BAH_acas
-		}
-		remove_ideas = BAH_acas
-	}
-	if = {
-		limit = {
-			has_idea = BAH_acd2
-		}
-		remove_ideas = BAH_acd2
-	}
-	if = {
-		limit = {
-			has_idea = BAH_acgs
-		}
-		remove_ideas = BAH_acgs
-	}
-	if = {
-		limit = {
-			has_idea = BAH_aco2
-		}
-		remove_ideas = BAH_aco2
-	}
-	if = {
-		limit = {
-			has_idea = BAH_acr
-		}
-		remove_ideas = BAH_acr
-	}
-	if = {
-		limit = {
-			has_idea = BAH_ai2
-		}
-		remove_ideas = BAH_ai2
-	}
-	if = {
-		limit = {
-			has_idea = BAH_ar
-		}
-		remove_ideas = BAH_ar
-	}
-	if = {
-		limit = {
-			has_idea = BAH_awt
-		}
-		remove_ideas = BAH_awt
-	}
-	if = {
-		limit = {
 			has_idea = BAH_coi
 		}
 		remove_ideas = BAH_coi
@@ -2119,36 +1436,6 @@ remove_all_ideas_chunk_4 = {
 			has_idea = BAH_fascist_guy
 		}
 		remove_ideas = BAH_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = BAH_mt
-		}
-		remove_ideas = BAH_mt
-	}
-	if = {
-		limit = {
-			has_idea = BAH_nccr
-		}
-		remove_ideas = BAH_nccr
-	}
-	if = {
-		limit = {
-			has_idea = BAH_ncm
-		}
-		remove_ideas = BAH_ncm
-	}
-	if = {
-		limit = {
-			has_idea = BAH_ncs
-		}
-		remove_ideas = BAH_ncs
-	}
-	if = {
-		limit = {
-			has_idea = BAH_nt
-		}
-		remove_ideas = BAH_nt
 	}
 	if = {
 		limit = {
@@ -2354,60 +1641,6 @@ remove_all_ideas_chunk_4 = {
 		}
 		remove_ideas = BALTIC_union_idea_1
 	}
-	if = {
-		limit = {
-			has_idea = BAS_aa2
-		}
-		remove_ideas = BAS_aa2
-	}
-	if = {
-		limit = {
-			has_idea = BAS_acas
-		}
-		remove_ideas = BAS_acas
-	}
-	if = {
-		limit = {
-			has_idea = BAS_acd2
-		}
-		remove_ideas = BAS_acd2
-	}
-	if = {
-		limit = {
-			has_idea = BAS_acgs
-		}
-		remove_ideas = BAS_acgs
-	}
-	if = {
-		limit = {
-			has_idea = BAS_aco2
-		}
-		remove_ideas = BAS_aco2
-	}
-	if = {
-		limit = {
-			has_idea = BAS_acr
-		}
-		remove_ideas = BAS_acr
-	}
-	if = {
-		limit = {
-			has_idea = BAS_ai2
-		}
-		remove_ideas = BAS_ai2
-	}
-	if = {
-		limit = {
-			has_idea = BAS_ar
-		}
-		remove_ideas = BAS_ar
-	}
-	if = {
-		limit = {
-			has_idea = BAS_awt
-		}
-		remove_ideas = BAS_awt
-	}
 }
 
 remove_all_ideas_chunk_5 = {
@@ -2437,36 +1670,6 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BAS_mt
-		}
-		remove_ideas = BAS_mt
-	}
-	if = {
-		limit = {
-			has_idea = BAS_nccr
-		}
-		remove_ideas = BAS_nccr
-	}
-	if = {
-		limit = {
-			has_idea = BAS_ncm
-		}
-		remove_ideas = BAS_ncm
-	}
-	if = {
-		limit = {
-			has_idea = BAS_ncs
-		}
-		remove_ideas = BAS_ncs
-	}
-	if = {
-		limit = {
-			has_idea = BAS_nt
-		}
-		remove_ideas = BAS_nt
-	}
-	if = {
-		limit = {
 			has_idea = BAS_pot
 		}
 		remove_ideas = BAS_pot
@@ -2476,54 +1679,6 @@ remove_all_ideas_chunk_5 = {
 			has_idea = BAS_stc
 		}
 		remove_ideas = BAS_stc
-	}
-	if = {
-		limit = {
-			has_idea = BAYACR
-		}
-		remove_ideas = BAYACR
-	}
-	if = {
-		limit = {
-			has_idea = BAY_abi
-		}
-		remove_ideas = BAY_abi
-	}
-	if = {
-		limit = {
-			has_idea = BAY_acd
-		}
-		remove_ideas = BAY_acd
-	}
-	if = {
-		limit = {
-			has_idea = BAY_acgs
-		}
-		remove_ideas = BAY_acgs
-	}
-	if = {
-		limit = {
-			has_idea = BAY_aco
-		}
-		remove_ideas = BAY_aco
-	}
-	if = {
-		limit = {
-			has_idea = BAY_acom
-		}
-		remove_ideas = BAY_acom
-	}
-	if = {
-		limit = {
-			has_idea = BAY_arg
-		}
-		remove_ideas = BAY_arg
-	}
-	if = {
-		limit = {
-			has_idea = BAY_at
-		}
-		remove_ideas = BAY_at
 	}
 	if = {
 		limit = {
@@ -2545,51 +1700,9 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BAY_ent
-		}
-		remove_ideas = BAY_ent
-	}
-	if = {
-		limit = {
 			has_idea = BAY_fascist_guy
 		}
 		remove_ideas = BAY_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = BAY_inf
-		}
-		remove_ideas = BAY_inf
-	}
-	if = {
-		limit = {
-			has_idea = BAY_man
-		}
-		remove_ideas = BAY_man
-	}
-	if = {
-		limit = {
-			has_idea = BAY_mt
-		}
-		remove_ideas = BAY_mt
-	}
-	if = {
-		limit = {
-			has_idea = BAY_ncav
-		}
-		remove_ideas = BAY_ncav
-	}
-	if = {
-		limit = {
-			has_idea = BAY_ncdb
-		}
-		remove_ideas = BAY_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = BAY_nt
-		}
-		remove_ideas = BAY_nt
 	}
 	if = {
 		limit = {
@@ -2611,18 +1724,6 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BEL_ateliers_metallurgiques_sambre
-		}
-		remove_ideas = BEL_ateliers_metallurgiques_sambre
-	}
-	if = {
-		limit = {
-			has_idea = BEL_ateliers_metallurgiques_tubize
-		}
-		remove_ideas = BEL_ateliers_metallurgiques_tubize
-	}
-	if = {
-		limit = {
 			has_idea = BEL_belgian_immigration_ns
 		}
 		remove_ideas = BEL_belgian_immigration_ns
@@ -2638,12 +1739,6 @@ remove_all_ideas_chunk_5 = {
 			has_idea = BEL_chasseurs_ardennais_ns
 		}
 		remove_ideas = BEL_chasseurs_ardennais_ns
-	}
-	if = {
-		limit = {
-			has_idea = BEL_chasseurs_ardennais_ns_ncns
-		}
-		remove_ideas = BEL_chasseurs_ardennais_ns_ncns
 	}
 	if = {
 		limit = {
@@ -2803,12 +1898,6 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BEL_laboratoire_aerotechnique_de_belgique
-		}
-		remove_ideas = BEL_laboratoire_aerotechnique_de_belgique
-	}
-	if = {
-		limit = {
 			has_idea = BEL_lack_of_junior_officers_ns
 		}
 		remove_ideas = BEL_lack_of_junior_officers_ns
@@ -2935,18 +2024,6 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BLR_aleksei_antonov
-		}
-		remove_ideas = BLR_aleksei_antonov
-	}
-	if = {
-		limit = {
-			has_idea = BLR_alexander_akulich
-		}
-		remove_ideas = BLR_alexander_akulich
-	}
-	if = {
-		limit = {
 			has_idea = BLR_boris_berman
 		}
 		remove_ideas = BLR_boris_berman
@@ -2971,67 +2048,13 @@ remove_all_ideas_chunk_5 = {
 	}
 	if = {
 		limit = {
-			has_idea = BLR_fedor_dobysh
-		}
-		remove_ideas = BLR_fedor_dobysh
-	}
-	if = {
-		limit = {
-			has_idea = BLR_georgy_holostyakov
-		}
-		remove_ideas = BLR_georgy_holostyakov
-	}
-	if = {
-		limit = {
-			has_idea = BLR_ivan_pstygo
-		}
-		remove_ideas = BLR_ivan_pstygo
-	}
-	if = {
-		limit = {
-			has_idea = BLR_ivan_yakubovsky
-		}
-		remove_ideas = BLR_ivan_yakubovsky
-	}
-	if = {
-		limit = {
 			has_idea = BLR_jozeph_ryzhykov
 		}
 		remove_ideas = BLR_jozeph_ryzhykov
 	}
-	if = {
-		limit = {
-			has_idea = BLR_maksim_antonyuk
-		}
-		remove_ideas = BLR_maksim_antonyuk
-	}
-	if = {
-		limit = {
-			has_idea = BLR_piotr_kozlov
-		}
-		remove_ideas = BLR_piotr_kozlov
-	}
 }
 
 remove_all_ideas_chunk_6 = {
-	if = {
-		limit = {
-			has_idea = BLR_stepan_krasovsky
-		}
-		remove_ideas = BLR_stepan_krasovsky
-	}
-	if = {
-		limit = {
-			has_idea = BLR_valentin_drozd
-		}
-		remove_ideas = BLR_valentin_drozd
-	}
-	if = {
-		limit = {
-			has_idea = BLR_vasily_sokolovsky
-		}
-		remove_ideas = BLR_vasily_sokolovsky
-	}
 	if = {
 		limit = {
 			has_idea = BOL_empresa_nacional_ferrocarriles_del_estado
@@ -3064,60 +2087,6 @@ remove_all_ideas_chunk_6 = {
 	}
 	if = {
 		limit = {
-			has_idea = BOS_aa2
-		}
-		remove_ideas = BOS_aa2
-	}
-	if = {
-		limit = {
-			has_idea = BOS_acas
-		}
-		remove_ideas = BOS_acas
-	}
-	if = {
-		limit = {
-			has_idea = BOS_acd2
-		}
-		remove_ideas = BOS_acd2
-	}
-	if = {
-		limit = {
-			has_idea = BOS_acgs
-		}
-		remove_ideas = BOS_acgs
-	}
-	if = {
-		limit = {
-			has_idea = BOS_aco2
-		}
-		remove_ideas = BOS_aco2
-	}
-	if = {
-		limit = {
-			has_idea = BOS_acr
-		}
-		remove_ideas = BOS_acr
-	}
-	if = {
-		limit = {
-			has_idea = BOS_ai2
-		}
-		remove_ideas = BOS_ai2
-	}
-	if = {
-		limit = {
-			has_idea = BOS_ar
-		}
-		remove_ideas = BOS_ar
-	}
-	if = {
-		limit = {
-			has_idea = BOS_awt
-		}
-		remove_ideas = BOS_awt
-	}
-	if = {
-		limit = {
 			has_idea = BOS_coi
 		}
 		remove_ideas = BOS_coi
@@ -3142,36 +2111,6 @@ remove_all_ideas_chunk_6 = {
 	}
 	if = {
 		limit = {
-			has_idea = BOS_mt
-		}
-		remove_ideas = BOS_mt
-	}
-	if = {
-		limit = {
-			has_idea = BOS_nccr
-		}
-		remove_ideas = BOS_nccr
-	}
-	if = {
-		limit = {
-			has_idea = BOS_ncm
-		}
-		remove_ideas = BOS_ncm
-	}
-	if = {
-		limit = {
-			has_idea = BOS_ncs
-		}
-		remove_ideas = BOS_ncs
-	}
-	if = {
-		limit = {
-			has_idea = BOS_nt
-		}
-		remove_ideas = BOS_nt
-	}
-	if = {
-		limit = {
 			has_idea = BOS_pot
 		}
 		remove_ideas = BOS_pot
@@ -3181,12 +2120,6 @@ remove_all_ideas_chunk_6 = {
 			has_idea = BOS_stc
 		}
 		remove_ideas = BOS_stc
-	}
-	if = {
-		limit = {
-			has_idea = BRA
-		}
-		remove_ideas = BRA
 	}
 	if = {
 		limit = {
@@ -3601,18 +2534,6 @@ remove_all_ideas_chunk_6 = {
 			has_idea = BRA_weak_government_dummy_idea
 		}
 		remove_ideas = BRA_weak_government_dummy_idea
-	}
-	if = {
-		limit = {
-			has_idea = BRM
-		}
-		remove_ideas = BRM
-	}
-	if = {
-		limit = {
-			has_idea = BUL
-		}
-		remove_ideas = BUL
 	}
 }
 
@@ -4708,60 +3629,6 @@ remove_all_ideas_chunk_8 = {
 	}
 	if = {
 		limit = {
-			has_idea = CAT_aa2
-		}
-		remove_ideas = CAT_aa2
-	}
-	if = {
-		limit = {
-			has_idea = CAT_acas
-		}
-		remove_ideas = CAT_acas
-	}
-	if = {
-		limit = {
-			has_idea = CAT_acd2
-		}
-		remove_ideas = CAT_acd2
-	}
-	if = {
-		limit = {
-			has_idea = CAT_acgs
-		}
-		remove_ideas = CAT_acgs
-	}
-	if = {
-		limit = {
-			has_idea = CAT_aco2
-		}
-		remove_ideas = CAT_aco2
-	}
-	if = {
-		limit = {
-			has_idea = CAT_acr
-		}
-		remove_ideas = CAT_acr
-	}
-	if = {
-		limit = {
-			has_idea = CAT_ai2
-		}
-		remove_ideas = CAT_ai2
-	}
-	if = {
-		limit = {
-			has_idea = CAT_ar
-		}
-		remove_ideas = CAT_ar
-	}
-	if = {
-		limit = {
-			has_idea = CAT_awt
-		}
-		remove_ideas = CAT_awt
-	}
-	if = {
-		limit = {
 			has_idea = CAT_coi
 		}
 		remove_ideas = CAT_coi
@@ -4786,36 +3653,6 @@ remove_all_ideas_chunk_8 = {
 	}
 	if = {
 		limit = {
-			has_idea = CAT_mt
-		}
-		remove_ideas = CAT_mt
-	}
-	if = {
-		limit = {
-			has_idea = CAT_nccr
-		}
-		remove_ideas = CAT_nccr
-	}
-	if = {
-		limit = {
-			has_idea = CAT_ncm
-		}
-		remove_ideas = CAT_ncm
-	}
-	if = {
-		limit = {
-			has_idea = CAT_ncs
-		}
-		remove_ideas = CAT_ncs
-	}
-	if = {
-		limit = {
-			has_idea = CAT_nt
-		}
-		remove_ideas = CAT_nt
-	}
-	if = {
-		limit = {
 			has_idea = CAT_pot
 		}
 		remove_ideas = CAT_pot
@@ -4828,60 +3665,6 @@ remove_all_ideas_chunk_9 = {
 			has_idea = CAT_stc
 		}
 		remove_ideas = CAT_stc
-	}
-	if = {
-		limit = {
-			has_idea = CAY_aa2
-		}
-		remove_ideas = CAY_aa2
-	}
-	if = {
-		limit = {
-			has_idea = CAY_acas
-		}
-		remove_ideas = CAY_acas
-	}
-	if = {
-		limit = {
-			has_idea = CAY_acd2
-		}
-		remove_ideas = CAY_acd2
-	}
-	if = {
-		limit = {
-			has_idea = CAY_acgs
-		}
-		remove_ideas = CAY_acgs
-	}
-	if = {
-		limit = {
-			has_idea = CAY_aco2
-		}
-		remove_ideas = CAY_aco2
-	}
-	if = {
-		limit = {
-			has_idea = CAY_acr
-		}
-		remove_ideas = CAY_acr
-	}
-	if = {
-		limit = {
-			has_idea = CAY_ai2
-		}
-		remove_ideas = CAY_ai2
-	}
-	if = {
-		limit = {
-			has_idea = CAY_ar
-		}
-		remove_ideas = CAY_ar
-	}
-	if = {
-		limit = {
-			has_idea = CAY_awt
-		}
-		remove_ideas = CAY_awt
 	}
 	if = {
 		limit = {
@@ -4909,36 +3692,6 @@ remove_all_ideas_chunk_9 = {
 	}
 	if = {
 		limit = {
-			has_idea = CAY_mt
-		}
-		remove_ideas = CAY_mt
-	}
-	if = {
-		limit = {
-			has_idea = CAY_nccr
-		}
-		remove_ideas = CAY_nccr
-	}
-	if = {
-		limit = {
-			has_idea = CAY_ncm
-		}
-		remove_ideas = CAY_ncm
-	}
-	if = {
-		limit = {
-			has_idea = CAY_ncs
-		}
-		remove_ideas = CAY_ncs
-	}
-	if = {
-		limit = {
-			has_idea = CAY_nt
-		}
-		remove_ideas = CAY_nt
-	}
-	if = {
-		limit = {
 			has_idea = CAY_pot
 		}
 		remove_ideas = CAY_pot
@@ -4948,12 +3701,6 @@ remove_all_ideas_chunk_9 = {
 			has_idea = CAY_stc
 		}
 		remove_ideas = CAY_stc
-	}
-	if = {
-		limit = {
-			has_idea = CHI
-		}
-		remove_ideas = CHI
 	}
 	if = {
 		limit = {
@@ -5518,12 +4265,6 @@ remove_all_ideas_chunk_10 = {
 	}
 	if = {
 		limit = {
-			has_idea = CHI_soviet_military_cooperation_idea
-		}
-		remove_ideas = CHI_soviet_military_cooperation_idea
-	}
-	if = {
-		limit = {
 			has_idea = CHI_soviet_support_hidden
 		}
 		remove_ideas = CHI_soviet_support_hidden
@@ -5818,12 +4559,6 @@ remove_all_ideas_chunk_10 = {
 	}
 	if = {
 		limit = {
-			has_idea = CHI_warlord_looting_idea
-		}
-		remove_ideas = CHI_warlord_looting_idea
-	}
-	if = {
-		limit = {
 			has_idea = CHI_warlord_state_idea
 		}
 		remove_ideas = CHI_warlord_state_idea
@@ -5869,12 +4604,6 @@ remove_all_ideas_chunk_10 = {
 			has_idea = CHI_yongli_chemical_industries
 		}
 		remove_ideas = CHI_yongli_chemical_industries
-	}
-	if = {
-		limit = {
-			has_idea = CHL
-		}
-		remove_ideas = CHL
 	}
 	if = {
 		limit = {
@@ -6535,48 +5264,6 @@ remove_all_ideas_chunk_11 = {
 	}
 	if = {
 		limit = {
-			has_idea = COG_aa2
-		}
-		remove_ideas = COG_aa2
-	}
-	if = {
-		limit = {
-			has_idea = COG_acas
-		}
-		remove_ideas = COG_acas
-	}
-	if = {
-		limit = {
-			has_idea = COG_acd2
-		}
-		remove_ideas = COG_acd2
-	}
-	if = {
-		limit = {
-			has_idea = COG_acgs
-		}
-		remove_ideas = COG_acgs
-	}
-	if = {
-		limit = {
-			has_idea = COG_aco2
-		}
-		remove_ideas = COG_aco2
-	}
-	if = {
-		limit = {
-			has_idea = COG_acr
-		}
-		remove_ideas = COG_acr
-	}
-	if = {
-		limit = {
-			has_idea = COG_ai2
-		}
-		remove_ideas = COG_ai2
-	}
-	if = {
-		limit = {
 			has_idea = COG_alliance_de_bakongo_idea
 		}
 		remove_ideas = COG_alliance_de_bakongo_idea
@@ -6595,18 +5282,6 @@ remove_all_ideas_chunk_11 = {
 	}
 	if = {
 		limit = {
-			has_idea = COG_ar
-		}
-		remove_ideas = COG_ar
-	}
-	if = {
-		limit = {
-			has_idea = COG_awt
-		}
-		remove_ideas = COG_awt
-	}
-	if = {
-		limit = {
 			has_idea = COG_banque_du_congo_belge_idea
 		}
 		remove_ideas = COG_banque_du_congo_belge_idea
@@ -6622,12 +5297,6 @@ remove_all_ideas_chunk_11 = {
 			has_idea = COG_bouvandji
 		}
 		remove_ideas = COG_bouvandji
-	}
-	if = {
-		limit = {
-			has_idea = COG_brown_water_navy_idea
-		}
-		remove_ideas = COG_brown_water_navy_idea
 	}
 }
 
@@ -6886,39 +5555,9 @@ remove_all_ideas_chunk_12 = {
 	}
 	if = {
 		limit = {
-			has_idea = COG_mt
-		}
-		remove_ideas = COG_mt
-	}
-	if = {
-		limit = {
 			has_idea = COG_nationals_going_to_the_british_commonwealth
 		}
 		remove_ideas = COG_nationals_going_to_the_british_commonwealth
-	}
-	if = {
-		limit = {
-			has_idea = COG_nccr
-		}
-		remove_ideas = COG_nccr
-	}
-	if = {
-		limit = {
-			has_idea = COG_ncm
-		}
-		remove_ideas = COG_ncm
-	}
-	if = {
-		limit = {
-			has_idea = COG_ncs
-		}
-		remove_ideas = COG_ncs
-	}
-	if = {
-		limit = {
-			has_idea = COG_nt
-		}
-		remove_ideas = COG_nt
 	}
 	if = {
 		limit = {
@@ -7184,63 +5823,9 @@ remove_all_ideas_chunk_12 = {
 		}
 		remove_ideas = COG_women_in_the_military_idea
 	}
-	if = {
-		limit = {
-			has_idea = COR_aa2
-		}
-		remove_ideas = COR_aa2
-	}
-	if = {
-		limit = {
-			has_idea = COR_acas
-		}
-		remove_ideas = COR_acas
-	}
-	if = {
-		limit = {
-			has_idea = COR_acd2
-		}
-		remove_ideas = COR_acd2
-	}
-	if = {
-		limit = {
-			has_idea = COR_acgs
-		}
-		remove_ideas = COR_acgs
-	}
-	if = {
-		limit = {
-			has_idea = COR_aco2
-		}
-		remove_ideas = COR_aco2
-	}
-	if = {
-		limit = {
-			has_idea = COR_acr
-		}
-		remove_ideas = COR_acr
-	}
-	if = {
-		limit = {
-			has_idea = COR_ai2
-		}
-		remove_ideas = COR_ai2
-	}
-	if = {
-		limit = {
-			has_idea = COR_ar
-		}
-		remove_ideas = COR_ar
-	}
 }
 
 remove_all_ideas_chunk_13 = {
-	if = {
-		limit = {
-			has_idea = COR_awt
-		}
-		remove_ideas = COR_awt
-	}
 	if = {
 		limit = {
 			has_idea = COR_coi
@@ -7267,36 +5852,6 @@ remove_all_ideas_chunk_13 = {
 	}
 	if = {
 		limit = {
-			has_idea = COR_mt
-		}
-		remove_ideas = COR_mt
-	}
-	if = {
-		limit = {
-			has_idea = COR_nccr
-		}
-		remove_ideas = COR_nccr
-	}
-	if = {
-		limit = {
-			has_idea = COR_ncm
-		}
-		remove_ideas = COR_ncm
-	}
-	if = {
-		limit = {
-			has_idea = COR_ncs
-		}
-		remove_ideas = COR_ncs
-	}
-	if = {
-		limit = {
-			has_idea = COR_nt
-		}
-		remove_ideas = COR_nt
-	}
-	if = {
-		limit = {
 			has_idea = COR_pot
 		}
 		remove_ideas = COR_pot
@@ -7306,60 +5861,6 @@ remove_all_ideas_chunk_13 = {
 			has_idea = COR_stc
 		}
 		remove_ideas = COR_stc
-	}
-	if = {
-		limit = {
-			has_idea = CRC_aa2
-		}
-		remove_ideas = CRC_aa2
-	}
-	if = {
-		limit = {
-			has_idea = CRC_acas
-		}
-		remove_ideas = CRC_acas
-	}
-	if = {
-		limit = {
-			has_idea = CRC_acd2
-		}
-		remove_ideas = CRC_acd2
-	}
-	if = {
-		limit = {
-			has_idea = CRC_acgs
-		}
-		remove_ideas = CRC_acgs
-	}
-	if = {
-		limit = {
-			has_idea = CRC_aco2
-		}
-		remove_ideas = CRC_aco2
-	}
-	if = {
-		limit = {
-			has_idea = CRC_acr
-		}
-		remove_ideas = CRC_acr
-	}
-	if = {
-		limit = {
-			has_idea = CRC_ai2
-		}
-		remove_ideas = CRC_ai2
-	}
-	if = {
-		limit = {
-			has_idea = CRC_ar
-		}
-		remove_ideas = CRC_ar
-	}
-	if = {
-		limit = {
-			has_idea = CRC_awt
-		}
-		remove_ideas = CRC_awt
 	}
 	if = {
 		limit = {
@@ -7387,36 +5888,6 @@ remove_all_ideas_chunk_13 = {
 	}
 	if = {
 		limit = {
-			has_idea = CRC_mt
-		}
-		remove_ideas = CRC_mt
-	}
-	if = {
-		limit = {
-			has_idea = CRC_nccr
-		}
-		remove_ideas = CRC_nccr
-	}
-	if = {
-		limit = {
-			has_idea = CRC_ncm
-		}
-		remove_ideas = CRC_ncm
-	}
-	if = {
-		limit = {
-			has_idea = CRC_ncs
-		}
-		remove_ideas = CRC_ncs
-	}
-	if = {
-		limit = {
-			has_idea = CRC_nt
-		}
-		remove_ideas = CRC_nt
-	}
-	if = {
-		limit = {
 			has_idea = CRC_pot
 		}
 		remove_ideas = CRC_pot
@@ -7426,120 +5897,6 @@ remove_all_ideas_chunk_13 = {
 			has_idea = CRC_stc
 		}
 		remove_ideas = CRC_stc
-	}
-	if = {
-		limit = {
-			has_idea = CRO_adalbert_rogulja
-		}
-		remove_ideas = CRO_adalbert_rogulja
-	}
-	if = {
-		limit = {
-			has_idea = CRO_alojzije_stepinac
-		}
-		remove_ideas = CRO_alojzije_stepinac
-	}
-	if = {
-		limit = {
-			has_idea = CRO_communist_guy
-		}
-		remove_ideas = CRO_communist_guy
-	}
-	if = {
-		limit = {
-			has_idea = CRO_democratic_guy
-		}
-		remove_ideas = CRO_democratic_guy
-	}
-	if = {
-		limit = {
-			has_idea = CRO_djuro_jakcin
-		}
-		remove_ideas = CRO_djuro_jakcin
-	}
-	if = {
-		limit = {
-			has_idea = CRO_edgar_angeli
-		}
-		remove_ideas = CRO_edgar_angeli
-	}
-	if = {
-		limit = {
-			has_idea = CRO_fascist_guy
-		}
-		remove_ideas = CRO_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = CRO_fedor_dragojlov
-		}
-		remove_ideas = CRO_fedor_dragojlov
-	}
-	if = {
-		limit = {
-			has_idea = CRO_friedrich_navratil
-		}
-		remove_ideas = CRO_friedrich_navratil
-	}
-	if = {
-		limit = {
-			has_idea = CRO_gaspar_njegovan
-		}
-		remove_ideas = CRO_gaspar_njegovan
-	}
-	if = {
-		limit = {
-			has_idea = CRO_ivan_crnkovic
-		}
-		remove_ideas = CRO_ivan_crnkovic
-	}
-	if = {
-		limit = {
-			has_idea = CRO_ivan_subasic
-		}
-		remove_ideas = CRO_ivan_subasic
-	}
-	if = {
-		limit = {
-			has_idea = CRO_mihajlo_tomasic
-		}
-		remove_ideas = CRO_mihajlo_tomasic
-	}
-	if = {
-		limit = {
-			has_idea = CRO_nikola_steinfl
-		}
-		remove_ideas = CRO_nikola_steinfl
-	}
-	if = {
-		limit = {
-			has_idea = CRO_sismundo_pejacevic
-		}
-		remove_ideas = CRO_sismundo_pejacevic
-	}
-	if = {
-		limit = {
-			has_idea = CRO_slavko_stancer
-		}
-		remove_ideas = CRO_slavko_stancer
-	}
-	if = {
-		limit = {
-			has_idea = CRO_vilko_begic
-		}
-		remove_ideas = CRO_vilko_begic
-	}
-	if = {
-		limit = {
-			has_idea = CRO_vladimir_kren
-		}
-		remove_ideas = CRO_vladimir_kren
-	}
-	if = {
-		limit = {
-			has_idea = CRO_vladimir_laxa
-		}
-		remove_ideas = CRO_vladimir_laxa
 	}
 	if = {
 		limit = {
@@ -7558,60 +5915,6 @@ remove_all_ideas_chunk_13 = {
 			has_idea = CSA_spirit_of_rebellion
 		}
 		remove_ideas = CSA_spirit_of_rebellion
-	}
-	if = {
-		limit = {
-			has_idea = CYP_aa2
-		}
-		remove_ideas = CYP_aa2
-	}
-	if = {
-		limit = {
-			has_idea = CYP_acas
-		}
-		remove_ideas = CYP_acas
-	}
-	if = {
-		limit = {
-			has_idea = CYP_acd2
-		}
-		remove_ideas = CYP_acd2
-	}
-	if = {
-		limit = {
-			has_idea = CYP_acgs
-		}
-		remove_ideas = CYP_acgs
-	}
-	if = {
-		limit = {
-			has_idea = CYP_aco2
-		}
-		remove_ideas = CYP_aco2
-	}
-	if = {
-		limit = {
-			has_idea = CYP_acr
-		}
-		remove_ideas = CYP_acr
-	}
-	if = {
-		limit = {
-			has_idea = CYP_ai2
-		}
-		remove_ideas = CYP_ai2
-	}
-	if = {
-		limit = {
-			has_idea = CYP_ar
-		}
-		remove_ideas = CYP_ar
-	}
-	if = {
-		limit = {
-			has_idea = CYP_awt
-		}
-		remove_ideas = CYP_awt
 	}
 	if = {
 		limit = {
@@ -7639,36 +5942,6 @@ remove_all_ideas_chunk_13 = {
 	}
 	if = {
 		limit = {
-			has_idea = CYP_mt
-		}
-		remove_ideas = CYP_mt
-	}
-	if = {
-		limit = {
-			has_idea = CYP_nccr
-		}
-		remove_ideas = CYP_nccr
-	}
-	if = {
-		limit = {
-			has_idea = CYP_ncm
-		}
-		remove_ideas = CYP_ncm
-	}
-	if = {
-		limit = {
-			has_idea = CYP_ncs
-		}
-		remove_ideas = CYP_ncs
-	}
-	if = {
-		limit = {
-			has_idea = CYP_nt
-		}
-		remove_ideas = CYP_nt
-	}
-	if = {
-		limit = {
 			has_idea = CYP_pot
 		}
 		remove_ideas = CYP_pot
@@ -7678,12 +5951,6 @@ remove_all_ideas_chunk_13 = {
 			has_idea = CYP_stc
 		}
 		remove_ideas = CYP_stc
-	}
-	if = {
-		limit = {
-			has_idea = CZE
-		}
-		remove_ideas = CZE
 	}
 	if = {
 		limit = {
@@ -8425,12 +6692,6 @@ remove_all_ideas_chunk_14 = {
 			has_idea = CZE_legacy_of_the_czechoslovak_legion_army
 		}
 		remove_ideas = CZE_legacy_of_the_czechoslovak_legion_army
-	}
-	if = {
-		limit = {
-			has_idea = CZE_legacy_of_the_czechoslovak_legion_army_spirit
-		}
-		remove_ideas = CZE_legacy_of_the_czechoslovak_legion_army_spirit
 	}
 	if = {
 		limit = {
@@ -9334,12 +7595,6 @@ remove_all_ideas_chunk_16 = {
 	}
 	if = {
 		limit = {
-			has_idea = DEN
-		}
-		remove_ideas = DEN
-	}
-	if = {
-		limit = {
 			has_idea = DEN_aalborg_portland
 		}
 		remove_ideas = DEN_aalborg_portland
@@ -9526,60 +7781,6 @@ remove_all_ideas_chunk_16 = {
 	}
 	if = {
 		limit = {
-			has_idea = EGY_aa2
-		}
-		remove_ideas = EGY_aa2
-	}
-	if = {
-		limit = {
-			has_idea = EGY_acas
-		}
-		remove_ideas = EGY_acas
-	}
-	if = {
-		limit = {
-			has_idea = EGY_acd2
-		}
-		remove_ideas = EGY_acd2
-	}
-	if = {
-		limit = {
-			has_idea = EGY_acgs
-		}
-		remove_ideas = EGY_acgs
-	}
-	if = {
-		limit = {
-			has_idea = EGY_aco2
-		}
-		remove_ideas = EGY_aco2
-	}
-	if = {
-		limit = {
-			has_idea = EGY_acr
-		}
-		remove_ideas = EGY_acr
-	}
-	if = {
-		limit = {
-			has_idea = EGY_ai2
-		}
-		remove_ideas = EGY_ai2
-	}
-	if = {
-		limit = {
-			has_idea = EGY_ar
-		}
-		remove_ideas = EGY_ar
-	}
-	if = {
-		limit = {
-			has_idea = EGY_awt
-		}
-		remove_ideas = EGY_awt
-	}
-	if = {
-		limit = {
 			has_idea = EGY_coi
 		}
 		remove_ideas = EGY_coi
@@ -9604,36 +7805,6 @@ remove_all_ideas_chunk_16 = {
 	}
 	if = {
 		limit = {
-			has_idea = EGY_mt
-		}
-		remove_ideas = EGY_mt
-	}
-	if = {
-		limit = {
-			has_idea = EGY_nccr
-		}
-		remove_ideas = EGY_nccr
-	}
-	if = {
-		limit = {
-			has_idea = EGY_ncm
-		}
-		remove_ideas = EGY_ncm
-	}
-	if = {
-		limit = {
-			has_idea = EGY_ncs
-		}
-		remove_ideas = EGY_ncs
-	}
-	if = {
-		limit = {
-			has_idea = EGY_nt
-		}
-		remove_ideas = EGY_nt
-	}
-	if = {
-		limit = {
 			has_idea = EGY_pot
 		}
 		remove_ideas = EGY_pot
@@ -9647,24 +7818,6 @@ remove_all_ideas_chunk_16 = {
 }
 
 remove_all_ideas_chunk_17 = {
-	if = {
-		limit = {
-			has_idea = ELSE
-		}
-		remove_ideas = ELSE
-	}
-	if = {
-		limit = {
-			has_idea = ELSE_IF
-		}
-		remove_ideas = ELSE_IF
-	}
-	if = {
-		limit = {
-			has_idea = ENG
-		}
-		remove_ideas = ENG
-	}
 	if = {
 		limit = {
 			has_idea = ENG_a_change_in_course_idea
@@ -9727,12 +7880,6 @@ remove_all_ideas_chunk_17 = {
 	}
 	if = {
 		limit = {
-			has_idea = ENG_crewe_works_manufacturer
-		}
-		remove_ideas = ENG_crewe_works_manufacturer
-	}
-	if = {
-		limit = {
 			has_idea = ENG_desperate_defense_of_the_homeland
 		}
 		remove_ideas = ENG_desperate_defense_of_the_homeland
@@ -9748,12 +7895,6 @@ remove_all_ideas_chunk_17 = {
 			has_idea = ENG_dominion_fascist_propaganda
 		}
 		remove_ideas = ENG_dominion_fascist_propaganda
-	}
-	if = {
-		limit = {
-			has_idea = ENG_evacuated_colonial_assets
-		}
-		remove_ideas = ENG_evacuated_colonial_assets
 	}
 	if = {
 		limit = {
@@ -9985,21 +8126,9 @@ remove_all_ideas_chunk_17 = {
 	}
 	if = {
 		limit = {
-			has_idea = ENG_mi6_ns
-		}
-		remove_ideas = ENG_mi6_ns
-	}
-	if = {
-		limit = {
 			has_idea = ENG_no_further_appeasement_idea
 		}
 		remove_ideas = ENG_no_further_appeasement_idea
-	}
-	if = {
-		limit = {
-			has_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
-		}
-		remove_ideas = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
 	}
 	if = {
 		limit = {
@@ -10219,12 +8348,6 @@ remove_all_ideas_chunk_17 = {
 	}
 	if = {
 		limit = {
-			has_idea = ETH
-		}
-		remove_ideas = ETH
-	}
-	if = {
-		limit = {
 			has_idea = ETH_CZE_avia
 		}
 		remove_ideas = ETH_CZE_avia
@@ -10279,18 +8402,6 @@ remove_all_ideas_chunk_18 = {
 			has_idea = ETH_bofors
 		}
 		remove_ideas = ETH_bofors
-	}
-	if = {
-		limit = {
-			has_idea = ETH_chitet_law
-		}
-		remove_ideas = ETH_chitet_law
-	}
-	if = {
-		limit = {
-			has_idea = ETH_chitet_law_peace_time
-		}
-		remove_ideas = ETH_chitet_law_peace_time
 	}
 	if = {
 		limit = {
@@ -10774,60 +8885,6 @@ remove_all_ideas_chunk_18 = {
 	}
 	if = {
 		limit = {
-			has_idea = FIJ_aa2
-		}
-		remove_ideas = FIJ_aa2
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_acas
-		}
-		remove_ideas = FIJ_acas
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_acd2
-		}
-		remove_ideas = FIJ_acd2
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_acgs
-		}
-		remove_ideas = FIJ_acgs
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_aco2
-		}
-		remove_ideas = FIJ_aco2
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_acr
-		}
-		remove_ideas = FIJ_acr
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_ai2
-		}
-		remove_ideas = FIJ_ai2
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_ar
-		}
-		remove_ideas = FIJ_ar
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_awt
-		}
-		remove_ideas = FIJ_awt
-	}
-	if = {
-		limit = {
 			has_idea = FIJ_coi
 		}
 		remove_ideas = FIJ_coi
@@ -10855,36 +8912,6 @@ remove_all_ideas_chunk_18 = {
 remove_all_ideas_chunk_19 = {
 	if = {
 		limit = {
-			has_idea = FIJ_mt
-		}
-		remove_ideas = FIJ_mt
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_nccr
-		}
-		remove_ideas = FIJ_nccr
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_ncm
-		}
-		remove_ideas = FIJ_ncm
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_ncs
-		}
-		remove_ideas = FIJ_ncs
-	}
-	if = {
-		limit = {
-			has_idea = FIJ_nt
-		}
-		remove_ideas = FIJ_nt
-	}
-	if = {
-		limit = {
 			has_idea = FIJ_pot
 		}
 		remove_ideas = FIJ_pot
@@ -10894,12 +8921,6 @@ remove_all_ideas_chunk_19 = {
 			has_idea = FIJ_stc
 		}
 		remove_ideas = FIJ_stc
-	}
-	if = {
-		limit = {
-			has_idea = FIN
-		}
-		remove_ideas = FIN
 	}
 	if = {
 		limit = {
@@ -11470,12 +9491,6 @@ remove_all_ideas_chunk_20 = {
 	}
 	if = {
 		limit = {
-			has_idea = FRA
-		}
-		remove_ideas = FRA
-	}
-	if = {
-		limit = {
 			has_idea = FRA_AMX
 		}
 		remove_ideas = FRA_AMX
@@ -11503,12 +9518,6 @@ remove_all_ideas_chunk_20 = {
 			has_idea = FRA_air_dominance
 		}
 		remove_ideas = FRA_air_dominance
-	}
-	if = {
-		limit = {
-			has_idea = FRA_alsthom_manufacturer
-		}
-		remove_ideas = FRA_alsthom_manufacturer
 	}
 	if = {
 		limit = {
@@ -11926,66 +9935,6 @@ remove_all_ideas_chunk_20 = {
 	}
 	if = {
 		limit = {
-			has_idea = FROM
-		}
-		remove_ideas = FROM
-	}
-	if = {
-		limit = {
-			has_idea = FSM_aa2
-		}
-		remove_ideas = FSM_aa2
-	}
-	if = {
-		limit = {
-			has_idea = FSM_acas
-		}
-		remove_ideas = FSM_acas
-	}
-	if = {
-		limit = {
-			has_idea = FSM_acd2
-		}
-		remove_ideas = FSM_acd2
-	}
-	if = {
-		limit = {
-			has_idea = FSM_acgs
-		}
-		remove_ideas = FSM_acgs
-	}
-	if = {
-		limit = {
-			has_idea = FSM_aco2
-		}
-		remove_ideas = FSM_aco2
-	}
-	if = {
-		limit = {
-			has_idea = FSM_acr
-		}
-		remove_ideas = FSM_acr
-	}
-	if = {
-		limit = {
-			has_idea = FSM_ai2
-		}
-		remove_ideas = FSM_ai2
-	}
-	if = {
-		limit = {
-			has_idea = FSM_ar
-		}
-		remove_ideas = FSM_ar
-	}
-	if = {
-		limit = {
-			has_idea = FSM_awt
-		}
-		remove_ideas = FSM_awt
-	}
-	if = {
-		limit = {
 			has_idea = FSM_coi
 		}
 		remove_ideas = FSM_coi
@@ -12010,36 +9959,6 @@ remove_all_ideas_chunk_20 = {
 	}
 	if = {
 		limit = {
-			has_idea = FSM_mt
-		}
-		remove_ideas = FSM_mt
-	}
-	if = {
-		limit = {
-			has_idea = FSM_nccr
-		}
-		remove_ideas = FSM_nccr
-	}
-	if = {
-		limit = {
-			has_idea = FSM_ncm
-		}
-		remove_ideas = FSM_ncm
-	}
-	if = {
-		limit = {
-			has_idea = FSM_ncs
-		}
-		remove_ideas = FSM_ncs
-	}
-	if = {
-		limit = {
-			has_idea = FSM_nt
-		}
-		remove_ideas = FSM_nt
-	}
-	if = {
-		limit = {
 			has_idea = FSM_pot
 		}
 		remove_ideas = FSM_pot
@@ -12050,63 +9969,9 @@ remove_all_ideas_chunk_20 = {
 		}
 		remove_ideas = FSM_stc
 	}
-	if = {
-		limit = {
-			has_idea = GAM_aa2
-		}
-		remove_ideas = GAM_aa2
-	}
 }
 
 remove_all_ideas_chunk_21 = {
-	if = {
-		limit = {
-			has_idea = GAM_acas
-		}
-		remove_ideas = GAM_acas
-	}
-	if = {
-		limit = {
-			has_idea = GAM_acd2
-		}
-		remove_ideas = GAM_acd2
-	}
-	if = {
-		limit = {
-			has_idea = GAM_acgs
-		}
-		remove_ideas = GAM_acgs
-	}
-	if = {
-		limit = {
-			has_idea = GAM_aco2
-		}
-		remove_ideas = GAM_aco2
-	}
-	if = {
-		limit = {
-			has_idea = GAM_acr
-		}
-		remove_ideas = GAM_acr
-	}
-	if = {
-		limit = {
-			has_idea = GAM_ai2
-		}
-		remove_ideas = GAM_ai2
-	}
-	if = {
-		limit = {
-			has_idea = GAM_ar
-		}
-		remove_ideas = GAM_ar
-	}
-	if = {
-		limit = {
-			has_idea = GAM_awt
-		}
-		remove_ideas = GAM_awt
-	}
 	if = {
 		limit = {
 			has_idea = GAM_coi
@@ -12133,36 +9998,6 @@ remove_all_ideas_chunk_21 = {
 	}
 	if = {
 		limit = {
-			has_idea = GAM_mt
-		}
-		remove_ideas = GAM_mt
-	}
-	if = {
-		limit = {
-			has_idea = GAM_nccr
-		}
-		remove_ideas = GAM_nccr
-	}
-	if = {
-		limit = {
-			has_idea = GAM_ncm
-		}
-		remove_ideas = GAM_ncm
-	}
-	if = {
-		limit = {
-			has_idea = GAM_ncs
-		}
-		remove_ideas = GAM_ncs
-	}
-	if = {
-		limit = {
-			has_idea = GAM_nt
-		}
-		remove_ideas = GAM_nt
-	}
-	if = {
-		limit = {
 			has_idea = GAM_pot
 		}
 		remove_ideas = GAM_pot
@@ -12172,60 +10007,6 @@ remove_all_ideas_chunk_21 = {
 			has_idea = GAM_stc
 		}
 		remove_ideas = GAM_stc
-	}
-	if = {
-		limit = {
-			has_idea = GDL_aa2
-		}
-		remove_ideas = GDL_aa2
-	}
-	if = {
-		limit = {
-			has_idea = GDL_acas
-		}
-		remove_ideas = GDL_acas
-	}
-	if = {
-		limit = {
-			has_idea = GDL_acd2
-		}
-		remove_ideas = GDL_acd2
-	}
-	if = {
-		limit = {
-			has_idea = GDL_acgs
-		}
-		remove_ideas = GDL_acgs
-	}
-	if = {
-		limit = {
-			has_idea = GDL_aco2
-		}
-		remove_ideas = GDL_aco2
-	}
-	if = {
-		limit = {
-			has_idea = GDL_acr
-		}
-		remove_ideas = GDL_acr
-	}
-	if = {
-		limit = {
-			has_idea = GDL_ai2
-		}
-		remove_ideas = GDL_ai2
-	}
-	if = {
-		limit = {
-			has_idea = GDL_ar
-		}
-		remove_ideas = GDL_ar
-	}
-	if = {
-		limit = {
-			has_idea = GDL_awt
-		}
-		remove_ideas = GDL_awt
 	}
 	if = {
 		limit = {
@@ -12250,36 +10031,6 @@ remove_all_ideas_chunk_21 = {
 			has_idea = GDL_fascist_guy
 		}
 		remove_ideas = GDL_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = GDL_mt
-		}
-		remove_ideas = GDL_mt
-	}
-	if = {
-		limit = {
-			has_idea = GDL_nccr
-		}
-		remove_ideas = GDL_nccr
-	}
-	if = {
-		limit = {
-			has_idea = GDL_ncm
-		}
-		remove_ideas = GDL_ncm
-	}
-	if = {
-		limit = {
-			has_idea = GDL_ncs
-		}
-		remove_ideas = GDL_ncs
-	}
-	if = {
-		limit = {
-			has_idea = GDL_nt
-		}
-		remove_ideas = GDL_nt
 	}
 	if = {
 		limit = {
@@ -12310,12 +10061,6 @@ remove_all_ideas_chunk_21 = {
 			has_idea = GEN_cheaper_amphib
 		}
 		remove_ideas = GEN_cheaper_amphib
-	}
-	if = {
-		limit = {
-			has_idea = GER
-		}
-		remove_ideas = GER
 	}
 	if = {
 		limit = {
@@ -12808,12 +10553,6 @@ remove_all_ideas_chunk_22 = {
 	}
 	if = {
 		limit = {
-			has_idea = GER_focke_achgelis
-		}
-		remove_ideas = GER_focke_achgelis
-	}
-	if = {
-		limit = {
 			has_idea = GER_focke_wulf_improved
 		}
 		remove_ideas = GER_focke_wulf_improved
@@ -12949,12 +10688,6 @@ remove_all_ideas_chunk_22 = {
 			has_idea = GER_henschel_improved
 		}
 		remove_ideas = GER_henschel_improved
-	}
-	if = {
-		limit = {
-			has_idea = GER_henschel_kassel_manufacturer
-		}
-		remove_ideas = GER_henschel_kassel_manufacturer
 	}
 	if = {
 		limit = {
@@ -13213,12 +10946,6 @@ remove_all_ideas_chunk_22 = {
 			has_idea = GER_messerschmitt_improved
 		}
 		remove_ideas = GER_messerschmitt_improved
-	}
-	if = {
-		limit = {
-			has_idea = GER_mitteleuropa_customs_union_member
-		}
-		remove_ideas = GER_mitteleuropa_customs_union_member
 	}
 	if = {
 		limit = {
@@ -13829,63 +11556,9 @@ remove_all_ideas_chunk_23 = {
 		}
 		remove_ideas = GER_wilhelm_iii
 	}
-	if = {
-		limit = {
-			has_idea = GLC_aa2
-		}
-		remove_ideas = GLC_aa2
-	}
-	if = {
-		limit = {
-			has_idea = GLC_acas
-		}
-		remove_ideas = GLC_acas
-	}
-	if = {
-		limit = {
-			has_idea = GLC_acd2
-		}
-		remove_ideas = GLC_acd2
-	}
-	if = {
-		limit = {
-			has_idea = GLC_acgs
-		}
-		remove_ideas = GLC_acgs
-	}
-	if = {
-		limit = {
-			has_idea = GLC_aco2
-		}
-		remove_ideas = GLC_aco2
-	}
-	if = {
-		limit = {
-			has_idea = GLC_acr
-		}
-		remove_ideas = GLC_acr
-	}
 }
 
 remove_all_ideas_chunk_24 = {
-	if = {
-		limit = {
-			has_idea = GLC_ai2
-		}
-		remove_ideas = GLC_ai2
-	}
-	if = {
-		limit = {
-			has_idea = GLC_ar
-		}
-		remove_ideas = GLC_ar
-	}
-	if = {
-		limit = {
-			has_idea = GLC_awt
-		}
-		remove_ideas = GLC_awt
-	}
 	if = {
 		limit = {
 			has_idea = GLC_coi
@@ -13909,36 +11582,6 @@ remove_all_ideas_chunk_24 = {
 			has_idea = GLC_fascist_guy
 		}
 		remove_ideas = GLC_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = GLC_mt
-		}
-		remove_ideas = GLC_mt
-	}
-	if = {
-		limit = {
-			has_idea = GLC_nccr
-		}
-		remove_ideas = GLC_nccr
-	}
-	if = {
-		limit = {
-			has_idea = GLC_ncm
-		}
-		remove_ideas = GLC_ncm
-	}
-	if = {
-		limit = {
-			has_idea = GLC_ncs
-		}
-		remove_ideas = GLC_ncs
-	}
-	if = {
-		limit = {
-			has_idea = GLC_nt
-		}
-		remove_ideas = GLC_nt
 	}
 	if = {
 		limit = {
@@ -14290,12 +11933,6 @@ remove_all_ideas_chunk_24 = {
 	}
 	if = {
 		limit = {
-			has_idea = GRE_macedonian_farmlands_idea
-		}
-		remove_ideas = GRE_macedonian_farmlands_idea
-	}
-	if = {
-		limit = {
 			has_idea = GRE_man
 		}
 		remove_ideas = GRE_man
@@ -14371,12 +12008,6 @@ remove_all_ideas_chunk_24 = {
 			has_idea = GRE_neorion
 		}
 		remove_ideas = GRE_neorion
-	}
-	if = {
-		limit = {
-			has_idea = GRE_orthodox_church_support
-		}
-		remove_ideas = GRE_orthodox_church_support
 	}
 	if = {
 		limit = {
@@ -14671,60 +12302,6 @@ remove_all_ideas_chunk_25 = {
 	}
 	if = {
 		limit = {
-			has_idea = GUM_aa2
-		}
-		remove_ideas = GUM_aa2
-	}
-	if = {
-		limit = {
-			has_idea = GUM_acas
-		}
-		remove_ideas = GUM_acas
-	}
-	if = {
-		limit = {
-			has_idea = GUM_acd2
-		}
-		remove_ideas = GUM_acd2
-	}
-	if = {
-		limit = {
-			has_idea = GUM_acgs
-		}
-		remove_ideas = GUM_acgs
-	}
-	if = {
-		limit = {
-			has_idea = GUM_aco2
-		}
-		remove_ideas = GUM_aco2
-	}
-	if = {
-		limit = {
-			has_idea = GUM_acr
-		}
-		remove_ideas = GUM_acr
-	}
-	if = {
-		limit = {
-			has_idea = GUM_ai2
-		}
-		remove_ideas = GUM_ai2
-	}
-	if = {
-		limit = {
-			has_idea = GUM_ar
-		}
-		remove_ideas = GUM_ar
-	}
-	if = {
-		limit = {
-			has_idea = GUM_awt
-		}
-		remove_ideas = GUM_awt
-	}
-	if = {
-		limit = {
 			has_idea = GUM_coi
 		}
 		remove_ideas = GUM_coi
@@ -14749,36 +12326,6 @@ remove_all_ideas_chunk_25 = {
 	}
 	if = {
 		limit = {
-			has_idea = GUM_mt
-		}
-		remove_ideas = GUM_mt
-	}
-	if = {
-		limit = {
-			has_idea = GUM_nccr
-		}
-		remove_ideas = GUM_nccr
-	}
-	if = {
-		limit = {
-			has_idea = GUM_ncm
-		}
-		remove_ideas = GUM_ncm
-	}
-	if = {
-		limit = {
-			has_idea = GUM_ncs
-		}
-		remove_ideas = GUM_ncs
-	}
-	if = {
-		limit = {
-			has_idea = GUM_nt
-		}
-		remove_ideas = GUM_nt
-	}
-	if = {
-		limit = {
 			has_idea = GUM_pot
 		}
 		remove_ideas = GUM_pot
@@ -14794,66 +12341,6 @@ remove_all_ideas_chunk_25 = {
 			has_idea = GXC_scorched_earth_policy
 		}
 		remove_ideas = GXC_scorched_earth_policy
-	}
-	if = {
-		limit = {
-			has_idea = GXC_uneasy_minds_idea
-		}
-		remove_ideas = GXC_uneasy_minds_idea
-	}
-	if = {
-		limit = {
-			has_idea = GYA_aa2
-		}
-		remove_ideas = GYA_aa2
-	}
-	if = {
-		limit = {
-			has_idea = GYA_acas
-		}
-		remove_ideas = GYA_acas
-	}
-	if = {
-		limit = {
-			has_idea = GYA_acd2
-		}
-		remove_ideas = GYA_acd2
-	}
-	if = {
-		limit = {
-			has_idea = GYA_acgs
-		}
-		remove_ideas = GYA_acgs
-	}
-	if = {
-		limit = {
-			has_idea = GYA_aco2
-		}
-		remove_ideas = GYA_aco2
-	}
-	if = {
-		limit = {
-			has_idea = GYA_acr
-		}
-		remove_ideas = GYA_acr
-	}
-	if = {
-		limit = {
-			has_idea = GYA_ai2
-		}
-		remove_ideas = GYA_ai2
-	}
-	if = {
-		limit = {
-			has_idea = GYA_ar
-		}
-		remove_ideas = GYA_ar
-	}
-	if = {
-		limit = {
-			has_idea = GYA_awt
-		}
-		remove_ideas = GYA_awt
 	}
 	if = {
 		limit = {
@@ -14881,36 +12368,6 @@ remove_all_ideas_chunk_25 = {
 	}
 	if = {
 		limit = {
-			has_idea = GYA_mt
-		}
-		remove_ideas = GYA_mt
-	}
-	if = {
-		limit = {
-			has_idea = GYA_nccr
-		}
-		remove_ideas = GYA_nccr
-	}
-	if = {
-		limit = {
-			has_idea = GYA_ncm
-		}
-		remove_ideas = GYA_ncm
-	}
-	if = {
-		limit = {
-			has_idea = GYA_ncs
-		}
-		remove_ideas = GYA_ncs
-	}
-	if = {
-		limit = {
-			has_idea = GYA_nt
-		}
-		remove_ideas = GYA_nt
-	}
-	if = {
-		limit = {
 			has_idea = GYA_pot
 		}
 		remove_ideas = GYA_pot
@@ -14935,54 +12392,6 @@ remove_all_ideas_chunk_25 = {
 	}
 	if = {
 		limit = {
-			has_idea = HANACR
-		}
-		remove_ideas = HANACR
-	}
-	if = {
-		limit = {
-			has_idea = HAN_abi
-		}
-		remove_ideas = HAN_abi
-	}
-	if = {
-		limit = {
-			has_idea = HAN_acd
-		}
-		remove_ideas = HAN_acd
-	}
-	if = {
-		limit = {
-			has_idea = HAN_acgs
-		}
-		remove_ideas = HAN_acgs
-	}
-	if = {
-		limit = {
-			has_idea = HAN_aco
-		}
-		remove_ideas = HAN_aco
-	}
-	if = {
-		limit = {
-			has_idea = HAN_acom
-		}
-		remove_ideas = HAN_acom
-	}
-	if = {
-		limit = {
-			has_idea = HAN_arg
-		}
-		remove_ideas = HAN_arg
-	}
-	if = {
-		limit = {
-			has_idea = HAN_at
-		}
-		remove_ideas = HAN_at
-	}
-	if = {
-		limit = {
 			has_idea = HAN_coi
 		}
 		remove_ideas = HAN_coi
@@ -15001,51 +12410,9 @@ remove_all_ideas_chunk_25 = {
 	}
 	if = {
 		limit = {
-			has_idea = HAN_ent
-		}
-		remove_ideas = HAN_ent
-	}
-	if = {
-		limit = {
 			has_idea = HAN_fascist_guy
 		}
 		remove_ideas = HAN_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = HAN_inf
-		}
-		remove_ideas = HAN_inf
-	}
-	if = {
-		limit = {
-			has_idea = HAN_man
-		}
-		remove_ideas = HAN_man
-	}
-	if = {
-		limit = {
-			has_idea = HAN_mt
-		}
-		remove_ideas = HAN_mt
-	}
-	if = {
-		limit = {
-			has_idea = HAN_ncav
-		}
-		remove_ideas = HAN_ncav
-	}
-	if = {
-		limit = {
-			has_idea = HAN_ncdb
-		}
-		remove_ideas = HAN_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = HAN_nt
-		}
-		remove_ideas = HAN_nt
 	}
 	if = {
 		limit = {
@@ -15065,63 +12432,9 @@ remove_all_ideas_chunk_25 = {
 		}
 		remove_ideas = HAN_wi
 	}
-	if = {
-		limit = {
-			has_idea = HAW_aa2
-		}
-		remove_ideas = HAW_aa2
-	}
 }
 
 remove_all_ideas_chunk_26 = {
-	if = {
-		limit = {
-			has_idea = HAW_acas
-		}
-		remove_ideas = HAW_acas
-	}
-	if = {
-		limit = {
-			has_idea = HAW_acd2
-		}
-		remove_ideas = HAW_acd2
-	}
-	if = {
-		limit = {
-			has_idea = HAW_acgs
-		}
-		remove_ideas = HAW_acgs
-	}
-	if = {
-		limit = {
-			has_idea = HAW_aco2
-		}
-		remove_ideas = HAW_aco2
-	}
-	if = {
-		limit = {
-			has_idea = HAW_acr
-		}
-		remove_ideas = HAW_acr
-	}
-	if = {
-		limit = {
-			has_idea = HAW_ai2
-		}
-		remove_ideas = HAW_ai2
-	}
-	if = {
-		limit = {
-			has_idea = HAW_ar
-		}
-		remove_ideas = HAW_ar
-	}
-	if = {
-		limit = {
-			has_idea = HAW_awt
-		}
-		remove_ideas = HAW_awt
-	}
 	if = {
 		limit = {
 			has_idea = HAW_coi
@@ -15145,36 +12458,6 @@ remove_all_ideas_chunk_26 = {
 			has_idea = HAW_fascist_guy
 		}
 		remove_ideas = HAW_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = HAW_mt
-		}
-		remove_ideas = HAW_mt
-	}
-	if = {
-		limit = {
-			has_idea = HAW_nccr
-		}
-		remove_ideas = HAW_nccr
-	}
-	if = {
-		limit = {
-			has_idea = HAW_ncm
-		}
-		remove_ideas = HAW_ncm
-	}
-	if = {
-		limit = {
-			has_idea = HAW_ncs
-		}
-		remove_ideas = HAW_ncs
-	}
-	if = {
-		limit = {
-			has_idea = HAW_nt
-		}
-		remove_ideas = HAW_nt
 	}
 	if = {
 		limit = {
@@ -15268,18 +12551,6 @@ remove_all_ideas_chunk_26 = {
 	}
 	if = {
 		limit = {
-			has_idea = HOL
-		}
-		remove_ideas = HOL
-	}
-	if = {
-		limit = {
-			has_idea = HOL_agricultural_taxes
-		}
-		remove_ideas = HOL_agricultural_taxes
-	}
-	if = {
-		limit = {
 			has_idea = HOL_allied_technological_developments
 		}
 		remove_ideas = HOL_allied_technological_developments
@@ -15361,18 +12632,6 @@ remove_all_ideas_chunk_26 = {
 			has_idea = HOL_caved_to_the_germans
 		}
 		remove_ideas = HOL_caved_to_the_germans
-	}
-	if = {
-		limit = {
-			has_idea = HOL_cheap_lumber
-		}
-		remove_ideas = HOL_cheap_lumber
-	}
-	if = {
-		limit = {
-			has_idea = HOL_cheap_sugar
-		}
-		remove_ideas = HOL_cheap_sugar
 	}
 	if = {
 		limit = {
@@ -15478,12 +12737,6 @@ remove_all_ideas_chunk_26 = {
 	}
 	if = {
 		limit = {
-			has_idea = HOL_flag_will_fly
-		}
-		remove_ideas = HOL_flag_will_fly
-	}
-	if = {
-		limit = {
 			has_idea = HOL_french_military_mission
 		}
 		remove_ideas = HOL_french_military_mission
@@ -15529,24 +12782,6 @@ remove_all_ideas_chunk_26 = {
 			has_idea = HOL_implement_the_program
 		}
 		remove_ideas = HOL_implement_the_program
-	}
-	if = {
-		limit = {
-			has_idea = HOL_indonesian_cheap_labor
-		}
-		remove_ideas = HOL_indonesian_cheap_labor
-	}
-	if = {
-		limit = {
-			has_idea = HOL_internationally_controversial_aggression
-		}
-		remove_ideas = HOL_internationally_controversial_aggression
-	}
-	if = {
-		limit = {
-			has_idea = HOL_internationally_controversial_aggression_2
-		}
-		remove_ideas = HOL_internationally_controversial_aggression_2
 	}
 	if = {
 		limit = {
@@ -16957,90 +14192,6 @@ remove_all_ideas_chunk_29 = {
 	}
 	if = {
 		limit = {
-			has_idea = IF
-		}
-		remove_ideas = IF
-	}
-	if = {
-		limit = {
-			has_idea = INS
-		}
-		remove_ideas = INS
-	}
-	if = {
-		limit = {
-			has_idea = INS_JAP_repaying_industrialists
-		}
-		remove_ideas = INS_JAP_repaying_industrialists
-	}
-	if = {
-		limit = {
-			has_idea = INS_anti_colonialist_sentiment_idea
-		}
-		remove_ideas = INS_anti_colonialist_sentiment_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_construction_boom
-		}
-		remove_ideas = INS_construction_boom
-	}
-	if = {
-		limit = {
-			has_idea = INS_economic_transition_idea
-		}
-		remove_ideas = INS_economic_transition_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_emergency_dockyard_construction_idea
-		}
-		remove_ideas = INS_emergency_dockyard_construction_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_establishing_naval_doctrine
-		}
-		remove_ideas = INS_establishing_naval_doctrine
-	}
-	if = {
-		limit = {
-			has_idea = INS_guided_democracy_idea
-		}
-		remove_ideas = INS_guided_democracy_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_investing_in_tin_idea
-		}
-		remove_ideas = INS_investing_in_tin_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_military_above_all_idea
-		}
-		remove_ideas = INS_military_above_all_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_no_compromise_idea
-		}
-		remove_ideas = INS_no_compromise_idea
-	}
-	if = {
-		limit = {
-			has_idea = INS_plane_making
-		}
-		remove_ideas = INS_plane_making
-	}
-	if = {
-		limit = {
-			has_idea = INS_revolutionaries_working_with_indonesians_idea
-		}
-		remove_ideas = INS_revolutionaries_working_with_indonesians_idea
-	}
-	if = {
-		limit = {
 			has_idea = IRQ_ENG_attack_bonus
 		}
 		remove_ideas = IRQ_ENG_attack_bonus
@@ -17305,12 +14456,6 @@ remove_all_ideas_chunk_29 = {
 	}
 	if = {
 		limit = {
-			has_idea = ITA
-		}
-		remove_ideas = ITA
-	}
-	if = {
-		limit = {
 			has_idea = ITA_ALB_italian_settlers
 		}
 		remove_ideas = ITA_ALB_italian_settlers
@@ -17344,18 +14489,6 @@ remove_all_ideas_chunk_29 = {
 			has_idea = ITA_alpine_defense
 		}
 		remove_ideas = ITA_alpine_defense
-	}
-	if = {
-		limit = {
-			has_idea = ITA_ansaldo_manufacturer
-		}
-		remove_ideas = ITA_ansaldo_manufacturer
-	}
-	if = {
-		limit = {
-			has_idea = ITA_ansaldo_manufacturer_improved
-		}
-		remove_ideas = ITA_ansaldo_manufacturer_improved
 	}
 	if = {
 		limit = {
@@ -18355,60 +15488,6 @@ remove_all_ideas_chunk_31 = {
 	}
 	if = {
 		limit = {
-			has_idea = IVO_aa2
-		}
-		remove_ideas = IVO_aa2
-	}
-	if = {
-		limit = {
-			has_idea = IVO_acas
-		}
-		remove_ideas = IVO_acas
-	}
-	if = {
-		limit = {
-			has_idea = IVO_acd2
-		}
-		remove_ideas = IVO_acd2
-	}
-	if = {
-		limit = {
-			has_idea = IVO_acgs
-		}
-		remove_ideas = IVO_acgs
-	}
-	if = {
-		limit = {
-			has_idea = IVO_aco2
-		}
-		remove_ideas = IVO_aco2
-	}
-	if = {
-		limit = {
-			has_idea = IVO_acr
-		}
-		remove_ideas = IVO_acr
-	}
-	if = {
-		limit = {
-			has_idea = IVO_ai2
-		}
-		remove_ideas = IVO_ai2
-	}
-	if = {
-		limit = {
-			has_idea = IVO_ar
-		}
-		remove_ideas = IVO_ar
-	}
-	if = {
-		limit = {
-			has_idea = IVO_awt
-		}
-		remove_ideas = IVO_awt
-	}
-	if = {
-		limit = {
 			has_idea = IVO_coi
 		}
 		remove_ideas = IVO_coi
@@ -18433,36 +15512,6 @@ remove_all_ideas_chunk_31 = {
 	}
 	if = {
 		limit = {
-			has_idea = IVO_mt
-		}
-		remove_ideas = IVO_mt
-	}
-	if = {
-		limit = {
-			has_idea = IVO_nccr
-		}
-		remove_ideas = IVO_nccr
-	}
-	if = {
-		limit = {
-			has_idea = IVO_ncm
-		}
-		remove_ideas = IVO_ncm
-	}
-	if = {
-		limit = {
-			has_idea = IVO_ncs
-		}
-		remove_ideas = IVO_ncs
-	}
-	if = {
-		limit = {
-			has_idea = IVO_nt
-		}
-		remove_ideas = IVO_nt
-	}
-	if = {
-		limit = {
 			has_idea = IVO_pot
 		}
 		remove_ideas = IVO_pot
@@ -18472,12 +15521,6 @@ remove_all_ideas_chunk_31 = {
 			has_idea = IVO_stc
 		}
 		remove_ideas = IVO_stc
-	}
-	if = {
-		limit = {
-			has_idea = JAP
-		}
-		remove_ideas = JAP
 	}
 	if = {
 		limit = {
@@ -19120,12 +16163,6 @@ remove_all_ideas_chunk_32 = {
 	}
 	if = {
 		limit = {
-			has_idea = JAP_kayaba_industry
-		}
-		remove_ideas = JAP_kayaba_industry
-	}
-	if = {
-		limit = {
 			has_idea = JAP_kempeitai_idea_lar
 		}
 		remove_ideas = JAP_kempeitai_idea_lar
@@ -19378,12 +16415,6 @@ remove_all_ideas_chunk_33 = {
 			has_idea = JAP_new_order_in_east_asia_idea
 		}
 		remove_ideas = JAP_new_order_in_east_asia_idea
-	}
-	if = {
-		limit = {
-			has_idea = JAP_nippon_sharyo
-		}
-		remove_ideas = JAP_nippon_sharyo
 	}
 	if = {
 		limit = {
@@ -19753,12 +16784,6 @@ remove_all_ideas_chunk_33 = {
 	}
 	if = {
 		limit = {
-			has_idea = JAP_war_communism_idea
-		}
-		remove_ideas = JAP_war_communism_idea
-	}
-	if = {
-		limit = {
 			has_idea = JAP_widespread_protests_and_sabotage_idea
 		}
 		remove_ideas = JAP_widespread_protests_and_sabotage_idea
@@ -19855,27 +16880,9 @@ remove_all_ideas_chunk_33 = {
 	}
 	if = {
 		limit = {
-			has_idea = KHM_anti_communist_campaign
-		}
-		remove_ideas = KHM_anti_communist_campaign
-	}
-	if = {
-		limit = {
 			has_idea = KHM_confiscated_gold
 		}
 		remove_ideas = KHM_confiscated_gold
-	}
-	if = {
-		limit = {
-			has_idea = KHM_influx_of_funds_idea
-		}
-		remove_ideas = KHM_influx_of_funds_idea
-	}
-	if = {
-		limit = {
-			has_idea = KHM_promoting_jadidist_movements_idea
-		}
-		remove_ideas = KHM_promoting_jadidist_movements_idea
 	}
 	if = {
 		limit = {
@@ -19883,75 +16890,9 @@ remove_all_ideas_chunk_33 = {
 		}
 		remove_ideas = KHM_pushing_them_back_idea
 	}
-	if = {
-		limit = {
-			has_idea = KHM_unrest
-		}
-		remove_ideas = KHM_unrest
-	}
-	if = {
-		limit = {
-			has_idea = KHM_unrest_2
-		}
-		remove_ideas = KHM_unrest_2
-	}
 }
 
 remove_all_ideas_chunk_34 = {
-	if = {
-		limit = {
-			has_idea = KOS_aa2
-		}
-		remove_ideas = KOS_aa2
-	}
-	if = {
-		limit = {
-			has_idea = KOS_acas
-		}
-		remove_ideas = KOS_acas
-	}
-	if = {
-		limit = {
-			has_idea = KOS_acd2
-		}
-		remove_ideas = KOS_acd2
-	}
-	if = {
-		limit = {
-			has_idea = KOS_acgs
-		}
-		remove_ideas = KOS_acgs
-	}
-	if = {
-		limit = {
-			has_idea = KOS_aco2
-		}
-		remove_ideas = KOS_aco2
-	}
-	if = {
-		limit = {
-			has_idea = KOS_acr
-		}
-		remove_ideas = KOS_acr
-	}
-	if = {
-		limit = {
-			has_idea = KOS_ai2
-		}
-		remove_ideas = KOS_ai2
-	}
-	if = {
-		limit = {
-			has_idea = KOS_ar
-		}
-		remove_ideas = KOS_ar
-	}
-	if = {
-		limit = {
-			has_idea = KOS_awt
-		}
-		remove_ideas = KOS_awt
-	}
 	if = {
 		limit = {
 			has_idea = KOS_coi
@@ -19975,36 +16916,6 @@ remove_all_ideas_chunk_34 = {
 			has_idea = KOS_fascist_guy
 		}
 		remove_ideas = KOS_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = KOS_mt
-		}
-		remove_ideas = KOS_mt
-	}
-	if = {
-		limit = {
-			has_idea = KOS_nccr
-		}
-		remove_ideas = KOS_nccr
-	}
-	if = {
-		limit = {
-			has_idea = KOS_ncm
-		}
-		remove_ideas = KOS_ncm
-	}
-	if = {
-		limit = {
-			has_idea = KOS_ncs
-		}
-		remove_ideas = KOS_ncs
-	}
-	if = {
-		limit = {
-			has_idea = KOS_nt
-		}
-		remove_ideas = KOS_nt
 	}
 	if = {
 		limit = {
@@ -20188,60 +17099,6 @@ remove_all_ideas_chunk_34 = {
 	}
 	if = {
 		limit = {
-			has_idea = LBA_aa2
-		}
-		remove_ideas = LBA_aa2
-	}
-	if = {
-		limit = {
-			has_idea = LBA_acas
-		}
-		remove_ideas = LBA_acas
-	}
-	if = {
-		limit = {
-			has_idea = LBA_acd2
-		}
-		remove_ideas = LBA_acd2
-	}
-	if = {
-		limit = {
-			has_idea = LBA_acgs
-		}
-		remove_ideas = LBA_acgs
-	}
-	if = {
-		limit = {
-			has_idea = LBA_aco2
-		}
-		remove_ideas = LBA_aco2
-	}
-	if = {
-		limit = {
-			has_idea = LBA_acr
-		}
-		remove_ideas = LBA_acr
-	}
-	if = {
-		limit = {
-			has_idea = LBA_ai2
-		}
-		remove_ideas = LBA_ai2
-	}
-	if = {
-		limit = {
-			has_idea = LBA_ar
-		}
-		remove_ideas = LBA_ar
-	}
-	if = {
-		limit = {
-			has_idea = LBA_awt
-		}
-		remove_ideas = LBA_awt
-	}
-	if = {
-		limit = {
 			has_idea = LBA_coi
 		}
 		remove_ideas = LBA_coi
@@ -20263,36 +17120,6 @@ remove_all_ideas_chunk_34 = {
 			has_idea = LBA_fascist_guy
 		}
 		remove_ideas = LBA_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = LBA_mt
-		}
-		remove_ideas = LBA_mt
-	}
-	if = {
-		limit = {
-			has_idea = LBA_nccr
-		}
-		remove_ideas = LBA_nccr
-	}
-	if = {
-		limit = {
-			has_idea = LBA_ncm
-		}
-		remove_ideas = LBA_ncm
-	}
-	if = {
-		limit = {
-			has_idea = LBA_ncs
-		}
-		remove_ideas = LBA_ncs
-	}
-	if = {
-		limit = {
-			has_idea = LBA_nt
-		}
-		remove_ideas = LBA_nt
 	}
 	if = {
 		limit = {
@@ -20509,60 +17336,6 @@ remove_all_ideas_chunk_35 = {
 	}
 	if = {
 		limit = {
-			has_idea = MAC_aa2
-		}
-		remove_ideas = MAC_aa2
-	}
-	if = {
-		limit = {
-			has_idea = MAC_acas
-		}
-		remove_ideas = MAC_acas
-	}
-	if = {
-		limit = {
-			has_idea = MAC_acd2
-		}
-		remove_ideas = MAC_acd2
-	}
-	if = {
-		limit = {
-			has_idea = MAC_acgs
-		}
-		remove_ideas = MAC_acgs
-	}
-	if = {
-		limit = {
-			has_idea = MAC_aco2
-		}
-		remove_ideas = MAC_aco2
-	}
-	if = {
-		limit = {
-			has_idea = MAC_acr
-		}
-		remove_ideas = MAC_acr
-	}
-	if = {
-		limit = {
-			has_idea = MAC_ai2
-		}
-		remove_ideas = MAC_ai2
-	}
-	if = {
-		limit = {
-			has_idea = MAC_ar
-		}
-		remove_ideas = MAC_ar
-	}
-	if = {
-		limit = {
-			has_idea = MAC_awt
-		}
-		remove_ideas = MAC_awt
-	}
-	if = {
-		limit = {
 			has_idea = MAC_coi
 		}
 		remove_ideas = MAC_coi
@@ -20587,36 +17360,6 @@ remove_all_ideas_chunk_35 = {
 	}
 	if = {
 		limit = {
-			has_idea = MAC_mt
-		}
-		remove_ideas = MAC_mt
-	}
-	if = {
-		limit = {
-			has_idea = MAC_nccr
-		}
-		remove_ideas = MAC_nccr
-	}
-	if = {
-		limit = {
-			has_idea = MAC_ncm
-		}
-		remove_ideas = MAC_ncm
-	}
-	if = {
-		limit = {
-			has_idea = MAC_ncs
-		}
-		remove_ideas = MAC_ncs
-	}
-	if = {
-		limit = {
-			has_idea = MAC_nt
-		}
-		remove_ideas = MAC_nt
-	}
-	if = {
-		limit = {
 			has_idea = MAC_pot
 		}
 		remove_ideas = MAC_pot
@@ -20626,60 +17369,6 @@ remove_all_ideas_chunk_35 = {
 			has_idea = MAC_stc
 		}
 		remove_ideas = MAC_stc
-	}
-	if = {
-		limit = {
-			has_idea = MAD_aa2
-		}
-		remove_ideas = MAD_aa2
-	}
-	if = {
-		limit = {
-			has_idea = MAD_acas
-		}
-		remove_ideas = MAD_acas
-	}
-	if = {
-		limit = {
-			has_idea = MAD_acd2
-		}
-		remove_ideas = MAD_acd2
-	}
-	if = {
-		limit = {
-			has_idea = MAD_acgs
-		}
-		remove_ideas = MAD_acgs
-	}
-	if = {
-		limit = {
-			has_idea = MAD_aco2
-		}
-		remove_ideas = MAD_aco2
-	}
-	if = {
-		limit = {
-			has_idea = MAD_acr
-		}
-		remove_ideas = MAD_acr
-	}
-	if = {
-		limit = {
-			has_idea = MAD_ai2
-		}
-		remove_ideas = MAD_ai2
-	}
-	if = {
-		limit = {
-			has_idea = MAD_ar
-		}
-		remove_ideas = MAD_ar
-	}
-	if = {
-		limit = {
-			has_idea = MAD_awt
-		}
-		remove_ideas = MAD_awt
 	}
 	if = {
 		limit = {
@@ -20707,36 +17396,6 @@ remove_all_ideas_chunk_35 = {
 	}
 	if = {
 		limit = {
-			has_idea = MAD_mt
-		}
-		remove_ideas = MAD_mt
-	}
-	if = {
-		limit = {
-			has_idea = MAD_nccr
-		}
-		remove_ideas = MAD_nccr
-	}
-	if = {
-		limit = {
-			has_idea = MAD_ncm
-		}
-		remove_ideas = MAD_ncm
-	}
-	if = {
-		limit = {
-			has_idea = MAD_ncs
-		}
-		remove_ideas = MAD_ncs
-	}
-	if = {
-		limit = {
-			has_idea = MAD_nt
-		}
-		remove_ideas = MAD_nt
-	}
-	if = {
-		limit = {
 			has_idea = MAD_pot
 		}
 		remove_ideas = MAD_pot
@@ -20746,30 +17405,6 @@ remove_all_ideas_chunk_35 = {
 			has_idea = MAD_stc
 		}
 		remove_ideas = MAD_stc
-	}
-	if = {
-		limit = {
-			has_idea = MAL_colonial_administration_idea
-		}
-		remove_ideas = MAL_colonial_administration_idea
-	}
-	if = {
-		limit = {
-			has_idea = MAL_ketuanan_melayu
-		}
-		remove_ideas = MAL_ketuanan_melayu
-	}
-	if = {
-		limit = {
-			has_idea = MAL_ketuanan_melayu_2
-		}
-		remove_ideas = MAL_ketuanan_melayu_2
-	}
-	if = {
-		limit = {
-			has_idea = MAL_ketuanan_melayu_3
-		}
-		remove_ideas = MAL_ketuanan_melayu_3
 	}
 	if = {
 		limit = {
@@ -21154,54 +17789,6 @@ remove_all_ideas_chunk_36 = {
 	}
 	if = {
 		limit = {
-			has_idea = MEKACR
-		}
-		remove_ideas = MEKACR
-	}
-	if = {
-		limit = {
-			has_idea = MEK_abi
-		}
-		remove_ideas = MEK_abi
-	}
-	if = {
-		limit = {
-			has_idea = MEK_acd
-		}
-		remove_ideas = MEK_acd
-	}
-	if = {
-		limit = {
-			has_idea = MEK_acgs
-		}
-		remove_ideas = MEK_acgs
-	}
-	if = {
-		limit = {
-			has_idea = MEK_aco
-		}
-		remove_ideas = MEK_aco
-	}
-	if = {
-		limit = {
-			has_idea = MEK_acom
-		}
-		remove_ideas = MEK_acom
-	}
-	if = {
-		limit = {
-			has_idea = MEK_arg
-		}
-		remove_ideas = MEK_arg
-	}
-	if = {
-		limit = {
-			has_idea = MEK_at
-		}
-		remove_ideas = MEK_at
-	}
-	if = {
-		limit = {
 			has_idea = MEK_coi
 		}
 		remove_ideas = MEK_coi
@@ -21220,51 +17807,9 @@ remove_all_ideas_chunk_36 = {
 	}
 	if = {
 		limit = {
-			has_idea = MEK_ent
-		}
-		remove_ideas = MEK_ent
-	}
-	if = {
-		limit = {
 			has_idea = MEK_fascist_guy
 		}
 		remove_ideas = MEK_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = MEK_inf
-		}
-		remove_ideas = MEK_inf
-	}
-	if = {
-		limit = {
-			has_idea = MEK_man
-		}
-		remove_ideas = MEK_man
-	}
-	if = {
-		limit = {
-			has_idea = MEK_mt
-		}
-		remove_ideas = MEK_mt
-	}
-	if = {
-		limit = {
-			has_idea = MEK_ncav
-		}
-		remove_ideas = MEK_ncav
-	}
-	if = {
-		limit = {
-			has_idea = MEK_ncdb
-		}
-		remove_ideas = MEK_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = MEK_nt
-		}
-		remove_ideas = MEK_nt
 	}
 	if = {
 		limit = {
@@ -21634,60 +18179,6 @@ remove_all_ideas_chunk_36 = {
 	}
 	if = {
 		limit = {
-			has_idea = MNT_aa2
-		}
-		remove_ideas = MNT_aa2
-	}
-	if = {
-		limit = {
-			has_idea = MNT_acas
-		}
-		remove_ideas = MNT_acas
-	}
-	if = {
-		limit = {
-			has_idea = MNT_acd2
-		}
-		remove_ideas = MNT_acd2
-	}
-	if = {
-		limit = {
-			has_idea = MNT_acgs
-		}
-		remove_ideas = MNT_acgs
-	}
-	if = {
-		limit = {
-			has_idea = MNT_aco2
-		}
-		remove_ideas = MNT_aco2
-	}
-	if = {
-		limit = {
-			has_idea = MNT_acr
-		}
-		remove_ideas = MNT_acr
-	}
-	if = {
-		limit = {
-			has_idea = MNT_ai2
-		}
-		remove_ideas = MNT_ai2
-	}
-	if = {
-		limit = {
-			has_idea = MNT_ar
-		}
-		remove_ideas = MNT_ar
-	}
-	if = {
-		limit = {
-			has_idea = MNT_awt
-		}
-		remove_ideas = MNT_awt
-	}
-	if = {
-		limit = {
 			has_idea = MNT_coi
 		}
 		remove_ideas = MNT_coi
@@ -21715,36 +18206,6 @@ remove_all_ideas_chunk_37 = {
 	}
 	if = {
 		limit = {
-			has_idea = MNT_mt
-		}
-		remove_ideas = MNT_mt
-	}
-	if = {
-		limit = {
-			has_idea = MNT_nccr
-		}
-		remove_ideas = MNT_nccr
-	}
-	if = {
-		limit = {
-			has_idea = MNT_ncm
-		}
-		remove_ideas = MNT_ncm
-	}
-	if = {
-		limit = {
-			has_idea = MNT_ncs
-		}
-		remove_ideas = MNT_ncs
-	}
-	if = {
-		limit = {
-			has_idea = MNT_nt
-		}
-		remove_ideas = MNT_nt
-	}
-	if = {
-		limit = {
 			has_idea = MNT_pot
 		}
 		remove_ideas = MNT_pot
@@ -21760,60 +18221,6 @@ remove_all_ideas_chunk_37 = {
 			has_idea = MON_income_from_hulunbuir_idea
 		}
 		remove_ideas = MON_income_from_hulunbuir_idea
-	}
-	if = {
-		limit = {
-			has_idea = MOR_aa2
-		}
-		remove_ideas = MOR_aa2
-	}
-	if = {
-		limit = {
-			has_idea = MOR_acas
-		}
-		remove_ideas = MOR_acas
-	}
-	if = {
-		limit = {
-			has_idea = MOR_acd2
-		}
-		remove_ideas = MOR_acd2
-	}
-	if = {
-		limit = {
-			has_idea = MOR_acgs
-		}
-		remove_ideas = MOR_acgs
-	}
-	if = {
-		limit = {
-			has_idea = MOR_aco2
-		}
-		remove_ideas = MOR_aco2
-	}
-	if = {
-		limit = {
-			has_idea = MOR_acr
-		}
-		remove_ideas = MOR_acr
-	}
-	if = {
-		limit = {
-			has_idea = MOR_ai2
-		}
-		remove_ideas = MOR_ai2
-	}
-	if = {
-		limit = {
-			has_idea = MOR_ar
-		}
-		remove_ideas = MOR_ar
-	}
-	if = {
-		limit = {
-			has_idea = MOR_awt
-		}
-		remove_ideas = MOR_awt
 	}
 	if = {
 		limit = {
@@ -21838,36 +18245,6 @@ remove_all_ideas_chunk_37 = {
 			has_idea = MOR_fascist_guy
 		}
 		remove_ideas = MOR_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = MOR_mt
-		}
-		remove_ideas = MOR_mt
-	}
-	if = {
-		limit = {
-			has_idea = MOR_nccr
-		}
-		remove_ideas = MOR_nccr
-	}
-	if = {
-		limit = {
-			has_idea = MOR_ncm
-		}
-		remove_ideas = MOR_ncm
-	}
-	if = {
-		limit = {
-			has_idea = MOR_ncs
-		}
-		remove_ideas = MOR_ncs
-	}
-	if = {
-		limit = {
-			has_idea = MOR_nt
-		}
-		remove_ideas = MOR_nt
 	}
 	if = {
 		limit = {
@@ -21913,60 +18290,6 @@ remove_all_ideas_chunk_37 = {
 	}
 	if = {
 		limit = {
-			has_idea = NAV_aa2
-		}
-		remove_ideas = NAV_aa2
-	}
-	if = {
-		limit = {
-			has_idea = NAV_acas
-		}
-		remove_ideas = NAV_acas
-	}
-	if = {
-		limit = {
-			has_idea = NAV_acd2
-		}
-		remove_ideas = NAV_acd2
-	}
-	if = {
-		limit = {
-			has_idea = NAV_acgs
-		}
-		remove_ideas = NAV_acgs
-	}
-	if = {
-		limit = {
-			has_idea = NAV_aco2
-		}
-		remove_ideas = NAV_aco2
-	}
-	if = {
-		limit = {
-			has_idea = NAV_acr
-		}
-		remove_ideas = NAV_acr
-	}
-	if = {
-		limit = {
-			has_idea = NAV_ai2
-		}
-		remove_ideas = NAV_ai2
-	}
-	if = {
-		limit = {
-			has_idea = NAV_ar
-		}
-		remove_ideas = NAV_ar
-	}
-	if = {
-		limit = {
-			has_idea = NAV_awt
-		}
-		remove_ideas = NAV_awt
-	}
-	if = {
-		limit = {
 			has_idea = NAV_coi
 		}
 		remove_ideas = NAV_coi
@@ -21991,36 +18314,6 @@ remove_all_ideas_chunk_37 = {
 	}
 	if = {
 		limit = {
-			has_idea = NAV_mt
-		}
-		remove_ideas = NAV_mt
-	}
-	if = {
-		limit = {
-			has_idea = NAV_nccr
-		}
-		remove_ideas = NAV_nccr
-	}
-	if = {
-		limit = {
-			has_idea = NAV_ncm
-		}
-		remove_ideas = NAV_ncm
-	}
-	if = {
-		limit = {
-			has_idea = NAV_ncs
-		}
-		remove_ideas = NAV_ncs
-	}
-	if = {
-		limit = {
-			has_idea = NAV_nt
-		}
-		remove_ideas = NAV_nt
-	}
-	if = {
-		limit = {
 			has_idea = NAV_pot
 		}
 		remove_ideas = NAV_pot
@@ -22036,12 +18329,6 @@ remove_all_ideas_chunk_37 = {
 			has_idea = NEP_royal_army
 		}
 		remove_ideas = NEP_royal_army
-	}
-	if = {
-		limit = {
-			has_idea = NOR
-		}
-		remove_ideas = NOR
 	}
 	if = {
 		limit = {
@@ -22546,21 +18833,9 @@ remove_all_ideas_chunk_38 = {
 	}
 	if = {
 		limit = {
-			has_idea = NZL_commonwealth_loyalty
-		}
-		remove_ideas = NZL_commonwealth_loyalty
-	}
-	if = {
-		limit = {
 			has_idea = NZL_first_labor_government
 		}
 		remove_ideas = NZL_first_labor_government
-	}
-	if = {
-		limit = {
-			has_idea = NZL_great_depression
-		}
-		remove_ideas = NZL_great_depression
 	}
 	if = {
 		limit = {
@@ -22573,18 +18848,6 @@ remove_all_ideas_chunk_38 = {
 			has_idea = NZL_maori_conscription
 		}
 		remove_ideas = NZL_maori_conscription
-	}
-	if = {
-		limit = {
-			has_idea = NZL_national_coal_board_idea
-		}
-		remove_ideas = NZL_national_coal_board_idea
-	}
-	if = {
-		limit = {
-			has_idea = NZL_national_film_unit
-		}
-		remove_ideas = NZL_national_film_unit
 	}
 	if = {
 		limit = {
@@ -22606,21 +18869,9 @@ remove_all_ideas_chunk_38 = {
 	}
 	if = {
 		limit = {
-			has_idea = NZL_railways_board
-		}
-		remove_ideas = NZL_railways_board
-	}
-	if = {
-		limit = {
 			has_idea = NZL_ratana_alliance
 		}
 		remove_ideas = NZL_ratana_alliance
-	}
-	if = {
-		limit = {
-			has_idea = NZL_reserve_bank_of_new_zealand
-		}
-		remove_ideas = NZL_reserve_bank_of_new_zealand
 	}
 	if = {
 		limit = {
@@ -22684,18 +18935,6 @@ remove_all_ideas_chunk_38 = {
 	}
 	if = {
 		limit = {
-			has_idea = OVERLORD
-		}
-		remove_ideas = OVERLORD
-	}
-	if = {
-		limit = {
-			has_idea = PAR
-		}
-		remove_ideas = PAR
-	}
-	if = {
-		limit = {
 			has_idea = PAR_central_bank_of_paraguay
 		}
 		remove_ideas = PAR_central_bank_of_paraguay
@@ -22711,12 +18950,6 @@ remove_all_ideas_chunk_38 = {
 			has_idea = PAR_guarani_in_the_army
 		}
 		remove_ideas = PAR_guarani_in_the_army
-	}
-	if = {
-		limit = {
-			has_idea = PAR_jose_felix_estigarribia
-		}
-		remove_ideas = PAR_jose_felix_estigarribia
 	}
 	if = {
 		limit = {
@@ -23548,12 +19781,6 @@ remove_all_ideas_chunk_40 = {
 	}
 	if = {
 		limit = {
-			has_idea = POL
-		}
-		remove_ideas = POL
-	}
-	if = {
-		limit = {
 			has_idea = POL_aces_in_exile
 		}
 		remove_ideas = POL_aces_in_exile
@@ -24343,12 +20570,6 @@ remove_all_ideas_chunk_41 = {
 	}
 	if = {
 		limit = {
-			has_idea = POR_timorese_coffe_and_sandalwood_exports_idea
-		}
-		remove_ideas = POR_timorese_coffe_and_sandalwood_exports_idea
-	}
-	if = {
-		limit = {
 			has_idea = POR_unified_youth_wings
 		}
 		remove_ideas = POR_unified_youth_wings
@@ -24388,12 +20609,6 @@ remove_all_ideas_chunk_41 = {
 			has_idea = POR_volunteers_in_the_war_republican
 		}
 		remove_ideas = POR_volunteers_in_the_war_republican
-	}
-	if = {
-		limit = {
-			has_idea = PRC
-		}
-		remove_ideas = PRC
 	}
 	if = {
 		limit = {
@@ -25192,54 +21407,6 @@ remove_all_ideas_chunk_42 = {
 	}
 	if = {
 		limit = {
-			has_idea = PREACR
-		}
-		remove_ideas = PREACR
-	}
-	if = {
-		limit = {
-			has_idea = PRE_abi
-		}
-		remove_ideas = PRE_abi
-	}
-	if = {
-		limit = {
-			has_idea = PRE_acd
-		}
-		remove_ideas = PRE_acd
-	}
-	if = {
-		limit = {
-			has_idea = PRE_acgs
-		}
-		remove_ideas = PRE_acgs
-	}
-	if = {
-		limit = {
-			has_idea = PRE_aco
-		}
-		remove_ideas = PRE_aco
-	}
-	if = {
-		limit = {
-			has_idea = PRE_acom
-		}
-		remove_ideas = PRE_acom
-	}
-	if = {
-		limit = {
-			has_idea = PRE_arg
-		}
-		remove_ideas = PRE_arg
-	}
-	if = {
-		limit = {
-			has_idea = PRE_at
-		}
-		remove_ideas = PRE_at
-	}
-	if = {
-		limit = {
 			has_idea = PRE_coi
 		}
 		remove_ideas = PRE_coi
@@ -25258,51 +21425,9 @@ remove_all_ideas_chunk_42 = {
 	}
 	if = {
 		limit = {
-			has_idea = PRE_ent
-		}
-		remove_ideas = PRE_ent
-	}
-	if = {
-		limit = {
 			has_idea = PRE_fascist_guy
 		}
 		remove_ideas = PRE_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = PRE_inf
-		}
-		remove_ideas = PRE_inf
-	}
-	if = {
-		limit = {
-			has_idea = PRE_man
-		}
-		remove_ideas = PRE_man
-	}
-	if = {
-		limit = {
-			has_idea = PRE_mt
-		}
-		remove_ideas = PRE_mt
-	}
-	if = {
-		limit = {
-			has_idea = PRE_ncav
-		}
-		remove_ideas = PRE_ncav
-	}
-	if = {
-		limit = {
-			has_idea = PRE_ncdb
-		}
-		remove_ideas = PRE_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = PRE_nt
-		}
-		remove_ideas = PRE_nt
 	}
 	if = {
 		limit = {
@@ -25333,60 +21458,6 @@ remove_all_ideas_chunk_43 = {
 	}
 	if = {
 		limit = {
-			has_idea = QAT_aa2
-		}
-		remove_ideas = QAT_aa2
-	}
-	if = {
-		limit = {
-			has_idea = QAT_acas
-		}
-		remove_ideas = QAT_acas
-	}
-	if = {
-		limit = {
-			has_idea = QAT_acd2
-		}
-		remove_ideas = QAT_acd2
-	}
-	if = {
-		limit = {
-			has_idea = QAT_acgs
-		}
-		remove_ideas = QAT_acgs
-	}
-	if = {
-		limit = {
-			has_idea = QAT_aco2
-		}
-		remove_ideas = QAT_aco2
-	}
-	if = {
-		limit = {
-			has_idea = QAT_acr
-		}
-		remove_ideas = QAT_acr
-	}
-	if = {
-		limit = {
-			has_idea = QAT_ai2
-		}
-		remove_ideas = QAT_ai2
-	}
-	if = {
-		limit = {
-			has_idea = QAT_ar
-		}
-		remove_ideas = QAT_ar
-	}
-	if = {
-		limit = {
-			has_idea = QAT_awt
-		}
-		remove_ideas = QAT_awt
-	}
-	if = {
-		limit = {
 			has_idea = QAT_coi
 		}
 		remove_ideas = QAT_coi
@@ -25411,36 +21482,6 @@ remove_all_ideas_chunk_43 = {
 	}
 	if = {
 		limit = {
-			has_idea = QAT_mt
-		}
-		remove_ideas = QAT_mt
-	}
-	if = {
-		limit = {
-			has_idea = QAT_nccr
-		}
-		remove_ideas = QAT_nccr
-	}
-	if = {
-		limit = {
-			has_idea = QAT_ncm
-		}
-		remove_ideas = QAT_ncm
-	}
-	if = {
-		limit = {
-			has_idea = QAT_ncs
-		}
-		remove_ideas = QAT_ncs
-	}
-	if = {
-		limit = {
-			has_idea = QAT_nt
-		}
-		remove_ideas = QAT_nt
-	}
-	if = {
-		limit = {
 			has_idea = QAT_pot
 		}
 		remove_ideas = QAT_pot
@@ -25450,12 +21491,6 @@ remove_all_ideas_chunk_43 = {
 			has_idea = QAT_stc
 		}
 		remove_ideas = QAT_stc
-	}
-	if = {
-		limit = {
-			has_idea = RAJ
-		}
-		remove_ideas = RAJ
 	}
 	if = {
 		limit = {
@@ -25693,60 +21728,6 @@ remove_all_ideas_chunk_43 = {
 	}
 	if = {
 		limit = {
-			has_idea = RCG_aa2
-		}
-		remove_ideas = RCG_aa2
-	}
-	if = {
-		limit = {
-			has_idea = RCG_acas
-		}
-		remove_ideas = RCG_acas
-	}
-	if = {
-		limit = {
-			has_idea = RCG_acd2
-		}
-		remove_ideas = RCG_acd2
-	}
-	if = {
-		limit = {
-			has_idea = RCG_acgs
-		}
-		remove_ideas = RCG_acgs
-	}
-	if = {
-		limit = {
-			has_idea = RCG_aco2
-		}
-		remove_ideas = RCG_aco2
-	}
-	if = {
-		limit = {
-			has_idea = RCG_acr
-		}
-		remove_ideas = RCG_acr
-	}
-	if = {
-		limit = {
-			has_idea = RCG_ai2
-		}
-		remove_ideas = RCG_ai2
-	}
-	if = {
-		limit = {
-			has_idea = RCG_ar
-		}
-		remove_ideas = RCG_ar
-	}
-	if = {
-		limit = {
-			has_idea = RCG_awt
-		}
-		remove_ideas = RCG_awt
-	}
-	if = {
-		limit = {
 			has_idea = RCG_coi
 		}
 		remove_ideas = RCG_coi
@@ -25768,36 +21749,6 @@ remove_all_ideas_chunk_43 = {
 			has_idea = RCG_fascist_guy
 		}
 		remove_ideas = RCG_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = RCG_mt
-		}
-		remove_ideas = RCG_mt
-	}
-	if = {
-		limit = {
-			has_idea = RCG_nccr
-		}
-		remove_ideas = RCG_nccr
-	}
-	if = {
-		limit = {
-			has_idea = RCG_ncm
-		}
-		remove_ideas = RCG_ncm
-	}
-	if = {
-		limit = {
-			has_idea = RCG_ncs
-		}
-		remove_ideas = RCG_ncs
-	}
-	if = {
-		limit = {
-			has_idea = RCG_nt
-		}
-		remove_ideas = RCG_nt
 	}
 	if = {
 		limit = {
@@ -26110,12 +22061,6 @@ remove_all_ideas_chunk_44 = {
 	}
 	if = {
 		limit = {
-			has_idea = ROOT
-		}
-		remove_ideas = ROOT
-	}
-	if = {
-		limit = {
 			has_idea = SAF_abandon_westminster
 		}
 		remove_ideas = SAF_abandon_westminster
@@ -26266,60 +22211,6 @@ remove_all_ideas_chunk_44 = {
 	}
 	if = {
 		limit = {
-			has_idea = SAM_aa2
-		}
-		remove_ideas = SAM_aa2
-	}
-	if = {
-		limit = {
-			has_idea = SAM_acas
-		}
-		remove_ideas = SAM_acas
-	}
-	if = {
-		limit = {
-			has_idea = SAM_acd2
-		}
-		remove_ideas = SAM_acd2
-	}
-	if = {
-		limit = {
-			has_idea = SAM_acgs
-		}
-		remove_ideas = SAM_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SAM_aco2
-		}
-		remove_ideas = SAM_aco2
-	}
-	if = {
-		limit = {
-			has_idea = SAM_acr
-		}
-		remove_ideas = SAM_acr
-	}
-	if = {
-		limit = {
-			has_idea = SAM_ai2
-		}
-		remove_ideas = SAM_ai2
-	}
-	if = {
-		limit = {
-			has_idea = SAM_ar
-		}
-		remove_ideas = SAM_ar
-	}
-	if = {
-		limit = {
-			has_idea = SAM_awt
-		}
-		remove_ideas = SAM_awt
-	}
-	if = {
-		limit = {
 			has_idea = SAM_coi
 		}
 		remove_ideas = SAM_coi
@@ -26344,36 +22235,6 @@ remove_all_ideas_chunk_44 = {
 	}
 	if = {
 		limit = {
-			has_idea = SAM_mt
-		}
-		remove_ideas = SAM_mt
-	}
-	if = {
-		limit = {
-			has_idea = SAM_nccr
-		}
-		remove_ideas = SAM_nccr
-	}
-	if = {
-		limit = {
-			has_idea = SAM_ncm
-		}
-		remove_ideas = SAM_ncm
-	}
-	if = {
-		limit = {
-			has_idea = SAM_ncs
-		}
-		remove_ideas = SAM_ncs
-	}
-	if = {
-		limit = {
-			has_idea = SAM_nt
-		}
-		remove_ideas = SAM_nt
-	}
-	if = {
-		limit = {
 			has_idea = SAM_pot
 		}
 		remove_ideas = SAM_pot
@@ -26389,54 +22250,6 @@ remove_all_ideas_chunk_44 = {
 			has_idea = SAU_refining_the_national_identity_idea
 		}
 		remove_ideas = SAU_refining_the_national_identity_idea
-	}
-	if = {
-		limit = {
-			has_idea = SAXACR
-		}
-		remove_ideas = SAXACR
-	}
-	if = {
-		limit = {
-			has_idea = SAX_abi
-		}
-		remove_ideas = SAX_abi
-	}
-	if = {
-		limit = {
-			has_idea = SAX_acd
-		}
-		remove_ideas = SAX_acd
-	}
-	if = {
-		limit = {
-			has_idea = SAX_acgs
-		}
-		remove_ideas = SAX_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SAX_aco
-		}
-		remove_ideas = SAX_aco
-	}
-	if = {
-		limit = {
-			has_idea = SAX_acom
-		}
-		remove_ideas = SAX_acom
-	}
-	if = {
-		limit = {
-			has_idea = SAX_arg
-		}
-		remove_ideas = SAX_arg
-	}
-	if = {
-		limit = {
-			has_idea = SAX_at
-		}
-		remove_ideas = SAX_at
 	}
 	if = {
 		limit = {
@@ -26458,51 +22271,9 @@ remove_all_ideas_chunk_44 = {
 	}
 	if = {
 		limit = {
-			has_idea = SAX_ent
-		}
-		remove_ideas = SAX_ent
-	}
-	if = {
-		limit = {
 			has_idea = SAX_fascist_guy
 		}
 		remove_ideas = SAX_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = SAX_inf
-		}
-		remove_ideas = SAX_inf
-	}
-	if = {
-		limit = {
-			has_idea = SAX_man
-		}
-		remove_ideas = SAX_man
-	}
-	if = {
-		limit = {
-			has_idea = SAX_mt
-		}
-		remove_ideas = SAX_mt
-	}
-	if = {
-		limit = {
-			has_idea = SAX_ncav
-		}
-		remove_ideas = SAX_ncav
-	}
-	if = {
-		limit = {
-			has_idea = SAX_ncdb
-		}
-		remove_ideas = SAX_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = SAX_nt
-		}
-		remove_ideas = SAX_nt
 	}
 	if = {
 		limit = {
@@ -26522,57 +22293,9 @@ remove_all_ideas_chunk_44 = {
 		}
 		remove_ideas = SAX_wi
 	}
-	if = {
-		limit = {
-			has_idea = SHLACR
-		}
-		remove_ideas = SHLACR
-	}
 }
 
 remove_all_ideas_chunk_45 = {
-	if = {
-		limit = {
-			has_idea = SHL_abi
-		}
-		remove_ideas = SHL_abi
-	}
-	if = {
-		limit = {
-			has_idea = SHL_acd
-		}
-		remove_ideas = SHL_acd
-	}
-	if = {
-		limit = {
-			has_idea = SHL_acgs
-		}
-		remove_ideas = SHL_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SHL_aco
-		}
-		remove_ideas = SHL_aco
-	}
-	if = {
-		limit = {
-			has_idea = SHL_acom
-		}
-		remove_ideas = SHL_acom
-	}
-	if = {
-		limit = {
-			has_idea = SHL_arg
-		}
-		remove_ideas = SHL_arg
-	}
-	if = {
-		limit = {
-			has_idea = SHL_at
-		}
-		remove_ideas = SHL_at
-	}
 	if = {
 		limit = {
 			has_idea = SHL_coi
@@ -26593,51 +22316,9 @@ remove_all_ideas_chunk_45 = {
 	}
 	if = {
 		limit = {
-			has_idea = SHL_ent
-		}
-		remove_ideas = SHL_ent
-	}
-	if = {
-		limit = {
 			has_idea = SHL_fascist_guy
 		}
 		remove_ideas = SHL_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = SHL_inf
-		}
-		remove_ideas = SHL_inf
-	}
-	if = {
-		limit = {
-			has_idea = SHL_man
-		}
-		remove_ideas = SHL_man
-	}
-	if = {
-		limit = {
-			has_idea = SHL_mt
-		}
-		remove_ideas = SHL_mt
-	}
-	if = {
-		limit = {
-			has_idea = SHL_ncav
-		}
-		remove_ideas = SHL_ncav
-	}
-	if = {
-		limit = {
-			has_idea = SHL_ncdb
-		}
-		remove_ideas = SHL_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = SHL_nt
-		}
-		remove_ideas = SHL_nt
 	}
 	if = {
 		limit = {
@@ -26662,54 +22343,6 @@ remove_all_ideas_chunk_45 = {
 			has_idea = SHX_suiyuan_campaign_idea
 		}
 		remove_ideas = SHX_suiyuan_campaign_idea
-	}
-	if = {
-		limit = {
-			has_idea = SIA_army_ordnance_department
-		}
-		remove_ideas = SIA_army_ordnance_department
-	}
-	if = {
-		limit = {
-			has_idea = SIA_army_ordnance_department_artillery
-		}
-		remove_ideas = SIA_army_ordnance_department_artillery
-	}
-	if = {
-		limit = {
-			has_idea = SIA_bangkok_dock
-		}
-		remove_ideas = SIA_bangkok_dock
-	}
-	if = {
-		limit = {
-			has_idea = SIA_chaiseri
-		}
-		remove_ideas = SIA_chaiseri
-	}
-	if = {
-		limit = {
-			has_idea = SIA_directorate_of_aeronautical_engineering
-		}
-		remove_ideas = SIA_directorate_of_aeronautical_engineering
-	}
-	if = {
-		limit = {
-			has_idea = SIA_radio_propaganda
-		}
-		remove_ideas = SIA_radio_propaganda
-	}
-	if = {
-		limit = {
-			has_idea = SIA_siamese_tankettes
-		}
-		remove_ideas = SIA_siamese_tankettes
-	}
-	if = {
-		limit = {
-			has_idea = SIA_thai_rung
-		}
-		remove_ideas = SIA_thai_rung
 	}
 	if = {
 		limit = {
@@ -26839,60 +22472,6 @@ remove_all_ideas_chunk_45 = {
 	}
 	if = {
 		limit = {
-			has_idea = SLV_aa2
-		}
-		remove_ideas = SLV_aa2
-	}
-	if = {
-		limit = {
-			has_idea = SLV_acas
-		}
-		remove_ideas = SLV_acas
-	}
-	if = {
-		limit = {
-			has_idea = SLV_acd2
-		}
-		remove_ideas = SLV_acd2
-	}
-	if = {
-		limit = {
-			has_idea = SLV_acgs
-		}
-		remove_ideas = SLV_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SLV_aco2
-		}
-		remove_ideas = SLV_aco2
-	}
-	if = {
-		limit = {
-			has_idea = SLV_acr
-		}
-		remove_ideas = SLV_acr
-	}
-	if = {
-		limit = {
-			has_idea = SLV_ai2
-		}
-		remove_ideas = SLV_ai2
-	}
-	if = {
-		limit = {
-			has_idea = SLV_ar
-		}
-		remove_ideas = SLV_ar
-	}
-	if = {
-		limit = {
-			has_idea = SLV_awt
-		}
-		remove_ideas = SLV_awt
-	}
-	if = {
-		limit = {
 			has_idea = SLV_coi
 		}
 		remove_ideas = SLV_coi
@@ -26914,36 +22493,6 @@ remove_all_ideas_chunk_45 = {
 			has_idea = SLV_fascist_guy
 		}
 		remove_ideas = SLV_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = SLV_mt
-		}
-		remove_ideas = SLV_mt
-	}
-	if = {
-		limit = {
-			has_idea = SLV_nccr
-		}
-		remove_ideas = SLV_nccr
-	}
-	if = {
-		limit = {
-			has_idea = SLV_ncm
-		}
-		remove_ideas = SLV_ncm
-	}
-	if = {
-		limit = {
-			has_idea = SLV_ncs
-		}
-		remove_ideas = SLV_ncs
-	}
-	if = {
-		limit = {
-			has_idea = SLV_nt
-		}
-		remove_ideas = SLV_nt
 	}
 	if = {
 		limit = {
@@ -27049,60 +22598,6 @@ remove_all_ideas_chunk_45 = {
 	}
 	if = {
 		limit = {
-			has_idea = SOM_aa2
-		}
-		remove_ideas = SOM_aa2
-	}
-	if = {
-		limit = {
-			has_idea = SOM_acas
-		}
-		remove_ideas = SOM_acas
-	}
-	if = {
-		limit = {
-			has_idea = SOM_acd2
-		}
-		remove_ideas = SOM_acd2
-	}
-	if = {
-		limit = {
-			has_idea = SOM_acgs
-		}
-		remove_ideas = SOM_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SOM_aco2
-		}
-		remove_ideas = SOM_aco2
-	}
-	if = {
-		limit = {
-			has_idea = SOM_acr
-		}
-		remove_ideas = SOM_acr
-	}
-	if = {
-		limit = {
-			has_idea = SOM_ai2
-		}
-		remove_ideas = SOM_ai2
-	}
-	if = {
-		limit = {
-			has_idea = SOM_ar
-		}
-		remove_ideas = SOM_ar
-	}
-	if = {
-		limit = {
-			has_idea = SOM_awt
-		}
-		remove_ideas = SOM_awt
-	}
-	if = {
-		limit = {
 			has_idea = SOM_coi
 		}
 		remove_ideas = SOM_coi
@@ -27125,39 +22620,9 @@ remove_all_ideas_chunk_45 = {
 		}
 		remove_ideas = SOM_fascist_guy
 	}
-	if = {
-		limit = {
-			has_idea = SOM_mt
-		}
-		remove_ideas = SOM_mt
-	}
 }
 
 remove_all_ideas_chunk_46 = {
-	if = {
-		limit = {
-			has_idea = SOM_nccr
-		}
-		remove_ideas = SOM_nccr
-	}
-	if = {
-		limit = {
-			has_idea = SOM_ncm
-		}
-		remove_ideas = SOM_ncm
-	}
-	if = {
-		limit = {
-			has_idea = SOM_ncs
-		}
-		remove_ideas = SOM_ncs
-	}
-	if = {
-		limit = {
-			has_idea = SOM_nt
-		}
-		remove_ideas = SOM_nt
-	}
 	if = {
 		limit = {
 			has_idea = SOM_pot
@@ -27169,12 +22634,6 @@ remove_all_ideas_chunk_46 = {
 			has_idea = SOM_stc
 		}
 		remove_ideas = SOM_stc
-	}
-	if = {
-		limit = {
-			has_idea = SOV
-		}
-		remove_ideas = SOV
 	}
 	if = {
 		limit = {
@@ -27964,12 +23423,6 @@ remove_all_ideas_chunk_47 = {
 			has_idea = SOV_kirov_final
 		}
 		remove_ideas = SOV_kirov_final
-	}
-	if = {
-		limit = {
-			has_idea = SOV_kolomna_manufacturer
-		}
-		remove_ideas = SOV_kolomna_manufacturer
 	}
 	if = {
 		limit = {
@@ -29485,12 +24938,6 @@ remove_all_ideas_chunk_49 = {
 	}
 	if = {
 		limit = {
-			has_idea = SPR
-		}
-		remove_ideas = SPR
-	}
-	if = {
-		limit = {
 			has_idea = SPR_altos_hornos_de_vizcaya
 		}
 		remove_ideas = SPR_altos_hornos_de_vizcaya
@@ -29677,12 +25124,6 @@ remove_all_ideas_chunk_50 = {
 			has_idea = SPR_collective_recovery_efforts
 		}
 		remove_ideas = SPR_collective_recovery_efforts
-	}
-	if = {
-		limit = {
-			has_idea = SPR_collectivized_society
-		}
-		remove_ideas = SPR_collectivized_society
 	}
 	if = {
 		limit = {
@@ -30040,60 +25481,6 @@ remove_all_ideas_chunk_50 = {
 	}
 	if = {
 		limit = {
-			has_idea = SRL_aa2
-		}
-		remove_ideas = SRL_aa2
-	}
-	if = {
-		limit = {
-			has_idea = SRL_acas
-		}
-		remove_ideas = SRL_acas
-	}
-	if = {
-		limit = {
-			has_idea = SRL_acd2
-		}
-		remove_ideas = SRL_acd2
-	}
-	if = {
-		limit = {
-			has_idea = SRL_acgs
-		}
-		remove_ideas = SRL_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SRL_aco2
-		}
-		remove_ideas = SRL_aco2
-	}
-	if = {
-		limit = {
-			has_idea = SRL_acr
-		}
-		remove_ideas = SRL_acr
-	}
-	if = {
-		limit = {
-			has_idea = SRL_ai2
-		}
-		remove_ideas = SRL_ai2
-	}
-	if = {
-		limit = {
-			has_idea = SRL_ar
-		}
-		remove_ideas = SRL_ar
-	}
-	if = {
-		limit = {
-			has_idea = SRL_awt
-		}
-		remove_ideas = SRL_awt
-	}
-	if = {
-		limit = {
 			has_idea = SRL_coi
 		}
 		remove_ideas = SRL_coi
@@ -30116,36 +25503,6 @@ remove_all_ideas_chunk_50 = {
 		}
 		remove_ideas = SRL_fascist_guy
 	}
-	if = {
-		limit = {
-			has_idea = SRL_mt
-		}
-		remove_ideas = SRL_mt
-	}
-	if = {
-		limit = {
-			has_idea = SRL_nccr
-		}
-		remove_ideas = SRL_nccr
-	}
-	if = {
-		limit = {
-			has_idea = SRL_ncm
-		}
-		remove_ideas = SRL_ncm
-	}
-	if = {
-		limit = {
-			has_idea = SRL_ncs
-		}
-		remove_ideas = SRL_ncs
-	}
-	if = {
-		limit = {
-			has_idea = SRL_nt
-		}
-		remove_ideas = SRL_nt
-	}
 }
 
 remove_all_ideas_chunk_51 = {
@@ -30166,60 +25523,6 @@ remove_all_ideas_chunk_51 = {
 			has_idea = SSB_saadabad_trade_agreement
 		}
 		remove_ideas = SSB_saadabad_trade_agreement
-	}
-	if = {
-		limit = {
-			has_idea = SUR_aa2
-		}
-		remove_ideas = SUR_aa2
-	}
-	if = {
-		limit = {
-			has_idea = SUR_acas
-		}
-		remove_ideas = SUR_acas
-	}
-	if = {
-		limit = {
-			has_idea = SUR_acd2
-		}
-		remove_ideas = SUR_acd2
-	}
-	if = {
-		limit = {
-			has_idea = SUR_acgs
-		}
-		remove_ideas = SUR_acgs
-	}
-	if = {
-		limit = {
-			has_idea = SUR_aco2
-		}
-		remove_ideas = SUR_aco2
-	}
-	if = {
-		limit = {
-			has_idea = SUR_acr
-		}
-		remove_ideas = SUR_acr
-	}
-	if = {
-		limit = {
-			has_idea = SUR_ai2
-		}
-		remove_ideas = SUR_ai2
-	}
-	if = {
-		limit = {
-			has_idea = SUR_ar
-		}
-		remove_ideas = SUR_ar
-	}
-	if = {
-		limit = {
-			has_idea = SUR_awt
-		}
-		remove_ideas = SUR_awt
 	}
 	if = {
 		limit = {
@@ -30247,36 +25550,6 @@ remove_all_ideas_chunk_51 = {
 	}
 	if = {
 		limit = {
-			has_idea = SUR_mt
-		}
-		remove_ideas = SUR_mt
-	}
-	if = {
-		limit = {
-			has_idea = SUR_nccr
-		}
-		remove_ideas = SUR_nccr
-	}
-	if = {
-		limit = {
-			has_idea = SUR_ncm
-		}
-		remove_ideas = SUR_ncm
-	}
-	if = {
-		limit = {
-			has_idea = SUR_ncs
-		}
-		remove_ideas = SUR_ncs
-	}
-	if = {
-		limit = {
-			has_idea = SUR_nt
-		}
-		remove_ideas = SUR_nt
-	}
-	if = {
-		limit = {
 			has_idea = SUR_pot
 		}
 		remove_ideas = SUR_pot
@@ -30286,12 +25559,6 @@ remove_all_ideas_chunk_51 = {
 			has_idea = SUR_stc
 		}
 		remove_ideas = SUR_stc
-	}
-	if = {
-		limit = {
-			has_idea = SWE
-		}
-		remove_ideas = SWE
 	}
 	if = {
 		limit = {
@@ -30970,18 +26237,6 @@ remove_all_ideas_chunk_52 = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_citizen_militia_1
-		}
-		remove_ideas = SWI_citizen_militia_1
-	}
-	if = {
-		limit = {
-			has_idea = SWI_citizen_militia_2
-		}
-		remove_ideas = SWI_citizen_militia_2
-	}
-	if = {
-		limit = {
 			has_idea = SWI_communist_party_banned_idea
 		}
 		remove_ideas = SWI_communist_party_banned_idea
@@ -31334,63 +26589,9 @@ remove_all_ideas_chunk_52 = {
 		}
 		remove_ideas = SWI_werner_risch
 	}
-	if = {
-		limit = {
-			has_idea = TAJ_aa2
-		}
-		remove_ideas = TAJ_aa2
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_acas
-		}
-		remove_ideas = TAJ_acas
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_acd2
-		}
-		remove_ideas = TAJ_acd2
-	}
 }
 
 remove_all_ideas_chunk_53 = {
-	if = {
-		limit = {
-			has_idea = TAJ_acgs
-		}
-		remove_ideas = TAJ_acgs
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_aco2
-		}
-		remove_ideas = TAJ_aco2
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_acr
-		}
-		remove_ideas = TAJ_acr
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_ai2
-		}
-		remove_ideas = TAJ_ai2
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_ar
-		}
-		remove_ideas = TAJ_ar
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_awt
-		}
-		remove_ideas = TAJ_awt
-	}
 	if = {
 		limit = {
 			has_idea = TAJ_coi
@@ -31414,36 +26615,6 @@ remove_all_ideas_chunk_53 = {
 			has_idea = TAJ_fascist_guy
 		}
 		remove_ideas = TAJ_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_mt
-		}
-		remove_ideas = TAJ_mt
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_nccr
-		}
-		remove_ideas = TAJ_nccr
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_ncm
-		}
-		remove_ideas = TAJ_ncm
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_ncs
-		}
-		remove_ideas = TAJ_ncs
-	}
-	if = {
-		limit = {
-			has_idea = TAJ_nt
-		}
-		remove_ideas = TAJ_nt
 	}
 	if = {
 		limit = {
@@ -31471,60 +26642,6 @@ remove_all_ideas_chunk_53 = {
 	}
 	if = {
 		limit = {
-			has_idea = TMS_aa2
-		}
-		remove_ideas = TMS_aa2
-	}
-	if = {
-		limit = {
-			has_idea = TMS_acas
-		}
-		remove_ideas = TMS_acas
-	}
-	if = {
-		limit = {
-			has_idea = TMS_acd2
-		}
-		remove_ideas = TMS_acd2
-	}
-	if = {
-		limit = {
-			has_idea = TMS_acgs
-		}
-		remove_ideas = TMS_acgs
-	}
-	if = {
-		limit = {
-			has_idea = TMS_aco2
-		}
-		remove_ideas = TMS_aco2
-	}
-	if = {
-		limit = {
-			has_idea = TMS_acr
-		}
-		remove_ideas = TMS_acr
-	}
-	if = {
-		limit = {
-			has_idea = TMS_ai2
-		}
-		remove_ideas = TMS_ai2
-	}
-	if = {
-		limit = {
-			has_idea = TMS_ar
-		}
-		remove_ideas = TMS_ar
-	}
-	if = {
-		limit = {
-			has_idea = TMS_awt
-		}
-		remove_ideas = TMS_awt
-	}
-	if = {
-		limit = {
 			has_idea = TMS_coi
 		}
 		remove_ideas = TMS_coi
@@ -31546,36 +26663,6 @@ remove_all_ideas_chunk_53 = {
 			has_idea = TMS_fascist_guy
 		}
 		remove_ideas = TMS_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = TMS_mt
-		}
-		remove_ideas = TMS_mt
-	}
-	if = {
-		limit = {
-			has_idea = TMS_nccr
-		}
-		remove_ideas = TMS_nccr
-	}
-	if = {
-		limit = {
-			has_idea = TMS_ncm
-		}
-		remove_ideas = TMS_ncm
-	}
-	if = {
-		limit = {
-			has_idea = TMS_ncs
-		}
-		remove_ideas = TMS_ncs
-	}
-	if = {
-		limit = {
-			has_idea = TMS_nt
-		}
-		remove_ideas = TMS_nt
 	}
 	if = {
 		limit = {
@@ -31603,60 +26690,6 @@ remove_all_ideas_chunk_53 = {
 	}
 	if = {
 		limit = {
-			has_idea = TRI_aa2
-		}
-		remove_ideas = TRI_aa2
-	}
-	if = {
-		limit = {
-			has_idea = TRI_acas
-		}
-		remove_ideas = TRI_acas
-	}
-	if = {
-		limit = {
-			has_idea = TRI_acd2
-		}
-		remove_ideas = TRI_acd2
-	}
-	if = {
-		limit = {
-			has_idea = TRI_acgs
-		}
-		remove_ideas = TRI_acgs
-	}
-	if = {
-		limit = {
-			has_idea = TRI_aco2
-		}
-		remove_ideas = TRI_aco2
-	}
-	if = {
-		limit = {
-			has_idea = TRI_acr
-		}
-		remove_ideas = TRI_acr
-	}
-	if = {
-		limit = {
-			has_idea = TRI_ai2
-		}
-		remove_ideas = TRI_ai2
-	}
-	if = {
-		limit = {
-			has_idea = TRI_ar
-		}
-		remove_ideas = TRI_ar
-	}
-	if = {
-		limit = {
-			has_idea = TRI_awt
-		}
-		remove_ideas = TRI_awt
-	}
-	if = {
-		limit = {
 			has_idea = TRI_coi
 		}
 		remove_ideas = TRI_coi
@@ -31678,36 +26711,6 @@ remove_all_ideas_chunk_53 = {
 			has_idea = TRI_fascist_guy
 		}
 		remove_ideas = TRI_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = TRI_mt
-		}
-		remove_ideas = TRI_mt
-	}
-	if = {
-		limit = {
-			has_idea = TRI_nccr
-		}
-		remove_ideas = TRI_nccr
-	}
-	if = {
-		limit = {
-			has_idea = TRI_ncm
-		}
-		remove_ideas = TRI_ncm
-	}
-	if = {
-		limit = {
-			has_idea = TRI_ncs
-		}
-		remove_ideas = TRI_ncs
-	}
-	if = {
-		limit = {
-			has_idea = TRI_nt
-		}
-		remove_ideas = TRI_nt
 	}
 	if = {
 		limit = {
@@ -32020,12 +27023,6 @@ remove_all_ideas_chunk_54 = {
 	}
 	if = {
 		limit = {
-			has_idea = TUR_first_five_year_plan
-		}
-		remove_ideas = TUR_first_five_year_plan
-	}
-	if = {
-		limit = {
 			has_idea = TUR_fundamentalism
 		}
 		remove_ideas = TUR_fundamentalism
@@ -32065,12 +27062,6 @@ remove_all_ideas_chunk_54 = {
 			has_idea = TUR_integrated_german_officers
 		}
 		remove_ideas = TUR_integrated_german_officers
-	}
-	if = {
-		limit = {
-			has_idea = TUR_inventive_genius_hidden_idea
-		}
-		remove_ideas = TUR_inventive_genius_hidden_idea
 	}
 	if = {
 		limit = {
@@ -32452,21 +27443,9 @@ remove_all_ideas_chunk_54 = {
 	}
 	if = {
 		limit = {
-			has_idea = TUR_widespread_illiteracy_idea
-		}
-		remove_ideas = TUR_widespread_illiteracy_idea
-	}
-	if = {
-		limit = {
 			has_idea = ToA_aid_against_communists
 		}
 		remove_ideas = ToA_aid_against_communists
-	}
-	if = {
-		limit = {
-			has_idea = URG
-		}
-		remove_ideas = URG
 	}
 	if = {
 		limit = {
@@ -32485,12 +27464,6 @@ remove_all_ideas_chunk_54 = {
 			has_idea = URG_terra_dictatorship
 		}
 		remove_ideas = URG_terra_dictatorship
-	}
-	if = {
-		limit = {
-			has_idea = USA
-		}
-		remove_ideas = USA
 	}
 	if = {
 		limit = {
@@ -32521,12 +27494,6 @@ remove_all_ideas_chunk_54 = {
 			has_idea = USA_army_of_the_united_states
 		}
 		remove_ideas = USA_army_of_the_united_states
-	}
-	if = {
-		limit = {
-			has_idea = USA_baldwin_locomotive_works_manufacturer
-		}
-		remove_ideas = USA_baldwin_locomotive_works_manufacturer
 	}
 	if = {
 		limit = {
@@ -32671,12 +27638,6 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = USA_neutrality_act_aat
-		}
-		remove_ideas = USA_neutrality_act_aat
-	}
-	if = {
-		limit = {
 			has_idea = USA_prepare_intervention
 		}
 		remove_ideas = USA_prepare_intervention
@@ -32689,12 +27650,6 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = USA_sikorsky
-		}
-		remove_ideas = USA_sikorsky
-	}
-	if = {
-		limit = {
 			has_idea = USA_state_funds_refused
 		}
 		remove_ideas = USA_state_funds_refused
@@ -32704,12 +27659,6 @@ remove_all_ideas_chunk_55 = {
 			has_idea = USA_the_pentagon
 		}
 		remove_ideas = USA_the_pentagon
-	}
-	if = {
-		limit = {
-			has_idea = USA_union_pacific_railway
-		}
-		remove_ideas = USA_union_pacific_railway
 	}
 	if = {
 		limit = {
@@ -32773,60 +27722,6 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = UZB_aa2
-		}
-		remove_ideas = UZB_aa2
-	}
-	if = {
-		limit = {
-			has_idea = UZB_acas
-		}
-		remove_ideas = UZB_acas
-	}
-	if = {
-		limit = {
-			has_idea = UZB_acd2
-		}
-		remove_ideas = UZB_acd2
-	}
-	if = {
-		limit = {
-			has_idea = UZB_acgs
-		}
-		remove_ideas = UZB_acgs
-	}
-	if = {
-		limit = {
-			has_idea = UZB_aco2
-		}
-		remove_ideas = UZB_aco2
-	}
-	if = {
-		limit = {
-			has_idea = UZB_acr
-		}
-		remove_ideas = UZB_acr
-	}
-	if = {
-		limit = {
-			has_idea = UZB_ai2
-		}
-		remove_ideas = UZB_ai2
-	}
-	if = {
-		limit = {
-			has_idea = UZB_ar
-		}
-		remove_ideas = UZB_ar
-	}
-	if = {
-		limit = {
-			has_idea = UZB_awt
-		}
-		remove_ideas = UZB_awt
-	}
-	if = {
-		limit = {
 			has_idea = UZB_coi
 		}
 		remove_ideas = UZB_coi
@@ -32851,36 +27746,6 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = UZB_mt
-		}
-		remove_ideas = UZB_mt
-	}
-	if = {
-		limit = {
-			has_idea = UZB_nccr
-		}
-		remove_ideas = UZB_nccr
-	}
-	if = {
-		limit = {
-			has_idea = UZB_ncm
-		}
-		remove_ideas = UZB_ncm
-	}
-	if = {
-		limit = {
-			has_idea = UZB_ncs
-		}
-		remove_ideas = UZB_ncs
-	}
-	if = {
-		limit = {
-			has_idea = UZB_nt
-		}
-		remove_ideas = UZB_nt
-	}
-	if = {
-		limit = {
 			has_idea = UZB_pot
 		}
 		remove_ideas = UZB_pot
@@ -32899,69 +27764,9 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = VIC_charles_huntziger
-		}
-		remove_ideas = VIC_charles_huntziger
-	}
-	if = {
-		limit = {
-			has_idea = VIC_eugene_bridoux
-		}
-		remove_ideas = VIC_eugene_bridoux
-	}
-	if = {
-		limit = {
 			has_idea = VIC_guest_workers
 		}
 		remove_ideas = VIC_guest_workers
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_de_laborde
-		}
-		remove_ideas = VIC_jean_de_laborde
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_francois_darlan
-		}
-		remove_ideas = VIC_jean_francois_darlan
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_francois_jannekeyn
-		}
-		remove_ideas = VIC_jean_francois_jannekeyn
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_marie_abrial
-		}
-		remove_ideas = VIC_jean_marie_abrial
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_marie_bergeret
-		}
-		remove_ideas = VIC_jean_marie_bergeret
-	}
-	if = {
-		limit = {
-			has_idea = VIC_jean_romatet
-		}
-		remove_ideas = VIC_jean_romatet
-	}
-	if = {
-		limit = {
-			has_idea = VIC_lucien_lacaze
-		}
-		remove_ideas = VIC_lucien_lacaze
-	}
-	if = {
-		limit = {
-			has_idea = VIC_marcel_bruno_gensoul
-		}
-		remove_ideas = VIC_marcel_bruno_gensoul
 	}
 	if = {
 		limit = {
@@ -32971,21 +27776,9 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = VIC_maxime_weygand
-		}
-		remove_ideas = VIC_maxime_weygand
-	}
-	if = {
-		limit = {
 			has_idea = VIC_pierre_laval
 		}
 		remove_ideas = VIC_pierre_laval
-	}
-	if = {
-		limit = {
-			has_idea = VIC_pierre_le_gloan
-		}
-		remove_ideas = VIC_pierre_le_gloan
 	}
 	if = {
 		limit = {
@@ -32998,60 +27791,6 @@ remove_all_ideas_chunk_55 = {
 			has_idea = VIC_rene_bousquet
 		}
 		remove_ideas = VIC_rene_bousquet
-	}
-	if = {
-		limit = {
-			has_idea = WES_aa2
-		}
-		remove_ideas = WES_aa2
-	}
-	if = {
-		limit = {
-			has_idea = WES_acas
-		}
-		remove_ideas = WES_acas
-	}
-	if = {
-		limit = {
-			has_idea = WES_acd2
-		}
-		remove_ideas = WES_acd2
-	}
-	if = {
-		limit = {
-			has_idea = WES_acgs
-		}
-		remove_ideas = WES_acgs
-	}
-	if = {
-		limit = {
-			has_idea = WES_aco2
-		}
-		remove_ideas = WES_aco2
-	}
-	if = {
-		limit = {
-			has_idea = WES_acr
-		}
-		remove_ideas = WES_acr
-	}
-	if = {
-		limit = {
-			has_idea = WES_ai2
-		}
-		remove_ideas = WES_ai2
-	}
-	if = {
-		limit = {
-			has_idea = WES_ar
-		}
-		remove_ideas = WES_ar
-	}
-	if = {
-		limit = {
-			has_idea = WES_awt
-		}
-		remove_ideas = WES_awt
 	}
 	if = {
 		limit = {
@@ -33079,36 +27818,6 @@ remove_all_ideas_chunk_55 = {
 	}
 	if = {
 		limit = {
-			has_idea = WES_mt
-		}
-		remove_ideas = WES_mt
-	}
-	if = {
-		limit = {
-			has_idea = WES_nccr
-		}
-		remove_ideas = WES_nccr
-	}
-	if = {
-		limit = {
-			has_idea = WES_ncm
-		}
-		remove_ideas = WES_ncm
-	}
-	if = {
-		limit = {
-			has_idea = WES_ncs
-		}
-		remove_ideas = WES_ncs
-	}
-	if = {
-		limit = {
-			has_idea = WES_nt
-		}
-		remove_ideas = WES_nt
-	}
-	if = {
-		limit = {
 			has_idea = WES_pot
 		}
 		remove_ideas = WES_pot
@@ -33119,57 +27828,9 @@ remove_all_ideas_chunk_55 = {
 		}
 		remove_ideas = WES_stc
 	}
-	if = {
-		limit = {
-			has_idea = WURACR
-		}
-		remove_ideas = WURACR
-	}
-	if = {
-		limit = {
-			has_idea = WUR_abi
-		}
-		remove_ideas = WUR_abi
-	}
-	if = {
-		limit = {
-			has_idea = WUR_acd
-		}
-		remove_ideas = WUR_acd
-	}
-	if = {
-		limit = {
-			has_idea = WUR_acgs
-		}
-		remove_ideas = WUR_acgs
-	}
-	if = {
-		limit = {
-			has_idea = WUR_aco
-		}
-		remove_ideas = WUR_aco
-	}
-	if = {
-		limit = {
-			has_idea = WUR_acom
-		}
-		remove_ideas = WUR_acom
-	}
-	if = {
-		limit = {
-			has_idea = WUR_arg
-		}
-		remove_ideas = WUR_arg
-	}
 }
 
 remove_all_ideas_chunk_56 = {
-	if = {
-		limit = {
-			has_idea = WUR_at
-		}
-		remove_ideas = WUR_at
-	}
 	if = {
 		limit = {
 			has_idea = WUR_coi
@@ -33190,51 +27851,9 @@ remove_all_ideas_chunk_56 = {
 	}
 	if = {
 		limit = {
-			has_idea = WUR_ent
-		}
-		remove_ideas = WUR_ent
-	}
-	if = {
-		limit = {
 			has_idea = WUR_fascist_guy
 		}
 		remove_ideas = WUR_fascist_guy
-	}
-	if = {
-		limit = {
-			has_idea = WUR_inf
-		}
-		remove_ideas = WUR_inf
-	}
-	if = {
-		limit = {
-			has_idea = WUR_man
-		}
-		remove_ideas = WUR_man
-	}
-	if = {
-		limit = {
-			has_idea = WUR_mt
-		}
-		remove_ideas = WUR_mt
-	}
-	if = {
-		limit = {
-			has_idea = WUR_ncav
-		}
-		remove_ideas = WUR_ncav
-	}
-	if = {
-		limit = {
-			has_idea = WUR_ncdb
-		}
-		remove_ideas = WUR_ncdb
-	}
-	if = {
-		limit = {
-			has_idea = WUR_nt
-		}
-		remove_ideas = WUR_nt
 	}
 	if = {
 		limit = {
@@ -33274,18 +27893,6 @@ remove_all_ideas_chunk_56 = {
 	}
 	if = {
 		limit = {
-			has_idea = XSM_new_ninghai_army_idea
-		}
-		remove_ideas = XSM_new_ninghai_army_idea
-	}
-	if = {
-		limit = {
-			has_idea = XSM_salar_officers_idea
-		}
-		remove_ideas = XSM_salar_officers_idea
-	}
-	if = {
-		limit = {
 			has_idea = XSM_tsr_diarchy
 		}
 		remove_ideas = XSM_tsr_diarchy
@@ -33295,18 +27902,6 @@ remove_all_ideas_chunk_56 = {
 			has_idea = XSM_tsr_strike_the_traitors
 		}
 		remove_ideas = XSM_tsr_strike_the_traitors
-	}
-	if = {
-		limit = {
-			has_idea = XSM_wool_and_hide_bureau
-		}
-		remove_ideas = XSM_wool_and_hide_bureau
-	}
-	if = {
-		limit = {
-			has_idea = YUG
-		}
-		remove_ideas = YUG
 	}
 	if = {
 		limit = {
@@ -33532,45 +28127,9 @@ remove_all_ideas_chunk_56 = {
 	}
 	if = {
 		limit = {
-			has_idea = YUN_the_democratic_fortress_idea
-		}
-		remove_ideas = YUN_the_democratic_fortress_idea
-	}
-	if = {
-		limit = {
-			has_idea = YUN_the_democratic_fortress_idea_2
-		}
-		remove_ideas = YUN_the_democratic_fortress_idea_2
-	}
-	if = {
-		limit = {
-			has_idea = YUN_the_democratic_fortress_idea_3
-		}
-		remove_ideas = YUN_the_democratic_fortress_idea_3
-	}
-	if = {
-		limit = {
-			has_idea = YUN_the_democratic_fortress_idea_4
-		}
-		remove_ideas = YUN_the_democratic_fortress_idea_4
-	}
-	if = {
-		limit = {
-			has_idea = aa_curtain_navy_spirit
-		}
-		remove_ideas = aa_curtain_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = academy_scholarships_spirit
 		}
 		remove_ideas = academy_scholarships_spirit
-	}
-	if = {
-		limit = {
-			has_idea = academy_spirit
-		}
-		remove_ideas = academy_spirit
 	}
 	if = {
 		limit = {
@@ -33586,75 +28145,9 @@ remove_all_ideas_chunk_56 = {
 	}
 	if = {
 		limit = {
-			has_idea = add_building_construction
-		}
-		remove_ideas = add_building_construction
-	}
-	if = {
-		limit = {
-			has_idea = add_doctrine_cost_reduction
-		}
-		remove_ideas = add_doctrine_cost_reduction
-	}
-	if = {
-		limit = {
-			has_idea = add_dynamic_modifier
-		}
-		remove_ideas = add_dynamic_modifier
-	}
-	if = {
-		limit = {
-			has_idea = add_mastery_bonus
-		}
-		remove_ideas = add_mastery_bonus
-	}
-	if = {
-		limit = {
-			has_idea = add_offsite_building
-		}
-		remove_ideas = add_offsite_building
-	}
-	if = {
-		limit = {
-			has_idea = add_opinion_modifier
-		}
-		remove_ideas = add_opinion_modifier
-	}
-	if = {
-		limit = {
-			has_idea = add_popularity
-		}
-		remove_ideas = add_popularity
-	}
-	if = {
-		limit = {
 			has_idea = add_production_efficiency
 		}
 		remove_ideas = add_production_efficiency
-	}
-	if = {
-		limit = {
-			has_idea = add_resource
-		}
-		remove_ideas = add_resource
-	}
-	if = {
-		limit = {
-			has_idea = add_timed_idea
-		}
-		remove_ideas = add_timed_idea
-	}
-	if = {
-		limit = {
-			has_idea = add_to_array
-		}
-		remove_ideas = add_to_array
-	}
-	if = {
-		limit = {
-			has_idea = add_to_variable
-		}
-		remove_ideas = add_to_variable
 	}
 	if = {
 		limit = {
@@ -33694,18 +28187,6 @@ remove_all_ideas_chunk_56 = {
 	}
 	if = {
 		limit = {
-			has_idea = air_force_command_spirit
-		}
-		remove_ideas = air_force_command_spirit
-	}
-	if = {
-		limit = {
-			has_idea = air_force_spirit
-		}
-		remove_ideas = air_force_spirit
-	}
-	if = {
-		limit = {
 			has_idea = air_power_projection_spirit
 		}
 		remove_ideas = air_power_projection_spirit
@@ -33721,24 +28202,6 @@ remove_all_ideas_chunk_56 = {
 			has_idea = air_war_plans_division_focus
 		}
 		remove_ideas = air_war_plans_division_focus
-	}
-	if = {
-		limit = {
-			has_idea = all_adults_serve
-		}
-		remove_ideas = all_adults_serve
-	}
-	if = {
-		limit = {
-			has_idea = all_arms_at_defense_army_spirit
-		}
-		remove_ideas = all_arms_at_defense_army_spirit
-	}
-	if = {
-		limit = {
-			has_idea = allowed_to_remove
-		}
-		remove_ideas = allowed_to_remove
 	}
 	if = {
 		limit = {
@@ -33859,33 +28322,9 @@ remove_all_ideas_chunk_57 = {
 	}
 	if = {
 		limit = {
-			has_idea = amphibious_mechanized_equipment
-		}
-		remove_ideas = amphibious_mechanized_equipment
-	}
-	if = {
-		limit = {
-			has_idea = amphibious_tank_chassis
-		}
-		remove_ideas = amphibious_tank_chassis
-	}
-	if = {
-		limit = {
 			has_idea = anbo
 		}
 		remove_ideas = anbo
-	}
-	if = {
-		limit = {
-			has_idea = anti_air
-		}
-		remove_ideas = anti_air
-	}
-	if = {
-		limit = {
-			has_idea = anti_air_equipment
-		}
-		remove_ideas = anti_air_equipment
 	}
 	if = {
 		limit = {
@@ -33931,105 +28370,15 @@ remove_all_ideas_chunk_57 = {
 	}
 	if = {
 		limit = {
-			has_idea = anti_tank_equipment
-		}
-		remove_ideas = anti_tank_equipment
-	}
-	if = {
-		limit = {
-			has_idea = any_controlled_state
-		}
-		remove_ideas = any_controlled_state
-	}
-	if = {
-		limit = {
-			has_idea = any_core_state
-		}
-		remove_ideas = any_core_state
-	}
-	if = {
-		limit = {
-			has_idea = any_country
-		}
-		remove_ideas = any_country
-	}
-	if = {
-		limit = {
-			has_idea = any_country_with_original_tag
-		}
-		remove_ideas = any_country_with_original_tag
-	}
-	if = {
-		limit = {
-			has_idea = any_enemy_country
-		}
-		remove_ideas = any_enemy_country
-	}
-	if = {
-		limit = {
-			has_idea = any_neighbor_country
-		}
-		remove_ideas = any_neighbor_country
-	}
-	if = {
-		limit = {
-			has_idea = any_of_scopes
-		}
-		remove_ideas = any_of_scopes
-	}
-	if = {
-		limit = {
-			has_idea = any_other_country
-		}
-		remove_ideas = any_other_country
-	}
-	if = {
-		limit = {
-			has_idea = any_owned_state
-		}
-		remove_ideas = any_owned_state
-	}
-	if = {
-		limit = {
-			has_idea = any_subject_country
-		}
-		remove_ideas = any_subject_country
-	}
-	if = {
-		limit = {
 			has_idea = armed_communist_militants
 		}
 		remove_ideas = armed_communist_militants
 	}
 	if = {
 		limit = {
-			has_idea = armor
-		}
-		remove_ideas = armor
-	}
-	if = {
-		limit = {
-			has_idea = armored_car_equipment
-		}
-		remove_ideas = armored_car_equipment
-	}
-	if = {
-		limit = {
-			has_idea = armored_support_vehicle
-		}
-		remove_ideas = armored_support_vehicle
-	}
-	if = {
-		limit = {
 			has_idea = army_ordnance_department
 		}
 		remove_ideas = army_ordnance_department
-	}
-	if = {
-		limit = {
-			has_idea = army_spirit
-		}
-		remove_ideas = army_spirit
 	}
 	if = {
 		limit = {
@@ -34048,60 +28397,6 @@ remove_all_ideas_chunk_57 = {
 			has_idea = artillerie_inrichtingen
 		}
 		remove_ideas = artillerie_inrichtingen
-	}
-	if = {
-		limit = {
-			has_idea = artillerie_inrichtingen_ins
-		}
-		remove_ideas = artillerie_inrichtingen_ins
-	}
-	if = {
-		limit = {
-			has_idea = artillerie_inrichtingen_pyrotechnische
-		}
-		remove_ideas = artillerie_inrichtingen_pyrotechnische
-	}
-	if = {
-		limit = {
-			has_idea = artillery
-		}
-		remove_ideas = artillery
-	}
-	if = {
-		limit = {
-			has_idea = artillery_equipment
-		}
-		remove_ideas = artillery_equipment
-	}
-	if = {
-		limit = {
-			has_idea = ast_foreign_communist_influence_idea
-		}
-		remove_ideas = ast_foreign_communist_influence_idea
-	}
-	if = {
-		limit = {
-			has_idea = ast_support_for_comrades_idea
-		}
-		remove_ideas = ast_support_for_comrades_idea
-	}
-	if = {
-		limit = {
-			has_idea = ast_support_for_comrades_idea_improved
-		}
-		remove_ideas = ast_support_for_comrades_idea_improved
-	}
-	if = {
-		limit = {
-			has_idea = autarkic_economy
-		}
-		remove_ideas = autarkic_economy
-	}
-	if = {
-		limit = {
-			has_idea = autarkic_economy_improved
-		}
-		remove_ideas = autarkic_economy_improved
 	}
 	if = {
 		limit = {
@@ -34132,12 +28427,6 @@ remove_all_ideas_chunk_57 = {
 			has_idea = base_strike_navy_spirit
 		}
 		remove_ideas = base_strike_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = battlefield_air_interdiction_spirit
-		}
-		remove_ideas = battlefield_air_interdiction_spirit
 	}
 	if = {
 		limit = {
@@ -34177,12 +28466,6 @@ remove_all_ideas_chunk_57 = {
 	}
 	if = {
 		limit = {
-			has_idea = bio_pharma
-		}
-		remove_ideas = bio_pharma
-	}
-	if = {
-		limit = {
 			has_idea = bloch
 		}
 		remove_ideas = bloch
@@ -34210,12 +28493,6 @@ remove_all_ideas_chunk_57 = {
 			has_idea = bold_attack_spirit
 		}
 		remove_ideas = bold_attack_spirit
-	}
-	if = {
-		limit = {
-			has_idea = branch_independence_spirit
-		}
-		remove_ideas = branch_independence_spirit
 	}
 	if = {
 		limit = {
@@ -34267,12 +28544,6 @@ remove_all_ideas_chunk_57 = {
 	}
 	if = {
 		limit = {
-			has_idea = bureau_of_ordnance_spirit
-		}
-		remove_ideas = bureau_of_ordnance_spirit
-	}
-	if = {
-		limit = {
 			has_idea = bureau_of_ships_focus
 		}
 		remove_ideas = bureau_of_ships_focus
@@ -34321,24 +28592,6 @@ remove_all_ideas_chunk_57 = {
 	}
 	if = {
 		limit = {
-			has_idea = capital_investment_model
-		}
-		remove_ideas = capital_investment_model
-	}
-	if = {
-		limit = {
-			has_idea = capital_scope
-		}
-		remove_ideas = capital_scope
-	}
-	if = {
-		limit = {
-			has_idea = capital_ship
-		}
-		remove_ideas = capital_ship
-	}
-	if = {
-		limit = {
 			has_idea = caproni
 		}
 		remove_ideas = caproni
@@ -34348,18 +28601,6 @@ remove_all_ideas_chunk_57 = {
 			has_idea = caproni_ETH
 		}
 		remove_ideas = caproni_ETH
-	}
-	if = {
-		limit = {
-			has_idea = carrier
-		}
-		remove_ideas = carrier
-	}
-	if = {
-		limit = {
-			has_idea = cas
-		}
-		remove_ideas = cas
 	}
 	if = {
 		limit = {
@@ -34384,21 +28625,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = centralized_control_spirit
-		}
-		remove_ideas = centralized_control_spirit
-	}
-	if = {
-		limit = {
 			has_idea = cgt
 		}
 		remove_ideas = cgt
-	}
-	if = {
-		limit = {
-			has_idea = check_variable
-		}
-		remove_ideas = check_variable
 	}
 	if = {
 		limit = {
@@ -34414,27 +28643,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = civilian_economy
-		}
-		remove_ideas = civilian_economy
-	}
-	if = {
-		limit = {
-			has_idea = clear_rule
-		}
-		remove_ideas = clear_rule
-	}
-	if = {
-		limit = {
 			has_idea = close_combat_navy_spirit
 		}
 		remove_ideas = close_combat_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = closed_economy
-		}
-		remove_ideas = closed_economy
 	}
 	if = {
 		limit = {
@@ -34552,45 +28763,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = convoy
-		}
-		remove_ideas = convoy
-	}
-	if = {
-		limit = {
-			has_idea = convoy_1
-		}
-		remove_ideas = convoy_1
-	}
-	if = {
-		limit = {
-			has_idea = country_event
-		}
-		remove_ideas = country_event
-	}
-	if = {
-		limit = {
 			has_idea = crda
 		}
 		remove_ideas = crda
-	}
-	if = {
-		limit = {
-			has_idea = create_unit
-		}
-		remove_ideas = create_unit
-	}
-	if = {
-		limit = {
-			has_idea = create_wargoal
-		}
-		remove_ideas = create_wargoal
-	}
-	if = {
-		limit = {
-			has_idea = cruiser_submarine
-		}
-		remove_ideas = cruiser_submarine
 	}
 	if = {
 		limit = {
@@ -34606,69 +28781,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = cult_of_heroism_army_spirit
-		}
-		remove_ideas = cult_of_heroism_army_spirit
-	}
-	if = {
-		limit = {
-			has_idea = custom_effect_tooltip
-		}
-		remove_ideas = custom_effect_tooltip
-	}
-	if = {
-		limit = {
-			has_idea = custom_trigger_tooltip
-		}
-		remove_ideas = custom_trigger_tooltip
-	}
-	if = {
-		limit = {
-			has_idea = cv_small_plane_airframe
-		}
-		remove_ideas = cv_small_plane_airframe
-	}
-	if = {
-		limit = {
-			has_idea = cv_small_plane_cas_airframe
-		}
-		remove_ideas = cv_small_plane_cas_airframe
-	}
-	if = {
-		limit = {
-			has_idea = cv_small_plane_naval_bomber_airframe
-		}
-		remove_ideas = cv_small_plane_naval_bomber_airframe
-	}
-	if = {
-		limit = {
-			has_idea = cv_small_plane_suicide_airframe
-		}
-		remove_ideas = cv_small_plane_suicide_airframe
-	}
-	if = {
-		limit = {
 			has_idea = dagu_shipyard
 		}
 		remove_ideas = dagu_shipyard
-	}
-	if = {
-		limit = {
-			has_idea = damage_to_naval_base_high
-		}
-		remove_ideas = damage_to_naval_base_high
-	}
-	if = {
-		limit = {
-			has_idea = damage_to_naval_base_low
-		}
-		remove_ideas = damage_to_naval_base_low
-	}
-	if = {
-		limit = {
-			has_idea = damage_to_naval_base_medium
-		}
-		remove_ideas = damage_to_naval_base_medium
 	}
 	if = {
 		limit = {
@@ -34744,12 +28859,6 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = destroyer
-		}
-		remove_ideas = destroyer
-	}
-	if = {
-		limit = {
 			has_idea = deterrence
 		}
 		remove_ideas = deterrence
@@ -34762,39 +28871,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = direct_fire_support_army_spirit
-		}
-		remove_ideas = direct_fire_support_army_spirit
-	}
-	if = {
-		limit = {
 			has_idea = disa
 		}
 		remove_ideas = disa
-	}
-	if = {
-		limit = {
-			has_idea = disarmed_nation
-		}
-		remove_ideas = disarmed_nation
-	}
-	if = {
-		limit = {
-			has_idea = dive_bombing_spirit
-		}
-		remove_ideas = dive_bombing_spirit
-	}
-	if = {
-		limit = {
-			has_idea = division_command_spirit
-		}
-		remove_ideas = division_command_spirit
-	}
-	if = {
-		limit = {
-			has_idea = division_template
-		}
-		remove_ideas = division_template
 	}
 	if = {
 		limit = {
@@ -34834,24 +28913,6 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = economy
-		}
-		remove_ideas = economy
-	}
-	if = {
-		limit = {
-			has_idea = effect_tooltip
-		}
-		remove_ideas = effect_tooltip
-	}
-	if = {
-		limit = {
-			has_idea = effective_training_programs_spirit
-		}
-		remove_ideas = effective_training_programs_spirit
-	}
-	if = {
-		limit = {
 			has_idea = efficient_communications_spirit
 		}
 		remove_ideas = efficient_communications_spirit
@@ -34867,12 +28928,6 @@ remove_all_ideas_chunk_58 = {
 			has_idea = elevated_engineering_corps_spirit
 		}
 		remove_ideas = elevated_engineering_corps_spirit
-	}
-	if = {
-		limit = {
-			has_idea = else_if
-		}
-		remove_ideas = else_if
 	}
 	if = {
 		limit = {
@@ -34894,27 +28949,9 @@ remove_all_ideas_chunk_58 = {
 	}
 	if = {
 		limit = {
-			has_idea = etibank
-		}
-		remove_ideas = etibank
-	}
-	if = {
-		limit = {
 			has_idea = evans_deakin_co
 		}
 		remove_ideas = evans_deakin_co
-	}
-	if = {
-		limit = {
-			has_idea = export_focus
-		}
-		remove_ideas = export_focus
-	}
-	if = {
-		limit = {
-			has_idea = extensive_conscription
-		}
-		remove_ideas = extensive_conscription
 	}
 	if = {
 		limit = {
@@ -35011,18 +29048,6 @@ remove_all_ideas_chunk_59 = {
 	}
 	if = {
 		limit = {
-			has_idea = fighter
-		}
-		remove_ideas = fighter
-	}
-	if = {
-		limit = {
-			has_idea = fleet_defense_navy_spirit
-		}
-		remove_ideas = fleet_defense_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = fleet_in_being_academy_spirit
 		}
 		remove_ideas = fleet_in_being_academy_spirit
@@ -35032,18 +29057,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = fleet_in_being_navy_spirit
 		}
 		remove_ideas = fleet_in_being_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = fleet_interoperability_navy_spirit
-		}
-		remove_ideas = fleet_interoperability_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = fleet_submarine
-		}
-		remove_ideas = fleet_submarine
 	}
 	if = {
 		limit = {
@@ -35101,12 +29114,6 @@ remove_all_ideas_chunk_59 = {
 	}
 	if = {
 		limit = {
-			has_idea = fokker_ins
-		}
-		remove_ideas = fokker_ins
-	}
-	if = {
-		limit = {
 			has_idea = fonderie_royale_de_canons_leopoldville
 		}
 		remove_ideas = fonderie_royale_de_canons_leopoldville
@@ -35134,18 +29141,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = foreign_expeditions_focus
 		}
 		remove_ideas = foreign_expeditions_focus
-	}
-	if = {
-		limit = {
-			has_idea = free_building_slots
-		}
-		remove_ideas = free_building_slots
-	}
-	if = {
-		limit = {
-			has_idea = free_trade
-		}
-		remove_ideas = free_trade
 	}
 	if = {
 		limit = {
@@ -35230,12 +29225,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = generic_naval_manufacturer
 		}
 		remove_ideas = generic_naval_manufacturer
-	}
-	if = {
-		limit = {
-			has_idea = generic_secret_weapons_ns
-		}
-		remove_ideas = generic_secret_weapons_ns
 	}
 	if = {
 		limit = {
@@ -35329,12 +29318,6 @@ remove_all_ideas_chunk_59 = {
 	}
 	if = {
 		limit = {
-			has_idea = guided_missile_equipment
-		}
-		remove_ideas = guided_missile_equipment
-	}
-	if = {
-		limit = {
 			has_idea = habakkuk_carriers_ns
 		}
 		remove_ideas = habakkuk_carriers_ns
@@ -35359,54 +29342,6 @@ remove_all_ideas_chunk_59 = {
 	}
 	if = {
 		limit = {
-			has_idea = has_allowed_idea_with_traits
-		}
-		remove_ideas = has_allowed_idea_with_traits
-	}
-	if = {
-		limit = {
-			has_idea = has_country_flag
-		}
-		remove_ideas = has_country_flag
-	}
-	if = {
-		limit = {
-			has_idea = has_country_leader
-		}
-		remove_ideas = has_country_leader
-	}
-	if = {
-		limit = {
-			has_idea = has_dynamic_modifier
-		}
-		remove_ideas = has_dynamic_modifier
-	}
-	if = {
-		limit = {
-			has_idea = has_game_rule
-		}
-		remove_ideas = has_game_rule
-	}
-	if = {
-		limit = {
-			has_idea = has_mastery_level
-		}
-		remove_ideas = has_mastery_level
-	}
-	if = {
-		limit = {
-			has_idea = has_opinion
-		}
-		remove_ideas = has_opinion
-	}
-	if = {
-		limit = {
-			has_idea = has_power_balance
-		}
-		remove_ideas = has_power_balance
-	}
-	if = {
-		limit = {
 			has_idea = havilland_canada
 		}
 		remove_ideas = havilland_canada
@@ -35416,30 +29351,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = hawker
 		}
 		remove_ideas = hawker
-	}
-	if = {
-		limit = {
-			has_idea = heavy_fighter
-		}
-		remove_ideas = heavy_fighter
-	}
-	if = {
-		limit = {
-			has_idea = heavy_tank_artillery_chassis
-		}
-		remove_ideas = heavy_tank_artillery_chassis
-	}
-	if = {
-		limit = {
-			has_idea = heavy_tank_chassis
-		}
-		remove_ideas = heavy_tank_chassis
-	}
-	if = {
-		limit = {
-			has_idea = heavy_tank_destroyer_chassis
-		}
-		remove_ideas = heavy_tank_destroyer_chassis
 	}
 	if = {
 		limit = {
@@ -35458,18 +29369,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = heritage_of_accomplishment
 		}
 		remove_ideas = heritage_of_accomplishment
-	}
-	if = {
-		limit = {
-			has_idea = hidden_modifier
-		}
-		remove_ideas = hidden_modifier
-	}
-	if = {
-		limit = {
-			has_idea = hidden_trigger
-		}
-		remove_ideas = hidden_trigger
 	}
 	if = {
 		limit = {
@@ -35542,18 +29441,6 @@ remove_all_ideas_chunk_59 = {
 			has_idea = iar
 		}
 		remove_ideas = iar
-	}
-	if = {
-		limit = {
-			has_idea = ic_ratio
-		}
-		remove_ideas = ic_ratio
-	}
-	if = {
-		limit = {
-			has_idea = idea_AST_civil_war_on_their_own
-		}
-		remove_ideas = idea_AST_civil_war_on_their_own
 	}
 	if = {
 		limit = {
@@ -35917,174 +29804,6 @@ remove_all_ideas_chunk_60 = {
 			has_idea = idea_GUYA_weapons_licensing
 		}
 		remove_ideas = idea_GUYA_weapons_licensing
-	}
-	if = {
-		limit = {
-			has_idea = idea_HOL_comite_rijksenheeid
-		}
-		remove_ideas = idea_HOL_comite_rijksenheeid
-	}
-	if = {
-		limit = {
-			has_idea = idea_HOL_prioritizing_dutch_profits
-		}
-		remove_ideas = idea_HOL_prioritizing_dutch_profits
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_bank_of_java_concern
-		}
-		remove_ideas = idea_INS_bank_of_java_concern
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_defend_java_til_death
-		}
-		remove_ideas = idea_INS_defend_java_til_death
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_great_depression_fake
-		}
-		remove_ideas = idea_INS_great_depression_fake
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_great_depression_fake_2
-		}
-		remove_ideas = idea_INS_great_depression_fake_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_hidden_debt_timer
-		}
-		remove_ideas = idea_INS_hidden_debt_timer
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_hidden_naval_raid_range
-		}
-		remove_ideas = idea_INS_hidden_naval_raid_range
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_japanese_symphasizers
-		}
-		remove_ideas = idea_INS_japanese_symphasizers
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_mismanaged_admin_fake
-		}
-		remove_ideas = idea_INS_mismanaged_admin_fake
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_mismanaged_admin_fake_2
-		}
-		remove_ideas = idea_INS_mismanaged_admin_fake_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_nefis
-		}
-		remove_ideas = idea_INS_nefis
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_nefis_no_lar
-		}
-		remove_ideas = idea_INS_nefis_no_lar
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_netherlands_most_precious_jewel
-		}
-		remove_ideas = idea_INS_netherlands_most_precious_jewel
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_policy_shift
-		}
-		remove_ideas = idea_INS_policy_shift
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_prioritizing_dutch_profits
-		}
-		remove_ideas = idea_INS_prioritizing_dutch_profits
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_radio_communist
-		}
-		remove_ideas = idea_INS_radio_communist
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_radio_democratic
-		}
-		remove_ideas = idea_INS_radio_democratic
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_radio_fascist
-		}
-		remove_ideas = idea_INS_radio_fascist
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_radio_sukarno
-		}
-		remove_ideas = idea_INS_radio_sukarno
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_restoring_order
-		}
-		remove_ideas = idea_INS_restoring_order
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_royal_dutch_shell_concern
-		}
-		remove_ideas = idea_INS_royal_dutch_shell_concern
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_staatspoorwegen_ss_concern
-		}
-		remove_ideas = idea_INS_staatspoorwegen_ss_concern
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_standard_oil_california_borrowed_concern
-		}
-		remove_ideas = idea_INS_standard_oil_california_borrowed_concern
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_tax_reduction
-		}
-		remove_ideas = idea_INS_tax_reduction
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_telkom_indonesia_concern
-		}
-		remove_ideas = idea_INS_telkom_indonesia_concern
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_volksraad
-		}
-		remove_ideas = idea_INS_volksraad
-	}
-	if = {
-		limit = {
-			has_idea = idea_INS_western_trade
-		}
-		remove_ideas = idea_INS_western_trade
 	}
 	if = {
 		limit = {
@@ -37040,651 +30759,9 @@ remove_all_ideas_chunk_62 = {
 		}
 		remove_ideas = idea_RAJ_zamindars_broken
 	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_a_constituional_monarchy
-		}
-		remove_ideas = idea_SIA_a_constituional_monarchy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_a_modern_economy
-		}
-		remove_ideas = idea_SIA_a_modern_economy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_a_race_against_time
-		}
-		remove_ideas = idea_SIA_a_race_against_time
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_american_tank_studies
-		}
-		remove_ideas = idea_SIA_american_tank_studies
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_an_absolute_monarchy
-		}
-		remove_ideas = idea_SIA_an_absolute_monarchy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_an_unceasy_alliance
-		}
-		remove_ideas = idea_SIA_an_unceasy_alliance
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_army_of_siam
-		}
-		remove_ideas = idea_SIA_army_of_siam
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_army_of_siam_2
-		}
-		remove_ideas = idea_SIA_army_of_siam_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_bank_of_siam
-		}
-		remove_ideas = idea_SIA_bank_of_siam
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_bank_of_siam_2
-		}
-		remove_ideas = idea_SIA_bank_of_siam_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_bloodlusted_irredentism
-		}
-		remove_ideas = idea_SIA_bloodlusted_irredentism
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_boon_rawd_brewery
-		}
-		remove_ideas = idea_SIA_boon_rawd_brewery
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_breaking_the_burmese_line
-		}
-		remove_ideas = idea_SIA_breaking_the_burmese_line
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_british_tank_studies
-		}
-		remove_ideas = idea_SIA_british_tank_studies
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_cemented_control
-		}
-		remove_ideas = idea_SIA_cemented_control
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_cemented_control_2
-		}
-		remove_ideas = idea_SIA_cemented_control_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_cemented_control_3
-		}
-		remove_ideas = idea_SIA_cemented_control_3
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civil_service_heroism_1
-		}
-		remove_ideas = idea_SIA_civil_service_heroism_1
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civil_service_heroism_2
-		}
-		remove_ideas = idea_SIA_civil_service_heroism_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_full_support
-		}
-		remove_ideas = idea_SIA_civilian_full_support
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_neutral
-		}
-		remove_ideas = idea_SIA_civilian_neutral
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_opposition
-		}
-		remove_ideas = idea_SIA_civilian_opposition
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_rebellious
-		}
-		remove_ideas = idea_SIA_civilian_rebellious
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_slight_support
-		}
-		remove_ideas = idea_SIA_civilian_slight_support
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_civilian_technocrats_in_institutions
-		}
-		remove_ideas = idea_SIA_civilian_technocrats_in_institutions
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_constitutional_virtue
-		}
-		remove_ideas = idea_SIA_constitutional_virtue
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_defiant
-		}
-		remove_ideas = idea_SIA_death_defiant
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_communists
-		}
-		remove_ideas = idea_SIA_death_to_communists
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_communists_2
-		}
-		remove_ideas = idea_SIA_death_to_communists_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_communists_3
-		}
-		remove_ideas = idea_SIA_death_to_communists_3
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_nationalists
-		}
-		remove_ideas = idea_SIA_death_to_nationalists
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_nationalists_2
-		}
-		remove_ideas = idea_SIA_death_to_nationalists_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_death_to_nationalists_3
-		}
-		remove_ideas = idea_SIA_death_to_nationalists_3
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_debt_repayment
-		}
-		remove_ideas = idea_SIA_debt_repayment
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_defenders_of_constitutional_liberty
-		}
-		remove_ideas = idea_SIA_defenders_of_constitutional_liberty
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_deficit_spending
-		}
-		remove_ideas = idea_SIA_deficit_spending
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_desperate_gambit
-		}
-		remove_ideas = idea_SIA_desperate_gambit
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_diverting_army_funds_to_navy
-		}
-		remove_ideas = idea_SIA_diverting_army_funds_to_navy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_ending_military_grift
-		}
-		remove_ideas = idea_SIA_ending_military_grift
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_german_tank_studies
-		}
-		remove_ideas = idea_SIA_german_tank_studies
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_get_off_our_shores
-		}
-		remove_ideas = idea_SIA_get_off_our_shores
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_how_quickly_the_table_turns
-		}
-		remove_ideas = idea_SIA_how_quickly_the_table_turns
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_intermediate_war
-		}
-		remove_ideas = idea_SIA_intermediate_war
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_japan_repaying_debts
-		}
-		remove_ideas = idea_SIA_japan_repaying_debts
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_japan_repaying_debts_JAP
-		}
-		remove_ideas = idea_SIA_japan_repaying_debts_JAP
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_joint_military_command
-		}
-		remove_ideas = idea_SIA_joint_military_command
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_long_war
-		}
-		remove_ideas = idea_SIA_long_war
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_full_support
-		}
-		remove_ideas = idea_SIA_military_full_support
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_humiliation
-		}
-		remove_ideas = idea_SIA_military_humiliation
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_neutral
-		}
-		remove_ideas = idea_SIA_military_neutral
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_opposition
-		}
-		remove_ideas = idea_SIA_military_opposition
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_rebellious
-		}
-		remove_ideas = idea_SIA_military_rebellious
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_military_slight_support
-		}
-		remove_ideas = idea_SIA_military_slight_support
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nighttime_training
-		}
-		remove_ideas = idea_SIA_nighttime_training
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_all_adults_serve
-		}
-		remove_ideas = idea_SIA_nsb_all_adults_serve
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_disarmed_nation
-		}
-		remove_ideas = idea_SIA_nsb_disarmed_nation
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_extensive_conscription
-		}
-		remove_ideas = idea_SIA_nsb_extensive_conscription
-	}
 }
 
 remove_all_ideas_chunk_63 = {
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_limited_conscription
-		}
-		remove_ideas = idea_SIA_nsb_limited_conscription
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_scraping_the_barrel
-		}
-		remove_ideas = idea_SIA_nsb_scraping_the_barrel
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_service_by_requirement
-		}
-		remove_ideas = idea_SIA_nsb_service_by_requirement
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_nsb_volunteer_only
-		}
-		remove_ideas = idea_SIA_nsb_volunteer_only
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_order_discipline_and_unity
-		}
-		remove_ideas = idea_SIA_order_discipline_and_unity
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_overheated_economy
-		}
-		remove_ideas = idea_SIA_overheated_economy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_pacific_war_preparations
-		}
-		remove_ideas = idea_SIA_pacific_war_preparations
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_pan_thaiism
-		}
-		remove_ideas = idea_SIA_pan_thaiism
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_pan_thaiism_2
-		}
-		remove_ideas = idea_SIA_pan_thaiism_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_public_credit_debt
-		}
-		remove_ideas = idea_SIA_public_credit_debt
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_public_credit_debt_2
-		}
-		remove_ideas = idea_SIA_public_credit_debt_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_purged_military
-		}
-		remove_ideas = idea_SIA_purged_military
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_purged_senior_military
-		}
-		remove_ideas = idea_SIA_purged_senior_military
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_rebuilding_after_civil_war
-		}
-		remove_ideas = idea_SIA_rebuilding_after_civil_war
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_rebuilding_the_war_torn_economy
-		}
-		remove_ideas = idea_SIA_rebuilding_the_war_torn_economy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_redirected_military_funds
-		}
-		remove_ideas = idea_SIA_redirected_military_funds
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_rehabilitated_military
-		}
-		remove_ideas = idea_SIA_rehabilitated_military
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_restoring_order
-		}
-		remove_ideas = idea_SIA_restoring_order
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_revision_of_unequal_treaties
-		}
-		remove_ideas = idea_SIA_revision_of_unequal_treaties
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_royal_palace_bureau_directive_no_1523
-		}
-		remove_ideas = idea_SIA_royal_palace_bureau_directive_no_1523
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_rural_support
-		}
-		remove_ideas = idea_SIA_rural_support
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_secure_rubber_islands
-		}
-		remove_ideas = idea_SIA_secure_rubber_islands
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_seri_thai_contacts
-		}
-		remove_ideas = idea_SIA_seri_thai_contacts
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_short_war
-		}
-		remove_ideas = idea_SIA_short_war
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_short_war_temp_buff
-		}
-		remove_ideas = idea_SIA_short_war_temp_buff
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_short_war_temp_debuff
-		}
-		remove_ideas = idea_SIA_short_war_temp_debuff
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_siam_cement_group
-		}
-		remove_ideas = idea_SIA_siam_cement_group
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_sold_privy_purse_lands
-		}
-		remove_ideas = idea_SIA_sold_privy_purse_lands
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_songsuradet_ascendant_0
-		}
-		remove_ideas = idea_SIA_songsuradet_ascendant_0
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_songsuradet_ascendant_1
-		}
-		remove_ideas = idea_SIA_songsuradet_ascendant_1
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_specialist_marine_forces
-		}
-		remove_ideas = idea_SIA_specialist_marine_forces
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_specialized_warfare
-		}
-		remove_ideas = idea_SIA_specialized_warfare
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_standing_our_ground_mission_temp_buff
-		}
-		remove_ideas = idea_SIA_standing_our_ground_mission_temp_buff
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_steel_arteries
-		}
-		remove_ideas = idea_SIA_steel_arteries
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_sued_king_prajadhipok
-		}
-		remove_ideas = idea_SIA_sued_king_prajadhipok
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_suspend_ordinary_legal_procedures
-		}
-		remove_ideas = idea_SIA_suspend_ordinary_legal_procedures
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_thai_irredentism
-		}
-		remove_ideas = idea_SIA_thai_irredentism
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_thai_rice_company
-		}
-		remove_ideas = idea_SIA_thai_rice_company
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_the_military_oversight_bureau
-		}
-		remove_ideas = idea_SIA_the_military_oversight_bureau
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_the_royal_police_counterweight
-		}
-		remove_ideas = idea_SIA_the_royal_police_counterweight
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_the_sacred_hierarchy
-		}
-		remove_ideas = idea_SIA_the_sacred_hierarchy
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_the_yellow_dossier
-		}
-		remove_ideas = idea_SIA_the_yellow_dossier
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_the_yellow_dossier_2
-		}
-		remove_ideas = idea_SIA_the_yellow_dossier_2
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_unconventional_tank_construction
-		}
-		remove_ideas = idea_SIA_unconventional_tank_construction
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_war_fervor
-		}
-		remove_ideas = idea_SIA_war_fervor
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_war_material_substitutions
-		}
-		remove_ideas = idea_SIA_war_material_substitutions
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_weather_broadcasts
-		}
-		remove_ideas = idea_SIA_weather_broadcasts
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_yielded_the_air_war
-		}
-		remove_ideas = idea_SIA_yielded_the_air_war
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_yuvachon
-		}
-		remove_ideas = idea_SIA_yuvachon
-	}
-	if = {
-		limit = {
-			has_idea = idea_SIA_yuvachon_2
-		}
-		remove_ideas = idea_SIA_yuvachon_2
-	}
 	if = {
 		limit = {
 			has_idea = idea_URG_americanism
@@ -37897,12 +30974,6 @@ remove_all_ideas_chunk_63 = {
 	}
 	if = {
 		limit = {
-			has_idea = ikarus
-		}
-		remove_ideas = ikarus
-	}
-	if = {
-		limit = {
 			has_idea = imperial_austerity_idea
 		}
 		remove_ideas = imperial_austerity_idea
@@ -37927,18 +30998,6 @@ remove_all_ideas_chunk_63 = {
 	}
 	if = {
 		limit = {
-			has_idea = independent_air_force_spirit
-		}
-		remove_ideas = independent_air_force_spirit
-	}
-	if = {
-		limit = {
-			has_idea = independent_rule_occupation_law_fake_idea
-		}
-		remove_ideas = independent_rule_occupation_law_fake_idea
-	}
-	if = {
-		limit = {
 			has_idea = indian_independence_promised_idea
 		}
 		remove_ideas = indian_independence_promised_idea
@@ -37951,27 +31010,9 @@ remove_all_ideas_chunk_63 = {
 	}
 	if = {
 		limit = {
-			has_idea = industrial_destruction_spirit
-		}
-		remove_ideas = industrial_destruction_spirit
-	}
-	if = {
-		limit = {
 			has_idea = industry_liasons_spirit
 		}
 		remove_ideas = industry_liasons_spirit
-	}
-	if = {
-		limit = {
-			has_idea = infantry
-		}
-		remove_ideas = infantry
-	}
-	if = {
-		limit = {
-			has_idea = infantry_equipment
-		}
-		remove_ideas = infantry_equipment
 	}
 	if = {
 		limit = {
@@ -38008,12 +31049,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = is_in_array
-		}
-		remove_ideas = is_in_array
-	}
-	if = {
-		limit = {
 			has_idea = iscor
 		}
 		remove_ideas = iscor
@@ -38023,12 +31058,6 @@ remove_all_ideas_chunk_64 = {
 			has_idea = ishapore_rifle_factory
 		}
 		remove_ideas = ishapore_rifle_factory
-	}
-	if = {
-		limit = {
-			has_idea = isolation
-		}
-		remove_ideas = isolation
 	}
 	if = {
 		limit = {
@@ -38122,12 +31151,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = knilm
-		}
-		remove_ideas = knilm
-	}
-	if = {
-		limit = {
 			has_idea = koc_ticaret_as_armor
 		}
 		remove_ideas = koc_ticaret_as_armor
@@ -38200,33 +31223,9 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = land_cruiser_chassis
-		}
-		remove_ideas = land_cruiser_chassis
-	}
-	if = {
-		limit = {
 			has_idea = landsverk
 		}
 		remove_ideas = landsverk
-	}
-	if = {
-		limit = {
-			has_idea = large_plane_airframe
-		}
-		remove_ideas = large_plane_airframe
-	}
-	if = {
-		limit = {
-			has_idea = large_plane_airframe_4
-		}
-		remove_ideas = large_plane_airframe_4
-	}
-	if = {
-		limit = {
-			has_idea = large_plane_maritime_patrol_plane_airframe
-		}
-		remove_ideas = large_plane_maritime_patrol_plane_airframe
 	}
 	if = {
 		limit = {
@@ -38266,36 +31265,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = light_tank_artillery_chassis
-		}
-		remove_ideas = light_tank_artillery_chassis
-	}
-	if = {
-		limit = {
-			has_idea = light_tank_chassis
-		}
-		remove_ideas = light_tank_chassis
-	}
-	if = {
-		limit = {
-			has_idea = light_tank_destroyer_chassis
-		}
-		remove_ideas = light_tank_destroyer_chassis
-	}
-	if = {
-		limit = {
-			has_idea = limited_conscription
-		}
-		remove_ideas = limited_conscription
-	}
-	if = {
-		limit = {
-			has_idea = limited_exports
-		}
-		remove_ideas = limited_exports
-	}
-	if = {
-		limit = {
 			has_idea = limited_interventionism
 		}
 		remove_ideas = limited_interventionism
@@ -38305,12 +31274,6 @@ remove_all_ideas_chunk_64 = {
 			has_idea = lithgow_saf
 		}
 		remove_ideas = lithgow_saf
-	}
-	if = {
-		limit = {
-			has_idea = living_off_the_land_army_spirit
-		}
-		remove_ideas = living_off_the_land_army_spirit
 	}
 	if = {
 		limit = {
@@ -38332,12 +31295,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = low_economic_mobilisation
-		}
-		remove_ideas = low_economic_mobilisation
-	}
-	if = {
-		limit = {
 			has_idea = lysaghts_works
 		}
 		remove_ideas = lysaghts_works
@@ -38356,12 +31313,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = machinefabriek_braat
-		}
-		remove_ideas = machinefabriek_braat
-	}
-	if = {
-		limit = {
 			has_idea = maizuru_naval_arsenal
 		}
 		remove_ideas = maizuru_naval_arsenal
@@ -38371,12 +31322,6 @@ remove_all_ideas_chunk_64 = {
 			has_idea = maneuver_warfare_spirit
 		}
 		remove_ideas = maneuver_warfare_spirit
-	}
-	if = {
-		limit = {
-			has_idea = marine_establishment_ins
-		}
-		remove_ideas = marine_establishment_ins
 	}
 	if = {
 		limit = {
@@ -38416,18 +31361,6 @@ remove_all_ideas_chunk_64 = {
 	}
 	if = {
 		limit = {
-			has_idea = material_destruction_spirit
-		}
-		remove_ideas = material_destruction_spirit
-	}
-	if = {
-		limit = {
-			has_idea = materiel_manufacturer
-		}
-		remove_ideas = materiel_manufacturer
-	}
-	if = {
-		limit = {
 			has_idea = mauser
 		}
 		remove_ideas = mauser
@@ -38443,60 +31376,6 @@ remove_all_ideas_chunk_64 = {
 			has_idea = mazagon_dock_limited
 		}
 		remove_ideas = mazagon_dock_limited
-	}
-	if = {
-		limit = {
-			has_idea = mechanized_equipment
-		}
-		remove_ideas = mechanized_equipment
-	}
-	if = {
-		limit = {
-			has_idea = medium_plane_airframe
-		}
-		remove_ideas = medium_plane_airframe
-	}
-	if = {
-		limit = {
-			has_idea = medium_plane_airframe_4
-		}
-		remove_ideas = medium_plane_airframe_4
-	}
-	if = {
-		limit = {
-			has_idea = medium_plane_fighter_airframe
-		}
-		remove_ideas = medium_plane_fighter_airframe
-	}
-	if = {
-		limit = {
-			has_idea = medium_plane_scout_plane_airframe
-		}
-		remove_ideas = medium_plane_scout_plane_airframe
-	}
-	if = {
-		limit = {
-			has_idea = medium_tank_artillery_chassis
-		}
-		remove_ideas = medium_tank_artillery_chassis
-	}
-	if = {
-		limit = {
-			has_idea = medium_tank_chassis
-		}
-		remove_ideas = medium_tank_chassis
-	}
-	if = {
-		limit = {
-			has_idea = medium_tank_destroyer_chassis
-		}
-		remove_ideas = medium_tank_destroyer_chassis
-	}
-	if = {
-		limit = {
-			has_idea = mega_carrier
-		}
-		remove_ideas = mega_carrier
 	}
 	if = {
 		limit = {
@@ -38521,12 +31400,6 @@ remove_all_ideas_chunk_64 = {
 			has_idea = mexico_german_submarine_happy_time
 		}
 		remove_ideas = mexico_german_submarine_happy_time
-	}
-	if = {
-		limit = {
-			has_idea = midget_submarine
-		}
-		remove_ideas = midget_submarine
 	}
 	if = {
 		limit = {
@@ -38564,69 +31437,9 @@ remove_all_ideas_chunk_64 = {
 		}
 		remove_ideas = minerva_imperia_motorized
 	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_artillery
-		}
-		remove_ideas = mio_cat_eq_all_artillery
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_cv_aircraft
-		}
-		remove_ideas = mio_cat_eq_all_cv_aircraft
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_infantry_and_support_equipment
-		}
-		remove_ideas = mio_cat_eq_all_infantry_and_support_equipment
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_medium_tank
-		}
-		remove_ideas = mio_cat_eq_all_medium_tank
-	}
 }
 
 remove_all_ideas_chunk_65 = {
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_ships_no_convoys
-		}
-		remove_ideas = mio_cat_eq_all_ships_no_convoys
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_all_tanks
-		}
-		remove_ideas = mio_cat_eq_all_tanks
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_only_light_cas
-		}
-		remove_ideas = mio_cat_eq_only_light_cas
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_only_light_fighter
-		}
-		remove_ideas = mio_cat_eq_only_light_fighter
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_only_light_fighter_and_CAS_no_cv
-		}
-		remove_ideas = mio_cat_eq_only_light_fighter_and_CAS_no_cv
-	}
-	if = {
-		limit = {
-			has_idea = mio_cat_eq_only_light_nav
-		}
-		remove_ideas = mio_cat_eq_only_light_nav
-	}
 	if = {
 		limit = {
 			has_idea = mitsubishi
@@ -38665,24 +31478,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = mobilization_laws
-		}
-		remove_ideas = mobilization_laws
-	}
-	if = {
-		limit = {
-			has_idea = modern_tank_artillery_chassis
-		}
-		remove_ideas = modern_tank_artillery_chassis
-	}
-	if = {
-		limit = {
-			has_idea = modern_tank_chassis
-		}
-		remove_ideas = modern_tank_chassis
-	}
-	if = {
-		limit = {
 			has_idea = montreal_lab
 		}
 		remove_ideas = montreal_lab
@@ -38692,18 +31487,6 @@ remove_all_ideas_chunk_65 = {
 			has_idea = morane_saulnier
 		}
 		remove_ideas = morane_saulnier
-	}
-	if = {
-		limit = {
-			has_idea = motorized_equipment
-		}
-		remove_ideas = motorized_equipment
-	}
-	if = {
-		limit = {
-			has_idea = motorized_rocket_equipment
-		}
-		remove_ideas = motorized_rocket_equipment
 	}
 	if = {
 		limit = {
@@ -38749,12 +31532,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = national_defense_state
-		}
-		remove_ideas = national_defense_state
-	}
-	if = {
-		limit = {
 			has_idea = nationalism
 		}
 		remove_ideas = nationalism
@@ -38767,24 +31544,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = naval_academy_spirit
-		}
-		remove_ideas = naval_academy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = naval_bomber
-		}
-		remove_ideas = naval_bomber
-	}
-	if = {
-		limit = {
-			has_idea = naval_command_spirit
-		}
-		remove_ideas = naval_command_spirit
-	}
-	if = {
-		limit = {
 			has_idea = naval_refit_yards_spirit
 		}
 		remove_ideas = naval_refit_yards_spirit
@@ -38794,18 +31553,6 @@ remove_all_ideas_chunk_65 = {
 			has_idea = naval_reform_spirit
 		}
 		remove_ideas = naval_reform_spirit
-	}
-	if = {
-		limit = {
-			has_idea = naval_tripwire_navy_spirit
-		}
-		remove_ideas = naval_tripwire_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = navy_spirit
-		}
-		remove_ideas = navy_spirit
 	}
 	if = {
 		limit = {
@@ -38830,18 +31577,6 @@ remove_all_ideas_chunk_65 = {
 			has_idea = new_deal
 		}
 		remove_ideas = new_deal
-	}
-	if = {
-		limit = {
-			has_idea = new_economic_policy
-		}
-		remove_ideas = new_economic_policy
-	}
-	if = {
-		limit = {
-			has_idea = new_economic_policy_2
-		}
-		remove_ideas = new_economic_policy_2
 	}
 	if = {
 		limit = {
@@ -38875,33 +31610,15 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = norfolk_naval_yard
-		}
-		remove_ideas = norfolk_naval_yard
-	}
-	if = {
-		limit = {
 			has_idea = north_american_aviation
 		}
 		remove_ideas = north_american_aviation
 	}
 	if = {
 		limit = {
-			has_idea = not
-		}
-		remove_ideas = not
-	}
-	if = {
-		limit = {
 			has_idea = nsm_amsterdam
 		}
 		remove_ideas = nsm_amsterdam
-	}
-	if = {
-		limit = {
-			has_idea = nsm_amsterdam_ins
-		}
-		remove_ideas = nsm_amsterdam_ins
 	}
 	if = {
 		limit = {
@@ -38977,12 +31694,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = owner
-		}
-		remove_ideas = owner
-	}
-	if = {
-		limit = {
 			has_idea = paldiski_port
 		}
 		remove_ideas = paldiski_port
@@ -39010,12 +31721,6 @@ remove_all_ideas_chunk_65 = {
 			has_idea = paramilitary_training
 		}
 		remove_ideas = paramilitary_training
-	}
-	if = {
-		limit = {
-			has_idea = partial_economic_mobilisation
-		}
-		remove_ideas = partial_economic_mobilisation
 	}
 	if = {
 		limit = {
@@ -39085,18 +31790,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = princely_subjugation_occupation_law_fake_idea
-		}
-		remove_ideas = princely_subjugation_occupation_law_fake_idea
-	}
-	if = {
-		limit = {
-			has_idea = prioritize
-		}
-		remove_ideas = prioritize
-	}
-	if = {
-		limit = {
 			has_idea = professional_officer_corps_spirit
 		}
 		remove_ideas = professional_officer_corps_spirit
@@ -39106,18 +31799,6 @@ remove_all_ideas_chunk_65 = {
 			has_idea = proper_heritage_spirit
 		}
 		remove_ideas = proper_heritage_spirit
-	}
-	if = {
-		limit = {
-			has_idea = province
-		}
-		remove_ideas = province
-	}
-	if = {
-		limit = {
-			has_idea = proxy_wars_army_spirit
-		}
-		remove_ideas = proxy_wars_army_spirit
 	}
 	if = {
 		limit = {
@@ -39145,36 +31826,6 @@ remove_all_ideas_chunk_65 = {
 	}
 	if = {
 		limit = {
-			has_idea = railway_gun_equipment
-		}
-		remove_ideas = railway_gun_equipment
-	}
-	if = {
-		limit = {
-			has_idea = railway_gun_equipment_1
-		}
-		remove_ideas = railway_gun_equipment_1
-	}
-	if = {
-		limit = {
-			has_idea = random_core_state
-		}
-		remove_ideas = random_core_state
-	}
-	if = {
-		limit = {
-			has_idea = rapid_concentration_navy_spirit
-		}
-		remove_ideas = rapid_concentration_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = rapid_emplacement_army_spirit
-		}
-		remove_ideas = rapid_emplacement_army_spirit
-	}
-	if = {
-		limit = {
 			has_idea = raufoss_ammunisjonsfabrikker
 		}
 		remove_ideas = raufoss_ammunisjonsfabrikker
@@ -39185,21 +31836,9 @@ remove_all_ideas_chunk_65 = {
 		}
 		remove_ideas = received_attache
 	}
-	if = {
-		limit = {
-			has_idea = recon
-		}
-		remove_ideas = recon
-	}
 }
 
 remove_all_ideas_chunk_66 = {
-	if = {
-		limit = {
-			has_idea = regiments
-		}
-		remove_ideas = regiments
-	}
 	if = {
 		limit = {
 			has_idea = reign_of_terror
@@ -39211,48 +31850,6 @@ remove_all_ideas_chunk_66 = {
 			has_idea = relief_of_command_spirit
 		}
 		remove_ideas = relief_of_command_spirit
-	}
-	if = {
-		limit = {
-			has_idea = remove_advisor_role
-		}
-		remove_ideas = remove_advisor_role
-	}
-	if = {
-		limit = {
-			has_idea = remove_building
-		}
-		remove_ideas = remove_building
-	}
-	if = {
-		limit = {
-			has_idea = remove_dynamic_modifier
-		}
-		remove_ideas = remove_dynamic_modifier
-	}
-	if = {
-		limit = {
-			has_idea = remove_from_array
-		}
-		remove_ideas = remove_from_array
-	}
-	if = {
-		limit = {
-			has_idea = remove_opinion_modifier
-		}
-		remove_ideas = remove_opinion_modifier
-	}
-	if = {
-		limit = {
-			has_idea = remove_relation_modifier
-		}
-		remove_ideas = remove_relation_modifier
-	}
-	if = {
-		limit = {
-			has_idea = remove_relation_rule_override
-		}
-		remove_ideas = remove_relation_rule_override
 	}
 	if = {
 		limit = {
@@ -39316,18 +31913,6 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = rocket_artillery_equipment
-		}
-		remove_ideas = rocket_artillery_equipment
-	}
-	if = {
-		limit = {
-			has_idea = rogozarski
-		}
-		remove_ideas = rogozarski
-	}
-	if = {
-		limit = {
 			has_idea = royal_arsenal
 		}
 		remove_ideas = royal_arsenal
@@ -39388,30 +31973,6 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = scouting_force_navy_spirit
-		}
-		remove_ideas = scouting_force_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = scraping_the_barrel
-		}
-		remove_ideas = scraping_the_barrel
-	}
-	if = {
-		limit = {
-			has_idea = screen_ship
-		}
-		remove_ideas = screen_ship
-	}
-	if = {
-		limit = {
-			has_idea = sea_lane_denial_navy_spirit
-		}
-		remove_ideas = sea_lane_denial_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = secn
 		}
 		remove_ideas = secn
@@ -39424,39 +31985,9 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = selective_engagement_navy_spirit
-		}
-		remove_ideas = selective_engagement_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = senbu_occupation_law_fake_idea
 		}
 		remove_ideas = senbu_occupation_law_fake_idea
-	}
-	if = {
-		limit = {
-			has_idea = service_by_requirement
-		}
-		remove_ideas = service_by_requirement
-	}
-	if = {
-		limit = {
-			has_idea = set_rule
-		}
-		remove_ideas = set_rule
-	}
-	if = {
-		limit = {
-			has_idea = set_variable
-		}
-		remove_ideas = set_variable
-	}
-	if = {
-		limit = {
-			has_idea = sfr
-		}
-		remove_ideas = sfr
 	}
 	if = {
 		limit = {
@@ -39472,93 +32003,9 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = ship_hull_carrier
-		}
-		remove_ideas = ship_hull_carrier
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_cruiser
-		}
-		remove_ideas = ship_hull_cruiser
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_cruiser_coastal_defense_ship
-		}
-		remove_ideas = ship_hull_cruiser_coastal_defense_ship
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_cruiser_submarine
-		}
-		remove_ideas = ship_hull_cruiser_submarine
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_fleet_submarine
-		}
-		remove_ideas = ship_hull_fleet_submarine
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_heavy
-		}
-		remove_ideas = ship_hull_heavy
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_light
-		}
-		remove_ideas = ship_hull_light
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_mega_carrier
-		}
-		remove_ideas = ship_hull_mega_carrier
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_midget_submarine
-		}
-		remove_ideas = ship_hull_midget_submarine
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_submarine
-		}
-		remove_ideas = ship_hull_submarine
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_super_heavy_1
-		}
-		remove_ideas = ship_hull_super_heavy_1
-	}
-	if = {
-		limit = {
-			has_idea = ship_hull_torpedo_cruiser
-		}
-		remove_ideas = ship_hull_torpedo_cruiser
-	}
-	if = {
-		limit = {
-			has_idea = ship_to_shore_navy_spirit
-		}
-		remove_ideas = ship_to_shore_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = siemens
 		}
 		remove_ideas = siemens
-	}
-	if = {
-		limit = {
-			has_idea = signals_training_spirit
-		}
-		remove_ideas = signals_training_spirit
 	}
 	if = {
 		limit = {
@@ -39577,30 +32024,6 @@ remove_all_ideas_chunk_66 = {
 			has_idea = small_arms_limited
 		}
 		remove_ideas = small_arms_limited
-	}
-	if = {
-		limit = {
-			has_idea = small_plane_airframe
-		}
-		remove_ideas = small_plane_airframe
-	}
-	if = {
-		limit = {
-			has_idea = small_plane_airframe_4
-		}
-		remove_ideas = small_plane_airframe_4
-	}
-	if = {
-		limit = {
-			has_idea = small_plane_cas_airframe
-		}
-		remove_ideas = small_plane_cas_airframe
-	}
-	if = {
-		limit = {
-			has_idea = small_plane_naval_bomber_airframe
-		}
-		remove_ideas = small_plane_naval_bomber_airframe
 	}
 	if = {
 		limit = {
@@ -39640,39 +32063,9 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = special_economic_zones
-		}
-		remove_ideas = special_economic_zones
-	}
-	if = {
-		limit = {
 			has_idea = special_forces
 		}
 		remove_ideas = special_forces
-	}
-	if = {
-		limit = {
-			has_idea = special_project_consumer_costs_high
-		}
-		remove_ideas = special_project_consumer_costs_high
-	}
-	if = {
-		limit = {
-			has_idea = special_project_consumer_costs_low
-		}
-		remove_ideas = special_project_consumer_costs_low
-	}
-	if = {
-		limit = {
-			has_idea = special_project_consumer_costs_medium
-		}
-		remove_ideas = special_project_consumer_costs_medium
-	}
-	if = {
-		limit = {
-			has_idea = spirit_of_defiance_army_spirit
-		}
-		remove_ideas = spirit_of_defiance_army_spirit
 	}
 	if = {
 		limit = {
@@ -39724,12 +32117,6 @@ remove_all_ideas_chunk_66 = {
 	}
 	if = {
 		limit = {
-			has_idea = stay_at_your_posts_navy_spirit
-		}
-		remove_ideas = stay_at_your_posts_navy_spirit
-	}
-	if = {
-		limit = {
 			has_idea = steel_wings_steel_hearts_spirit
 		}
 		remove_ideas = steel_wings_steel_hearts_spirit
@@ -39745,12 +32132,6 @@ remove_all_ideas_chunk_66 = {
 			has_idea = stiff_upper_lip
 		}
 		remove_ideas = stiff_upper_lip
-	}
-	if = {
-		limit = {
-			has_idea = strategic_bomber
-		}
-		remove_ideas = strategic_bomber
 	}
 	if = {
 		limit = {
@@ -39799,39 +32180,9 @@ remove_all_ideas_chunk_66 = {
 remove_all_ideas_chunk_67 = {
 	if = {
 		limit = {
-			has_idea = submarine
-		}
-		remove_ideas = submarine
-	}
-	if = {
-		limit = {
-			has_idea = subsidized_contracts_army_spirit
-		}
-		remove_ideas = subsidized_contracts_army_spirit
-	}
-	if = {
-		limit = {
-			has_idea = subsidized_contracts_no_lar_army_spirit
-		}
-		remove_ideas = subsidized_contracts_no_lar_army_spirit
-	}
-	if = {
-		limit = {
-			has_idea = sumerbank
-		}
-		remove_ideas = sumerbank
-	}
-	if = {
-		limit = {
 			has_idea = sumitomo
 		}
 		remove_ideas = sumitomo
-	}
-	if = {
-		limit = {
-			has_idea = super_heavy_tank_chassis
-		}
-		remove_ideas = super_heavy_tank_chassis
 	}
 	if = {
 		limit = {
@@ -39850,18 +32201,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = supermarine
 		}
 		remove_ideas = supermarine
-	}
-	if = {
-		limit = {
-			has_idea = support
-		}
-		remove_ideas = support
-	}
-	if = {
-		limit = {
-			has_idea = support_equipment
-		}
-		remove_ideas = support_equipment
 	}
 	if = {
 		limit = {
@@ -39886,12 +32225,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = synarchist_youth
 		}
 		remove_ideas = synarchist_youth
-	}
-	if = {
-		limit = {
-			has_idea = tactical_bomber
-		}
-		remove_ideas = tactical_bomber
 	}
 	if = {
 		limit = {
@@ -39955,12 +32288,6 @@ remove_all_ideas_chunk_67 = {
 	}
 	if = {
 		limit = {
-			has_idea = torpedo_cruiser
-		}
-		remove_ideas = torpedo_cruiser
-	}
-	if = {
-		limit = {
 			has_idea = torpedo_cruisers_ns
 		}
 		remove_ideas = torpedo_cruisers_ns
@@ -39973,18 +32300,6 @@ remove_all_ideas_chunk_67 = {
 	}
 	if = {
 		limit = {
-			has_idea = tot_economic_mobilisation
-		}
-		remove_ideas = tot_economic_mobilisation
-	}
-	if = {
-		limit = {
-			has_idea = totaler_krieg_economy
-		}
-		remove_ideas = totaler_krieg_economy
-	}
-	if = {
-		limit = {
 			has_idea = trade_interdiction_academy_spirit
 		}
 		remove_ideas = trade_interdiction_academy_spirit
@@ -39994,36 +32309,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = trade_interdiction_navy_spirit
 		}
 		remove_ideas = trade_interdiction_navy_spirit
-	}
-	if = {
-		limit = {
-			has_idea = trade_laws
-		}
-		remove_ideas = trade_laws
-	}
-	if = {
-		limit = {
-			has_idea = train
-		}
-		remove_ideas = train
-	}
-	if = {
-		limit = {
-			has_idea = train_equipment
-		}
-		remove_ideas = train_equipment
-	}
-	if = {
-		limit = {
-			has_idea = train_equipment_2
-		}
-		remove_ideas = train_equipment_2
-	}
-	if = {
-		limit = {
-			has_idea = transport_plane_equipment
-		}
-		remove_ideas = transport_plane_equipment
 	}
 	if = {
 		limit = {
@@ -40069,24 +32354,6 @@ remove_all_ideas_chunk_67 = {
 	}
 	if = {
 		limit = {
-			has_idea = umberto_idea
-		}
-		remove_ideas = umberto_idea
-	}
-	if = {
-		limit = {
-			has_idea = uncontrolled_exports
-		}
-		remove_ideas = uncontrolled_exports
-	}
-	if = {
-		limit = {
-			has_idea = undisturbed_isolation
-		}
-		remove_ideas = undisturbed_isolation
-	}
-	if = {
-		limit = {
 			has_idea = vauxhall
 		}
 		remove_ideas = vauxhall
@@ -40096,12 +32363,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = vef
 		}
 		remove_ideas = vef
-	}
-	if = {
-		limit = {
-			has_idea = veteran_air_instructors_spirit
-		}
-		remove_ideas = veteran_air_instructors_spirit
 	}
 	if = {
 		limit = {
@@ -40171,21 +32432,9 @@ remove_all_ideas_chunk_67 = {
 	}
 	if = {
 		limit = {
-			has_idea = volunteer_only
-		}
-		remove_ideas = volunteer_only
-	}
-	if = {
-		limit = {
 			has_idea = war_bonds_focus
 		}
 		remove_ideas = war_bonds_focus
-	}
-	if = {
-		limit = {
-			has_idea = war_economy
-		}
-		remove_ideas = war_economy
 	}
 	if = {
 		limit = {
@@ -40204,12 +32453,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = why_we_fight_focus
 		}
 		remove_ideas = why_we_fight_focus
-	}
-	if = {
-		limit = {
-			has_idea = wilkies_new_deal
-		}
-		remove_ideas = wilkies_new_deal
 	}
 	if = {
 		limit = {
@@ -40270,12 +32513,6 @@ remove_all_ideas_chunk_67 = {
 			has_idea = zastava_arms
 		}
 		remove_ideas = zastava_arms
-	}
-	if = {
-		limit = {
-			has_idea = zmaj
-		}
-		remove_ideas = zmaj
 	}
 }
 
@@ -47342,3 +39579,5 @@ remove_all_claims = {
     }
 }
         
+
+

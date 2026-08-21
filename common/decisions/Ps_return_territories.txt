@@ -6,7 +6,7 @@ return_core_category = {
 		priority = 999
 
 		visible = {
-			NOT = { has_country_flag = bureaucratic_cooldown }
+			NOT = { has_country_flag = bureaucratic_cooldown_short }
 			is_in_faction = yes
 			NOT = { 
 				any_other_country = {
@@ -61,10 +61,7 @@ return_core_category = {
 				# Exclude states where ROOT is a German subject and the state isn't ROOT's capital core
 				NOT = {
 					ROOT = {
-						is_subject_of = GER
-						capital_scope = {
-							NOT = { is_core_of = PREV }
-						}
+						is_colony_or_reickskommissariat = yes
 					}
 				}
 
@@ -199,7 +196,7 @@ return_core_category = {
 		priority = 999
 
 		visible = {
-			NOT = { has_country_flag = bureaucratic_cooldown }
+			NOT = { has_country_flag = bureaucratic_cooldown_short }
 			num_subjects > 0
 			NOT = { 
 				any_other_country = {
@@ -382,7 +379,7 @@ return_core_category = {
 		icon = generic_agreement
 		priority = 999
 		
-		visible = { NOT = { has_country_flag = bureaucratic_cooldown } }
+		visible = { NOT = { has_country_flag = bureaucratic_cooldown_short } }
 		
 		target_root_trigger = {
 			num_subjects > 0

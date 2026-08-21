@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # Political Events
 ###########################
 
@@ -9,7 +9,67 @@ add_namespace = kr.political
 ###########################
 country_event = {
 	id = kr.political.75
-	immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.75 FROM = [From.GetName]" }
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event kr.political.75 FROM = [From.GetName]" 
+		
+		# Autonomy Calculation for ally's subject
+		if = {
+			limit = {
+				event_target:return_to = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT }
+					overlord = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			set_variable = { puppet_total_cores = 0 }
+			every_state = {
+				limit = { is_core_of = event_target:return_to }
+				ROOT = { add_to_variable = { puppet_total_cores = 1 } }
+			}
+			
+			set_variable = { puppet_returned_states = 0 }
+			every_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_fully_controlled_by = ROOT
+					is_core_of = event_target:return_to
+					NOT = { is_core_of = ROOT }
+					NOT = { is_claimed_by = ROOT }
+					NOT = { has_state_flag = KR_keeping_stateROOT }
+				}
+				ROOT = { add_to_variable = { puppet_returned_states = 1 } }
+			}
+			
+			if = {
+				limit = { check_variable = { puppet_total_cores > 0 } }
+				set_variable = { local_autonomy = puppet_returned_states }
+				divide_variable = { local_autonomy = puppet_total_cores }
+				
+				set_variable = { local_pp = local_autonomy }
+				multiply_variable = { local_pp = 1200 }
+				round_variable = local_pp
+
+				multiply_variable = { local_autonomy = 2000 }
+				round_variable = local_autonomy
+				
+				# Queue the points on the subject
+				event_target:return_to = {
+					add_to_variable = { autonomy_to_add = ROOT.local_autonomy }
+					add_to_variable = { pp_to_add = ROOT.local_pp }
+				}
+				
+				# Keep a copy on ROOT for the tooltip
+				set_variable = { autonomy_to_add = local_autonomy }
+				set_variable = { pp_to_add = local_pp }
+			}
+			else = {
+				set_variable = { autonomy_to_add = 0 }
+				set_variable = { pp_to_add = 0 }
+			}
+		}
+	}
 	title = kr.political.75.t
 	desc = kr.political.75.d
 	picture = GFX_report_event_generic_diplomacy2
@@ -25,6 +85,28 @@ country_event = {
 		}
 		clr_country_flag = KR_returning_land
         clr_country_flag = Decision_overlap_fix
+		
+		if = {
+			limit = {
+				event_target:return_to = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT }
+					overlord = { is_in_faction_with = ROOT }
+				}
+				check_variable = { autonomy_to_add > 0 }
+			}
+			custom_effect_tooltip = returned_cores_autonomy_tt
+			hidden_effect = {
+				event_target:return_to = {
+					if = {
+						limit = { NOT = { has_country_flag = autonomy_queue_running } }
+						set_country_flag = autonomy_queue_running
+						country_event = { id = ps_autonomy_queue.1 days = 1 }
+					}
+				}
+			}
+		}
+
 		hidden_effect = {
 			event_target:return_to = {
 				country_event = kr.political.76

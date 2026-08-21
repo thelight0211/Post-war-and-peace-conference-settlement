@@ -1,0 +1,56 @@
+add_namespace = ps_autonomy_queue
+
+country_event = {
+	id = ps_autonomy_queue.1
+	title = "Hidden Autonomy Queue"
+	desc = "Hidden Autonomy Queue"
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { check_variable = { autonomy_to_add > 0 } }
+			if = {
+				limit = { check_variable = { autonomy_to_add > 99 } }
+				add_autonomy_score = { value = 100 }
+				subtract_from_variable = { autonomy_to_add = 100 }
+				if = {
+					limit = { check_variable = { pp_to_add > 59 } }
+					add_political_power = 60
+					subtract_from_variable = { pp_to_add = 60 }
+				}
+			}
+			else = {
+				set_temp_variable = { loop_autonomy = autonomy_to_add }
+				while_loop_effect = {
+					limit = { check_variable = { loop_autonomy > 0 } }
+					add_autonomy_score = { value = 1 }
+					subtract_from_temp_variable = { loop_autonomy = 1 }
+				}
+				
+				set_temp_variable = { loop_pp = pp_to_add }
+				while_loop_effect = {
+					limit = { check_variable = { loop_pp > 0 } }
+					add_political_power = 1
+					subtract_from_temp_variable = { loop_pp = 1 }
+				}
+				
+				set_variable = { autonomy_to_add = 0 }
+				set_variable = { pp_to_add = 0 }
+			}
+			
+			# Re-trigger self next day
+			if = {
+				limit = { check_variable = { autonomy_to_add > 0 } }
+				country_event = { id = ps_autonomy_queue.1 days = 1 }
+			}
+			else = {
+				clr_country_flag = autonomy_queue_running
+			}
+		}
+		else = {
+			clr_country_flag = autonomy_queue_running
+		}
+	}
+}

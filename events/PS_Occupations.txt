@@ -5047,21 +5047,35 @@ country_event = {
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
 		}
+		every_state = {
+			limit = {
+				is_core_of = MAN
+				NOT = { 
+					OR = {
+						region = 155 
+						region = 242
+						region = 243
+					}
+				}
+			}
+			remove_core_of = MAN
+		}
 		if = {
 			limit = {
 				tag = JAP
 				RNG = { is_subject_of = ROOT }
 			}
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = MAN
-					is_claimed_by = MAN
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MAN
+						is_claimed_by = MAN
+					}
 				}
+				remove_core_of = RNG
+				remove_claim_by = RNG
+				set_state_flag = not_core_of_RNG
 			}
-			remove_core_of = RNG
-			set_state_flag = not_core_of_RNG
-		}
 		}
 	}
 	option = {
@@ -5359,12 +5373,25 @@ country_event = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = TIB
+				NOT = { 
+					OR = {
+						region = 146
+						region = 250
+					}
+				}
+			}
+			remove_core_of = TIB
+		}
+		every_state = {
+			limit = {
 				OR = {
 					is_core_of = TIB
 					is_claimed_by = TIB
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -11750,12 +11777,25 @@ country_event = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = SIK
+				NOT = { 
+					OR = {
+						region = 145 
+						region = 252
+					}
+				}
+			}
+			remove_core_of = SIK
+		}
+		every_state = {
+			limit = {
 				OR = {
 					is_core_of = SIK
 					is_claimed_by = SIK
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -11947,12 +11987,25 @@ country_event = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = YUN
+				NOT = { 
+					OR = {
+						region = 249
+						region = 165
+					}
+				}
+			}
+			remove_core_of = YUN
+		}
+		every_state = {
+			limit = {
 				OR = {
 					is_core_of = YUN
 					is_claimed_by = YUN
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -12023,6 +12076,18 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = YUN
+				NOT = { 
+					OR = {
+						region = 249
+						region = 165
+					}
+				}
+			}
+			remove_core_of = YUN
 		}
 	}
 
@@ -12180,12 +12245,20 @@ country_event = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = GXC
+				NOT = { region = 248 }
+			}
+			remove_core_of = GXC
+		}
+		every_state = {
+			limit = {
 				OR = {
 					is_core_of = GXC
 					is_claimed_by = GXC
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -12252,6 +12325,13 @@ country_event = {
 			}
 			GXC = { transfer_state = PREV }
 			GXC = { add_state_core = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = GXC
+				NOT = { region = 248 }
+			}
+			remove_core_of = GXC
 		}
 		puppet = GXC
 		GXC = {
@@ -12441,12 +12521,25 @@ country_event = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = XSM
+				NOT = { 
+					OR = {
+						region = 144
+						region = 200
+					}
+				}
+			}
+			remove_core_of = XSM
+		}
+		every_state = {
+			limit = {
 				OR = {
 					is_core_of = XSM
 					is_claimed_by = XSM
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -12556,6 +12649,18 @@ country_event = {
 			XSM = { add_state_core = PREV }
 		}
 		puppet = XSM
+		every_state = {
+			limit = {
+				is_core_of = XSM
+				NOT = { 
+					OR = {
+						region = 144
+						region = 200
+					}
+				}
+			}
+			remove_core_of = XSM
+		}
 		XSM = {
 			if = { 
 				limit = {
@@ -12850,8 +12955,21 @@ country_event = {
 					}
 				}
 				remove_core_of = RNG
+				remove_claim_by = RNG
 				set_state_flag = not_core_of_RNG
 			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SHX
+				NOT = { 
+					OR = {
+						region = 245
+						region = 244
+					}
+				}
+			}
+			remove_core_of = SHX
 		}
 		every_state = {
 			limit = {
@@ -12861,6 +12979,7 @@ country_event = {
 				}
 			}
 			remove_core_of = RNG
+			remove_claim_by = RNG
 			set_state_flag = not_core_of_RNG
 		}
 	}
@@ -12921,6 +13040,18 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			remove_all_claims = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = SHX
+				NOT = { 
+					OR = {
+						region = 245
+						region = 244
+					}
+				}
+			}
+			remove_core_of = SHX
 		}
 	}
 
@@ -13536,7 +13667,7 @@ country_event = {			# - Corsica Event
 	option = {
 		name = "Liberate Corsica"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				OR = {
@@ -13576,7 +13707,7 @@ country_event = {			# - Corsica Event
 			FRA = { is_ally_with = ROOT }
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				OCC = { is_subject_of = ROOT }
@@ -13667,20 +13798,7 @@ country_event = {			# - Actual Partition Event
 
 	immediate = {
 		hidden_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = AUS
-						is_core_of = CZE
-						is_core_of = POL
-						is_core_of = DEN
-						is_core_of = LIT
-						is_core_of = YUG
-						is_core_of = ITA
-					}
-				}
-				GER = { remove_state_claim = PREV }
-			}
+			clr_global_flag = partitioned_germany
 			every_state = {
 				limit = {
 					OR = {
@@ -13689,7 +13807,7 @@ country_event = {			# - Actual Partition Event
 						is_core_of = LIT
 					}
 				}
-				GER = { remove_state_core = PREV }
+				remove_core_of = GER
 			}
 			28 = { remove_claim_by = GER }
 		}
@@ -13699,8 +13817,11 @@ country_event = {			# - Actual Partition Event
 		name = "Release Germany"
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0
+				is_major = no
+			}
 		}
-		clr_global_flag = partitioned_germany
 		every_state = {
 			limit = {
 				is_core_of = GER
@@ -13735,10 +13856,10 @@ country_event = {			# - Actual Partition Event
 						has_game_rule = { rule = RULE_LOAD_GENERIC_FOCUS_PUPPET option = Disable }
 					}
 					load_focus_tree = generic_focus
-				remove_all_ideas = yes
+					remove_all_ideas = yes
 				} 
 				drop_cosmetic_tag = yes
-			remove_all_claims = yes
+				remove_all_claims = yes
 			}
 		}
 	}
@@ -13746,7 +13867,11 @@ country_event = {			# - Actual Partition Event
 	option = {
 		name = "Partition Germany"
 		ai_chance = {
-			base = 0
+			base = 100
+			modifier = {
+				factor = 0
+				is_major = yes
+			}
 		}
 		set_global_flag = partitioned_germany
 		set_country_flag = decided_GER
@@ -14199,7 +14324,7 @@ country_event = {			# - Dalmatia Event
 			ITA = { is_ally_with = ROOT }
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				ITA = { is_ally_with = ROOT }
@@ -14243,7 +14368,7 @@ country_event = {			# - Dalmatia Event
 		}
 		name = "Split it between Italy and Croatia"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				ITA = { is_ally_with = ROOT }
@@ -15043,7 +15168,7 @@ country_event = {			# - Kosovo Event
 			ALB = { is_ally_with = ROOT }
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				YUG = { is_ally_with = ROOT }
@@ -16354,7 +16479,7 @@ country_event = {			# - Thrace
 			}
 			name = "Give Silesia to Poland"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				NOT = {
@@ -16493,7 +16618,7 @@ country_event = {			#Pomerania
 		}
 		name = "Return Pomerania to Germany"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 					has_government = communism 
@@ -16527,7 +16652,7 @@ country_event = {			#Pomerania
 		}
 		name = "Return Pomerania to Prussia"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 					has_government = communism 
@@ -16560,7 +16685,7 @@ country_event = {			#Pomerania
 			POL = { is_ally_with = ROOT }
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -16617,7 +16742,7 @@ country_event = {			#Koenigsberg
 		}
 		name = "Return Koenigsberg to Germany"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				has_government = communism 
@@ -16652,7 +16777,7 @@ country_event = {			#Koenigsberg
 		}
 		name = "Return Koenigsberg to Prussia"
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				has_government = communism 
@@ -16686,7 +16811,7 @@ country_event = {			#Koenigsberg
 			POL = { is_ally_with = ROOT }
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -17613,7 +17738,7 @@ country_event = {			# - Schleswig-Holstein
 
 	option = {
 		name = "Establish a puppet in Schleswig-Holstein"
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 40 }
 		every_state = {
 			limit = {
 				is_core_of = SHL 
@@ -17656,7 +17781,7 @@ country_event = {			# - Schleswig-Holstein
 
 	option = {
 		name = "Give Schleswig-Holstein to Prussia"
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 30 }
 		trigger = { PRE = { is_ally_with = ROOT } }
 		every_state = {
 			limit = {
@@ -17683,6 +17808,38 @@ country_event = {			# - Schleswig-Holstein
 			}
 			PRE = { transfer_state = PREV }
 			PRE = { add_state_core = PREV }
+		}
+	}
+
+	option = {
+		name = "Give Schleswig-Holstein to our West German ally"
+		ai_chance = { factor = 30 }
+		trigger = { THU = { is_ally_with = ROOT } }
+		every_state = {
+			limit = {
+				is_core_of = SHL 
+				OR = {
+					is_fully_controlled_by = ROOT
+					AND = {
+						owner = { 
+							is_subject_of = ROOT 
+							NOT = { is_colony_or_reickskommissariat = yes }
+						}
+						NOT = {
+							owner = {
+								capital_scope = {
+									is_core_of = SHL
+								}
+							}
+						}
+					}
+				}
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+				NOT = { has_state_flag = dec_later }
+			}
+			THU = { transfer_state = PREV }
+			THU = { add_state_core = PREV }
 		}
 	}
 
