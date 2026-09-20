@@ -13789,7 +13789,7 @@ country_event = {			# - Hidden Event which determines who has control over Germa
 
 country_event = {			# - Actual Partition Event
 	id = ger.partition.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.partition.2"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ger.partition.2"}
 	title = "The End of Germany"
 	desc = ger.partition.2.d	
 	is_triggered_only = yes

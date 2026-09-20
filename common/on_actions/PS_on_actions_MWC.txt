@@ -1775,4 +1775,74 @@ on_actions = {
 
 		}
 	}
+
+	on_monthly = {
+		effect = {
+			every_country = {
+				every_other_country = {
+					limit = {
+						capital_scope = { is_claimed_by = PREV.PREV }
+						PREV = {
+							OR = {
+								has_wargoal_against = { target = PREV type = annex_everything }
+								has_wargoal_against = { target = PREV type = take_state_focus }
+							}
+						}
+					}
+					every_state = {
+						limit = {
+							is_claimed_by = PREV.PREV
+							OR = {
+								is_owned_by = PREV
+								is_core_of = PREV
+							}
+						}
+						remove_claim_by = PREV.PREV
+					}
+				}
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			# ROOT = Overlord, FROM = Puppet
+			# 1. Overlord ha claim sul Puppet
+			if = {
+				limit = {
+					OR = {
+						has_wargoal_against = { target = FROM type = annex_everything }
+						has_wargoal_against = { target = FROM type = take_state_focus }
+					}
+					FROM = { capital_scope = { is_claimed_by = ROOT } }
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = ROOT
+						OR = { is_owned_by = FROM is_core_of = FROM }
+					}
+					remove_claim_by = ROOT
+				}
+			}
+			# 2. Puppet ha claim sull'Overlord (caso raro)
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_wargoal_against = { target = ROOT type = annex_everything }
+							has_wargoal_against = { target = ROOT type = take_state_focus }
+						}
+					}
+					ROOT = { capital_scope = { is_claimed_by = FROM } }
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = FROM
+						OR = { is_owned_by = ROOT is_core_of = ROOT }
+					}
+					remove_claim_by = FROM
+				}
+			}
+		}
+	}
 }

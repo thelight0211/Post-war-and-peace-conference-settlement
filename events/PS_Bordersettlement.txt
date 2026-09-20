@@ -42,11 +42,47 @@
 					}
 				}
 				NOT = {
-					any_neighbor_state = {
-						owner = {
+					AND = {
+						impassable = yes
+						any_neighbor_state = {
 							OR = {
-								is_subject_of = ROOT
-								has_subject = ROOT
+								AND = {
+									impassable = no
+									is_owned_by = ROOT
+								}
+								AND = {
+									impassable = yes
+									is_owned_by = ROOT
+									any_neighbor_state = {
+										impassable = no
+										is_owned_by = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				NOT = {
+					OR = {
+						any_neighbor_state = {
+							owner = {
+								OR = {
+									is_subject_of = ROOT
+									has_subject = ROOT
+								}
+							}
+						}
+						AND = {
+							is_core_of = ROOT
+							any_neighbor_state = {
+								owner = {
+									is_neighbor_of = ROOT
+									NOT = { tag = ROOT }
+									OR = {
+										is_chinese_warlord = yes
+										original_tag = ROOT
+									}
+								}
 							}
 						}
 					}
@@ -88,9 +124,6 @@
 								any_neighbor_state = {
 									OR = {
 										AND = {
-											NOT = {
-												has_state_flag = Land_locked_state
-											}
 											impassable = no
 											is_owned_by = ROOT
 										}
@@ -98,9 +131,6 @@
 											impassable = yes
 											is_owned_by = ROOT
 											any_neighbor_state = {
-												NOT = {
-													has_state_flag = Land_locked_state
-												}
 												impassable = no
 												is_owned_by = ROOT
 											}
@@ -110,11 +140,26 @@
 							}
 						}
 						NOT = {
-							any_neighbor_state = {
-								owner = {
-									OR = {
-										is_subject_of = ROOT
-										has_subject = ROOT
+							OR = {
+								any_neighbor_state = {
+									owner = {
+										OR = {
+											is_subject_of = ROOT
+											has_subject = ROOT
+										}
+									}
+								}
+								AND = {
+									is_core_of = ROOT
+									any_neighbor_state = {
+										owner = {
+											is_neighbor_of = ROOT
+											NOT = { tag = ROOT }
+											OR = {
+												is_chinese_warlord = yes
+												original_tag = ROOT
+											}
+										}
 									}
 								}
 							}
@@ -373,16 +418,32 @@
 								is_owned_by = ROOT
 							}
 						}
-						any_neighbor_state = {
-							owner = {
-								OR = {
-									is_subject_of = ROOT
-									has_subject = ROOT
+						OR = {
+							any_neighbor_state = {
+								owner = {
+									OR = {
+										is_subject_of = ROOT
+										has_subject = ROOT
+									}
+								}
+							}
+							AND = {
+								is_core_of = ROOT
+								any_neighbor_state = {
+									owner = {
+										is_neighbor_of = ROOT
+										NOT = { tag = ROOT }
+										OR = {
+											is_chinese_warlord = yes
+											original_tag = ROOT
+										}
+									}
 								}
 							}
 						}
 					}
 					set_state_flag = connected_via_con
+					clr_state_flag = Land_locked_state
 				}
 				set_country_flag = PS_calculated_delay
 			}
@@ -405,6 +466,7 @@
 					}
 				}
 				set_state_flag = connected_via_con
+				clr_state_flag = Land_locked_state
 			}
 
 			if = {
