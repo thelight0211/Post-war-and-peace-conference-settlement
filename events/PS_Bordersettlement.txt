@@ -9,7 +9,7 @@
 
 		trigger = {
 			has_civil_war = no
-			surrender_progress < 0.001
+			surrender_progress < 0.99
 			has_capitulated = no
 			NOT = {
 				has_country_flag = PS_calculated_delay
@@ -201,7 +201,7 @@
 		hidden = yes
 
 		trigger = {
-			surrender_progress < 0.001
+			surrender_progress < 0.99
 		}
 
 		immediate = {
@@ -492,7 +492,7 @@
 			}
 			else_if = {
 				limit = {
-					surrender_progress < 0.001
+					surrender_progress < 0.99
 				}
 				clr_country_flag = PS_calculated_delay
 				country_event = {

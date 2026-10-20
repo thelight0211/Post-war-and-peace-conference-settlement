@@ -62,6 +62,18 @@ dynamic_puppet_category = {
 				NOT = {
 					FROM = { is_ally_with = ROOT }
 				}
+				NOT = {
+					any_country_with_original_tag = {
+						original_tag_to_check = FROM
+						has_war_with = ROOT
+					}
+				}
+				NOT = {
+					any_country_with_original_tag = {
+						original_tag_to_check = FROM
+						surrender_progress > 0.99
+					}
+				}
 				any_owned_state = {
 					is_core_of = FROM
 					is_owned_by = ROOT
