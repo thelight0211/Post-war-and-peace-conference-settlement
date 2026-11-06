@@ -431,14 +431,18 @@ return_core_category = {
 
 		complete_effect = {
 			country_event = puppets_give_cores.1
+
 			hidden_effect = {
+				country_event = puppets_give_cores.1
+				723 = { owner = { set_country_flag = refreshing_claims }}
 				random_country = {
-					random_owned_controlled_state = {
-						limit = { is_fully_controlled_by = PREV }
-						owner = {
-							set_state_controller = PREV
-						}
-					}
+					limit = { NOT = { has_country_flag = refreshing_claims } }
+					transfer_state = 723
+				}
+				random_country = {
+					limit = { has_country_flag = refreshing_claims }
+					transfer_state = 723
+					clr_country_flag = refreshing_claims
 				}
 			}
 		}

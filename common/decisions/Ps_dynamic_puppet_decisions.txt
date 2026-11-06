@@ -4,9 +4,23 @@ dynamic_puppet_category = {
 		icon = generic_military
 		days_re_enable = 1
 		visible = {
-				has_game_rule = { rule = RULE_DISABLE_DYNAMIC_PUPPETS_DECISIONS option = Enable }
-				is_subject = no
-				NOT = { has_country_flag = bureaucratic_cooldown }
+			has_game_rule = { rule = RULE_DISABLE_DYNAMIC_PUPPETS_DECISIONS option = Enable }
+			is_subject = no
+			NOT = { has_country_flag = bureaucratic_cooldown }
+			if = {
+				limit = {
+					has_start_date > 1935.12.31
+					has_start_date < 1936.01.02
+				}
+				date > 1936.01.08
+			}
+			else_if = {
+				limit = {
+					has_start_date > 1939.08.13
+					has_start_date < 1939.08.15
+				}
+				date > 1939.08.21
+			}
 		}
 		fire_only_once = no
 		
