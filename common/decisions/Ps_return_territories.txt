@@ -73,7 +73,6 @@ return_core_category = {
 				NOT = { state = 103 }
 				NOT = { state = 104 }
 				NOT = { state = 70 }
-				NOT = { state = 71 }
 				NOT = { state = 664 }
 				NOT = { state = 73 }
 				NOT = { state = 77 }
@@ -257,7 +256,6 @@ return_core_category = {
 				NOT = { state = 103 }
 				NOT = { state = 104 }
 				NOT = { state = 70 }
-				NOT = { state = 71 }
 				NOT = { state = 664 }
 				NOT = { state = 73 }
 				NOT = { state = 77 }
@@ -432,17 +430,15 @@ return_core_category = {
 		}
 
 		complete_effect = {
+			country_event = puppets_give_cores.1
 			hidden_effect = {
-				country_event = puppets_give_cores.1
-				723 = { owner = { set_country_flag = refreshing_claims }}
 				random_country = {
-					limit = { NOT = { has_country_flag = refreshing_claims } }
-					transfer_state = 723
-				}
-				random_country = {
-					limit = { has_country_flag = refreshing_claims }
-					transfer_state = 723
-					clr_country_flag = refreshing_claims
+					random_owned_controlled_state = {
+						limit = { is_fully_controlled_by = PREV }
+						owner = {
+							set_state_controller = PREV
+						}
+					}
 				}
 			}
 		}
